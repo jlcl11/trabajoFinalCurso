@@ -1,0 +1,315 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FCEFC850-27A1-1DB8-06AA-C050043BE281" name="jugador">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>2CC2CDCD-0944-84F6-6A89-3FA9FA0BB191</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="jugador_id" id="67E12C22-4F05-0075-4843-0849D0588BFD">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>78AE53BB-4A64-DA14-58E3-6CF7E88962EC</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nombre" id="FB9072AD-ACDE-712B-AED4-4E3AA4E828AF">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>80F69F1B-A52B-7307-18FF-8D1997ECF0CA</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Apellido" id="03F33B94-33BC-61F2-37D8-41CE7EBCE0AF">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>C897CC1D-FA13-1D7E-9605-0060E7D37980</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Apodo" id="BBF3B0BB-1D1F-AE18-56A7-5D1FD0097857">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>7DAA1C3F-3A25-A619-7114-CEE04EE1A88E</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="salario" id="70817B7D-3D3B-E5EB-D5DB-0526432F034B">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>BA7F57C8-438F-A4B3-686A-6F0888B895A5</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="puntosporPartido" id="25901EA8-E654-1B2E-8601-63A8A2378219">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>30291A90-0C1C-DEC0-501B-6149592CD694</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="asistenciasPorPartido" id="8B37718B-427C-39C0-284A-1CB9935BBC99">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>CB61F590-15ED-A1B3-00C9-4675272D3DCD</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rebotesPorPartido" id="2B51717F-B767-76AE-67A1-03EBFA3A71A8">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>AC6E44BC-7549-AD21-F88F-60542EB71E54</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="robosPorPartido" id="3E89B2A4-FDA5-9C55-B446-6ADBB33A14C8">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>2D9BFB87-8D0E-43EB-2E70-D27AE3C98C72</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="taponesPorPartido" id="F1CBEA98-9E09-2556-9191-0CEDFAEA0322">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>63CB65D7-AA83-BF74-E8C4-206B871EE851</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MVP" id="A786799A-1F2A-11A2-5F86-8EB108428F71">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>A2B3648F-EF90-A3C5-A586-E1126F188BC1</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estadisticaDPOY" id="8AB85A29-A4B1-BE8B-8AE4-0305C159A228">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>C5574261-7EA4-E5BE-A363-3DF4EE54CA34</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="defensorDelAnho" id="298E8958-B095-2EAB-C236-C28AD4B65721">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>9552AA3D-6B49-3D90-38BA-9A1CCD10146E</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="premioAnotador" id="628ED234-0C23-ABFA-780E-1D70994C6B01">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>87148146-50DC-9752-F8CD-29863611A6E7</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MVPAllStar" id="B06A888A-E4CD-FCBC-A804-392803600A53">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>8C7F9D4F-FC0D-08B1-EF40-BA059F0072DC</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MVPFinales" id="97DD2F51-1A9F-AF66-4470-43774EC870B1">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>643D0202-689F-4555-E187-B6AEEB27BE2B</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estadisticaMVP" id="DBB3773B-DB37-EA27-72B3-FC315D615CC2">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>B674B6E3-A872-2F04-C7DE-E0C80208A10C</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="equipo_equipo_id" id="772E0B80-B3D7-23A8-7649-28E2DC792CB2">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>9D727D2C-A1E9-6C10-3237-AC58D4866651</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ABB5BD51-A195-D8E7-1374-872A80CEED84" referredColumn="72E731C2-0DFE-3EF7-09EA-ED1360ED2BF0"/>
+</associations>
+</Column>
+<Column name="equipo_conf_conf_id" id="05D28219-AFCC-B51B-BC92-5AD769634AC2">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>5AB34662-311E-F9CC-A59F-2C4EA3F5B120</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ABB5BD51-A195-D8E7-1374-872A80CEED84" referredColumn="F247E611-0BEB-C299-CFD9-09764EDD9C95"/>
+</associations>
+</Column>
+<Column name="allStar_allStar_ID1" id="3CDD0487-8179-66EA-55F5-233B51F4CE1B">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3774F628-E243-9E20-57E2-DF10040244D4" referredColumn="0A9462AD-AF38-46F3-B37F-84A8DFAC6687"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5657445B-02BF-C01B-4387-81B887C2B885" name="jugador_PK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>158A2CF1-8E23-46B8-58A0-0D21E1DC4418</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67E12C22-4F05-0075-4843-0849D0588BFD"/>
+<colUsage columnID="772E0B80-B3D7-23A8-7649-28E2DC792CB2"/>
+<colUsage columnID="05D28219-AFCC-B51B-BC92-5AD769634AC2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0B769C25-7B6B-A243-65F4-55CFFC5F397E" name="jugador_allStar_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>7C5E75D8-3D06-D9A2-E93A-942910A06C2B</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3CDD0487-8179-66EA-55F5-233B51F4CE1B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C6C267E3-0589-F584-7F1D-38B7902B9198" name="jugador_equipo_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:25:10 UTC</createdTime>
+<generatorID>D0273535-70E4-8598-6662-CB1C8885A553</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="772E0B80-B3D7-23A8-7649-28E2DC792CB2"/>
+<colUsage columnID="05D28219-AFCC-B51B-BC92-5AD769634AC2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

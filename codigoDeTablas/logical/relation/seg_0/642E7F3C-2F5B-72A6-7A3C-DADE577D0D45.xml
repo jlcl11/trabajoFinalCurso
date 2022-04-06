@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="playoffs" directorySegmentName="seg_0" id="642E7F3C-2F5B-72A6-7A3C-DADE577D0D45">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:01:15 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<sourcePk>3082BE4A-3A5B-7608-4C45-F3DF40561E98</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E953D5CB-85DF-6945-C8E9-D9E45C89AEDE</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>34ECDBBD-4FDD-CB6D-80CD-E3F5D6A23679</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

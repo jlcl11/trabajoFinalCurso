@@ -1,0 +1,300 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2CC2CDCD-0944-84F6-6A89-3FA9FA0BB191" name="jugador">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:03:59 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="jugador_id" id="78AE53BB-4A64-DA14-58E3-6CF7E88962EC">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:04:17 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre" id="80F69F1B-A52B-7307-18FF-8D1997ECF0CA">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:05:45 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Apellido" id="C897CC1D-FA13-1D7E-9605-0060E7D37980">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:06:05 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Apodo" id="7DAA1C3F-3A25-A619-7114-CEE04EE1A88E">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:06:46 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="salario" id="BA7F57C8-438F-A4B3-686A-6F0888B895A5">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:07:09 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="puntosporPartido" id="30291A90-0C1C-DEC0-501B-6149592CD694">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:24:49 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="asistenciasPorPartido" id="CB61F590-15ED-A1B3-00C9-4675272D3DCD">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:25:15 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rebotesPorPartido" id="AC6E44BC-7549-AD21-F88F-60542EB71E54">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:30:27 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="robosPorPartido" id="2D9BFB87-8D0E-43EB-2E70-D27AE3C98C72">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:31:52 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="taponesPorPartido" id="63CB65D7-AA83-BF74-E8C4-206B871EE851">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:32:45 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MVP" id="A2B3648F-EF90-A3C5-A586-E1126F188BC1">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:09:02 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estadisticaDPOY" id="C5574261-7EA4-E5BE-A363-3DF4EE54CA34">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:30:54 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="defensorDelAnho" id="9552AA3D-6B49-3D90-38BA-9A1CCD10146E">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:23:03 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="premioAnotador" id="87148146-50DC-9752-F8CD-29863611A6E7">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:23:28 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MVPAllStar" id="8C7F9D4F-FC0D-08B1-EF40-BA059F0072DC">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:23:57 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MVPFinales" id="643D0202-689F-4555-E187-B6AEEB27BE2B">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:24:29 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estadisticaMVP" id="B674B6E3-A872-2F04-C7DE-E0C80208A10C">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:31:19 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="equipo_id" id="9D727D2C-A1E9-6C10-3237-AC58D4866651">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:20:44 UTC</createdTime>
+<generatorID>D0273535-70E4-8598-6662-CB1C8885A553</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<referedAttribute>03589478-ACF8-DB6B-E813-D3B2FBFEFC0C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="conf_id" id="5AB34662-311E-F9CC-A59F-2C4EA3F5B120">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:20:44 UTC</createdTime>
+<generatorID>D0273535-70E4-8598-6662-CB1C8885A553</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<referedAttribute>C521EB5A-353B-2415-B774-B1D33A0F7EE8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="158A2CF1-8E23-46B8-58A0-0D21E1DC4418" name="jugador PK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:05:44 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>78AE53BB-4A64-DA14-58E3-6CF7E88962EC</attributeRef>
+<attributeRef>9D727D2C-A1E9-6C10-3237-AC58D4866651</attributeRef>
+<attributeRef>5AB34662-311E-F9CC-A59F-2C4EA3F5B120</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

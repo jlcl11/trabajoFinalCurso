@@ -1,0 +1,188 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8F2FEAC2-909D-57AC-A629-AE4DEDC4B3B9" name="equipo">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:34:47 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="equipo_id" id="03589478-ACF8-DB6B-E813-D3B2FBFEFC0C">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:34:53 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="conferencia" id="5FA08B01-6E05-A491-FA66-106D664EEF06">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:35:30 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dorsalesRetirados" id="AAED1DCC-7B0A-BE5F-FCB4-68E5846E489C">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:35:56 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>90</dataTypeSize>
+<ownDataTypeParameters>90,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="generalManager" id="5F28FDF7-BBA9-B85B-69E7-9418042E06AD">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:49:22 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="limiteSalarial" id="90E60FD1-1B64-62BF-4B8D-89CE99B9ECA4">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:50:19 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="propietario" id="094BC8E9-48B3-A637-9312-3109495DC05A">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:50:43 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="puestoEnLaConferencia" id="E44CE20C-7A5B-538B-7471-1494D93D9878">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:51:07 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ciudadlocal" id="2A578E3B-26FC-5C85-35EE-8DE20E2D79D9">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:51:44 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estadio" id="140070F3-0C5F-0CDB-5FC0-52A767FFE200">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:52:01 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="jugador" id="272DDED6-A51E-2FEC-BD66-8FF85B386A93">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:52:31 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="conf_id" id="C521EB5A-353B-2415-B774-B1D33A0F7EE8">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:20:19 UTC</createdTime>
+<generatorID>37866507-0402-82AE-F423-5C1A4299F409</generatorID>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<referedAttribute>C7F6A580-6B74-67FF-F917-E947C7EE899D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="53F47062-DB3C-A59F-2A7D-3EC116D26817" name="equipo PK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:35:17 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>03589478-ACF8-DB6B-E813-D3B2FBFEFC0C</attributeRef>
+<attributeRef>C521EB5A-353B-2415-B774-B1D33A0F7EE8</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

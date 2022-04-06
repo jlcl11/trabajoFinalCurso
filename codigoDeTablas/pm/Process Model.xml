@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="AC6E062F-70D2-2430-A826-B37E22C6DA91">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 17:02:29 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

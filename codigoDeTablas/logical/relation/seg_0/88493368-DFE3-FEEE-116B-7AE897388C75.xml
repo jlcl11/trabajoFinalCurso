@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="allStar_liga" directorySegmentName="seg_0" id="88493368-DFE3-FEEE-116B-7AE897388C75">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:03:19 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9697997B-0659-3FA2-9799-397078C9D16C</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>34ECDBBD-4FDD-CB6D-80CD-E3F5D6A23679</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

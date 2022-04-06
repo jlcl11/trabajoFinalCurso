@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="allStar" directorySegmentName="seg_0" id="7C5E75D8-3D06-D9A2-E93A-942910A06C2B">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-04-06 18:21:18 UTC</createdTime>
+<ownerDesignName>codigoDeTablas </ownerDesignName>
+<engineerTo>
+<item key="7A325B34-EBFB-D53C-2E64-5512C9518424" value="true"/>
+</engineerTo>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9697997B-0659-3FA2-9799-397078C9D16C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2CC2CDCD-0944-84F6-6A89-3FA9FA0BB191</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
