@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="codigoDeTablas " id="ED0F11CC-F861-A648-92D0-091866CB1508" version="3.5">
-<createdBy>jcorr</createdBy>
-<createdTime>2022-04-06 17:02:29 UTC</createdTime>
-<ownerDesignName>codigoDeTablas </ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>ED0F11CC-F861-A648-92D0-091866CB1508</designId>
-</OSDM_Design>
