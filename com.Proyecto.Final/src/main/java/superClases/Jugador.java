@@ -60,6 +60,24 @@ public class Jugador extends ObjetoConNombre {
 		this.clutch = clutch;
 	}
 
+	public Jugador(String nombre, String apellido, byte dorsal, String apodo) {
+		super(nombre);
+		this.apellido = apellido;
+		this.dorsal = dorsal;
+		this.apodo = apodo;
+	}
+
+	public Jugador(String nombre) {
+		super(nombre);
+
+	}
+
+	public Jugador(String nombre, String apellido, byte dorsal) {
+		super(nombre);
+		this.apellido = apellido;
+		this.dorsal = dorsal;
+	}
+
 	public String getApellido() {
 		return apellido;
 	}
@@ -254,13 +272,23 @@ public class Jugador extends ObjetoConNombre {
 
 	@Override
 	public String toString() {
-		return "Jugador [apellido=" + apellido + ", dorsal=" + dorsal + ", apodo=" + apodo + ", posicion=" + posicion
-				+ ", salario=" + salario + ", nominacionesAllStar=" + nominacionesAllStar + ", anillosDeCampeon="
-				+ anillosDeCampeon + ", MVPs=" + MVPs + ", defensorDelAño=" + defensorDelAño + ", rookieDelAño="
-				+ rookieDelAño + ", MIP=" + MIP + ", MVPAllStar=" + MVPAllStar + ", FMVP=" + FMVP + ", premioAnotador="
-				+ premioAnotador + ", PPG=" + PPG + ", APG=" + APG + ", RBG=" + RBG + ", SPG=" + SPG + ", BPG=" + BPG
-				+ ", MPG=" + MPG + ", ataque=" + ataque + ", defensa=" + defensa + ", intangibles=" + intangibles
-				+ ", clutch=" + clutch + "]";
+
+		if (salario <= 0 && apodo != null) {
+			return getNombre() + " " + apellido + " nº" + dorsal + " conocido como " + apodo;
+		}
+		if (salario <= 0 && apodo == null) {
+			return getNombre() + " " + apellido + " nº" + dorsal;
+		}
+
+		else {
+			return "Jugador [apellido=" + apellido + ", dorsal=" + dorsal + ", apodo=" + apodo + ", posicion="
+					+ posicion + ", salario=" + salario + ", nominacionesAllStar=" + nominacionesAllStar
+					+ ", anillosDeCampeon=" + anillosDeCampeon + ", MVPs=" + MVPs + ", defensorDelAño=" + defensorDelAño
+					+ ", rookieDelAño=" + rookieDelAño + ", MIP=" + MIP + ", MVPAllStar=" + MVPAllStar + ", FMVP="
+					+ FMVP + ", premioAnotador=" + premioAnotador + ", PPG=" + PPG + ", APG=" + APG + ", RBG=" + RBG
+					+ ", SPG=" + SPG + ", BPG=" + BPG + ", MPG=" + MPG + ", ataque=" + ataque + ", defensa=" + defensa
+					+ ", intangibles=" + intangibles + ", clutch=" + clutch + "]";
+		}
 	}
 
 }

@@ -10,6 +10,7 @@ CREATE table Jugador(
 jugador_id NUMERIC(8) PRIMARY KEY,
 nombre varchar(200) NOT NULL ,
 apellido varchar(200) NOT NULL,
+apodo varchar(200),
 dorsal NUMERIC(2) NOT NULL,
 posicion ENUM('BASE','ESCOLTA','ALERO','ALAPIVOT','PIVOT') NOT NULL,
 salario NUMERIC(4,2) NOT NULL,
