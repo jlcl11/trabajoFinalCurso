@@ -27,10 +27,10 @@ RPG NUMERIC(4,2) NOT NULL,
 SPG NUMERIC(4,2) NOT NULL,
 BPG NUMERIC(4,2) NOT NULL,
 MPG NUMERIC(4,2) NOT NULL,
-ataque ENUM('A','B','C','D') NOT NULL,
+finalizacion ENUM('A','B','C','D') NOT NULL,
+tiro ENUM('A','B','C','D') NOT NULL,
+organizacion ENUM('A','B','C','D') NOT NULL,
 defensa ENUM('A','B','C','D') NOT NULL,
-intangibles ENUM('A','B','C','D') NOT NULL,
-clutch ENUM('A','B','C','D') NOT NULL,
 foreign key (nombre) references ObjetoConNombre(nombre)
 );
 

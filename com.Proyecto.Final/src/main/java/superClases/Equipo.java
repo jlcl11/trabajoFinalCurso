@@ -96,7 +96,7 @@ public class Equipo extends ObjetoConNombre {
 	public String getDorsalesRetirados(String nombre) throws EquipoSinDorsalesRetiradosException {
 		String ret = "";
 
-		if (nombre.equals("HAWKS")) {
+		if (nombre.equals("Hawks")) {
 			Jugador bobCousy = new Jugador("Bob", "Cousy", (byte) 9);
 			Jugador tedTurner = new Jugador("Ted", "Turner", (byte) 17);
 			Jugador dominiqueWilkins = new Jugador("Dominique", "Wilkins", (byte) 21);
@@ -121,7 +121,7 @@ public class Equipo extends ObjetoConNombre {
 
 		}
 
-		if (nombre.equals("CELTICS")) {
+		if (nombre.equals("Celtics")) {
 
 			Jugador robertparish = new Jugador("Robert", "Parish", (byte) 00);
 			Jugador walterBrown = new Jugador("Walter", "brown", (byte) 1);
@@ -166,7 +166,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 
 		}
-		if (nombre.equals("NETS")) {
+		if (nombre.equals("Nets")) {
 
 			Jugador drazenPetrovich = new Jugador("Dražen ", "Petrović", (byte) 3);
 			Jugador wendellLadner = new Jugador("Wendell", "Ladner", (byte) 4);
@@ -193,7 +193,7 @@ public class Equipo extends ObjetoConNombre {
 
 		}
 
-		if (nombre.equals("HORNETS")) {
+		if (nombre.equals("Hornets")) {
 
 			Jugador bobbyPhills = new Jugador("Bobby Ray ", "Phills ||", (byte) 13, "Bobby Phills");
 			ret += "-----------------------------------------" + "\n";
@@ -204,7 +204,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("BULLS")) {
+		if (nombre.equals("Bulls")) {
 
 			Jugador michaelJordan = new Jugador("Michael", "Jordan", (byte) 23, "Air Jordan");
 			Jugador scottiePippen = new Jugador("Scottie", "Pippen", (byte) 33, "Pip");
@@ -227,7 +227,7 @@ public class Equipo extends ObjetoConNombre {
 
 		}
 
-		if (nombre.equals("CAVS")) {
+		if (nombre.equals("Cavaliers")) {
 
 			Jugador bingoSmith = new Jugador("Robert", "Smith", (byte) 7, "Bingo Smith");
 			Jugador zydrunasilgaukas = new Jugador("Žydrūnas ", "Ilgauskas", (byte) 11);
@@ -253,7 +253,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("MAVERICKS")) {
+		if (nombre.equals("Mavericks")) {
 
 			Jugador derekHarper = new Jugador("Derek ", "Harper", (byte) 12);
 			Jugador bradDavis = new Jugador("Bradley Ernest ", "Davis", (byte) 15, "Brad Davis");
@@ -275,7 +275,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals(("NUGGETS"))) {
+		if (nombre.equals(("Nuggets"))) {
 			Jugador alexEnglish = new Jugador("Alexander", "English", (byte) 2, "Alex English");
 			Jugador fatLever = new Jugador("Lafayette ", "Lever", (byte) 12, "Fat Lever");
 			Jugador davidThompson = new Jugador("David O'Neil", "Thompson", (byte) 33);
@@ -300,7 +300,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("PISTONS")) {
+		if (nombre.equals("Pistons")) {
 
 			Jugador chaunceyBillups = new Jugador("Chauncey", "Billups", (byte) 1, "Mr. Big Shot");
 			Jugador chuckDaily = new Jugador("Charles Jerome ", "Daily", (byte) 2, "Chuck Daly");
@@ -330,7 +330,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------";
 		}
 
-		if (nombre.equals("WARRIORS")) {
+		if (nombre.equals("Warriors")) {
 
 			Jugador wiltChamberlain = new Jugador("Wilton Norman", "Chamberlain", (byte) 13, "Wilt the Stilt");
 			Jugador thomMeschery = new Jugador("Thomas Nicholas  ", "Meschery", (byte) 14, "Thom Meschery");
@@ -355,7 +355,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("ROCKETS")) {
+		if (nombre.equals("Rockets")) {
 
 			Jugador yaoMing = new Jugador("Yao", "Ming", (byte) 11, "Yao's dinasty");
 			Jugador clydeDrexler = new Jugador("Clyde Austin", "Drexler ", (byte) 22, "The Glide");
@@ -380,7 +380,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("PACERS")) {
+		if (nombre.equals("Pacers")) {
 
 			Jugador georgemcGinnis = new Jugador("George", "McGinnis", (byte) 30);
 			Jugador reggieMiller = new Jugador("Reginald Wayne", "Miller ", (byte) 31, "Miller Time");
@@ -404,7 +404,7 @@ public class Equipo extends ObjetoConNombre {
 
 		}
 
-		if (nombre.equals("LAKERS")) {
+		if (nombre.equals("Lakers")) {
 
 			Jugador kobe8 = new Jugador("Kobe ", "Bryant", (byte) 8, "Black mamba");
 			Jugador wiltChamberlain = new Jugador("Wilton Norman", "Chamberlain", (byte) 13, "Wilt the Stilt");
@@ -440,7 +440,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("GRIZZLIES")) {
+		if (nombre.equals("Grizzlies")) {
 
 			Jugador zachRandolph = new Jugador("Zachary McKenley", "Randolph", (byte) 50, "Z-Bo");
 			ret += "-----------------------------------------" + "\n";
@@ -451,7 +451,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("HEAT")) {
+		if (nombre.equals("Heat")) {
 			Jugador chrisBosh = new Jugador("Christopher Wesson ", "Bosh", (byte) 1, "Boshasaurus");
 			Jugador dwayneWade = new Jugador("Dwyane Tyrone", "Wade ", (byte) 3, "Flash");
 			Jugador timHardaway = new Jugador("Timothy Duane", "Hardaway", (byte) 10, "Tim Bug");
@@ -475,7 +475,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("BUCKS")) {
+		if (nombre.equals("Bucks")) {
 
 			Jugador oscarRobertson = new Jugador("Oscar Palmer", "Robertson", (byte) 1, "Mr.Triple-Double");
 			Jugador juniorBridgeman = new Jugador("Ulysses Lee", "Bridgeman ", (byte) 2, "Junior Bridgeman");
@@ -501,7 +501,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("TIMBERWOLVES")) {
+		if (nombre.equals("Timberwolves")) {
 			Jugador malikSealy = new Jugador("Malik", "Sealy", (byte) 2, "Silk");
 			ret += "-----------------------------------------" + "\n";
 			ret += "--DORSALES RETIRADOS DE LOS TIMBERWOLVES-" + "\n";
@@ -511,7 +511,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("PELICANS")) {
+		if (nombre.equals("Pelicans")) {
 
 			Jugador peteMaravichPelicans = new Jugador("Pete", "Maravich", (byte) 7, "Pistol Pete");
 			ret += "-----------------------------------------" + "\n";
@@ -522,7 +522,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("KNICKS")) {
+		if (nombre.equals("Knicks")) {
 
 			Jugador waltFrazier = new Jugador("Walter", "Frazier", (byte) 10, "Clyde");
 			Jugador dickBarnet = new Jugador("Richard", "Barnett ", (byte) 12, "Dick Barnett");
@@ -549,7 +549,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("MAGIC")) {
+		if (nombre.equals("Magic")) {
 
 			Jugador aficion = new Jugador("Afición", "", (byte) 6);
 			ret += "-----------------------------------------" + "\n";
@@ -560,7 +560,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("76ERS")) {
+		if (nombre.equals("76ers")) {
 
 			Jugador mosesMalonePhilly = new Jugador("Moses Eugene", "Malone", (byte) 2, "Moses Malone");
 			Jugador allenIverson = new Jugador("Allen Ezail", "Iverson ", (byte) 3, "The Answer");
@@ -587,7 +587,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("SUNS")) {
+		if (nombre.equals("Suns")) {
 
 			Jugador dickVanArsdale = new Jugador("Richard Albert", "Van Arsdale", (byte) 5, "Dick Van Arsdale");
 			Jugador walterDavis = new Jugador("Walter Paul", "Davis ", (byte) 6, "Sweet D");
@@ -616,7 +616,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("BLAZERS")) {
+		if (nombre.equals("Trail Blazers")) {
 
 			Jugador larryWeinberg = new Jugador("Larry", "Weinberg", (byte) 1);
 			Jugador davidTwardzik = new Jugador("David", "Twardzik", (byte) 13);
@@ -645,7 +645,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "|                                       |" + "\n";
 			ret += "-----------------------------------------" + "\n";
 		}
-		if (nombre.equals("KINGS")) {
+		if (nombre.equals("Kings")) {
 
 			Jugador nateArchibal = new Jugador("Nathaniel", "Archibald", (byte) 1, "Nate Tiny Archibald");
 			Jugador mithcRichmond = new Jugador("Mitchell James", "Richmond", (byte) 2, "Hammer");
@@ -674,7 +674,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("SPURS")) {
+		if (nombre.equals("Spurs")) {
 
 			Jugador jhonnyMoore = new Jugador("John Brian", "Moore", (byte) 00, "Johnny Moore");
 			Jugador averyJhonson = new Jugador("Avery", "Johnson", (byte) 6, "Taz");
@@ -702,7 +702,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("THUNDER")) {
+		if (nombre.equals("Thunder")) {
 
 			Jugador gusWilliams = new Jugador("Gus", "Williams", (byte) 1, "The Wizard");
 			Jugador nickCollison = new Jugador("Nicholas John", "Collison", (byte) 4);
@@ -727,7 +727,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 
-		if (nombre.equals("JAZZ")) {
+		if (nombre.equals("Jazz")) {
 			Jugador frankLayden = new Jugador("Frank", "Layden", (byte) 1);
 			Jugador adrianDantley = new Jugador("Adrian Delano", "Dantley", (byte) 4, "The teacher");
 			Jugador peteMaravichPelicans = new Jugador("Pete", "Maravich", (byte) 7, "Pistol Pete");
@@ -753,7 +753,7 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 
 		}
-		if (nombre.equals("WIZARDS")) {
+		if (nombre.equals("Wizards")) {
 			Jugador earlMonroeWizards = new Jugador("Vernon Earl", "Monroe", (byte) 10, "The Pearl");
 			Jugador elvinHayes = new Jugador("Elvin Ernest", "Hayes", (byte) 11, "The Big E");
 			Jugador gusJohnson = new Jugador("Gus", "Johnson", (byte) 25, "Honeycomb");
@@ -780,6 +780,38 @@ public class Equipo extends ObjetoConNombre {
 		if (nombre.equals("CLIPPERS")) {
 			throw new EquipoSinDorsalesRetiradosException(
 					"Los Clippers siempre han sido un mal equipo pero retirarán los dorsales del equipo de la época de Lob City");
+		}
+
+		return ret;
+	}
+
+	public String getDatosFranquicia(int opcion, Equipo equipo) throws EquipoSinDorsalesRetiradosException {
+		String ret = "";
+
+		switch (opcion) {
+		case 1:
+
+			ret += "El estadio de los " + equipo.getNombre() + " es " + equipo.getEstadio();
+
+			break;
+		case 2:
+			ret += "El propietario de los " + equipo.getNombre() + " es " + equipo.getPropietario();
+
+			break;
+		case 3:
+			ret += "El general manager de los " + equipo.getNombre() + " es " + equipo.getGM();
+
+			break;
+		case 4:
+			ret += "El límite salarial de los " + equipo.getNombre() + " habiendo pagado el impuesto de lujo es de "
+					+ equipo.getLimiteSalarial()+" millones de dólares";
+			break;
+		case 5:
+
+			ret += equipo.getDorsalesRetirados(equipo.getNombre());
+
+			break;
+
 		}
 
 		return ret;

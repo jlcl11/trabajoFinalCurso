@@ -21,4 +21,9 @@ public class Estadio extends ObjetoConNombre {
 		this.capacidad = capacidad;
 	}
 
+	@Override
+	public String toString() {
+		return "El " + getNombre() + " tiene una capacidad de " + capacidad + " personas";
+	}
+
 }
