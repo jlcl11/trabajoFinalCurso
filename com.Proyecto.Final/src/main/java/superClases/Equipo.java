@@ -7,8 +7,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import clases.Conferencia;
-import exceptions.ClippersNoTieneDorsalesRetiradosException;
-import exceptions.RaptorsNoTieneDorsalesRetiradosExceptions;
+import clases.Estadio;
+
+import exceptions.EquipoSinDorsalesRetiradosException;
 import utlis.utilsDB;
 
 public class Equipo extends ObjetoConNombre {
@@ -18,9 +19,10 @@ public class Equipo extends ObjetoConNombre {
 	private String propietario;
 	private String GM;
 	private float limiteSalarial;
+	private Estadio estadio;
 
 	public Equipo(String nombre, Conferencia conferencia, String ciudadLocal, Jugador[] dorsalesRetirados,
-			String propietario, String gM, float limiteSalarial) {
+			String propietario, String gM, float limiteSalarial, Estadio estadio) {
 		super(nombre);
 		this.conferencia = conferencia;
 		CiudadLocal = ciudadLocal;
@@ -28,6 +30,15 @@ public class Equipo extends ObjetoConNombre {
 		this.propietario = propietario;
 		GM = gM;
 		this.limiteSalarial = limiteSalarial;
+		this.estadio = estadio;
+	}
+
+	public Estadio getEstadio() {
+		return estadio;
+	}
+
+	public void setEstadio(Estadio estadio) {
+		this.estadio = estadio;
 	}
 
 	public Equipo(String nombre) {
@@ -82,8 +93,7 @@ public class Equipo extends ObjetoConNombre {
 		this.limiteSalarial = limiteSalarial;
 	}
 
-	public String getDorsalesRetirados(String nombre)
-			throws RaptorsNoTieneDorsalesRetiradosExceptions, ClippersNoTieneDorsalesRetiradosException {
+	public String getDorsalesRetirados(String nombre) throws EquipoSinDorsalesRetiradosException {
 		String ret = "";
 
 		if (nombre.equals("HAWKS")) {
@@ -764,11 +774,11 @@ public class Equipo extends ObjetoConNombre {
 			ret += "-----------------------------------------" + "\n";
 		}
 		if (nombre.equals("RAPTORS")) {
-			throw new RaptorsNoTieneDorsalesRetiradosExceptions(
+			throw new EquipoSinDorsalesRetiradosException(
 					"Los Raptors son un equipo relativamente reciente y no tiene dorsales retirados todavía,pero hay unos pocos jugadores que puede que su caso esté en trámite");
 		}
 		if (nombre.equals("CLIPPERS")) {
-			throw new ClippersNoTieneDorsalesRetiradosException(
+			throw new EquipoSinDorsalesRetiradosException(
 					"Los Clippers siempre han sido un mal equipo pero retirarán los dorsales del equipo de la época de Lob City");
 		}
 
