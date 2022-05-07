@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 import clases.Conferencia;
 import clases.Estadio;
+import clases.JugadorNormal;
 import exceptions.EquipoSinDorsalesRetiradosException;
 import exceptions.EquipoSinDorsalesRetiradosException;
 import superClases.Equipo;
 import superClases.Jugador;
+import utlis.funcionesUtiles;
 
 public class Main {
 
@@ -116,452 +118,760 @@ public class Main {
 		case 1:
 
 			do {
+
 				System.out.println("Enhorabuena has escogido los " + hawks.getCiudadLocal() + " " + hawks.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
+
 				try {
 					System.out.println(hawks.getDatosFranquicia(opcion, hawks));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 2:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + celtics.getCiudadLocal() + " "
 						+ celtics.getNombre() + " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(celtics.getDatosFranquicia(opcion, celtics));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 3:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + nets.getCiudadLocal() + " " + nets.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(nets.getDatosFranquicia(opcion, nets));
+					if (opcion == 6) {
+						do {
+							System.out.println("De qué equipo quieres ver la plantilla"
+									+ "\"1 Atlanta Hawks \\n2 Boston Celtics\\n3 Brooklyn Nets\\n4 Charlotte Hornets\\n\"\r\n"
+									+ "				+ \"5 Chicago Bulls\\n6 Cleveland Cavaliers\\n7 Detroit Pistons\\n8 Indiana Pacers\\n9 Miami Heat\\n10 Milwaukee Bucks\"\r\n"
+									+ "				+ \"\\n11 New York Knicks\\n12 Orlando Magic\\n13 Philladelphia 76ers\\n14 Toronto Raptors\\n15 Washinton Wizards\"\r\n"
+									+ "				+ \"\\n16 Dallas Mavericks\\n17 Denver Nuggets\\n18 Golden State Warriors\\n19 Houston Rockets\\n20 Los Angeles Clippers\"\r\n"
+									+ "				+ \"\\n21 Los Angeles Lakers\\n22 Minnesota Timberwolves\\n23 New Orleans Pelicans\\n24 Memphis Grizzlies\\n25 Oklahoma City Thunder\"\r\n"
+									+ "				+ \"\\n26 Phoenix Suns\\n27 Portland Trail Blazers\\n28 Sacramento Kings\\n29 San Antonio Spurs\\n30 Utah Jazz\");");
+							String equipoPlantilla = sc.nextLine();
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 4:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + hornets.getCiudadLocal() + " "
 						+ hornets.getNombre() + " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(hornets.getDatosFranquicia(opcion, hornets));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 5:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + bulls.getCiudadLocal() + " " + bulls.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(bulls.getDatosFranquicia(opcion, bulls));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 6:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + cavs.getCiudadLocal() + " " + cavs.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(cavs.getDatosFranquicia(opcion, cavs));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 7:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + pistons.getCiudadLocal() + " "
 						+ pistons.getNombre() + " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(pistons.getDatosFranquicia(opcion, pistons));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 8:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + pacers.getCiudadLocal() + " " + pacers.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(pacers.getDatosFranquicia(opcion, pacers));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 9:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + heat.getCiudadLocal() + " " + heat.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(heat.getDatosFranquicia(opcion, heat));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 10:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + bucks.getCiudadLocal() + " " + bucks.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(bucks.getDatosFranquicia(opcion, bucks));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 11:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + knicks.getCiudadLocal() + " " + knicks.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(knicks.getDatosFranquicia(opcion, knicks));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 12:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + magic.getCiudadLocal() + " " + magic.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(magic.getDatosFranquicia(opcion, magic));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 13:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + sixers.getCiudadLocal() + " " + sixers.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(sixers.getDatosFranquicia(opcion, sixers));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 14:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + raptors.getCiudadLocal() + " "
 						+ raptors.getNombre() + " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(raptors.getDatosFranquicia(opcion, raptors));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 15:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + wizards.getCiudadLocal() + " "
 						+ wizards.getNombre() + " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(wizards.getDatosFranquicia(opcion, wizards));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 16:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + mavs.getCiudadLocal() + " " + mavs.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(mavs.getDatosFranquicia(opcion, mavs));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 17:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + nuggets.getCiudadLocal() + " "
 						+ nuggets.getNombre() + " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(nuggets.getDatosFranquicia(opcion, nuggets));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 18:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + warriors.getCiudadLocal() + " "
 						+ warriors.getNombre() + " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(warriors.getDatosFranquicia(opcion, warriors));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 19:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + rockets.getCiudadLocal() + " "
 						+ rockets.getNombre() + " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(rockets.getDatosFranquicia(opcion, rockets));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 20:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + clippers.getCiudadLocal() + " "
 						+ clippers.getNombre() + " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(clippers.getDatosFranquicia(opcion, clippers));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 21:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + lakers.getCiudadLocal() + " " + lakers.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(lakers.getDatosFranquicia(opcion, lakers));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 22:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + wolves.getCiudadLocal() + " " + wolves.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(wolves.getDatosFranquicia(opcion, wolves));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 23:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + pelicans.getCiudadLocal() + " "
 						+ pelicans.getNombre() + " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(pelicans.getDatosFranquicia(opcion, pelicans));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 24:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + grizzlies.getCiudadLocal() + " "
 						+ grizzlies.getNombre() + " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(grizzlies.getDatosFranquicia(opcion, grizzlies));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 25:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + okc.getCiudadLocal() + " " + okc.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(okc.getDatosFranquicia(opcion, okc));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 26:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + suns.getCiudadLocal() + " " + suns.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(suns.getDatosFranquicia(opcion, suns));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 27:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + blazers.getCiudadLocal() + " "
 						+ blazers.getNombre() + " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(blazers.getDatosFranquicia(opcion, blazers));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 28:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + kings.getCiudadLocal() + " " + kings.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(kings.getDatosFranquicia(opcion, kings));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 29:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + spurs.getCiudadLocal() + " " + spurs.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(spurs.getDatosFranquicia(opcion, spurs));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 		case 30:
 
 			do {
 				System.out.println("Enhorabuena has escogido los " + jazz.getCiudadLocal() + " " + jazz.getNombre()
 						+ " que quieres hacer?"
-						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 salir");
+						+ "\n1 Ver datos del estadio\n2 Ver propietario del equipo\n3 Ver el gm del equipo\n4 Ver el límite salarial del equipo\n5 Ver los dorsales retirados\n6 Ver los premios de temporada\n7 salir");
 				opcion = Integer.parseInt(sc.nextLine());
 				try {
 					System.out.println(jazz.getDatosFranquicia(opcion, jazz));
+					if (opcion == 6) {
+						do {
+							System.out.println(
+									"¿Qué quieres hacer?\n1 Ver MVP\n2 Ver DPOY\n3 Ver máximo anotador\n4 Salir\n");
+							opcion = Integer.parseInt(sc.nextLine());
+							// System.out.println(hawks.getPremiosDeTemporada(opcionEquipo, hawks));
+						} while (opcion <= 3);
+						System.out.println("Vuelta al equipo");
+
+					}
 				} catch (EquipoSinDorsalesRetiradosException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
+					System.err.println(e.getMessage());
 				}
-			} while (opcion <= 5);
+			} while (opcion <= 6);
 			break;
 
 		}
