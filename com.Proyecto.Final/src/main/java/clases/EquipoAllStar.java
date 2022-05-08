@@ -9,7 +9,7 @@ public class EquipoAllStar extends Equipo {
 
 	private ArrayList<JugadorAllStar> plantilla;
 
-	public EquipoAllStar(String nombre, Conferencia conferencia, String ciudadLocal, Jugador[] dorsalesRetirados,
+	public EquipoAllStar(String nombre, Conferencia conferencia, String ciudadLocal, String dorsalesRetirados,
 			String propietario, String gM, float limiteSalarial, Estadio estadio, ArrayList<JugadorAllStar> plantilla) {
 		super(nombre, conferencia, ciudadLocal, dorsalesRetirados, propietario, gM, limiteSalarial, estadio);
 		this.plantilla = plantilla;
