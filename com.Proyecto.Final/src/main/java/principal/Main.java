@@ -8,6 +8,7 @@ import clases.EquipoNormal;
 import clases.Estadio;
 import clases.JugadorNormal;
 import exceptions.EquipoSinDorsalesRetiradosException;
+import pantalla.Ventana;
 import exceptions.EquipoSinDorsalesRetiradosException;
 import superClases.Equipo;
 import superClases.Jugador;
@@ -16,6 +17,8 @@ import utlis.funcionesUtiles;
 public class Main {
 
 	public static void main(String[] args) {
+		
+		Ventana ventana=new Ventana();
 
 		Scanner sc = new Scanner(System.in);
 		int opcionEquipo = 0;
@@ -140,12 +143,14 @@ public class Main {
 						opcionMenusesPremiosTemporada = Integer.parseInt(sc.nextLine());
 						switch (opcionMenusesPremiosTemporada) {
 						case 1:
-							//System.out.println(funcionesUtiles.devolverMVP());
-							System.out.println("Hola");
+
+							System.out.println(funcionesUtiles.devolverMVP());
+
 							break;
 						case 2:
-							//System.out.println(funcionesUtiles.devolverDPOY());
-							System.out.println("Buenas");
+
+							System.out.println(funcionesUtiles.devolverDPOY());
+
 							break;
 						case 3:
 							System.out.println(funcionesUtiles.devolverPremioAnotador());
