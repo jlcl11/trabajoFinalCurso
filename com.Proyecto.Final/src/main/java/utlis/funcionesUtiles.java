@@ -1,8 +1,11 @@
 package utlis;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Random;
 import java.util.Scanner;
+
 
 import clases.Conferencia;
 import clases.EquipoNormal;
@@ -16,6 +19,38 @@ import superClases.Equipo;
 import superClases.Jugador;
 
 public class funcionesUtiles {
+
+	public static ArrayList<JugadorNormal> getJugadoresAllStar() {
+		ArrayList<JugadorNormal> jugadores = funcionesUtiles.getTodosLosJugadoresNBA();
+
+		Collections.sort(jugadores, new Comparator<JugadorNormal>() {
+
+			public int compare(JugadorNormal o1, JugadorNormal o2) {
+
+				if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) > (o2.getPPG() + o2.getAPG()
+						+ o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return 1;
+				} else if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) < (o2.getPPG()
+						+ o2.getAPG() + o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return -1;
+				} else {
+					return 0;
+				}
+
+			}
+
+		});
+
+		ArrayList<JugadorNormal> allStars=new ArrayList<JugadorNormal>();
+		
+		for (short i = 0; i < jugadores.size(); i++) {
+			if (i >= 130) {
+				allStars.add(jugadores.get(i));
+			}
+		}
+
+		return allStars;
+	}
 
 	public static EquipoNormal escogerEquipo(int opcion) throws EquipoSinDorsalesRetiradosException {
 
@@ -267,46 +302,6 @@ public class funcionesUtiles {
 		else {
 			return null;
 		}
-
-	}
-
-	public static ArrayList<JugadorAllStar> conseguirJugadoresAllStar() {
-
-		ArrayList<JugadorAllStar> jugadoresAllStar = new ArrayList<JugadorAllStar>();
-
-		ArrayList<JugadorNormal> jugadoresNormalesNBA = getTodosLosJugadoresNBA();
-
-		JugadorNormal max_jugador = jugadoresNormalesNBA.get(0);
-		float max = max_jugador.getAPG() + max_jugador.getPPG() + max_jugador.getRBG() + max_jugador.getSPG()
-				+ max_jugador.getBPG();
-		float statsJugador = 0;
-
-		for (short i = 1; i < jugadoresNormalesNBA.size(); i++) {
-
-			statsJugador = jugadoresNormalesNBA.get(i).getAPG() + jugadoresNormalesNBA.get(i).getPPG()
-					+ jugadoresNormalesNBA.get(i).getRBG() + jugadoresNormalesNBA.get(i).getSPG()
-					+ jugadoresNormalesNBA.get(i).getBPG();
-
-			if (statsJugador > max) {
-				JugadorAllStar j = new JugadorAllStar(jugadoresNormalesNBA.get(i).getNombre(),
-						jugadoresNormalesNBA.get(i).getApellido(), jugadoresNormalesNBA.get(i).getDorsal(),
-						jugadoresNormalesNBA.get(i).getApodo(), jugadoresNormalesNBA.get(i).getPosicion(),
-						jugadoresNormalesNBA.get(i).getSalario(), jugadoresNormalesNBA.get(i).getNominacionesAllStar(),
-						jugadoresNormalesNBA.get(i).getAnillosDeCampeon(), jugadoresNormalesNBA.get(i).getMVPs(),
-						jugadoresNormalesNBA.get(i).getDefensorDelAño(), jugadoresNormalesNBA.get(i).isRookieDelAño(),
-						jugadoresNormalesNBA.get(i).isMIP(), jugadoresNormalesNBA.get(i).getMVPAllStar(),
-						jugadoresNormalesNBA.get(i).getFMVP(), jugadoresNormalesNBA.get(i).getPremioAnotador(),
-						jugadoresNormalesNBA.get(i).getPPG(), jugadoresNormalesNBA.get(i).getAPG(),
-						jugadoresNormalesNBA.get(i).getRBG(), jugadoresNormalesNBA.get(i).getSPG(),
-						jugadoresNormalesNBA.get(i).getBPG(), jugadoresNormalesNBA.get(i).getMPG(),
-						jugadoresNormalesNBA.get(i).getfinalizacion(), jugadoresNormalesNBA.get(i).gettiro(),
-						jugadoresNormalesNBA.get(i).getorganizacion(), jugadoresNormalesNBA.get(i).getdefensas());
-				
-				jugadoresAllStar.add(j);
-			}
-		}
-
-		return jugadoresAllStar;
 
 	}
 

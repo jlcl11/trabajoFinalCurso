@@ -17,8 +17,8 @@ import utlis.funcionesUtiles;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		Ventana ventana=new Ventana();
+
+		// Ventana ventana=new Ventana();
 
 		Scanner sc = new Scanner(System.in);
 		int opcionEquipo = 0;
@@ -47,7 +47,7 @@ public class Main {
 
 			do {
 				System.out.println("¿Qué quieres hacer?"
-						+ "\n1 Ver datos de franquicia\n2 ver premios de temporada\n3 Simular los playoffs\n4 salir");
+						+ "\n1 Ver datos de franquicia\n2 ver premios de temporada\n3 Simular los playoffs\n4 Ver el AllStar\n5 Salir");
 				opcionMenuses = Integer.parseInt(sc.nextLine());
 
 				switch (opcionMenuses) {
@@ -170,9 +170,20 @@ public class Main {
 					System.out.println("Playoffs");
 					System.out.println("-------------------------");
 					break;
+
+				case 4:
+
+					System.out.println("-------------------------");
+					System.out.println("All Star");
+					System.out.println("-------------------------");
+					System.out.println("Los jugadores all star son :");
+					System.out.println(funcionesUtiles.getJugadoresAllStar());
+
+					break;
+
 				}
 
-			} while (opcionMenuses >= 1 && opcionMenuses <= 3);
+			} while (opcionMenuses >= 1 && opcionMenuses <= 4);
 
 		} while (opcionEquipo >= 1 && opcionEquipo <= 30);
 
