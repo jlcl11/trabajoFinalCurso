@@ -19,6 +19,8 @@ public class Main {
 	public static void main(String[] args) {
 
 		// Ventana ventana=new Ventana();
+		
+
 
 		Scanner sc = new Scanner(System.in);
 		int opcionEquipo = 0;
@@ -177,7 +179,7 @@ public class Main {
 					System.out.println("All Star");
 					System.out.println("-------------------------");
 					System.out.println("Los jugadores all star son :");
-					System.out.println(funcionesUtiles.getJugadoresAllStar());
+					System.out.println(funcionesUtiles.partidoAllStar().getTitulares()+"\n");
 
 					break;
 

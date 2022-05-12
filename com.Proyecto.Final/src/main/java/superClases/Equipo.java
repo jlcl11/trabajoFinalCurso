@@ -46,6 +46,10 @@ public class Equipo extends ObjetoConNombre {
 		super(nombre);
 	}
 
+	public Equipo() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Conferencia getConferencia() {
 		return conferencia;
 	}

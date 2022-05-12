@@ -8,14 +8,14 @@ import superClases.Partido;
 public class PartidoAllStar extends Partido {
 	private EquipoAllStar equipo1;
 	private EquipoAllStar equipo2;
-	private ArrayList<JugadorAllStar> titulares;
+	private ArrayList<JugadorNormal> titulares;
 
 	public PartidoAllStar(short marcadorLocal, short marcadorVisitante, LocalDateTime fecha, EquipoAllStar equipo1,
-			EquipoAllStar equipo2, ArrayList<JugadorAllStar> titulares) {
+			EquipoAllStar equipo2, ArrayList<JugadorNormal> arrayList) {
 		super(marcadorLocal, marcadorVisitante, fecha);
 		this.equipo1 = equipo1;
 		this.equipo2 = equipo2;
-		this.titulares = titulares;
+		this.titulares = arrayList;
 	}
 
 	public EquipoAllStar getEquipo1() {
@@ -34,12 +34,19 @@ public class PartidoAllStar extends Partido {
 		this.equipo2 = equipo2;
 	}
 
-	public ArrayList<JugadorAllStar> getTitulares() {
+	public ArrayList<JugadorNormal> getTitulares() {
 		return titulares;
 	}
 
-	public void setTitulares(ArrayList<JugadorAllStar> titulares) {
+	public void setTitulares(ArrayList<JugadorNormal> titulares) {
 		this.titulares = titulares;
 	}
 
+	@Override
+	public String toString() {
+		return "PartidoAllStar [equipo1=" + equipo1 + ", equipo2=" + equipo2 + ", titulares=" + titulares + "]";
+	}
+
+	
+	
 }

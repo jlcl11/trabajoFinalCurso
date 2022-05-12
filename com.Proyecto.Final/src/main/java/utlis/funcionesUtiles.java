@@ -1,17 +1,19 @@
 package utlis;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Random;
 import java.util.Scanner;
 
-
 import clases.Conferencia;
+import clases.EquipoAllStar;
 import clases.EquipoNormal;
 import clases.Estadio;
 import clases.JugadorAllStar;
 import clases.JugadorNormal;
+import clases.PartidoAllStar;
 import enums.Posicion;
 import enums.Valores;
 import exceptions.EquipoSinDorsalesRetiradosException;
@@ -41,8 +43,8 @@ public class funcionesUtiles {
 
 		});
 
-		ArrayList<JugadorNormal> allStars=new ArrayList<JugadorNormal>();
-		
+		ArrayList<JugadorNormal> allStars = new ArrayList<JugadorNormal>();
+
 		for (short i = 0; i < jugadores.size(); i++) {
 			if (i >= 130) {
 				allStars.add(jugadores.get(i));
@@ -50,6 +52,120 @@ public class funcionesUtiles {
 		}
 
 		return allStars;
+	}
+
+	public static ArrayList<JugadorNormal> getTitularesAllStar() {
+		ArrayList<JugadorNormal> jugadores = funcionesUtiles.getTodosLosJugadoresNBA();
+
+		Collections.sort(jugadores, new Comparator<JugadorNormal>() {
+
+			public int compare(JugadorNormal o1, JugadorNormal o2) {
+
+				if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) > (o2.getPPG() + o2.getAPG()
+						+ o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return 1;
+				} else if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) < (o2.getPPG()
+						+ o2.getAPG() + o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return -1;
+				} else {
+					return 0;
+				}
+
+			}
+
+		});
+
+		ArrayList<JugadorNormal> allStars = new ArrayList<JugadorNormal>();
+
+		for (short i = 0; i < jugadores.size(); i++) {
+			if (i >= 140) {
+				allStars.add(jugadores.get(i));
+			}
+		}
+
+		return allStars;
+	}
+
+	public static ArrayList<JugadorNormal> getJugadoresEquipo1() {
+		ArrayList<JugadorNormal> jugadores = funcionesUtiles.getTodosLosJugadoresNBA();
+
+		Collections.sort(jugadores, new Comparator<JugadorNormal>() {
+
+			public int compare(JugadorNormal o1, JugadorNormal o2) {
+
+				if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) > (o2.getPPG() + o2.getAPG()
+						+ o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return 1;
+				} else if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) < (o2.getPPG()
+						+ o2.getAPG() + o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return -1;
+				} else {
+					return 0;
+				}
+
+			}
+
+		});
+
+		ArrayList<JugadorNormal> allStarsEquipo1 = new ArrayList<JugadorNormal>();
+
+		for (short i = 0; i < jugadores.size(); i++) {
+			if (i >= 130 && i <= 134) {
+				allStarsEquipo1.add(jugadores.get(i));
+			}
+			if (i >= 140 && i <= 145) {
+				allStarsEquipo1.add(jugadores.get(i));
+			}
+		}
+
+		return allStarsEquipo1;
+	}
+
+	public static ArrayList<JugadorNormal> getJugadoresEquipo2() {
+		ArrayList<JugadorNormal> jugadores = funcionesUtiles.getTodosLosJugadoresNBA();
+
+		Collections.sort(jugadores, new Comparator<JugadorNormal>() {
+
+			public int compare(JugadorNormal o1, JugadorNormal o2) {
+
+				if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) > (o2.getPPG() + o2.getAPG()
+						+ o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return 1;
+				} else if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) < (o2.getPPG()
+						+ o2.getAPG() + o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return -1;
+				} else {
+					return 0;
+				}
+
+			}
+
+		});
+
+		ArrayList<JugadorNormal> allStarsEquipo2 = new ArrayList<JugadorNormal>();
+
+		for (short i = 0; i < jugadores.size(); i++) {
+			if (i >= 135 && i <= 139) {
+				allStarsEquipo2.add(jugadores.get(i));
+			}
+			if (i >= 146 && i <= 150) {
+				allStarsEquipo2.add(jugadores.get(i));
+			}
+		}
+
+		return allStarsEquipo2;
+	}
+
+	public static PartidoAllStar partidoAllStar() {
+
+		Random r = new Random();
+
+		EquipoAllStar equipo1 = new EquipoAllStar(null);
+		EquipoAllStar equipo2 = new EquipoAllStar(null);
+
+		PartidoAllStar partido = new PartidoAllStar((short) (r.nextInt(164) + 1), (short) (r.nextInt(164) + 1),
+				LocalDateTime.of(2022, 2, 20, 02, 30), equipo1, equipo2, funcionesUtiles.getTitularesAllStar());
+		return partido;
 	}
 
 	public static EquipoNormal escogerEquipo(int opcion) throws EquipoSinDorsalesRetiradosException {
