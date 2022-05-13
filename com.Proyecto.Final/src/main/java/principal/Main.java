@@ -19,14 +19,13 @@ public class Main {
 	public static void main(String[] args) {
 
 		// Ventana ventana=new Ventana();
-		
-
 
 		Scanner sc = new Scanner(System.in);
 		int opcionEquipo = 0;
 		int opcionMenuses = 0;
 		int opcionMenusesDatosFranquicia = 0;
 		int opcionMenusesPremiosTemporada = 0;
+		int opcionMenusesPremiosAllStar = 0;
 
 		do {
 			System.out.println("Bienvenido al mejor juego indie de NBA,con que équipo NBA quieres jugar?");
@@ -178,8 +177,66 @@ public class Main {
 					System.out.println("-------------------------");
 					System.out.println("All Star");
 					System.out.println("-------------------------");
-					System.out.println("Los jugadores all star son :");
-					System.out.println(funcionesUtiles.partidoAllStar().getTitulares()+"\n");
+					do {
+						System.out.println(
+								"¿Qué quieres hacer?\n1 Ver los titulares del AllStar\n2 Ver el equipo del este\n3 Ver el equipo del oeste\n4 Ver el marcador del all star\n5 Ver el MVP del All Star"
+										+ "\n6 Ver el ganador del concurso de triples\n7 Ver el ganador del concurso de mates\n8 Ver el ganador del concurso de habilidades\n9 Salir");
+						opcionMenusesPremiosAllStar = Integer.parseInt(sc.nextLine());
+						switch (opcionMenusesPremiosAllStar) {
+						case 1:
+
+							System.out.println(funcionesUtiles.partidoAllStar().getTitulares());
+
+							break;
+						case 2:
+
+							System.out.println(funcionesUtiles.partidoAllStar().getEquipo1().getPlantilla());
+
+							break;
+						case 3:
+							System.out.println(funcionesUtiles.partidoAllStar().getEquipo2().getPlantilla());
+							break;
+						case 4:
+							if (funcionesUtiles.partidoAllStar().getMarcadorLocal() > funcionesUtiles.partidoAllStar()
+									.getMarcadorVisitante()) {
+
+								System.out.println("Ha ganado el equipo local,el resultado ah sido:");
+								System.out.println("Equipo 1 : " + funcionesUtiles.partidoAllStar().getMarcadorLocal()
+										+ " " + funcionesUtiles.partidoAllStar().getMarcadorVisitante()
+										+ " : Equipo 2");
+
+							} else {
+								System.out.println("Ha ganado el equipo visitante,el resultado ah sido:");
+								System.out.println("Equipo 1 : " + funcionesUtiles.partidoAllStar().getMarcadorLocal()
+										+ " " + funcionesUtiles.partidoAllStar().getMarcadorVisitante()
+										+ " : Equipo 2");
+
+							}
+
+							break;
+
+						case 5:
+							System.out.println("El MVP del All Star ha sido " + funcionesUtiles.getAllStarMVP());
+							break;
+						case 6:
+							System.out.println("El ganador del concurso de triples es "
+									+ funcionesUtiles.getGanadorConcursoTriples());
+							break;
+						case 7:
+							System.out.println(
+									"El ganador del concurso de mates es " + funcionesUtiles.getGanadorConcursoMates());
+							break;
+						case 8:
+							System.out.println("El ganador del concurso de habilidades es "
+									+ funcionesUtiles.getGanadorConcursoHabilidades());
+							break;
+						case 9:
+
+							break;
+
+						}
+
+					} while (opcionMenusesPremiosAllStar >= 1 && opcionMenusesPremiosAllStar <= 8);
 
 					break;
 

@@ -156,12 +156,144 @@ public class funcionesUtiles {
 		return allStarsEquipo2;
 	}
 
+	public static String getAllStarMVP() {
+		ArrayList<JugadorNormal> jugadores = funcionesUtiles.getTodosLosJugadoresNBA();
+
+		Collections.sort(jugadores, new Comparator<JugadorNormal>() {
+
+			public int compare(JugadorNormal o1, JugadorNormal o2) {
+
+				if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) > (o2.getPPG() + o2.getAPG()
+						+ o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return 1;
+				} else if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) < (o2.getPPG()
+						+ o2.getAPG() + o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return -1;
+				} else {
+					return 0;
+				}
+
+			}
+
+		});
+
+		String ret = "";
+
+		for (short i = 0; i < jugadores.size(); i++) {
+			if (i == 149) {
+				ret += jugadores.get(i);
+			}
+
+		}
+
+		return ret;
+	}
+
+	public static String getGanadorConcursoTriples() {
+		ArrayList<JugadorNormal> jugadores = funcionesUtiles.getTodosLosJugadoresNBA();
+
+		Collections.sort(jugadores, new Comparator<JugadorNormal>() {
+
+			public int compare(JugadorNormal o1, JugadorNormal o2) {
+
+				if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) > (o2.getPPG() + o2.getAPG()
+						+ o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return 1;
+				} else if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) < (o2.getPPG()
+						+ o2.getAPG() + o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return -1;
+				} else {
+					return 0;
+				}
+
+			}
+
+		});
+
+		String ret = "";
+
+		for (short i = 0; i < jugadores.size(); i++) {
+			if (i == 149 && jugadores.get(i).gettiro().equals("A")) {
+				ret += jugadores.get(i);
+			}
+
+		}
+
+		return ret;
+	}
+
+	public static String getGanadorConcursoMates() {
+		ArrayList<JugadorNormal> jugadores = funcionesUtiles.getTodosLosJugadoresNBA();
+
+		Collections.sort(jugadores, new Comparator<JugadorNormal>() {
+
+			public int compare(JugadorNormal o1, JugadorNormal o2) {
+
+				if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) > (o2.getPPG() + o2.getAPG()
+						+ o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return 1;
+				} else if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) < (o2.getPPG()
+						+ o2.getAPG() + o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return -1;
+				} else {
+					return 0;
+				}
+
+			}
+
+		});
+
+		String ret = "";
+
+		for (short i = 0; i < jugadores.size(); i++) {
+			if (i == 149 && jugadores.get(i).getfinalizacion().equals("A")){
+				ret += jugadores.get(i);
+			}
+
+		}
+
+		return ret;
+	}
+
+	public static String getGanadorConcursoHabilidades() {
+		ArrayList<JugadorNormal> jugadores = funcionesUtiles.getTodosLosJugadoresNBA();
+
+		Collections.sort(jugadores, new Comparator<JugadorNormal>() {
+
+			public int compare(JugadorNormal o1, JugadorNormal o2) {
+
+				if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) > (o2.getPPG() + o2.getAPG()
+						+ o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return 1;
+				} else if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) < (o2.getPPG()
+						+ o2.getAPG() + o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return -1;
+				} else {
+					return 0;
+				}
+
+			}
+
+		});
+
+		String ret = "";
+
+		for (short i = 0; i < jugadores.size(); i++) {
+			if ( jugadores.get(i).getorganizacion().equals("A")) {
+				ret += jugadores.get(i);
+			}
+
+		}
+
+		return ret;
+	}
+
 	public static PartidoAllStar partidoAllStar() {
 
 		Random r = new Random();
 
-		EquipoAllStar equipo1 = new EquipoAllStar(null);
-		EquipoAllStar equipo2 = new EquipoAllStar(null);
+		EquipoAllStar equipo1 = new EquipoAllStar(getJugadoresEquipo1());
+		EquipoAllStar equipo2 = new EquipoAllStar(getJugadoresEquipo2());
 
 		PartidoAllStar partido = new PartidoAllStar((short) (r.nextInt(164) + 1), (short) (r.nextInt(164) + 1),
 				LocalDateTime.of(2022, 2, 20, 02, 30), equipo1, equipo2, funcionesUtiles.getTitularesAllStar());
