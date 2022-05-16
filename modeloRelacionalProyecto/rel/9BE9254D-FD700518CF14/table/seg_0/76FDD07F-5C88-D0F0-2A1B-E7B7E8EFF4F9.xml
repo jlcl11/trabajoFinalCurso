@@ -1,0 +1,299 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="76FDD07F-5C88-D0F0-2A1B-E7B7E8EFF4F9" name="Equipo">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>4B4D7EB7-81D1-3606-3B30-BF5D3A6C0B07</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="eq_id" id="F6965D86-FD9E-1B6C-8EE0-D02F4A911376">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>F6C5A9B7-4F09-9C63-7F1E-AE88B872FEB9</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="conferencia" id="4DECCDE0-61A6-4A53-6FD2-7B6586DDE951">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>B181B613-31A6-D7D3-B729-E87970744D9D</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ciudadLocal" id="765BEFBD-378F-79D9-7C6E-BE7504E488D5">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>104246A6-38EF-9436-D5E4-0E27E90B343C</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dorsalesRetirados" id="7BC7BDEF-446F-AB26-C32B-C8D2A40EC20C">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>FCB88C02-12A2-35CA-9FEB-259E3846CFED</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gM" id="FE599F59-60F7-7938-7CAF-A269BB557028">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>79C30750-F71E-C540-4BD3-ECAF206579FE</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="limiteSalarial" id="419B12AF-BEFE-B6A5-1E0A-E04ABEE15C51">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>3CB39692-96A7-0D23-C397-8DB6D5D80B7D</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estadio" id="60F8DF35-2299-B42E-1BC4-4F444D4257ED">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>38E110B7-8A2F-02BD-2893-B2FA13E4F270</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="propietario" id="30883025-1686-4B4B-3C6B-93B7434F5ED2">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>DDBCAADE-129C-DAF9-3AF5-6161BF6C3993</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="partidoAllStar_partA_id" id="D89ED3EC-544C-6E0E-AEAD-A8DB91C3D803">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>48E6E919-5B63-D126-092F-F394533B70E2</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="047A3653-A7CC-8AF4-99C4-E9211A26BEC2" referredColumn="F7FA7F7F-91B2-C7F2-291D-3C013E001490"/>
+</associations>
+</Column>
+<Column name="partidoNormal_partidoNl_id" id="9561861C-EE11-5849-6835-2B6BB9450D06">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>53873188-0979-4BA7-1497-9B5380FB80DB</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4516E6BB-7CA6-D050-387B-441279C8AFF6" referredColumn="718C2146-474A-5D67-544A-8DB4159DD720"/>
+</associations>
+</Column>
+<Column name="jugadores" id="72298DB1-EEBC-568B-88AC-5B301BB2BC41">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>21644B48-A376-4061-6CC9-4603AB43EBAD</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="partidoNormal_partidos" id="C3F2FB50-9787-09B9-6902-534BB64DF2B8">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>1A4F8319-2E11-68AD-CD66-DFD422532693</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4516E6BB-7CA6-D050-387B-441279C8AFF6" referredColumn="CA10E386-F400-CD94-A2F7-9CC3DD4120DD"/>
+</associations>
+</Column>
+<Column name="partidoNormal_conferencias" id="C47D517E-1441-F903-2789-6B135C070425">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>4D77A5E1-7B60-F2B0-713C-71B466012D7E</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4516E6BB-7CA6-D050-387B-441279C8AFF6" referredColumn="6774F96B-2C3D-FD41-85D4-9405780A12FD"/>
+</associations>
+</Column>
+<Column name="playoffs_playoff_id" id="D2957C9A-DCAA-9350-CCB2-020C79F02F18">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>17AF2818-C663-1AAA-EAA5-899FF00007CE</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BB1C940C-912D-15AC-6A7E-95147E37363B" referredColumn="D131D12B-22AE-3BE4-776C-D921C22DFF59"/>
+</associations>
+</Column>
+<Column name="partidoNormal_playoff_id" id="C5AD3883-FAB1-A799-FCB8-7BAC2B3FB70A">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>7E2DC6DA-4FDC-B427-4D1B-CBFE4AE73948</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4516E6BB-7CA6-D050-387B-441279C8AFF6" referredColumn="9CF959CF-8219-3F75-4AA8-C076BA08121B"/>
+</associations>
+</Column>
+<Column name="partidoNormal_ronda_id" id="147F9738-305E-8316-9321-6D59E3D65A3E">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>45F49418-1EA4-F378-9DD2-4EDF08E597FA</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4516E6BB-7CA6-D050-387B-441279C8AFF6" referredColumn="39E4B7B8-32A7-D4CC-DE41-11AD00513821"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2E9D142B-702D-0884-D707-E03E2DD1BBBD" name="Equipo_PK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>43F4FC8D-618E-BAB3-CEBE-9A4426CB3DFA</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6965D86-FD9E-1B6C-8EE0-D02F4A911376"/>
+<colUsage columnID="D89ED3EC-544C-6E0E-AEAD-A8DB91C3D803"/>
+<colUsage columnID="9561861C-EE11-5849-6835-2B6BB9450D06"/>
+<colUsage columnID="C3F2FB50-9787-09B9-6902-534BB64DF2B8"/>
+<colUsage columnID="C47D517E-1441-F903-2789-6B135C070425"/>
+<colUsage columnID="C5AD3883-FAB1-A799-FCB8-7BAC2B3FB70A"/>
+<colUsage columnID="147F9738-305E-8316-9321-6D59E3D65A3E"/>
+<colUsage columnID="D2957C9A-DCAA-9350-CCB2-020C79F02F18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F61E1A26-8EC9-DEDF-AF46-602AB3B171FB" name="Equipo_playoffs_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>0612D832-FA01-ECA1-7A18-D426E4C92870</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D2957C9A-DCAA-9350-CCB2-020C79F02F18"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D9387AC5-F4B9-646C-0E57-5A7BC53F3D65" name="Equipo_partidoAllStar_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>7182BDAB-A62C-DE6C-7382-944A524150BF</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D89ED3EC-544C-6E0E-AEAD-A8DB91C3D803"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="61484025-D8C7-E1E2-1812-9CDB9F9DE882" name="Equipo_partidoNormal_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>D7597181-C3A9-C1C8-B2D2-27C613187F3E</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9561861C-EE11-5849-6835-2B6BB9450D06"/>
+<colUsage columnID="C3F2FB50-9787-09B9-6902-534BB64DF2B8"/>
+<colUsage columnID="C47D517E-1441-F903-2789-6B135C070425"/>
+<colUsage columnID="C5AD3883-FAB1-A799-FCB8-7BAC2B3FB70A"/>
+<colUsage columnID="147F9738-305E-8316-9321-6D59E3D65A3E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

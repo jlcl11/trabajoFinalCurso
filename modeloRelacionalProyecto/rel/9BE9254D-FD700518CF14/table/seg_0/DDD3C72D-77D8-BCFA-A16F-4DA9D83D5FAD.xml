@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DDD3C72D-77D8-BCFA-A16F-4DA9D83D5FAD" name="playoffs">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>F4BE265B-FF9C-442C-D895-B94926EF2695</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="playoff_id" id="D131D12B-22AE-3BE4-776C-D921C22DFF59">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>B0FEBA6D-0FFC-64C1-9635-ACD695A2CC20</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="listaEquipos" id="9EE93041-EF43-383B-6C1B-04046E0A69A9">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>57DA4272-505B-BBE6-CD4E-C386DECAE678</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="lista_Rondas" id="B4AB1531-331F-F3D2-8E4E-2954317587C5">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>9B04FA32-02AD-5D50-9377-4B8B9A0E3402</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8C3C768D-6B0B-0BD4-EE4B-D11B604C93D8" name="playoffs_PK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>5576EC48-E48B-EF18-6FB1-C88DE8B57AA9</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D131D12B-22AE-3BE4-776C-D921C22DFF59"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

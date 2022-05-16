@@ -1,0 +1,180 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0CB270C8-DBE2-0555-5DCF-DAB7926B74E7" name="Estadio">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 16:21:54 UTC</createdTime>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<engineerTo>
+<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nombre" id="2DEA211E-40A0-14E6-CBF3-288523DBD51B">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 16:22:16 UTC</createdTime>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<engineerTo>
+<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="capacidad" id="C23A6A80-8DAB-66B7-3227-B7D11FC3B14E">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 16:22:51 UTC</createdTime>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<engineerTo>
+<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="eq_id" id="FB84B871-C261-F2F2-628F-1F9837BF4E47">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 16:23:18 UTC</createdTime>
+<generatorID>20BCAB84-2DD6-C371-11ED-40C0398CB40D</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<engineerTo>
+<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+</engineerTo>
+<referedAttribute>F6C5A9B7-4F09-9C63-7F1E-AE88B872FEB9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="partA_id" id="D2573E7C-B396-BB03-0EED-677C7A749FD6">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 16:38:40 UTC</createdTime>
+<generatorID>20BCAB84-2DD6-C371-11ED-40C0398CB40D</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<engineerTo>
+<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+</engineerTo>
+<referedAttribute>48E6E919-5B63-D126-092F-F394533B70E2</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="partidoNl_id" id="ED6B5F00-4F16-B0D0-86DD-9242B2738D1E">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 16:39:46 UTC</createdTime>
+<generatorID>20BCAB84-2DD6-C371-11ED-40C0398CB40D</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<engineerTo>
+<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+</engineerTo>
+<referedAttribute>53873188-0979-4BA7-1497-9B5380FB80DB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="partidos" id="C9414FCF-253C-B258-D82B-CBE506F51115">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:01:32 UTC</createdTime>
+<generatorID>20BCAB84-2DD6-C371-11ED-40C0398CB40D</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<engineerTo>
+<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+</engineerTo>
+<referedAttribute>1A4F8319-2E11-68AD-CD66-DFD422532693</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="conferencias" id="3F4B831C-0F28-E219-34C8-01AA0DF6E2D4">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:03:25 UTC</createdTime>
+<generatorID>20BCAB84-2DD6-C371-11ED-40C0398CB40D</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<engineerTo>
+<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+</engineerTo>
+<referedAttribute>4D77A5E1-7B60-F2B0-713C-71B466012D7E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="playoff_id" id="3BDEDACE-13D7-0538-0B26-B42876040356">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:12:33 UTC</createdTime>
+<generatorID>20BCAB84-2DD6-C371-11ED-40C0398CB40D</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<engineerTo>
+<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+</engineerTo>
+<referedAttribute>17AF2818-C663-1AAA-EAA5-899FF00007CE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="playoff_id1" id="FFF9FA01-E78F-C7DA-9338-86D3670983B5">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:10 UTC</createdTime>
+<generatorID>20BCAB84-2DD6-C371-11ED-40C0398CB40D</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<engineerTo>
+<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+</engineerTo>
+<referedAttribute>7E2DC6DA-4FDC-B427-4D1B-CBFE4AE73948</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ronda_id" id="9FE25820-E1F4-C382-6BE4-970483522D1B">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:10 UTC</createdTime>
+<generatorID>20BCAB84-2DD6-C371-11ED-40C0398CB40D</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<engineerTo>
+<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+</engineerTo>
+<referedAttribute>45F49418-1EA4-F378-9DD2-4EDF08E597FA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A79F478C-51EA-05A5-1530-73C41F2D31C7" name="Estadio PK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 16:22:53 UTC</createdTime>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<engineerTo>
+<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2DEA211E-40A0-14E6-CBF3-288523DBD51B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

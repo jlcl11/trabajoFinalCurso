@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4524BE60-5186-E319-2445-89CB8DBA8FC9" name="RondaPlayoff">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>DF230B42-A6D5-B549-60C8-35DB18C2DEC1</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ronda_id" id="6D6118D8-9CA2-283B-C194-DFA1BB9FA2F6">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>53C93D42-78B4-AB09-FE97-95188D7673F7</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="listaRondas" id="6B39FC6F-26BD-FB25-DD26-A24FBA9FAB20">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>C6424801-6542-E4BA-98D9-02F2A3EA22F4</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="playoffs_playoff_id" id="9BE7E3B4-DCA7-832C-E30A-C8762B3EED3B">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>6DCA2DEA-DA8B-1ED9-8BAD-AEBC378DBECE</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CC156BD5-627D-149F-4497-6CAB118F40B0" referredColumn="D131D12B-22AE-3BE4-776C-D921C22DFF59"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6BC56360-FB42-7C85-E6AE-C26FD87DC841" name="RondaPlayoff_PK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>E9615085-7A28-81FF-2964-BE7D3D371DC5</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9BE7E3B4-DCA7-832C-E30A-C8762B3EED3B"/>
+<colUsage columnID="6D6118D8-9CA2-283B-C194-DFA1BB9FA2F6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="182A948F-5F58-0E4E-7FB1-D3B6F77DAF93" name="RondaPlayoff_playoffs_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:38:33 UTC</createdTime>
+<generatorID>C71B9FE5-68B0-86CC-3ED7-8DF38E05AF02</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9BE7E3B4-DCA7-832C-E30A-C8762B3EED3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
