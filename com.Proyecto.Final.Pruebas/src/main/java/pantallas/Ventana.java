@@ -16,8 +16,14 @@ public class Ventana extends JFrame {
 		pantallas = new HashMap<String, JPanel>();
 		pantallas.put("inicial", new PantallaInicial(this));
 		pantallas.put("primerMenu", new PantallaInicioPrimerMenu(this));
+		pantallas.put("Escoger Equipos", new PantallaEscogerEquipoDatosFranquicia(this));
+		pantallas.put("Datos Franquicia", new PantallaDatosFranquicia(this));
+		pantallas.put("Premios De Temporada", new PantallaMenusPremiosDeTemporada(this));
+		pantallas.put("Menu AllStar", new PantallaMenuAllStar(this));
+		pantallas.put("Playoffs", new PantallaPlayOffs(this));
+		pantallas.put("ticket", new pantallaTicket(this));
 
-		this.setSize(1500, 800);
+		this.setSize(1400, 800);
 		this.setLocationRelativeTo(null);
 		this.setTitle("JuegoIndie2kNBA.exe");
 		this.setIconImage(new ImageIcon("./imagenes/logoPrograma.png").getImage());
@@ -25,6 +31,7 @@ public class Ventana extends JFrame {
 		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
 				new ImageIcon("./imagenes/logoPrograma.png").getImage(), new Point(0, 0), "custom cursor"));
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setBackground(getBackground());
 
 		// TODO Poner en pantalla completa
 		// this.setExtendedState(JFrame.MAXIMIZED_BOTH);

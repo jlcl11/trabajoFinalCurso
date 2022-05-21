@@ -1,101 +1,159 @@
 package pantallas;
 
-import javax.swing.JPanel;
-import javax.swing.JLabel;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Font;
-import java.awt.Insets;
-import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class PantallaInicioPrimerMenu extends JPanel {
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.awt.GridBagLayout;
+import javax.swing.ImageIcon;
+
+public class PantallaInicioPrimerMenu extends JPanel{
 	private Ventana ventana;
-	
-	public PantallaInicioPrimerMenu(Ventana v) {
-		this.ventana=v;
+
+	public PantallaInicioPrimerMenu(final Ventana ventana) {
+		super();
+		this.ventana = ventana;
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		gridBagLayout.columnWeights = new double[]{0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.rowWeights = new double[]{0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
 		
-		JLabel inicioPrimerMenu = new JLabel("\u00BFQu\u00E9 quieres hacer?");
-		inicioPrimerMenu.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
-		GridBagConstraints gbc_inicioPrimerMenu = new GridBagConstraints();
-		gbc_inicioPrimerMenu.gridwidth = 5;
-		gbc_inicioPrimerMenu.insets = new Insets(0, 0, 5, 5);
-		gbc_inicioPrimerMenu.gridx = 2;
-		gbc_inicioPrimerMenu.gridy = 2;
-		add(inicioPrimerMenu, gbc_inicioPrimerMenu);
-		
-		JButton botonDatosDeFranquicias = new JButton("Ver datos de franquicias");
-		botonDatosDeFranquicias.setBackground(Color.BLUE);
-		botonDatosDeFranquicias.setForeground(Color.WHITE);
-		botonDatosDeFranquicias.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
-		GridBagConstraints gbc_botonDatosDeFranquicias = new GridBagConstraints();
-		gbc_botonDatosDeFranquicias.gridheight = 3;
-		gbc_botonDatosDeFranquicias.fill = GridBagConstraints.BOTH;
-		gbc_botonDatosDeFranquicias.insets = new Insets(0, 0, 5, 5);
-		gbc_botonDatosDeFranquicias.gridx = 2;
-		gbc_botonDatosDeFranquicias.gridy = 7;
-		add(botonDatosDeFranquicias, gbc_botonDatosDeFranquicias);
-		
-		JButton BotonPremiosTemporada = new JButton("Ver los premios de temporada");
-		BotonPremiosTemporada.setBackground(Color.BLUE);
-		BotonPremiosTemporada.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
-		BotonPremiosTemporada.setForeground(Color.WHITE);
-		GridBagConstraints gbc_BotonPremiosTemporada = new GridBagConstraints();
-		gbc_BotonPremiosTemporada.fill = GridBagConstraints.BOTH;
-		gbc_BotonPremiosTemporada.gridheight = 3;
-		gbc_BotonPremiosTemporada.insets = new Insets(0, 0, 5, 5);
-		gbc_BotonPremiosTemporada.gridx = 6;
-		gbc_BotonPremiosTemporada.gridy = 7;
-		add(BotonPremiosTemporada, gbc_BotonPremiosTemporada);
-		
-		JButton BotonAllStar = new JButton("Ver el All Star");
-		BotonAllStar.setForeground(Color.WHITE);
-		BotonAllStar.setBackground(Color.BLUE);
-		BotonAllStar.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
-		GridBagConstraints gbc_BotonAllStar = new GridBagConstraints();
-		gbc_BotonAllStar.fill = GridBagConstraints.BOTH;
-		gbc_BotonAllStar.gridheight = 3;
-		gbc_BotonAllStar.insets = new Insets(0, 0, 5, 5);
-		gbc_BotonAllStar.gridx = 2;
-		gbc_BotonAllStar.gridy = 12;
-		add(BotonAllStar, gbc_BotonAllStar);
-		
-		JButton botonPlayoffs = new JButton("Simular los playoff");
-		botonPlayoffs.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
-		botonPlayoffs.setBackground(Color.BLUE);
-		botonPlayoffs.setForeground(Color.WHITE);
-		GridBagConstraints gbc_botonPlayoffs = new GridBagConstraints();
-		gbc_botonPlayoffs.fill = GridBagConstraints.BOTH;
-		gbc_botonPlayoffs.gridheight = 3;
-		gbc_botonPlayoffs.insets = new Insets(0, 0, 5, 5);
-		gbc_botonPlayoffs.gridx = 6;
-		gbc_botonPlayoffs.gridy = 12;
-		add(botonPlayoffs, gbc_botonPlayoffs);
-		
-		JButton botonVolverEmpecemos = new JButton("Volver");
-		botonVolverEmpecemos.addMouseListener(new MouseAdapter() {
+		JLabel botonTitulo = new JLabel("Qu\u00E9 quieres hacer?");
+		botonTitulo.setForeground(Color.WHITE);
+		botonTitulo.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
+		GridBagConstraints gbc_botonTitulo = new GridBagConstraints();
+		gbc_botonTitulo.insets = new Insets(0, 0, 5, 5);
+		gbc_botonTitulo.gridx = 5;
+		gbc_botonTitulo.gridy = 2;
+		add(botonTitulo, gbc_botonTitulo);
+
+		JButton botonDatosFranquicia = new JButton("Ver datos de Franquicia");
+		botonDatosFranquicia.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("inicial");
+				ventana.cambiarAPantalla("Escoger Equipos");
 			}
 		});
-		botonVolverEmpecemos.setForeground(Color.WHITE);
-		botonVolverEmpecemos.setBackground(Color.RED);
-		GridBagConstraints gbc_botonVolverEmpecemos = new GridBagConstraints();
-		gbc_botonVolverEmpecemos.fill = GridBagConstraints.BOTH;
-		gbc_botonVolverEmpecemos.insets = new Insets(0, 0, 5, 5);
-		gbc_botonVolverEmpecemos.gridx = 1;
-		gbc_botonVolverEmpecemos.gridy = 16;
-		add(botonVolverEmpecemos, gbc_botonVolverEmpecemos);
-		
-	}
+		botonDatosFranquicia.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
+		botonDatosFranquicia.setForeground(Color.WHITE);
+		botonDatosFranquicia.setBackground(Color.BLUE);
+		GridBagConstraints gbc_botonDatosFranquicia = new GridBagConstraints();
+		gbc_botonDatosFranquicia.fill = GridBagConstraints.BOTH;
+		gbc_botonDatosFranquicia.gridheight = 3;
+		gbc_botonDatosFranquicia.insets = new Insets(0, 0, 5, 5);
+		gbc_botonDatosFranquicia.gridx = 4;
+		gbc_botonDatosFranquicia.gridy = 4;
+		add(botonDatosFranquicia, gbc_botonDatosFranquicia);
 
+		JButton botonDatosDeTemporada = new JButton("Ver premios de temporada");
+		botonDatosDeTemporada.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("Premios De Temporada");
+			}
+		});
+		botonDatosDeTemporada.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
+		botonDatosDeTemporada.setForeground(Color.WHITE);
+		botonDatosDeTemporada.setBackground(Color.BLUE);
+		GridBagConstraints gbc_botonDatosDeTemporada = new GridBagConstraints();
+		gbc_botonDatosDeTemporada.fill = GridBagConstraints.BOTH;
+		gbc_botonDatosDeTemporada.gridheight = 3;
+		gbc_botonDatosDeTemporada.insets = new Insets(0, 0, 5, 5);
+		gbc_botonDatosDeTemporada.gridx = 6;
+		gbc_botonDatosDeTemporada.gridy = 4;
+		add(botonDatosDeTemporada, gbc_botonDatosDeTemporada);
+
+		JButton botonSimular = new JButton("Simular los playoffs");
+		botonSimular.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("Playoffs");
+			}
+		});
+		botonSimular.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
+		botonSimular.setForeground(Color.WHITE);
+		botonSimular.setBackground(Color.BLUE);
+		GridBagConstraints gbc_botonSimular = new GridBagConstraints();
+		gbc_botonSimular.fill = GridBagConstraints.BOTH;
+		gbc_botonSimular.gridheight = 3;
+		gbc_botonSimular.insets = new Insets(0, 0, 5, 5);
+		gbc_botonSimular.gridx = 4;
+		gbc_botonSimular.gridy = 8;
+		add(botonSimular, gbc_botonSimular);
+
+		JButton botonAllStar = new JButton("Ver el AllStar");
+		botonAllStar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("Menu AllStar");
+			}
+		});
+		botonAllStar.setForeground(Color.WHITE);
+		botonAllStar.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
+		botonAllStar.setBackground(Color.BLUE);
+		GridBagConstraints gbc_botonAllStar = new GridBagConstraints();
+		gbc_botonAllStar.fill = GridBagConstraints.BOTH;
+		gbc_botonAllStar.gridheight = 3;
+		gbc_botonAllStar.insets = new Insets(0, 0, 5, 5);
+		gbc_botonAllStar.gridx = 6;
+		gbc_botonAllStar.gridy = 8;
+		add(botonAllStar, gbc_botonAllStar);
+
+		JButton botonVolver = new JButton("Volver");
+		botonVolver.addMouseListener(new MouseAdapter() {
+		    @Override
+		    public void mouseClicked(MouseEvent e) {
+		        ventana.cambiarAPantalla("inicial");
+		    }
+		});
+		
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon(".\\imagenes\\NBA-2K22.jpeg"));
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 0);
+		gbc_lblNewLabel.gridheight = 15;
+		gbc_lblNewLabel.gridwidth = 10;
+		gbc_lblNewLabel.gridx = 0;
+		gbc_lblNewLabel.gridy = 0;
+		add(lblNewLabel, gbc_lblNewLabel);
+		
+		
+		JButton botonTicket = new JButton("Imprimir un ticket con los ganadores de la temporada");
+		botonTicket.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("ticket");
+			}
+		});
+		botonTicket.setForeground(Color.WHITE);
+		botonTicket.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
+		botonTicket.setBackground(Color.BLUE);
+		GridBagConstraints gbc_botonTicket = new GridBagConstraints();
+		gbc_botonTicket.gridheight = 2;
+		gbc_botonTicket.fill = GridBagConstraints.BOTH;
+		gbc_botonTicket.insets = new Insets(0, 0, 5, 5);
+		gbc_botonTicket.gridx = 5;
+		gbc_botonTicket.gridy = 12;
+		add(botonTicket, gbc_botonTicket);
+
+		botonVolver.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
+		botonVolver.setForeground(Color.WHITE);
+		botonVolver.setBackground(Color.RED);
+		GridBagConstraints gbc_botonVolver = new GridBagConstraints();
+		gbc_botonVolver.insets = new Insets(0, 0, 5, 5);
+		gbc_botonVolver.gridx = 1;
+		gbc_botonVolver.gridy = 14;
+		add(botonVolver, gbc_botonVolver);
+	}
 }

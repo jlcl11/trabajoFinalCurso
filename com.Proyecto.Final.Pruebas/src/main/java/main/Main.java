@@ -30,14 +30,14 @@ public class Main {
 
 		try {
 			funcionesUtiles.borrarDatosTablas();
-			funcionesUtiles.declararObjetos();
+		//	funcionesUtiles.declararObjetos();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (EquipoMalIntroduciodoException e) {
+		}/* catch (EquipoMalIntroduciodoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 
 		
