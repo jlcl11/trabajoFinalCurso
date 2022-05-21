@@ -1,5 +1,6 @@
 package principal;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -7,8 +8,10 @@ import clases.Conferencia;
 import clases.EquipoNormal;
 import clases.Estadio;
 import clases.JugadorNormal;
+import exceptions.EquipoMalIntroduciodoException;
 import exceptions.EquipoSinDorsalesRetiradosException;
-import pantalla.Ventana;
+import exceptions.PartidoAllStarMalHechoException;
+import pantalla.VentanaInicial;
 import exceptions.EquipoSinDorsalesRetiradosException;
 import superClases.Equipo;
 import superClases.Jugador;
@@ -18,7 +21,15 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		// Ventana ventana=new Ventana();
+		 VentanaInicial ventana=new VentanaInicial();
+
+		/*
+		try {
+			funcionesUtiles.borrarDatosTablas();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 
 		Scanner sc = new Scanner(System.in);
 		int opcionEquipo = 0;
@@ -44,6 +55,12 @@ public class Main {
 								+ " " + funcionesUtiles.escogerEquipo(opcionEquipo).getNombre());
 			} catch (EquipoSinDorsalesRetiradosException e) {
 				// TODO Auto-generated catch block
+			} catch (EquipoMalIntroduciodoException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 
 			do {
@@ -72,6 +89,12 @@ public class Main {
 							} catch (EquipoSinDorsalesRetiradosException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
+							} catch (EquipoMalIntroduciodoException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (SQLException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
 							}
 							break;
 						case 2:
@@ -82,6 +105,12 @@ public class Main {
 							} catch (EquipoSinDorsalesRetiradosException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
+							} catch (EquipoMalIntroduciodoException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (SQLException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
 							}
 							break;
 						case 3:
@@ -90,6 +119,12 @@ public class Main {
 										+ funcionesUtiles.escogerEquipo(opcionEquipo).getNombre() + " es "
 										+ funcionesUtiles.escogerEquipo(opcionEquipo).getGM());
 							} catch (EquipoSinDorsalesRetiradosException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (EquipoMalIntroduciodoException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (SQLException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
@@ -104,6 +139,12 @@ public class Main {
 							} catch (EquipoSinDorsalesRetiradosException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
+							} catch (EquipoMalIntroduciodoException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (SQLException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
 							}
 							break;
 						case 5:
@@ -111,6 +152,12 @@ public class Main {
 								System.out.println(funcionesUtiles
 										.getDorsalesRetirados(funcionesUtiles.escogerEquipo(opcionEquipo).getNombre()));
 							} catch (EquipoSinDorsalesRetiradosException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (EquipoMalIntroduciodoException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (SQLException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
@@ -121,6 +168,12 @@ public class Main {
 										.getPlantilla(funcionesUtiles.escogerEquipo(opcionEquipo).getNombre());
 								System.out.println(plantillas);
 							} catch (EquipoSinDorsalesRetiradosException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (EquipoMalIntroduciodoException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (SQLException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
@@ -185,32 +238,64 @@ public class Main {
 						switch (opcionMenusesPremiosAllStar) {
 						case 1:
 
-							System.out.println(funcionesUtiles.partidoAllStar().getTitulares());
+							try {
+								System.out.println(funcionesUtiles.partidoAllStar().getTitulares());
+							} catch (SQLException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (PartidoAllStarMalHechoException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 
 							break;
 						case 2:
 
-							System.out.println(funcionesUtiles.partidoAllStar().getEquipo1().getPlantilla());
+							try {
+								System.out.println(funcionesUtiles.partidoAllStar().getEquipo1());
+							} catch (SQLException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (PartidoAllStarMalHechoException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 
 							break;
 						case 3:
-							System.out.println(funcionesUtiles.partidoAllStar().getEquipo2().getPlantilla());
+							try {
+								System.out.println(funcionesUtiles.partidoAllStar().getEquipo2());
+							} catch (SQLException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (PartidoAllStarMalHechoException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
 							break;
 						case 4:
-							if (funcionesUtiles.partidoAllStar().getMarcadorLocal() > funcionesUtiles.partidoAllStar()
-									.getMarcadorVisitante()) {
+							try {
+								if (funcionesUtiles.partidoAllStar().getMarcadorLocal() > funcionesUtiles
+										.partidoAllStar().getMarcadorVisitante()) {
 
-								System.out.println("Ha ganado el equipo local,el resultado ah sido:");
-								System.out.println("Equipo 1 : " + funcionesUtiles.partidoAllStar().getMarcadorLocal()
-										+ " " + funcionesUtiles.partidoAllStar().getMarcadorVisitante()
-										+ " : Equipo 2");
+									System.out.println("Ha ganado el equipo local,el resultado ah sido:");
+									System.out.println("Equipo 1 : "
+											+ funcionesUtiles.partidoAllStar().getMarcadorLocal() + " "
+											+ funcionesUtiles.partidoAllStar().getMarcadorVisitante() + " : Equipo 2");
 
-							} else {
-								System.out.println("Ha ganado el equipo visitante,el resultado ah sido:");
-								System.out.println("Equipo 1 : " + funcionesUtiles.partidoAllStar().getMarcadorLocal()
-										+ " " + funcionesUtiles.partidoAllStar().getMarcadorVisitante()
-										+ " : Equipo 2");
+								} else {
+									System.out.println("Ha ganado el equipo visitante,el resultado ah sido:");
+									System.out.println("Equipo 1 : "
+											+ funcionesUtiles.partidoAllStar().getMarcadorLocal() + " "
+											+ funcionesUtiles.partidoAllStar().getMarcadorVisitante() + " : Equipo 2");
 
+								}
+							} catch (SQLException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							} catch (PartidoAllStarMalHechoException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
 							}
 
 							break;
@@ -244,7 +329,7 @@ public class Main {
 
 			} while (opcionMenuses >= 1 && opcionMenuses <= 4);
 
-		} while (opcionEquipo >= 1 && opcionEquipo <= 30);
+		} while (opcionEquipo >= 1 && opcionEquipo <= 30);*/
 
 	}
 

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A3B63C0D-035C-C0D5-A945-D1134B88A0FE" containerWithKeyObject="4F42BC89-A143-1A89-BAF8-377AE1E34037" localFKIndex="2CE469A5-B555-524D-FF97-8758A842BEE3" name="partidoNormal_Conferencia_FK">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>2158BFE0-A555-0EBD-392F-A20E9DAE35A5</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<referredTableLongName>Conferencia</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>345E30AF-C802-9843-FA07-AD46712CB3ED</referredTableID>
+<keyObject>9E1D7948-3B35-1481-8345-D5B562B31D82</keyObject>
+<referredKeyID>9E1D7948-3B35-1481-8345-D5B562B31D82</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>partidos,Liga_conferencias</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="jugadores_equipo" directorySegmentName="seg_0" id="7F38C59F-4C60-3C11-2A78-AF196B121B9C">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:30:37 UTC</createdTime>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<engineerTo>
+<item key="F23172C1-9DBC-2FD7-E866-165E543A4CD7" value="true"/>
+</engineerTo>
+<sourcePk>43F4FC8D-618E-BAB3-CEBE-9A4426CB3DFA</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>4B4D7EB7-81D1-3606-3B30-BF5D3A6C0B07</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0190C688-6E30-8D87-AC9E-11D00F22C28F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

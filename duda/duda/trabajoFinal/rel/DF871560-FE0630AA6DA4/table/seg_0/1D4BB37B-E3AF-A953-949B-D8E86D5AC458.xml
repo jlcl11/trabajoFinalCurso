@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1D4BB37B-E3AF-A953-949B-D8E86D5AC458" name="Conferencia">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>317A0E7D-BBE2-E221-4233-99CD84C093B8</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="partidos" id="2E93F3A5-D3E0-FB35-917E-064AEE2B79E8">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>8F6035B9-9468-4765-19E4-B87A13589C08</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Liga_conferencias" id="0E415B20-E8C8-974A-69A0-9AE1E97876EF">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>07C1C7A3-38DA-B1A3-A387-FF111D1F9FE4</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3467DAE2-5FA7-F423-4A6D-B6FCA955B89D" referredColumn="CF92CF9E-8182-0E14-F927-344ACDE0B130"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DD0D874A-44D1-9AA7-9600-93CDAD34E172" name="Conferencia_PK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>1FDF31B8-54C5-EC36-828A-EE25255C0134</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2E93F3A5-D3E0-FB35-917E-064AEE2B79E8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B87447B3-4215-3F6D-C7F2-61A0E7AD0301" name="Conferencia_Liga_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>866F3F3A-E099-D377-053B-0816A859A306</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E415B20-E8C8-974A-69A0-9AE1E97876EF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

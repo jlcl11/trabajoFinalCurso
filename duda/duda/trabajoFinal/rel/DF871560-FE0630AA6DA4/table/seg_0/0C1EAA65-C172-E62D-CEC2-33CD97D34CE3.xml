@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0C1EAA65-C172-E62D-CEC2-33CD97D34CE3" name="partidoAllStar">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>F51EF7B7-AE66-DB1A-ED7C-80E5B5076FC4</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="partA_id" id="D949E4AC-3D8E-9A86-7AEA-04C57268B413">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>F4D1B7F1-3D22-69EC-E348-760D7EB74AEA</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="equipo1" id="217D5979-3C79-F198-8E63-522D32697F30">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>E43115E7-DD9E-ABB2-B97E-A8544D329F93</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="equipo2" id="49A8F7F1-9968-604D-7FF7-E5138EE494B1">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>70950C1F-44D0-8524-8270-690661F0AC41</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="marcadorEquipo1" id="85AF970F-5376-5B96-A0CE-E44A7F199B16">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>A3050A5C-8F96-9677-A351-338E5EF4DE82</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="marcadorEquipo2" id="8F3A91AA-CBE6-1F28-9E36-F1CDEBA8EE89">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>2C52B673-CE77-1627-D3DA-4D4AE4B8DE7D</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha" id="AF83EA69-8C25-955A-2B2B-8E31544414AF">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>1206772E-4A38-B1A2-0807-8008C87FBE44</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="titulares" id="335A4FC5-68D2-B733-B241-1ACAB35CE5CB">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>5A6CE479-F699-D0A5-82B2-ACC7024D3848</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A58FD90D-A423-BF5D-DF36-1851A08CF1C4" name="partidoAllStar_PK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>CC6AC8C8-8DBD-864D-980E-79102D70A351</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D949E4AC-3D8E-9A86-7AEA-04C57268B413"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

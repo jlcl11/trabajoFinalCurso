@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="83D177D0-EA61-9793-E4FB-A19578FFAF4B" containerWithKeyObject="ED640AB8-B2FB-371E-F3C2-F8AE35BC1069" localFKIndex="9D07BE10-A956-B71E-C58B-219397401005" name="Equipo_partidoAllStar_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>7182BDAB-A62C-DE6C-7382-944A524150BF</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<referredTableLongName>partidoAllStar</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1057C5B7-5D01-CFB9-A6C6-98752C38A15B</referredTableID>
+<keyObject>FFFC3792-F2F8-C100-71A7-CA9EE60345DB</keyObject>
+<referredKeyID>FFFC3792-F2F8-C100-71A7-CA9EE60345DB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>partA_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

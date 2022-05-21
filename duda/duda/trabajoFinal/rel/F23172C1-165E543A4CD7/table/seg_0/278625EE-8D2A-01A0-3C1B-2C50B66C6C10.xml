@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="278625EE-8D2A-01A0-3C1B-2C50B66C6C10" name="RondaPlayoff">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>DF230B42-A6D5-B549-60C8-35DB18C2DEC1</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ronda_id" id="196CAA6D-213D-EE72-84AC-574D8EE553A3">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>53C93D42-78B4-AB09-FE97-95188D7673F7</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="listaRondas" id="80620064-EB67-8A3A-E072-DFBE428C9D8C">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>C6424801-6542-E4BA-98D9-02F2A3EA22F4</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="playoffs_playoff_id" id="952328CB-3E3F-6CBD-96F7-597C176B6D3A">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>6DCA2DEA-DA8B-1ED9-8BAD-AEBC378DBECE</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B7947088-6494-7141-CD27-C41D315F4F06" referredColumn="14EC3FF5-970A-38B5-B3F0-B072D126BEAF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CCBA2288-400C-D5B6-FD50-62E8FE4345F8" name="RondaPlayoff_PK">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>E9615085-7A28-81FF-2964-BE7D3D371DC5</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="196CAA6D-213D-EE72-84AC-574D8EE553A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C6725710-C7DC-B35B-5294-9E8FAABC3E74" name="RondaPlayoff_playoffs_FK">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>C71B9FE5-68B0-86CC-3ED7-8DF38E05AF02</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="952328CB-3E3F-6CBD-96F7-597C176B6D3A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

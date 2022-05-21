@@ -1,0 +1,237 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FFEBA0B2-62B3-E2EE-1DDC-EBF6AF5E5861" name="Equipo">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>4B4D7EB7-81D1-3606-3B30-BF5D3A6C0B07</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="eq_id" id="AB8EAC44-7CB6-C3BC-C2E8-7151261C14AA">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>F6C5A9B7-4F09-9C63-7F1E-AE88B872FEB9</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,8,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="conferencia" id="7752CE46-597A-0B1C-4D34-ACC3980BFCE4">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>B181B613-31A6-D7D3-B729-E87970744D9D</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ciudadLocal" id="BEFB0FC2-CD02-8DC0-A625-F244C93B75CA">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>104246A6-38EF-9436-D5E4-0E27E90B343C</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dorsalesRetirados" id="A578A398-DCAD-EA44-AE0E-731955E5574C">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>FCB88C02-12A2-35CA-9FEB-259E3846CFED</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="gM" id="CF70B619-BD9F-475E-9A5E-FBFA58F6A469">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>79C30750-F71E-C540-4BD3-ECAF206579FE</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="limiteSalarial" id="E52FCEA6-4AB1-6C1C-BE1D-0552A38B4357">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>3CB39692-96A7-0D23-C397-8DB6D5D80B7D</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,6,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estadio" id="22173F29-81D5-697C-7973-CCBD0BD7159B">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>38E110B7-8A2F-02BD-2893-B2FA13E4F270</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="propietario" id="0F5760A2-2821-6D9A-F2E3-992707ED5A98">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>DDBCAADE-129C-DAF9-3AF5-6161BF6C3993</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="partidoAllStar_partA_id" id="EC707051-F912-346B-A1DA-D080EAA12285">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>48E6E919-5B63-D126-092F-F394533B70E2</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51BF3107-713D-8C0E-BA09-62D5E388D496" referredColumn="15D7D39D-36AD-4FE1-8F81-C10218895B92"/>
+</associations>
+</Column>
+<Column name="partidoNormal_partidoNl_id" id="E95D8536-146D-CB8C-6FF4-531814BAD054">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>53873188-0979-4BA7-1497-9B5380FB80DB</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BB5B44E3-38B2-8AE8-A78E-3850F214F550" referredColumn="304B1B83-957F-F353-9726-54EF615B9381"/>
+</associations>
+</Column>
+<Column name="jugadores" id="818B815B-7EC9-F204-610D-AAB53C9A7963">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>21644B48-A376-4061-6CC9-4603AB43EBAD</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="playoffs_playoff_id" id="917C1809-EC62-76C7-4976-1C006776F3B6">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>17AF2818-C663-1AAA-EAA5-899FF00007CE</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8E40ACA5-431F-09B7-5696-53CB42035463" referredColumn="14EC3FF5-970A-38B5-B3F0-B072D126BEAF"/>
+</associations>
+</Column>
+<Column name="nombre" id="AEB2319E-1EA9-EA14-A8AF-DCF2B644F409">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>4F7F1419-9154-BCD5-FD7B-EC5B846ACD06</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="55857177-CF29-367D-5F47-70365966DE4C" name="Equipo_PK">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>43F4FC8D-618E-BAB3-CEBE-9A4426CB3DFA</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB8EAC44-7CB6-C3BC-C2E8-7151261C14AA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="111AC5F5-54AA-4250-1BE1-7ABBE27AF07C" name="Equipo_playoffs_FK">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>0612D832-FA01-ECA1-7A18-D426E4C92870</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="917C1809-EC62-76C7-4976-1C006776F3B6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="593ABF95-593B-FA77-FA88-7B7C9B486027" name="Equipo_partidoAllStar_FK">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>7182BDAB-A62C-DE6C-7382-944A524150BF</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EC707051-F912-346B-A1DA-D080EAA12285"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6DBEAE8C-A607-E936-0596-63712749869D" name="Equipo_partidoNormal_FK">
+<createdBy>aleja</createdBy>
+<createdTime>2022-05-17 17:15:23 UTC</createdTime>
+<generatorID>D7597181-C3A9-C1C8-B2D2-27C613187F3E</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E95D8536-146D-CB8C-6FF4-531814BAD054"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="jugadores_playoffs" directorySegmentName="seg_0" id="B2401C87-66DD-131B-8F1D-3F7C56C460A6">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:30:56 UTC</createdTime>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<engineerTo>
+<item key="52E679F0-3E64-0CFE-E689-D9C2FEF88EBD" value="true"/>
+</engineerTo>
+<sourcePk>5576EC48-E48B-EF18-6FB1-C88DE8B57AA9</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F4BE265B-FF9C-442C-D895-B94926EF2695</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0190C688-6E30-8D87-AC9E-11D00F22C28F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -14,10 +14,10 @@ import javax.swing.JLabel;
 
 public class PantallaInicial extends JPanel {
 
-	private Ventana ventana;
+	private VentanaInicial ventana;
 	private JTextField textoComencemos;
 
-	public PantallaInicial(Ventana v) {
+	public PantallaInicial(VentanaInicial v) {
 		setForeground(SystemColor.activeCaption);
 		this.ventana = v;
 		setLayout(null);

@@ -4,7 +4,7 @@
 <createdTime>2022-05-16 17:16:35 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2022-05-16 17:16:44 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -33,7 +33,7 @@
 <createdTime>2022-05-16 17:17:00 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -47,7 +47,7 @@
 <createdTime>2022-05-16 17:19:41 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -61,7 +61,7 @@
 <createdTime>2022-05-16 17:19:57 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -75,7 +75,7 @@
 <createdTime>2022-05-16 17:20:25 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -89,7 +89,7 @@
 <createdTime>2022-05-16 17:21:07 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -103,7 +103,7 @@
 <createdTime>2022-05-16 17:21:45 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -118,7 +118,7 @@
 <createdTime>2022-05-16 17:22:08 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -132,7 +132,7 @@
 <createdTime>2022-05-16 17:22:45 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -146,7 +146,7 @@
 <createdTime>2022-05-16 17:23:49 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -160,7 +160,7 @@
 <createdTime>2022-05-16 17:24:04 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -174,7 +174,7 @@
 <createdTime>2022-05-16 17:24:31 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -188,7 +188,7 @@
 <createdTime>2022-05-16 17:24:49 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -202,7 +202,7 @@
 <createdTime>2022-05-16 17:25:17 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -216,7 +216,7 @@
 <createdTime>2022-05-16 17:25:36 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -230,7 +230,7 @@
 <createdTime>2022-05-16 17:26:00 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -244,7 +244,7 @@
 <createdTime>2022-05-16 17:26:48 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -258,7 +258,7 @@
 <createdTime>2022-05-16 17:27:24 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -272,7 +272,7 @@
 <createdTime>2022-05-16 17:27:36 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -286,7 +286,7 @@
 <createdTime>2022-05-16 17:27:47 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -300,7 +300,7 @@
 <createdTime>2022-05-16 17:28:05 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -314,7 +314,7 @@
 <createdTime>2022-05-16 17:28:25 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -328,7 +328,7 @@
 <createdTime>2022-05-16 17:28:42 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -342,7 +342,7 @@
 <createdTime>2022-05-16 17:28:44 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -356,7 +356,7 @@
 <createdTime>2022-05-16 17:28:45 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -370,7 +370,7 @@
 <createdTime>2022-05-16 17:28:45 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -385,14 +385,15 @@
 <generatorID>7F38C59F-4C60-3C11-2A78-AF196B121B9C</generatorID>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <referedAttribute>F6C5A9B7-4F09-9C63-7F1E-AE88B872FEB9</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
 <dataTypeSize>25</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="partA_id" id="38A5ACC4-58CC-2EC2-1EC7-FF3943254DC4">
 <createdBy>jcorr</createdBy>
@@ -400,14 +401,14 @@
 <generatorID>7F38C59F-4C60-3C11-2A78-AF196B121B9C</generatorID>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <referedAttribute>48E6E919-5B63-D126-092F-F394533B70E2</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="partidoNl_id" id="3CAB9262-EFAD-6E79-E1F4-27127F309439">
 <createdBy>jcorr</createdBy>
@@ -415,14 +416,14 @@
 <generatorID>7F38C59F-4C60-3C11-2A78-AF196B121B9C</generatorID>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <referedAttribute>53873188-0979-4BA7-1497-9B5380FB80DB</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="partidos" id="02400E6E-BAA5-EA56-58C3-D9401E0EE922">
 <createdBy>jcorr</createdBy>
@@ -430,14 +431,14 @@
 <generatorID>7F38C59F-4C60-3C11-2A78-AF196B121B9C</generatorID>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <referedAttribute>1A4F8319-2E11-68AD-CD66-DFD422532693</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="conferencias" id="C5786A50-806A-0EEA-56CC-BABD367CA103">
 <createdBy>jcorr</createdBy>
@@ -445,14 +446,14 @@
 <generatorID>7F38C59F-4C60-3C11-2A78-AF196B121B9C</generatorID>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <referedAttribute>4D77A5E1-7B60-F2B0-713C-71B466012D7E</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="playoff_id" id="7FFAABBD-A2A1-6F03-09FC-7827C675F6F0">
 <createdBy>jcorr</createdBy>
@@ -460,14 +461,14 @@
 <generatorID>7F38C59F-4C60-3C11-2A78-AF196B121B9C</generatorID>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <referedAttribute>17AF2818-C663-1AAA-EAA5-899FF00007CE</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>1</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="playoff_id1" id="25E2BCCB-681E-38D5-FA94-D543E0999AEB">
 <createdBy>jcorr</createdBy>
@@ -475,14 +476,14 @@
 <generatorID>B2401C87-66DD-131B-8F1D-3F7C56C460A6</generatorID>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <referedAttribute>B0FEBA6D-0FFC-64C1-9635-ACD695A2CC20</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>1</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="playoff_id11" id="75E75165-4906-946E-3BC5-FF7599404029">
 <createdBy>jcorr</createdBy>
@@ -490,14 +491,14 @@
 <generatorID>7F38C59F-4C60-3C11-2A78-AF196B121B9C</generatorID>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <referedAttribute>7E2DC6DA-4FDC-B427-4D1B-CBFE4AE73948</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>1</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,1,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="ronda_id" id="634F5912-4CB9-DFCF-32FF-A3B394AB0547">
 <createdBy>jcorr</createdBy>
@@ -505,14 +506,14 @@
 <generatorID>7F38C59F-4C60-3C11-2A78-AF196B121B9C</generatorID>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <referedAttribute>45F49418-1EA4-F378-9DD2-4EDF08E597FA</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
 <dataTypePrecision>3</dataTypePrecision>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -521,7 +522,7 @@
 <createdTime>2022-05-16 17:16:59 UTC</createdTime>
 <ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
 <engineerTo>
-<item key="9BE9254D-08D4-C040-D59B-FD700518CF14" value="true"/>
+<item key="22228A35-FAB7-02AF-C8AD-DA544657E602" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

@@ -1,7 +1,9 @@
 package clases;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
+import exceptions.EquipoMalIntroduciodoException;
 import exceptions.EquipoSinDorsalesRetiradosException;
 import superClases.ObjetoConNombre;
 import superClases.Partido;
@@ -29,7 +31,7 @@ public class RondaPlayoffs extends ObjetoConNombre {
 	RondaPlayoffs confFinals = new RondaPlayoffs("Finales de conferencia", partido);
 	RondaPlayoffs finals = new RondaPlayoffs("Finales NBA", partido);
 
-	public static void pillarEquipos(ArrayList<EquipoNormal> w) throws EquipoSinDorsalesRetiradosException {
+	public static void pillarEquipos(ArrayList<EquipoNormal> w) throws EquipoSinDorsalesRetiradosException, EquipoMalIntroduciodoException, SQLException {
 
 		w = funcionesUtiles.devolverTodosLosEquipos();
 

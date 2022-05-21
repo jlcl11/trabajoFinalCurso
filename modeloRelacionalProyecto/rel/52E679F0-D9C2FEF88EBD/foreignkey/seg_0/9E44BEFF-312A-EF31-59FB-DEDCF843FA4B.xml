@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="9E44BEFF-312A-EF31-59FB-DEDCF843FA4B" containerWithKeyObject="5BBEB085-674C-DC6F-DAA7-AD5548E9595B" localFKIndex="45864755-9CA8-3DAE-759E-DFFDC25C7A8A" name="partidoNormal_RondaPlayoff_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>E36285BD-CE69-D88B-9680-C4F01C606229</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<referredTableLongName>RondaPlayoff</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>BD1BB34E-B149-6B5B-E3D4-7636EA8C2A3D</referredTableID>
+<keyObject>3AD37457-31EE-884F-E882-B7CA0A9384EB</keyObject>
+<referredKeyID>3AD37457-31EE-884F-E882-B7CA0A9384EB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>playoffs_playoff_id,ronda_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

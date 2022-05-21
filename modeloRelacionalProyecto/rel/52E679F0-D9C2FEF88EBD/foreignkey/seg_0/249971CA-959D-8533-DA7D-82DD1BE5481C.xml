@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="249971CA-959D-8533-DA7D-82DD1BE5481C" containerWithKeyObject="ED640AB8-B2FB-371E-F3C2-F8AE35BC1069" localFKIndex="9ED68798-4977-70B7-27DF-7B0BBD5AA065" name="Equipo_partidoNormal_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>D7597181-C3A9-C1C8-B2D2-27C613187F3E</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<referredTableLongName>partidoNormal</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>5BBEB085-674C-DC6F-DAA7-AD5548E9595B</referredTableID>
+<keyObject>A97D5A6F-6444-257A-9EFB-D8059B90A889</keyObject>
+<referredKeyID>A97D5A6F-6444-257A-9EFB-D8059B90A889</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>partidoNl_id,Conferencia_partidos,Conferencia_Liga_conferencias,RondaPlayoff_playoff_id,RondaPlayoff_ronda_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

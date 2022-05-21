@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FB4A5079-C327-F334-C2E4-42855310CA91" name="partidos">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="partidoNormal_partidoNl_id" id="8AC652E6-AAA1-84AC-7DD3-0F055BC2A588">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="97938819-E586-8634-5AE2-3DD7A00D82A5" referredColumn="7A46C30A-A9DD-902D-349F-9AB71FCBCE3D"/>
+</associations>
+</Column>
+<Column name="Equipo_eq_id" id="94A2BC96-E2A6-2C60-8F3B-EAF177C59F45">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3B58C28C-FFFB-152C-5A63-D2F97738B18D" referredColumn="498154EC-EB12-D830-E2C4-4074898E92A4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="438BDFB9-7ACC-660E-CAF7-29048A60F859" name="partidos_PK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8AC652E6-AAA1-84AC-7DD3-0F055BC2A588"/>
+<colUsage columnID="94A2BC96-E2A6-2C60-8F3B-EAF177C59F45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6A85BEAE-E683-83C8-CDFB-3446591B0EFF" name="partidos_partidoNormal_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>0A46E5FA-020A-88FA-5110-3FF2D5A8ED29</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8AC652E6-AAA1-84AC-7DD3-0F055BC2A588"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9AFDE32C-55F5-8520-D3E0-83BFE8D034F2" name="partidos_Equipo_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:29:30 UTC</createdTime>
+<generatorID>0A46E5FA-020A-88FA-5110-3FF2D5A8ED29</generatorID>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="94A2BC96-E2A6-2C60-8F3B-EAF177C59F45"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

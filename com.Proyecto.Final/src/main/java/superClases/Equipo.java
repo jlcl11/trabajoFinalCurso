@@ -9,29 +9,52 @@ import java.util.Arrays;
 import clases.Conferencia;
 import clases.Estadio;
 import clases.JugadorNormal;
+import exceptions.EquipoMalIntroduciodoException;
 import exceptions.EquipoSinDorsalesRetiradosException;
+import exceptions.PartidoAllStarMalHechoException;
 import utlis.funcionesUtiles;
 import utlis.utilsDB;
 
 public class Equipo extends ObjetoConNombre {
+	private short equipoID;
 	private Conferencia conferencia;
-	private String CiudadLocal;
+	private String ciudadLocal;
 	private String dorsalesRetirados;
 	private String propietario;
 	private String GM;
 	private float limiteSalarial;
 	private Estadio estadio;
 
-	public Equipo(String nombre, Conferencia conferencia, String ciudadLocal, String dorsalesRetirados,
-			String propietario, String gM, float limiteSalarial, Estadio estadio) {
+	public Equipo(String nombre, short equipoID, Conferencia conferencia, String ciudadLocal, String dorsalesRetirados,
+			String propietario, String gM, float limiteSalarial, Estadio estadio)
+			throws EquipoMalIntroduciodoException, SQLException, EquipoSinDorsalesRetiradosException {
 		super(nombre);
-		this.conferencia = conferencia;
-		CiudadLocal = ciudadLocal;
-		this.dorsalesRetirados = dorsalesRetirados;
-		this.propietario = propietario;
-		GM = gM;
-		this.limiteSalarial = limiteSalarial;
-		this.estadio = estadio;
+
+		Statement query = utilsDB.conectarBBDD();
+
+		if (query.executeUpdate(
+				"INSERT INTO equipo("+equipoID+";"+nombre+","+conferencia+","+ciudadLocal+","+dorsalesRetirados+","+GM+",limitesalarial,estadio,propietario,partidoallstar_parta_id,jugadores,playoffs_playoff_id,nombre) VALUES (99,'ejemplo','ejemplo','ejemplo',999,'ejemplo','ejemplo',1,'ejemplo',1,'ejemplo');") > 0) {
+
+			this.equipoID = equipoID;
+			this.conferencia = conferencia;
+			ciudadLocal = ciudadLocal;
+			this.dorsalesRetirados = dorsalesRetirados;
+			this.propietario = propietario;
+			GM = gM;
+			this.limiteSalarial = limiteSalarial;
+			this.estadio = estadio;
+		} else {
+			throw new EquipoMalIntroduciodoException("El equipo del All Star se ha introducido de manera incorrecta");
+		}
+		utilsDB.desconectarBBDD();
+	}
+
+	public short getEquipoID() {
+		return equipoID;
+	}
+
+	public void setEquipoID(short equipoID) {
+		this.equipoID = equipoID;
 	}
 
 	public Estadio getEstadio() {
@@ -59,11 +82,11 @@ public class Equipo extends ObjetoConNombre {
 	}
 
 	public String getCiudadLocal() {
-		return CiudadLocal;
+		return ciudadLocal;
 	}
 
 	public void setCiudadLocal(String ciudadLocal) {
-		CiudadLocal = ciudadLocal;
+		ciudadLocal = ciudadLocal;
 	}
 
 	public String getDorsalesRetirados() {
@@ -100,9 +123,9 @@ public class Equipo extends ObjetoConNombre {
 
 	@Override
 	public String toString() {
-		return "Equipo [conferencia=" + conferencia + ", CiudadLocal=" + CiudadLocal + ", dorsalesRetirados="
-				+dorsalesRetirados + ", propietario=" + propietario + ", GM=" + GM
-				+ ", limiteSalarial=" + limiteSalarial + "]";
+		return "Equipo [conferencia=" + conferencia + ", CiudadLocal=" + ciudadLocal + ", dorsalesRetirados="
+				+ dorsalesRetirados + ", propietario=" + propietario + ", GM=" + GM + ", limiteSalarial="
+				+ limiteSalarial + "]";
 	}
 
 }

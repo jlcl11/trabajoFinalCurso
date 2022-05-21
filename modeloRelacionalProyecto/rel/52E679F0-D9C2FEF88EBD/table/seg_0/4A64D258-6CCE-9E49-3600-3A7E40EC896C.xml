@@ -1,0 +1,227 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4A64D258-6CCE-9E49-3600-3A7E40EC896C" name="Estadio">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>0CB270C8-DBE2-0555-5DCF-DAB7926B74E7</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="estadio_id" id="82AA3864-8E2D-B389-5ABC-3945270BEFD4">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>A99B998E-D1EC-3BF4-5A9C-98A2266794E5</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="7AC0A3A6-CDD4-9B61-9CF8-427A2C9B5BDA">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>2DEA211E-40A0-14E6-CBF3-288523DBD51B</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="capacidad" id="397E08E3-9391-A868-F56B-5BF0FAACBEDA">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>C23A6A80-8DAB-66B7-3227-B7D11FC3B14E</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>6</dataTypePrecision>
+<ownDataTypeParameters>,6,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Equipo_eq_id" id="890B9EA0-6BEF-CC34-3005-A7450A9D57F9">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>FB84B871-C261-F2F2-628F-1F9837BF4E47</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4B9267D4-9EB1-AB26-1375-07F5D1B0AFAB" referredColumn="095A5129-A785-5174-D132-AFC7980A386D"/>
+</associations>
+</Column>
+<Column name="Equipo_partA_id" id="878F9BD8-B46D-88D3-103F-850B3980BDC6">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>D2573E7C-B396-BB03-0EED-677C7A749FD6</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4B9267D4-9EB1-AB26-1375-07F5D1B0AFAB" referredColumn="E89084B1-C02E-6D64-F5CA-1B0D07940CC2"/>
+</associations>
+</Column>
+<Column name="Equipo_partidoNl_id" id="DDA70680-2BEF-E93F-AA1E-D705600EB6CE">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>ED6B5F00-4F16-B0D0-86DD-9242B2738D1E</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4B9267D4-9EB1-AB26-1375-07F5D1B0AFAB" referredColumn="1188A11F-B9E9-906C-2084-93D60B52381D"/>
+</associations>
+</Column>
+<Column name="Equipo_partidos" id="B70DEFC4-EEC8-8A03-D3C1-5E23AA4EFDF1">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>C9414FCF-253C-B258-D82B-CBE506F51115</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4B9267D4-9EB1-AB26-1375-07F5D1B0AFAB" referredColumn="7859239D-C606-C4E2-F29F-2305720F53F4"/>
+</associations>
+</Column>
+<Column name="Equipo_conferencias" id="EB451B78-FC31-1975-F66F-EAE8FB1F5752">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>3F4B831C-0F28-E219-34C8-01AA0DF6E2D4</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4B9267D4-9EB1-AB26-1375-07F5D1B0AFAB" referredColumn="05DBEEB9-D98A-2120-9B67-485E46DF601E"/>
+</associations>
+</Column>
+<Column name="Equipo_playoff_id" id="8F50810A-6C02-A9F8-1474-06679A963E84">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>3BDEDACE-13D7-0538-0B26-B42876040356</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4B9267D4-9EB1-AB26-1375-07F5D1B0AFAB" referredColumn="3638CBB5-3B72-D192-7E60-B0F3F9B76D91"/>
+</associations>
+</Column>
+<Column name="Equipo_playoff_id1" id="8E48ADD2-BB8E-6BDF-12CC-7E39EA394FA2">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>FFF9FA01-E78F-C7DA-9338-86D3670983B5</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>1</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4B9267D4-9EB1-AB26-1375-07F5D1B0AFAB" referredColumn="D3A0F672-AE74-0EFC-CF73-EDED5CB2A74E"/>
+</associations>
+</Column>
+<Column name="Equipo_ronda_id" id="1D9330A5-F21C-818B-3E20-CA292BB4E792">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>9FE25820-E1F4-C382-6BE4-970483522D1B</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4B9267D4-9EB1-AB26-1375-07F5D1B0AFAB" referredColumn="5E7DD3D9-7668-C16A-1082-8F097018FA02"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C70B0114-0200-24FD-6339-042E27E2579F" name="Estadio_PK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>A79F478C-51EA-05A5-1530-73C41F2D31C7</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="82AA3864-8E2D-B389-5ABC-3945270BEFD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="15698F8E-A083-FC23-4A07-1DBB2DBD0431" name="Estadio__IDX">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>20BCAB84-2DD6-C371-11ED-40C0398CB40D</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="890B9EA0-6BEF-CC34-3005-A7450A9D57F9"/>
+<colUsage columnID="878F9BD8-B46D-88D3-103F-850B3980BDC6"/>
+<colUsage columnID="DDA70680-2BEF-E93F-AA1E-D705600EB6CE"/>
+<colUsage columnID="B70DEFC4-EEC8-8A03-D3C1-5E23AA4EFDF1"/>
+<colUsage columnID="EB451B78-FC31-1975-F66F-EAE8FB1F5752"/>
+<colUsage columnID="8E48ADD2-BB8E-6BDF-12CC-7E39EA394FA2"/>
+<colUsage columnID="1D9330A5-F21C-818B-3E20-CA292BB4E792"/>
+<colUsage columnID="8F50810A-6C02-A9F8-1474-06679A963E84"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2BA9277F-154B-AF59-F734-11D1BF70C498" name="Estadio_Equipo_FK">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-17 17:09:28 UTC</createdTime>
+<generatorID>20BCAB84-2DD6-C371-11ED-40C0398CB40D</generatorID>
+<ownerDesignName>modeloRelacionalProyecto</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="890B9EA0-6BEF-CC34-3005-A7450A9D57F9"/>
+<colUsage columnID="878F9BD8-B46D-88D3-103F-850B3980BDC6"/>
+<colUsage columnID="DDA70680-2BEF-E93F-AA1E-D705600EB6CE"/>
+<colUsage columnID="B70DEFC4-EEC8-8A03-D3C1-5E23AA4EFDF1"/>
+<colUsage columnID="EB451B78-FC31-1975-F66F-EAE8FB1F5752"/>
+<colUsage columnID="8E48ADD2-BB8E-6BDF-12CC-7E39EA394FA2"/>
+<colUsage columnID="1D9330A5-F21C-818B-3E20-CA292BB4E792"/>
+<colUsage columnID="8F50810A-6C02-A9F8-1474-06679A963E84"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

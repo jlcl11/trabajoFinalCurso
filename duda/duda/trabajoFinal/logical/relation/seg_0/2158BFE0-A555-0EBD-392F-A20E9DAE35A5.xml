@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="partidos_conferencia" directorySegmentName="seg_0" id="2158BFE0-A555-0EBD-392F-A20E9DAE35A5">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:01:32 UTC</createdTime>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<engineerTo>
+<item key="DF871560-0691-FAB2-1C6B-FE0630AA6DA4" value="true"/>
+</engineerTo>
+<sourcePk>1FDF31B8-54C5-EC36-828A-EE25255C0134</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>317A0E7D-BBE2-E221-4233-99CD84C093B8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F5F3E4E8-B51B-B44C-164B-5F47E6B50358</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,14 +1,30 @@
 package clases;
 
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import exceptions.LigaInvalidaException;
+import utlis.utilsDB;
+
 public class Liga {
 
 	private Conferencia confOeste;
 	private Conferencia confEste;
 
-	public Liga(Conferencia confOeste, Conferencia confEste) {
+	public Liga(Conferencia confOeste, Conferencia confEste) throws SQLException, LigaInvalidaException {
 		super();
-		this.confOeste = confOeste;
-		this.confEste = confEste;
+
+		Statement query = utilsDB.conectarBBDD();
+
+		if (query.executeUpdate("INSERT INTO liga VALUES(1);") > 0) {
+
+			this.confEste = confEste;
+			this.confOeste = confOeste;
+		} else {
+			throw new LigaInvalidaException("La liga se ha introducido de manera incorrecta");
+		}
+		utilsDB.desconectarBBDD();
+
 	}
 
 	public Conferencia getConfOeste() {

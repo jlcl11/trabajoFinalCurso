@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="liga_conf" directorySegmentName="seg_0" id="866F3F3A-E099-D377-053B-0816A859A306">
+<createdBy>jcorr</createdBy>
+<createdTime>2022-05-16 17:03:25 UTC</createdTime>
+<ownerDesignName>trabajoFinal</ownerDesignName>
+<engineerTo>
+<item key="52E679F0-3E64-0CFE-E689-D9C2FEF88EBD" value="true"/>
+</engineerTo>
+<sourcePk>34F1626A-DA27-5E53-63D6-1CCD740A3C86</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D53A66A5-2100-06D5-718B-0A3E07B2D50F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>317A0E7D-BBE2-E221-4233-99CD84C093B8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

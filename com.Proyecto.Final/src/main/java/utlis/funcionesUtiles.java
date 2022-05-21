@@ -1,5 +1,7 @@
 package utlis;
 
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,7 +18,9 @@ import clases.JugadorNormal;
 import clases.PartidoAllStar;
 import enums.Posicion;
 import enums.Valores;
+import exceptions.EquipoMalIntroduciodoException;
 import exceptions.EquipoSinDorsalesRetiradosException;
+import exceptions.PartidoAllStarMalHechoException;
 import superClases.Equipo;
 import superClases.Jugador;
 
@@ -246,7 +250,7 @@ public class funcionesUtiles {
 		String ret = "";
 
 		for (short i = 0; i < jugadores.size(); i++) {
-			if (i == 149 && jugadores.get(i).getfinalizacion().equals("A")){
+			if (i == 149 && jugadores.get(i).getfinalizacion().equals("A")) {
 				ret += jugadores.get(i);
 			}
 
@@ -279,7 +283,7 @@ public class funcionesUtiles {
 		String ret = "";
 
 		for (short i = 0; i < jugadores.size(); i++) {
-			if ( jugadores.get(i).getorganizacion().equals("A")) {
+			if (jugadores.get(i).getorganizacion().equals("A")) {
 				ret += jugadores.get(i);
 			}
 
@@ -288,7 +292,7 @@ public class funcionesUtiles {
 		return ret;
 	}
 
-	public static PartidoAllStar partidoAllStar() {
+	public static PartidoAllStar partidoAllStar() throws SQLException, PartidoAllStarMalHechoException {
 
 		Random r = new Random();
 
@@ -300,38 +304,39 @@ public class funcionesUtiles {
 		return partido;
 	}
 
-	public static EquipoNormal escogerEquipo(int opcion) throws EquipoSinDorsalesRetiradosException {
+	public static EquipoNormal escogerEquipo(int opcion)
+			throws EquipoSinDorsalesRetiradosException, EquipoMalIntroduciodoException, SQLException {
 
 		Conferencia este = new Conferencia("este", null);
 		Conferencia oeste = new Conferencia("oeste", null);
 
 		if (opcion == 1) {
 			Estadio stateFarmArena = new Estadio("State Farm Arena", (short) 16600);
-			EquipoNormal hawks = new EquipoNormal("Hawks", este, "Atlanta", null, "Anthony Ressler", "Travis Schlenk",
-					109.1f, stateFarmArena);
+			EquipoNormal hawks = new EquipoNormal("Hawks", (short) 1, este, "Atlanta", null, "Anthony Ressler",
+					"Travis Schlenk", 109.1f, stateFarmArena);
 			hawks.setPlantilla(funcionesUtiles.getPlantilla(hawks.getNombre()));
 			hawks.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(hawks.getNombre()));
 			return hawks;
 		}
 		if (opcion == 2) {
 			Estadio tdGarden = new Estadio("TD Garden", (short) 18624);
-			EquipoNormal celtics = new EquipoNormal("Celtics", este, "Boston", null, "Boston basketball partners",
-					"Brad Stevens", 109.1f, tdGarden);
+			EquipoNormal celtics = new EquipoNormal("Celtics", (short) 2, este, "Boston", null,
+					"Boston basketball partners", "Brad Stevens", 109.1f, tdGarden);
 			celtics.setPlantilla(funcionesUtiles.getPlantilla(celtics.getNombre()));
 			celtics.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(celtics.getNombre()));
 			return celtics;
 		}
 		if (opcion == 3) {
 			Estadio barclaysCenter = new Estadio("Barclays Center", (short) 17732);
-			EquipoNormal nets = new EquipoNormal("Nets", este, "Brooklyn", null, "Joseph Tsai", "Sean marks", 109.1f,
-					barclaysCenter);
+			EquipoNormal nets = new EquipoNormal("Nets", (short) 3, este, "Brooklyn", null, "Joseph Tsai", "Sean marks",
+					109.1f, barclaysCenter);
 			nets.setPlantilla(funcionesUtiles.getPlantilla(nets.getNombre()));
 			nets.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(nets.getNombre()));
 			return nets;
 		}
 		if (opcion == 4) {
 			Estadio spectrumCenter = new Estadio("Spectrum center", (short) 19077);
-			EquipoNormal hornets = new EquipoNormal("Hornets", este, "Charlotte", null, "Michael Jordan",
+			EquipoNormal hornets = new EquipoNormal("Hornets", (short) 4, este, "Charlotte", null, "Michael Jordan",
 					"Mitch Kupchak", 109.1f, spectrumCenter);
 			hornets.setPlantilla(funcionesUtiles.getPlantilla(hornets.getNombre()));
 			hornets.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(hornets.getNombre()));
@@ -339,79 +344,79 @@ public class funcionesUtiles {
 		}
 		if (opcion == 5) {
 			Estadio unitedCenter = new Estadio("United center", (short) 20917);
-			EquipoNormal bulls = new EquipoNormal("Bulls", este, "Chicago", null, "Jerry Reinsdorf", "Marc Eversley",
-					109.1f, unitedCenter);
+			EquipoNormal bulls = new EquipoNormal("Bulls", (short) 5, este, "Chicago", null, "Jerry Reinsdorf",
+					"Marc Eversley", 109.1f, unitedCenter);
 			bulls.setPlantilla(funcionesUtiles.getPlantilla(bulls.getNombre()));
 			bulls.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(bulls.getNombre()));
 			return bulls;
 		}
 		if (opcion == 6) {
 			Estadio rocketMortageFieldHouse = new Estadio("Rocket Mortgage FieldHouse", (short) 19432);
-			EquipoNormal cavs = new EquipoNormal("Cavaliers", este, "Cleveland", null, "Dan Gilbert", "Mike Gansey",
-					109.1f, rocketMortageFieldHouse);
+			EquipoNormal cavs = new EquipoNormal("Cavaliers", (short) 6, este, "Cleveland", null, "Dan Gilbert",
+					"Mike Gansey", 109.1f, rocketMortageFieldHouse);
 			cavs.setPlantilla(funcionesUtiles.getPlantilla(cavs.getNombre()));
 			cavs.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(cavs.getNombre()));
 			return cavs;
 		}
 		if (opcion == 7) {
 			Estadio littkeCaesarsArena = new Estadio("Little Caesar Arena", (short) 20332);
-			EquipoNormal pistons = new EquipoNormal("Pistons", este, "Detroit", null, "Tom Gores", "Troy Weaver",
-					109.1f, littkeCaesarsArena);
+			EquipoNormal pistons = new EquipoNormal("Pistons", (short) 7, este, "Detroit", null, "Tom Gores",
+					"Troy Weaver", 109.1f, littkeCaesarsArena);
 			pistons.setPlantilla(funcionesUtiles.getPlantilla(pistons.getNombre()));
 			pistons.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(pistons.getNombre()));
 			return pistons;
 		}
 		if (opcion == 8) {
 			Estadio bankersLifeFieldHouse = new Estadio("Bankers Life FieldHouse", (short) 17923);
-			EquipoNormal pacers = new EquipoNormal("Pacers", este, "Indiana", null, "Herbert Simon", "Chad Buchanan",
-					109.1f, bankersLifeFieldHouse);
+			EquipoNormal pacers = new EquipoNormal("Pacers", (short) 8, este, "Indiana", null, "Herbert Simon",
+					"Chad Buchanan", 109.1f, bankersLifeFieldHouse);
 			pacers.setPlantilla(funcionesUtiles.getPlantilla(pacers.getNombre()));
 			pacers.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(pacers.getNombre()));
 			return pacers;
 		}
 		if (opcion == 9) {
 			Estadio ftxArena = new Estadio("FTX Arena", (short) 19600);
-			EquipoNormal heat = new EquipoNormal("Heat", este, "Miami", null, "Micky Arison", "Andy Elisburg", 109.1f,
-					ftxArena);
+			EquipoNormal heat = new EquipoNormal("Heat", (short) 9, este, "Miami", null, "Micky Arison",
+					"Andy Elisburg", 109.1f, ftxArena);
 			heat.setPlantilla(funcionesUtiles.getPlantilla(heat.getNombre()));
 			heat.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(heat.getNombre()));
 			return heat;
 		}
 		if (opcion == 10) {
 			Estadio fiservForum = new Estadio("Fiserv Forum", (short) 17341);
-			EquipoNormal bucks = new EquipoNormal("Bucks", este, "Milwaukee", null, "Los hermanos Edens", "Jon Horst",
-					109.1f, fiservForum);
+			EquipoNormal bucks = new EquipoNormal("Bucks", (short) 10, este, "Milwaukee", null, "Los hermanos Edens",
+					"Jon Horst", 109.1f, fiservForum);
 			bucks.setPlantilla(funcionesUtiles.getPlantilla(bucks.getNombre()));
 			bucks.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(bucks.getNombre()));
 			return bucks;
 		}
 		if (opcion == 11) {
 			Estadio madisonSquareGarde = new Estadio("Madison Square Garden", (short) 19812);
-			EquipoNormal knicks = new EquipoNormal("Knicks", este, "New York", null, "James L Dolan", "Scott Perry",
-					109.1f, madisonSquareGarde);
+			EquipoNormal knicks = new EquipoNormal("Knicks", (short) 11, este, "New York", null, "James L Dolan",
+					"Scott Perry", 109.1f, madisonSquareGarde);
 			knicks.setPlantilla(funcionesUtiles.getPlantilla(knicks.getNombre()));
 			knicks.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(knicks.getNombre()));
 			return knicks;
 		}
 		if (opcion == 12) {
 			Estadio amwayCenter = new Estadio("Amway Center", (short) 18846);
-			EquipoNormal magic = new EquipoNormal("Magic", este, "Orlando", null, "Richard DeVos", "John Hammond",
-					109.1f, amwayCenter);
+			EquipoNormal magic = new EquipoNormal("Magic", (short) 12, este, "Orlando", null, "Richard DeVos",
+					"John Hammond", 109.1f, amwayCenter);
 			magic.setPlantilla(funcionesUtiles.getPlantilla(magic.getNombre()));
 			magic.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(magic.getNombre()));
 			return magic;
 		}
 		if (opcion == 13) {
 			Estadio wellsFargoCenter = new Estadio("Wells Fargo Center", (short) 20478);
-			EquipoNormal sixers = new EquipoNormal("76ers", este, "Philladelphia", null, "Josh Harris", "Elton Brand",
-					109.1f, wellsFargoCenter);
+			EquipoNormal sixers = new EquipoNormal("76ers", (short) 13, este, "Philladelphia", null, "Josh Harris",
+					"Elton Brand", 109.1f, wellsFargoCenter);
 			sixers.setPlantilla(funcionesUtiles.getPlantilla(sixers.getNombre()));
 			sixers.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(sixers.getNombre()));
 			return sixers;
 		}
 		if (opcion == 14) {
 			Estadio scotiaBankArena = new Estadio("Scotia Bank Arena", (short) 19800);
-			EquipoNormal raptors = new EquipoNormal("Raptors", este, "Toronto", null,
+			EquipoNormal raptors = new EquipoNormal("Raptors", (short) 14, este, "Toronto", null,
 					"Maple Leaf Sports & Entertainment", "Bobby Webster", 109.1f, scotiaBankArena);
 			raptors.setPlantilla(funcionesUtiles.getPlantilla(raptors.getNombre()));
 			raptors.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(raptors.getNombre()));
@@ -419,39 +424,39 @@ public class funcionesUtiles {
 		}
 		if (opcion == 15) {
 			Estadio capitalOneArena = new Estadio("Capital One Arena", (short) 20356);
-			EquipoNormal wizards = new EquipoNormal("Wizards", este, "Washinton", null, "Ted Leonsis", "Tommy Sheppard",
-					109.1f, capitalOneArena);
+			EquipoNormal wizards = new EquipoNormal("Wizards", (short) 15, este, "Washinton", null, "Ted Leonsis",
+					"Tommy Sheppard", 109.1f, capitalOneArena);
 			wizards.setPlantilla(funcionesUtiles.getPlantilla(wizards.getNombre()));
 			wizards.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(wizards.getNombre()));
 			return wizards;
 		}
 		if (opcion == 16) {
 			Estadio americanAirlinesCenter = new Estadio("American Airlines Center", (short) 19200);
-			EquipoNormal mavs = new EquipoNormal("Mavericks", oeste, "Dallas", null, "Mark Cuban", "Nico Harrison",
-					109.1f, americanAirlinesCenter);
+			EquipoNormal mavs = new EquipoNormal("Mavericks", (short) 16, oeste, "Dallas", null, "Mark Cuban",
+					"Nico Harrison", 109.1f, americanAirlinesCenter);
 			mavs.setPlantilla(funcionesUtiles.getPlantilla(mavs.getNombre()));
 			mavs.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(mavs.getNombre()));
 			return mavs;
 		}
 		if (opcion == 17) {
 			Estadio ballCenter = new Estadio("Ball Center", (short) 19520);
-			EquipoNormal nuggets = new EquipoNormal("Nuggets", oeste, "Denver", null, "Kroenke Sports & Entertainment",
-					"Calvin Booth", 109.1f, ballCenter);
+			EquipoNormal nuggets = new EquipoNormal("Nuggets", (short) 17, oeste, "Denver", null,
+					"Kroenke Sports & Entertainment", "Calvin Booth", 109.1f, ballCenter);
 			nuggets.setPlantilla(funcionesUtiles.getPlantilla(nuggets.getNombre()));
 			nuggets.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(nuggets.getNombre()));
 			return nuggets;
 		}
 		if (opcion == 18) {
 			Estadio chaseCenter = new Estadio("Chase Center", (short) 18064);
-			EquipoNormal warriors = new EquipoNormal("Warriors", oeste, "San Francisco", null, "Joe Lacob,Peter Guber",
-					"Bob Myers", 109.1f, chaseCenter);
+			EquipoNormal warriors = new EquipoNormal("Warriors", (short) 18, oeste, "San Francisco", null,
+					"Joe Lacob,Peter Guber", "Bob Myers", 109.1f, chaseCenter);
 			warriors.setPlantilla(funcionesUtiles.getPlantilla(warriors.getNombre()));
 			warriors.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(warriors.getNombre()));
 			return warriors;
 		}
 		if (opcion == 19) {
 			Estadio toyotaCenter = new Estadio("Toyota Center", (short) 18055);
-			EquipoNormal rockets = new EquipoNormal("Rockets", oeste, "Houston", null, "Tilman Fertitta",
+			EquipoNormal rockets = new EquipoNormal("Rockets", (short) 19, oeste, "Houston", null, "Tilman Fertitta",
 					"Rafael Stone", 109.1f, toyotaCenter);
 			rockets.setPlantilla(funcionesUtiles.getPlantilla(rockets.getNombre()));
 			rockets.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(rockets.getNombre()));
@@ -459,7 +464,7 @@ public class funcionesUtiles {
 		}
 		if (opcion == 20) {
 			Estadio cryptocomArena = new Estadio("Crypto.com Arena", (short) 19060);
-			EquipoNormal clippers = new EquipoNormal("Clippers", oeste, "Los Ángeles", null, "Steve Ballmer",
+			EquipoNormal clippers = new EquipoNormal("Clippers", (short) 20, oeste, "Los Ángeles", null, "Steve Ballmer",
 					"Michael Winger", 109.1f, cryptocomArena);
 			clippers.setPlantilla(funcionesUtiles.getPlantilla(clippers.getNombre()));
 			clippers.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(clippers.getNombre()));
@@ -467,15 +472,15 @@ public class funcionesUtiles {
 		}
 		if (opcion == 21) {
 			Estadio cryptocomArena = new Estadio("Crypto.com Arena", (short) 19060);
-			EquipoNormal lakers = new EquipoNormal("Lakers", oeste, "Los Ángeles", null, "Jeanie Buss", "Rob Pelinka",
-					109.1f, cryptocomArena);
+			EquipoNormal lakers = new EquipoNormal("Lakers", (short) 21, oeste, "Los Ángeles", null, "Jeanie Buss",
+					"Rob Pelinka", 109.1f, cryptocomArena);
 			lakers.setPlantilla(funcionesUtiles.getPlantilla(lakers.getNombre()));
 			lakers.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(lakers.getNombre()));
 			return lakers;
 		}
 		if (opcion == 22) {
 			Estadio targetCenter = new Estadio("Target Center", (short) 18798);
-			EquipoNormal wolves = new EquipoNormal("Timberwolves", oeste, "Minnesota", null, "Marc Lore",
+			EquipoNormal wolves = new EquipoNormal("Timberwolves", (short)22, oeste, "Minnesota", null, "Marc Lore",
 					"Sachin Gupta", 109.1f, targetCenter);
 			wolves.setPlantilla(funcionesUtiles.getPlantilla(wolves.getNombre()));
 			wolves.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(wolves.getNombre()));
@@ -484,7 +489,7 @@ public class funcionesUtiles {
 
 		if (opcion == 23) {
 			Estadio smoothieKingCenter = new Estadio("Smoothie King Center", (short) 16867);
-			EquipoNormal pelicans = new EquipoNormal("Pelicans", oeste, "New Orleans", null, "Gayle Benson",
+			EquipoNormal pelicans = new EquipoNormal("Pelicans", (short) 23, oeste, "New Orleans", null, "Gayle Benson",
 					"Trajan Langdon", 109.1f, smoothieKingCenter);
 			pelicans.setPlantilla(funcionesUtiles.getPlantilla(pelicans.getNombre()));
 			pelicans.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(pelicans.getNombre()));
@@ -492,15 +497,15 @@ public class funcionesUtiles {
 		}
 		if (opcion == 24) {
 			Estadio fedexForum = new Estadio("FedEx Forum", (short) 18119);
-			EquipoNormal grizzlies = new EquipoNormal("Grizzlies", este, "Memphis", null, "Robert Pera", "Jason Wexler",
-					109.1f, fedexForum);
+			EquipoNormal grizzlies = new EquipoNormal("Grizzlies", (short) 24, este, "Memphis", null, "Robert Pera",
+					"Jason Wexler", 109.1f, fedexForum);
 			grizzlies.setPlantilla(funcionesUtiles.getPlantilla(grizzlies.getNombre()));
 			grizzlies.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(grizzlies.getNombre()));
 			return grizzlies;
 		}
 		if (opcion == 25) {
 			Estadio paycomCenter = new Estadio("Paycom Center", (short) 18203);
-			EquipoNormal okc = new EquipoNormal("Thunder", oeste, "Oklahoma city", null,
+			EquipoNormal okc = new EquipoNormal("Thunder", (short) 25, oeste, "Oklahoma city", null,
 					"Professional Basketball Club LLC", "Sam Presti", 109.1f, paycomCenter);
 			okc.setPlantilla(funcionesUtiles.getPlantilla(okc.getNombre()));
 			okc.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(okc.getNombre()));
@@ -508,15 +513,15 @@ public class funcionesUtiles {
 		}
 		if (opcion == 26) {
 			Estadio footprintCenter = new Estadio("Footprint Center", (short) 18422);
-			EquipoNormal suns = new EquipoNormal("Suns", oeste, "Phoenix", null, "Robert Sarver", "James Andrew Jones",
-					109.1f, footprintCenter);
+			EquipoNormal suns = new EquipoNormal("Suns", (short) 26, oeste, "Phoenix", null, "Robert Sarver",
+					"James Andrew Jones", 109.1f, footprintCenter);
 			suns.setPlantilla(funcionesUtiles.getPlantilla(suns.getNombre()));
 			suns.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(suns.getNombre()));
 			return suns;
 		}
 		if (opcion == 27) {
 			Estadio modaCenter = new Estadio("Moda Center", (short) 19393);
-			EquipoNormal blazers = new EquipoNormal("Trail Blazers", oeste, "Portland", null, "Paul Allen",
+			EquipoNormal blazers = new EquipoNormal("Trail Blazers", (short) 27, oeste, "Portland", null, "Paul Allen",
 					"Joe Cronin", 109.1f, modaCenter);
 			blazers.setPlantilla(funcionesUtiles.getPlantilla(blazers.getNombre()));
 			blazers.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(blazers.getNombre()));
@@ -524,15 +529,15 @@ public class funcionesUtiles {
 		}
 		if (opcion == 28) {
 			Estadio golden1Center = new Estadio("Golden 1 Center", (short) 17608);
-			EquipoNormal kings = new EquipoNormal("Kings", oeste, "Sacramento", null, "Vivek Ranadivé", "Monte McNair",
-					109.1f, golden1Center);
+			EquipoNormal kings = new EquipoNormal("Kings", (short) 28, oeste, "Sacramento", null, "Vivek Ranadivé",
+					"Monte McNair", 109.1f, golden1Center);
 			kings.setPlantilla(funcionesUtiles.getPlantilla(kings.getNombre()));
 			kings.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(kings.getNombre()));
 			return kings;
 		}
 		if (opcion == 29) {
 			Estadio attcenter = new Estadio("AT&T Center", (short) 18418);
-			EquipoNormal spurs = new EquipoNormal("Spurs", oeste, "San Antonio", null,
+			EquipoNormal spurs = new EquipoNormal("Spurs", (short) 29, oeste, "San Antonio", null,
 					"Spurs Sports & Entertainment L.L.C.", "Brian Wright", 109.1f, attcenter);
 			spurs.setPlantilla(funcionesUtiles.getPlantilla(spurs.getNombre()));
 			spurs.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(spurs.getNombre()));
@@ -540,8 +545,8 @@ public class funcionesUtiles {
 		}
 		if (opcion == 30) {
 			Estadio vivintArena = new Estadio("Vivint Arena", (short) 18306);
-			EquipoNormal jazz = new EquipoNormal("Jazz", oeste, "Utah", null, "Ryan Smith", "Justin Zanik", 109.1f,
-					vivintArena);
+			EquipoNormal jazz = new EquipoNormal("Jazz", (short) 30, oeste, "Utah", null, "Ryan Smith", "Justin Zanik",
+					109.1f, vivintArena);
 			jazz.setPlantilla(funcionesUtiles.getPlantilla(jazz.getNombre()));
 			jazz.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(jazz.getNombre()));
 			return jazz;
@@ -553,189 +558,190 @@ public class funcionesUtiles {
 
 	}
 
-	public static ArrayList<EquipoNormal> devolverTodosLosEquipos() throws EquipoSinDorsalesRetiradosException {
+	public static ArrayList<EquipoNormal> devolverTodosLosEquipos()
+			throws EquipoSinDorsalesRetiradosException, EquipoMalIntroduciodoException, SQLException {
 		ArrayList<EquipoNormal> equiposNBA = new ArrayList<EquipoNormal>();
 
 		Conferencia este = new Conferencia("este", null);
 		Conferencia oeste = new Conferencia("oeste", null);
 
 		Estadio stateFarmArena = new Estadio("State Farm Arena", (short) 16600);
-		EquipoNormal hawks = new EquipoNormal("Hawks", este, "Atlanta", null, "Anthony Ressler", "Travis Schlenk",
-				109.1f, stateFarmArena);
+		EquipoNormal hawks = new EquipoNormal("Hawks", (short) 1, este, "Atlanta", null, "Anthony Ressler",
+				"Travis Schlenk", 109.1f, stateFarmArena);
 		hawks.setPlantilla(funcionesUtiles.getPlantilla(hawks.getNombre()));
 		hawks.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(hawks.getNombre()));
 
 		equiposNBA.add(hawks);
 
 		Estadio tdGarden = new Estadio("TD Garden", (short) 18624);
-		EquipoNormal celtics = new EquipoNormal("Celtics", este, "Boston", null, "Boston basketball partners",
-				"Brad Stevens", 109.1f, tdGarden);
+		EquipoNormal celtics = new EquipoNormal("Celtics", (short) 2, este, "Boston", null,
+				"Boston basketball partners", "Brad Stevens", 109.1f, tdGarden);
 		celtics.setPlantilla(funcionesUtiles.getPlantilla(celtics.getNombre()));
 		celtics.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(celtics.getNombre()));
 
 		equiposNBA.add(celtics);
 
 		Estadio barclaysCenter = new Estadio("Barclays Center", (short) 17732);
-		EquipoNormal nets = new EquipoNormal("Nets", este, "Brooklyn", null, "Joseph Tsai", "Sean marks", 109.1f,
-				barclaysCenter);
+		EquipoNormal nets = new EquipoNormal("Nets", (short) 3, este, "Brooklyn", null, "Joseph Tsai", "Sean marks",
+				109.1f, barclaysCenter);
 		nets.setPlantilla(funcionesUtiles.getPlantilla(nets.getNombre()));
 		nets.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(nets.getNombre()));
 
 		equiposNBA.add(nets);
 
 		Estadio spectrumCenter = new Estadio("Spectrum center", (short) 19077);
-		EquipoNormal hornets = new EquipoNormal("Hornets", este, "Charlotte", null, "Michael Jordan", "Mitch Kupchak",
-				109.1f, spectrumCenter);
+		EquipoNormal hornets = new EquipoNormal("Hornets", (short) 4, este, "Charlotte", null, "Michael Jordan",
+				"Mitch Kupchak", 109.1f, spectrumCenter);
 		hornets.setPlantilla(funcionesUtiles.getPlantilla(hornets.getNombre()));
 		hornets.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(hornets.getNombre()));
 
 		equiposNBA.add(hornets);
 
 		Estadio unitedCenter = new Estadio("United center", (short) 20917);
-		EquipoNormal bulls = new EquipoNormal("Bulls", este, "Chicago", null, "Jerry Reinsdorf", "Marc Eversley",
-				109.1f, unitedCenter);
+		EquipoNormal bulls = new EquipoNormal("Bulls", (short) 5, este, "Chicago", null, "Jerry Reinsdorf",
+				"Marc Eversley", 109.1f, unitedCenter);
 		bulls.setPlantilla(funcionesUtiles.getPlantilla(bulls.getNombre()));
 		bulls.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(bulls.getNombre()));
 
 		equiposNBA.add(bulls);
 
 		Estadio rocketMortageFieldHouse = new Estadio("Rocket Mortgage FieldHouse", (short) 19432);
-		EquipoNormal cavs = new EquipoNormal("Cavaliers", este, "Cleveland", null, "Dan Gilbert", "Mike Gansey", 109.1f,
-				rocketMortageFieldHouse);
+		EquipoNormal cavs = new EquipoNormal("Cavaliers", (short) 6, este, "Cleveland", null, "Dan Gilbert",
+				"Mike Gansey", 109.1f, rocketMortageFieldHouse);
 		cavs.setPlantilla(funcionesUtiles.getPlantilla(cavs.getNombre()));
 		cavs.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(cavs.getNombre()));
 
 		equiposNBA.add(cavs);
 
 		Estadio littkeCaesarsArena = new Estadio("Little Caesar Arena", (short) 20332);
-		EquipoNormal pistons = new EquipoNormal("Pistons", este, "Detroit", null, "Tom Gores", "Troy Weaver", 109.1f,
-				littkeCaesarsArena);
+		EquipoNormal pistons = new EquipoNormal("Pistons", (short) 7, este, "Detroit", null, "Tom Gores", "Troy Weaver",
+				109.1f, littkeCaesarsArena);
 		pistons.setPlantilla(funcionesUtiles.getPlantilla(pistons.getNombre()));
 		pistons.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(pistons.getNombre()));
 
 		equiposNBA.add(pistons);
 
 		Estadio bankersLifeFieldHouse = new Estadio("Bankers Life FieldHouse", (short) 17923);
-		EquipoNormal pacers = new EquipoNormal("Pacers", este, "Indiana", null, "Herbert Simon", "Chad Buchanan",
-				109.1f, bankersLifeFieldHouse);
+		EquipoNormal pacers = new EquipoNormal("Pacers", (short) 8, este, "Indiana", null, "Herbert Simon",
+				"Chad Buchanan", 109.1f, bankersLifeFieldHouse);
 		pacers.setPlantilla(funcionesUtiles.getPlantilla(pacers.getNombre()));
 		pacers.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(pacers.getNombre()));
 
 		equiposNBA.add(pacers);
 
 		Estadio ftxArena = new Estadio("FTX Arena", (short) 19600);
-		EquipoNormal heat = new EquipoNormal("Heat", este, "Miami", null, "Micky Arison", "Andy Elisburg", 109.1f,
-				ftxArena);
+		EquipoNormal heat = new EquipoNormal("Heat", (short) 9, este, "Miami", null, "Micky Arison", "Andy Elisburg",
+				109.1f, ftxArena);
 		heat.setPlantilla(funcionesUtiles.getPlantilla(heat.getNombre()));
 		heat.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(heat.getNombre()));
 
 		equiposNBA.add(heat);
 
 		Estadio fiservForum = new Estadio("Fiserv Forum", (short) 17341);
-		EquipoNormal bucks = new EquipoNormal("Bucks", este, "Milwaukee", null, "Los hermanos Edens", "Jon Horst",
-				109.1f, fiservForum);
+		EquipoNormal bucks = new EquipoNormal("Bucks", (short) 10, este, "Milwaukee", null, "Los hermanos Edens",
+				"Jon Horst", 109.1f, fiservForum);
 		bucks.setPlantilla(funcionesUtiles.getPlantilla(bucks.getNombre()));
 		bucks.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(bucks.getNombre()));
 
 		equiposNBA.add(bucks);
 
 		Estadio madisonSquareGarde = new Estadio("Madison Square Garden", (short) 19812);
-		EquipoNormal knicks = new EquipoNormal("Knicks", este, "New York", null, "James L Dolan", "Scott Perry", 109.1f,
-				madisonSquareGarde);
+		EquipoNormal knicks = new EquipoNormal("Knicks", (short) 11, este, "New York", null, "James L Dolan",
+				"Scott Perry", 109.1f, madisonSquareGarde);
 		knicks.setPlantilla(funcionesUtiles.getPlantilla(knicks.getNombre()));
 		knicks.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(knicks.getNombre()));
 
 		equiposNBA.add(knicks);
 
 		Estadio amwayCenter = new Estadio("Amway Center", (short) 18846);
-		EquipoNormal magic = new EquipoNormal("Magic", este, "Orlando", null, "Richard DeVos", "John Hammond", 109.1f,
-				amwayCenter);
+		EquipoNormal magic = new EquipoNormal("Magic", (short) 12, este, "Orlando", null, "Richard DeVos",
+				"John Hammond", 109.1f, amwayCenter);
 		magic.setPlantilla(funcionesUtiles.getPlantilla(magic.getNombre()));
 		magic.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(magic.getNombre()));
 
 		equiposNBA.add(magic);
 
 		Estadio wellsFargoCenter = new Estadio("Wells Fargo Center", (short) 20478);
-		EquipoNormal sixers = new EquipoNormal("76ers", este, "Philladelphia", null, "Josh Harris", "Elton Brand",
-				109.1f, wellsFargoCenter);
+		EquipoNormal sixers = new EquipoNormal("76ers", (short) 13, este, "Philladelphia", null, "Josh Harris",
+				"Elton Brand", 109.1f, wellsFargoCenter);
 		sixers.setPlantilla(funcionesUtiles.getPlantilla(sixers.getNombre()));
 		sixers.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(sixers.getNombre()));
 
 		equiposNBA.add(sixers);
 
 		Estadio scotiaBankArena = new Estadio("Scotia Bank Arena", (short) 19800);
-		EquipoNormal raptors = new EquipoNormal("Raptors", este, "Toronto", null, "Maple Leaf Sports & Entertainment",
-				"Bobby Webster", 109.1f, scotiaBankArena);
+		EquipoNormal raptors = new EquipoNormal("Raptors", (short) 14, este, "Toronto", null,
+				"Maple Leaf Sports & Entertainment", "Bobby Webster", 109.1f, scotiaBankArena);
 		raptors.setPlantilla(funcionesUtiles.getPlantilla(raptors.getNombre()));
 		raptors.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(raptors.getNombre()));
 
 		equiposNBA.add(raptors);
 
 		Estadio capitalOneArena = new Estadio("Capital One Arena", (short) 20356);
-		EquipoNormal wizards = new EquipoNormal("Wizards", este, "Washinton", null, "Ted Leonsis", "Tommy Sheppard",
-				109.1f, capitalOneArena);
+		EquipoNormal wizards = new EquipoNormal("Wizards", (short) 15, este, "Washinton", null, "Ted Leonsis",
+				"Tommy Sheppard", 109.1f, capitalOneArena);
 		wizards.setPlantilla(funcionesUtiles.getPlantilla(wizards.getNombre()));
 		wizards.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(wizards.getNombre()));
 
 		equiposNBA.add(wizards);
 
 		Estadio americanAirlinesCenter = new Estadio("American Airlines Center", (short) 19200);
-		EquipoNormal mavs = new EquipoNormal("Mavericks", oeste, "Dallas", null, "Mark Cuban", "Nico Harrison", 109.1f,
-				americanAirlinesCenter);
+		EquipoNormal mavs = new EquipoNormal("Mavericks", (short) 16, oeste, "Dallas", null, "Mark Cuban",
+				"Nico Harrison", 109.1f, americanAirlinesCenter);
 		mavs.setPlantilla(funcionesUtiles.getPlantilla(mavs.getNombre()));
 		mavs.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(mavs.getNombre()));
 
 		equiposNBA.add(mavs);
 
 		Estadio ballCenter = new Estadio("Ball Center", (short) 19520);
-		EquipoNormal nuggets = new EquipoNormal("Nuggets", oeste, "Denver", null, "Kroenke Sports & Entertainment",
-				"Calvin Booth", 109.1f, ballCenter);
+		EquipoNormal nuggets = new EquipoNormal("Nuggets", (short) 17, oeste, "Denver", null,
+				"Kroenke Sports & Entertainment", "Calvin Booth", 109.1f, ballCenter);
 		nuggets.setPlantilla(funcionesUtiles.getPlantilla(nuggets.getNombre()));
 		nuggets.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(nuggets.getNombre()));
 
 		equiposNBA.add(nuggets);
 
 		Estadio chaseCenter = new Estadio("Chase Center", (short) 18064);
-		EquipoNormal warriors = new EquipoNormal("Warriors", oeste, "San Francisco", null, "Joe Lacob,Peter Guber",
-				"Bob Myers", 109.1f, chaseCenter);
+		EquipoNormal warriors = new EquipoNormal("Warriors", (short) 18, oeste, "San Francisco", null,
+				"Joe Lacob,Peter Guber", "Bob Myers", 109.1f, chaseCenter);
 		warriors.setPlantilla(funcionesUtiles.getPlantilla(warriors.getNombre()));
 		warriors.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(warriors.getNombre()));
 
 		equiposNBA.add(warriors);
 
 		Estadio toyotaCenter = new Estadio("Toyota Center", (short) 18055);
-		EquipoNormal rockets = new EquipoNormal("Rockets", oeste, "Houston", null, "Tilman Fertitta", "Rafael Stone",
-				109.1f, toyotaCenter);
+		EquipoNormal rockets = new EquipoNormal("Rockets", (short) 19, oeste, "Houston", null, "Tilman Fertitta",
+				"Rafael Stone", 109.1f, toyotaCenter);
 		rockets.setPlantilla(funcionesUtiles.getPlantilla(rockets.getNombre()));
 		rockets.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(rockets.getNombre()));
 
 		equiposNBA.add(rockets);
 
 		Estadio cryptocomArena = new Estadio("Crypto.com Arena", (short) 19060);
-		EquipoNormal clippers = new EquipoNormal("Clippers", oeste, "Los Ángeles", null, "Steve Ballmer",
+		EquipoNormal clippers = new EquipoNormal("Clippers", (short) 20, oeste, "Los Ángeles", null, "Steve Ballmer",
 				"Michael Winger", 109.1f, cryptocomArena);
 		clippers.setPlantilla(funcionesUtiles.getPlantilla(clippers.getNombre()));
 		clippers.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(clippers.getNombre()));
 
 		equiposNBA.add(clippers);
 
-		EquipoNormal lakers = new EquipoNormal("Lakers", oeste, "Los Ángeles", null, "Jeanie Buss", "Rob Pelinka",
-				109.1f, cryptocomArena);
+		EquipoNormal lakers = new EquipoNormal("Lakers", (short) 21, oeste, "Los Ángeles", null, "Jeanie Buss",
+				"Rob Pelinka", 109.1f, cryptocomArena);
 		lakers.setPlantilla(funcionesUtiles.getPlantilla(lakers.getNombre()));
 		lakers.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(lakers.getNombre()));
 
 		equiposNBA.add(lakers);
 
 		Estadio targetCenter = new Estadio("Target Center", (short) 18798);
-		EquipoNormal wolves = new EquipoNormal("Timberwolves", oeste, "Minnesota", null, "Marc Lore", "Sachin Gupta",
-				109.1f, targetCenter);
+		EquipoNormal wolves = new EquipoNormal("Timberwolves", (short)22, oeste, "Minnesota", null, "Marc Lore",
+				"Sachin Gupta", 109.1f, targetCenter);
 		wolves.setPlantilla(funcionesUtiles.getPlantilla(wolves.getNombre()));
 		wolves.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(wolves.getNombre()));
 
 		equiposNBA.add(wolves);
 
 		Estadio smoothieKingCenter = new Estadio("Smoothie King Center", (short) 16867);
-		EquipoNormal pelicans = new EquipoNormal("Pelicans", oeste, "New Orleans", null, "Gayle Benson",
+		EquipoNormal pelicans = new EquipoNormal("Pelicans", (short) 23, oeste, "New Orleans", null, "Gayle Benson",
 				"Trajan Langdon", 109.1f, smoothieKingCenter);
 		pelicans.setPlantilla(funcionesUtiles.getPlantilla(pelicans.getNombre()));
 		pelicans.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(pelicans.getNombre()));
@@ -743,47 +749,47 @@ public class funcionesUtiles {
 		equiposNBA.add(pelicans);
 
 		Estadio fedexForum = new Estadio("FedEx Forum", (short) 18119);
-		EquipoNormal grizzlies = new EquipoNormal("Grizzlies", este, "Memphis", null, "Robert Pera", "Jason Wexler",
-				109.1f, fedexForum);
+		EquipoNormal grizzlies = new EquipoNormal("Grizzlies", (short) 24, este, "Memphis", null, "Robert Pera",
+				"Jason Wexler", 109.1f, fedexForum);
 		grizzlies.setPlantilla(funcionesUtiles.getPlantilla(grizzlies.getNombre()));
 		grizzlies.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(grizzlies.getNombre()));
 
 		equiposNBA.add(grizzlies);
 
 		Estadio paycomCenter = new Estadio("Paycom Center", (short) 18203);
-		EquipoNormal okc = new EquipoNormal("Thunder", oeste, "Oklahoma city", null, "Professional Basketball Club LLC",
-				"Sam Presti", 109.1f, paycomCenter);
+		EquipoNormal okc = new EquipoNormal("Thunder", (short) 25, oeste, "Oklahoma city", null,
+				"Professional Basketball Club LLC", "Sam Presti", 109.1f, paycomCenter);
 		okc.setPlantilla(funcionesUtiles.getPlantilla(okc.getNombre()));
 		okc.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(okc.getNombre()));
 
 		equiposNBA.add(okc);
 
 		Estadio footprintCenter = new Estadio("Footprint Center", (short) 18422);
-		EquipoNormal suns = new EquipoNormal("Suns", oeste, "Phoenix", null, "Robert Sarver", "James Andrew Jones",
-				109.1f, footprintCenter);
+		EquipoNormal suns = new EquipoNormal("Suns", (short) 26, oeste, "Phoenix", null, "Robert Sarver",
+				"James Andrew Jones", 109.1f, footprintCenter);
 		suns.setPlantilla(funcionesUtiles.getPlantilla(suns.getNombre()));
 		suns.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(suns.getNombre()));
 
 		equiposNBA.add(suns);
 
 		Estadio modaCenter = new Estadio("Moda Center", (short) 19393);
-		EquipoNormal blazers = new EquipoNormal("Trail Blazers", oeste, "Portland", null, "Paul Allen", "Joe Cronin",
-				109.1f, modaCenter);
+		EquipoNormal blazers = new EquipoNormal("Trail Blazers", (short) 27, oeste, "Portland", null, "Paul Allen",
+				"Joe Cronin", 109.1f, modaCenter);
 		blazers.setPlantilla(funcionesUtiles.getPlantilla(blazers.getNombre()));
 		blazers.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(blazers.getNombre()));
 
 		equiposNBA.add(blazers);
 
 		Estadio golden1Center = new Estadio("Golden 1 Center", (short) 17608);
-		EquipoNormal kings = new EquipoNormal("Kings", oeste, "Sacramento", null, "Vivek Ranadivé", "Monte McNair",
-				109.1f, golden1Center);
+		EquipoNormal kings = new EquipoNormal("Kings", (short) 28, oeste, "Sacramento", null, "Vivek Ranadivé",
+				"Monte McNair", 109.1f, golden1Center);
 		kings.setPlantilla(funcionesUtiles.getPlantilla(kings.getNombre()));
 		kings.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(kings.getNombre()));
 
 		equiposNBA.add(kings);
 
 		Estadio attcenter = new Estadio("AT&T Center", (short) 18418);
-		EquipoNormal spurs = new EquipoNormal("Spurs", oeste, "San Antonio", null,
+		EquipoNormal spurs = new EquipoNormal("Spurs", (short) 29, oeste, "San Antonio", null,
 				"Spurs Sports & Entertainment L.L.C.", "Brian Wright", 109.1f, attcenter);
 		spurs.setPlantilla(funcionesUtiles.getPlantilla(spurs.getNombre()));
 		spurs.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(spurs.getNombre()));
@@ -791,8 +797,8 @@ public class funcionesUtiles {
 		equiposNBA.add(spurs);
 
 		Estadio vivintArena = new Estadio("Vivint Arena", (short) 18306);
-		EquipoNormal jazz = new EquipoNormal("Jazz", oeste, "Utah", null, "Ryan Smith", "Justin Zanik", 109.1f,
-				vivintArena);
+		EquipoNormal jazz = new EquipoNormal("Jazz", (short) 30, oeste, "Utah", null, "Ryan Smith", "Justin Zanik",
+				109.1f, vivintArena);
 		jazz.setPlantilla(funcionesUtiles.getPlantilla(jazz.getNombre()));
 		jazz.setDorsalesRetirados(funcionesUtiles.getDorsalesRetirados(jazz.getNombre()));
 
@@ -3222,6 +3228,34 @@ public class funcionesUtiles {
 
 		return plantillaEquipo;
 
+	}
+
+	public static void borrarDatosTablas() throws SQLException {
+		Statement query = utilsDB.conectarBBDD();
+
+		query.executeUpdate("DELETE FROM conferencia;");
+		query.executeUpdate("DELETE FROM equipo;");
+		query.executeUpdate("DELETE FROM partidos;");
+		query.executeUpdate("DELETE FROM estadio;");
+		query.executeUpdate("DELETE FROM jugador;");
+		query.executeUpdate("DELETE FROM liga;");
+		query.executeUpdate("DELETE FROM partidoallstar;");
+		query.executeUpdate("DELETE FROM partidonormal;");
+		query.executeUpdate("DELETE FROM playoffs;");
+		query.executeUpdate("DELETE FROM rondaplayoff;");
+
+		query.executeUpdate("ALTER TABLE conferencia AUTO_INCREMENT = 1");
+		query.executeUpdate("ALTER TABLE equipo AUTO_INCREMENT = 1");
+		query.executeUpdate("ALTER TABLE partidos AUTO_INCREMENT = 1");
+		query.executeUpdate("ALTER TABLE estadio AUTO_INCREMENT = 1");
+		query.executeUpdate("ALTER TABLE jugador AUTO_INCREMENT = 1");
+		query.executeUpdate("ALTER TABLE liga AUTO_INCREMENT = 1");
+		query.executeUpdate("ALTER TABLE partidoallstar AUTO_INCREMENT = 1");
+		query.executeUpdate("ALTER TABLE partidonormal AUTO_INCREMENT = 1");
+		query.executeUpdate("ALTER TABLE playoffs AUTO_INCREMENT = 1");
+		query.executeUpdate("ALTER TABLE rondaplayoff AUTO_INCREMENT = 1");
+
+		utilsDB.desconectarBBDD();
 	}
 
 }
