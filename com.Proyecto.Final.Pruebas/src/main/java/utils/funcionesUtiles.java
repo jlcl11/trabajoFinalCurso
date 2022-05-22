@@ -173,290 +173,290 @@ public class funcionesUtiles {
 		Equipo jazz = new Equipo((byte) 30, "Jazz", (byte) 2, "Utah", "jugadores Retirados", "Justin Zanik", 109.4f,
 				"Estadio", "Ryan Smith", "plantilla", (byte) 1);
 		Estadio vivintArena = new Estadio((byte) 30, "Vivint Arena", (short) 18306, (byte) 30);
-/*
-		Jugador bobCousy = new Jugador((byte) 1, "Bob", "Cousy", (byte) 9, (byte) 1);
-		Jugador tedTurner = new Jugador((byte) 2, "Ted", "Turner", (byte) 17, (byte) 1);
-		Jugador dominiqueWilkins = new Jugador((byte) 3, "Dominique", "Wilkins", (byte) 21, (byte) 1);
-		Jugador louHudson = new Jugador((byte) 4, "Lou", "Hudson", (byte) 23, (byte) 1);
-		Jugador jasonColler = new Jugador((byte) 5, "Jason", "Collier", (byte) 40, (byte) 1);
-		Jugador peteMaravich = new Jugador((byte) 6, "Pete", "Maravich", (byte) 44, "Pistol Pete", (byte) 1);
-		Jugador dikembeMutombo = new Jugador((byte) 7, "Dikembe", "Mutombo", (byte) 55, (byte) 1);
 
-		Jugador robertparish = new Jugador((byte) 8, "Robert", "Parish", (byte) 00, (byte) 2);
-		Jugador walterBrown = new Jugador((byte) 9, "Walter", "brown", (byte) 1, (byte) 9);
-		Jugador arnoldAuerbach = new Jugador((byte) 10, "Arnold", "Auerbach", (byte) 2, "Red", (byte) 2);
-		Jugador dennisJhonson = new Jugador((byte) 11, "Dennis", "Jhonson", (byte) 3, (byte) 2);
-		Jugador kevinGarnet = new Jugador((byte) 12, "Kevin", "Garnet", (byte) 5, "Big Ticket", (byte) 2);
-		Jugador billRussel = new Jugador((byte) 13, "Bill", "Russel", (byte) 6, "Lord of the Rings", (byte) 2);
-		Jugador jojoWhite = new Jugador((byte) 14, "Jo Jo", "White", (byte) 10, (byte) 2);
-		Jugador bobCousyCeltics = new Jugador((byte) 15, "Bob", "Cousy", (byte) 14, (byte) 2);
-		Jugador tomHeison = new Jugador((byte) 16, "Tom", "Heison", (byte) 15, (byte) 2);
-		Jugador tomSanders = new Jugador((byte) 17, "Tom", "Sanders", (byte) 16, "Satch", (byte) 2);
-		Jugador jhonHavliceK = new Jugador((byte) 18, "Jhon", "Havlicek", (byte) 17, (byte) 2);
-		Jugador jimLoscutoff = new Jugador((byte) 19, "Bob", "Cousy", (byte) 18, (byte) 2);
-		Jugador daveCowens = new Jugador((byte) 20, "Dave", "Cowens", (byte) 18, (byte) 2);
-		Jugador donaldNelson = new Jugador((byte) 21, "Donald", "Nelson", (byte) 19, "Don Nelson", (byte) 2);
-		Jugador billSharman = new Jugador((byte) 22, "Bill", "Sharman", (byte) 21, (byte) 2);
-		Jugador edMacauley = new Jugador((byte) 23, "Edward", "Macauley", (byte) 22, "Ed Macauley", (byte) 2);
-		Jugador frankRamsey = new Jugador((byte) 24, "Frank Vernon", "Ramsey", (byte) 23, "Frank Ramsey", (byte) 2);
-		Jugador samJones = new Jugador((byte) 25, "Sam", "Jones", (byte) 24, (byte) 2);
-		Jugador kcJones = new Jugador((byte) 26, "K.C.", "Jones", (byte) 25, (byte) 2);
-		Jugador cedricMaxwell = new Jugador((byte) 27, "Cedric", "Maxwell", (byte) 31, "Cornbread", (byte) 2);
-		Jugador kevinMcHale = new Jugador((byte) 28, "Kevin Edward", "McHale", (byte) 32, "Kevin McHale", (byte) 2);
-		Jugador larryBird = new Jugador((byte) 29, "Larry Joe", "Bird", (byte) 33, "Larry Bird", (byte) 2);
-		Jugador paulPierce = new Jugador((byte) 30, "Paul", "Pierce", (byte) 34, "the truth", (byte) 2);
-		Jugador reggieLewis = new Jugador((byte) 31, "Reginald", "Lewis", (byte) 35, "Reggie Lewis", (byte) 2);
+		Jugador bobCousy = new Jugador((short) 1, "Bob", "Cousy", (byte) 9, (byte) 1);
+		Jugador tedTurner = new Jugador((short) 2, "Ted", "Turner", (byte) 17, (byte) 1);
+		Jugador dominiqueWilkins = new Jugador((short) 3, "Dominique", "Wilkins", (byte) 21, (byte) 1);
+		Jugador louHudson = new Jugador((short) 4, "Lou", "Hudson", (byte) 23, (byte) 1);
+		Jugador jasonColler = new Jugador((short) 5, "Jason", "Collier", (byte) 40, (byte) 1);
+		Jugador peteMaravich = new Jugador((short) 6, "Pete", "Maravich", (byte) 44, "Pistol Pete", (byte) 1);
+		Jugador dikembeMutombo = new Jugador((short) 7, "Dikembe", "Mutombo", (byte) 55, (byte) 1);
 
-		Jugador drazenPetrovich = new Jugador((byte) 32, "Dražen ", "Petrović", (byte) 3, (byte) 3);
-		Jugador wendellLadner = new Jugador((byte) 33, "Wendell", "Ladner", (byte) 4, (byte) 3);
-		Jugador jasonKidd = new Jugador((byte) 34, "Jason", "Kidd", (byte) 5, (byte) 3);
-		Jugador jhonWilliamson = new Jugador((byte) 35, "Jhon Lee", "Williamson", (byte) 23, "John Williamson",
+		Jugador robertparish = new Jugador((short) 8, "Robert", "Parish", (byte) 00, (byte) 2);
+		Jugador walterBrown = new Jugador((short) 9, "Walter", "brown", (byte) 1, (byte) 9);
+		Jugador arnoldAuerbach = new Jugador((short) 10, "Arnold", "Auerbach", (byte) 2, "Red", (byte) 2);
+		Jugador dennisJhonson = new Jugador((short) 11, "Dennis", "Jhonson", (byte) 3, (byte) 2);
+		Jugador kevinGarnet = new Jugador((short) 12, "Kevin", "Garnet", (byte) 5, "Big Ticket", (byte) 2);
+		Jugador billRussel = new Jugador((short) 13, "Bill", "Russel", (byte) 6, "Lord of the Rings", (byte) 2);
+		Jugador jojoWhite = new Jugador((short) 14, "Jo Jo", "White", (byte) 10, (byte) 2);
+		Jugador bobCousyCeltics = new Jugador((short) 15, "Bob", "Cousy", (byte) 14, (byte) 2);
+		Jugador tomHeison = new Jugador((short) 16, "Tom", "Heison", (byte) 15, (byte) 2);
+		Jugador tomSanders = new Jugador((short) 17, "Tom", "Sanders", (byte) 16, "Satch", (byte) 2);
+		Jugador jhonHavliceK = new Jugador((short) 18, "Jhon", "Havlicek", (byte) 17, (byte) 2);
+		Jugador jimLoscutoff = new Jugador((short) 19, "Bob", "Cousy", (byte) 18, (byte) 2);
+		Jugador daveCowens = new Jugador((short) 20, "Dave", "Cowens", (byte) 18, (byte) 2);
+		Jugador donaldNelson = new Jugador((short) 21, "Donald", "Nelson", (byte) 19, "Don Nelson", (byte) 2);
+		Jugador billSharman = new Jugador((short) 22, "Bill", "Sharman", (byte) 21, (byte) 2);
+		Jugador edMacauley = new Jugador((short) 23, "Edward", "Macauley", (byte) 22, "Ed Macauley", (byte) 2);
+		Jugador frankRamsey = new Jugador((short) 24, "Frank Vernon", "Ramsey", (byte) 23, "Frank Ramsey", (byte) 2);
+		Jugador samJones = new Jugador((short) 25, "Sam", "Jones", (byte) 24, (byte) 2);
+		Jugador kcJones = new Jugador((short) 26, "K.C.", "Jones", (byte) 25, (byte) 2);
+		Jugador cedricMaxwell = new Jugador((short) 27, "Cedric", "Maxwell", (byte) 31, "Cornbread", (byte) 2);
+		Jugador kevinMcHale = new Jugador((short) 28, "Kevin Edward", "McHale", (byte) 32, "Kevin McHale", (byte) 2);
+		Jugador larryBird = new Jugador((short) 29, "Larry Joe", "Bird", (byte) 33, "Larry Bird", (byte) 2);
+		Jugador paulPierce = new Jugador((short) 30, "Paul", "Pierce", (byte) 34, "the truth", (byte) 2);
+		Jugador reggieLewis = new Jugador((short) 31, "Reginald", "Lewis", (byte) 35, "Reggie Lewis", (byte) 2);
+
+		Jugador drazenPetrovich = new Jugador((short) 32, "Dražen ", "Petrović", (byte) 3, (byte) 3);
+		Jugador wendellLadner = new Jugador((short) 33, "Wendell", "Ladner", (byte) 4, (byte) 3);
+		Jugador jasonKidd = new Jugador((short) 34, "Jason", "Kidd", (byte) 5, (byte) 3);
+		Jugador jhonWilliamson = new Jugador((short) 35, "Jhon Lee", "Williamson", (byte) 23, "John Williamson",
 				(byte) 3);
-		Jugador billMelchionni = new Jugador((byte) 36, "William P", "Melchionni", (byte) 25, "Bill Melchionni",
+		Jugador billMelchionni = new Jugador((short) 36, "William P", "Melchionni", (byte) 25, "Bill Melchionni",
 				(byte) 3);
-		Jugador juliusErving = new Jugador((byte) 37, "Julius Winfield", "Earving ||", (byte) 32, "Dr J", (byte) 3);
-		Jugador buckWilliams = new Jugador((byte) 38, "Dikembe", "Mutombo", (byte) 55, (byte) 3);
+		Jugador juliusErving = new Jugador((short) 37, "Julius Winfield", "Earving ||", (byte) 32, "Dr J", (byte) 3);
+		Jugador buckWilliams = new Jugador((short) 38, "Dikembe", "Mutombo", (byte) 55, (byte) 3);
 
-		Jugador bobbyPhills = new Jugador((byte) 39, "Bobby Ray ", "Phills ||", (byte) 13, "Bobby Phills", (byte) 4);
+		Jugador bobbyPhills = new Jugador((short) 39, "Bobby Ray ", "Phills ||", (byte) 13, "Bobby Phills", (byte) 4);
 
-		Jugador michaelJordan = new Jugador((byte) 40, "Michael", "Jordan", (byte) 23, "Air Jordan", (byte) 5);
-		Jugador scottiePippen = new Jugador((byte) 41, "Scottie", "Pippen", (byte) 33, "Pip", (byte) 5);
-		Jugador bobLove = new Jugador((byte) 42, "Bob", "Love", (byte) 10, (byte) 5);
+		Jugador michaelJordan = new Jugador((short) 40, "Michael", "Jordan", (byte) 23, "Air Jordan", (byte) 5);
+		Jugador scottiePippen = new Jugador((short) 41, "Scottie", "Pippen", (byte) 33, "Pip", (byte) 5);
+		Jugador bobLove = new Jugador((short) 42, "Bob", "Love", (byte) 10, (byte) 5);
 		Jugador jerrySloan = new Jugador((byte) 43, "Jerry", "Sloan", (byte) 4, (byte) 5);
 
-		Jugador bingoSmith = new Jugador((byte) 44, "Robert", "Smith", (byte) 7, "Bingo Smith", (byte) 6);
-		Jugador zydrunasilgaukas = new Jugador((byte) 45, "Žydrūnas ", "Ilgauskas", (byte) 11, (byte) 6);
-		Jugador larryNance = new Jugador((byte) 46, "Larry Donnel", "Nance Sr", (byte) 2, "Larry Nance", (byte) 6);
-		Jugador markPrice = new Jugador((byte) (byte) 47, "William Mark", "Price", (byte) 25, "Mark Price", (byte) 6);
-		Jugador austinCarr = new Jugador((byte) 48, "Austin George ", "Carr", (byte) 34, "Austin Carr", (byte) 6);
-		Jugador nateThurmond = new Jugador((byte) 49, "Nathaniel", "Thurmond", (byte) 42, "Nate the Great", (byte) 6);
-		Jugador bradDaugherty = new Jugador((byte) 50, "Bradley Lee", "Daugherty", (byte) 43, "Brad Daugherty",
+		Jugador bingoSmith = new Jugador((short) 44, "Robert", "Smith", (byte) 7, "Bingo Smith", (byte) 6);
+		Jugador zydrunasilgaukas = new Jugador((short) 45, "Žydrūnas ", "Ilgauskas", (byte) 11, (byte) 6);
+		Jugador larryNance = new Jugador((short) 46, "Larry Donnel", "Nance Sr", (byte) 2, "Larry Nance", (byte) 6);
+		Jugador markPrice = new Jugador((short) (byte) 47, "William Mark", "Price", (byte) 25, "Mark Price", (byte) 6);
+		Jugador austinCarr = new Jugador((short) 48, "Austin George ", "Carr", (byte) 34, "Austin Carr", (byte) 6);
+		Jugador nateThurmond = new Jugador((short) 49, "Nathaniel", "Thurmond", (byte) 42, "Nate the Great", (byte) 6);
+		Jugador bradDaugherty = new Jugador((short) 50, "Bradley Lee", "Daugherty", (byte) 43, "Brad Daugherty",
 				(byte) 6);
 
-		Jugador derekHarper = new Jugador((byte) 51, "Derek ", "Harper", (byte) 12, (byte) 16);
-		Jugador bradDavis = new Jugador((byte) 52, "Bradley Ernest ", "Davis", (byte) 15, "Brad Davis", (byte) 16);
-		Jugador rolandoBlackman = new Jugador((byte) 53, "Rolando  Antonio", "Price", (byte) 22, "Ro Blackman",
+		Jugador derekHarper = new Jugador((short) 51, "Derek ", "Harper", (byte) 12, (byte) 16);
+		Jugador bradDavis = new Jugador((short) 52, "Bradley Ernest ", "Davis", (byte) 15, "Brad Davis", (byte) 16);
+		Jugador rolandoBlackman = new Jugador((short) 53, "Rolando  Antonio", "Price", (byte) 22, "Ro Blackman",
 				(byte) 16);
-		Jugador dirkNowitzki = new Jugador((byte) 54, "Dirk", "Werner Nowitzki", (byte) 41, "Wunderkind", (byte) 16);
+		Jugador dirkNowitzki = new Jugador((short) 54, "Dirk", "Werner Nowitzki", (byte) 41, "Wunderkind", (byte) 16);
 
-		Jugador alexEnglish = new Jugador((byte) 55, "Alexander", "English", (byte) 2, "Alex English", (byte) 17);
-		Jugador fatLever = new Jugador((byte) 56, "Lafayette ", "Lever", (byte) 12, "Fat Lever", (byte) 17);
-		Jugador davidThompson = new Jugador((byte) 57, "David O'Neil", "Thompson", (byte) 33, (byte) 17);
-		Jugador byronbeck = new Jugador((byte) 58, "Byrin", "Beck", (byte) 40, (byte) 17);
-		Jugador danIssel = new Jugador((byte) 59, "Daniel Paul ", "Issel", (byte) 44, "Dan Issel", (byte) 17);
-		Jugador dikembeMutomboNuggets = new Jugador((byte) 60, "Dikembe", "Mutombo", (byte) 55, (byte) 17);
-		Jugador dougMoe = new Jugador((byte) 61, "Douglas Edwin", "Moe", (byte) 432, "Doug Moe", (byte) 17);
+		Jugador alexEnglish = new Jugador((short) 55, "Alexander", "English", (byte) 2, "Alex English", (byte) 17);
+		Jugador fatLever = new Jugador((short) 56, "Lafayette ", "Lever", (byte) 12, "Fat Lever", (byte) 17);
+		//Jugador davidThompson = new Jugador((short) 57, "David O'Neil", "Thompson", (byte) 33, (byte) 17);
+		Jugador byronbeck = new Jugador((short) 58, "Byrin", "Beck", (byte) 40, (byte) 17);
+		Jugador danIssel = new Jugador((short) 59, "Daniel Paul ", "Issel", (byte) 44, "Dan Issel", (byte) 17);
+		Jugador dikembeMutomboNuggets = new Jugador((short) 60, "Dikembe", "Mutombo", (byte) 55, (byte) 17);
+		Jugador dougMoe = new Jugador((short) 61, "Douglas Edwin", "Moe", (byte) 432, "Doug Moe", (byte) 17);
 
-		Jugador chaunceyBillups = new Jugador((byte) 62, "Chauncey", "Billups", (byte) 1, "Mr. Big Shot", (byte) 7);
-		Jugador chuckDaily = new Jugador((byte) 63, "Charles Jerome ", "Daily", (byte) 2, "Chuck Daly", (byte) 7);
-		Jugador benWallace = new Jugador((byte) 64, "Ben", "Wallace", (byte) 6, "Big Ben", (byte) 7);
-		Jugador joeDumars = new Jugador((byte) 65, "Joe", "Dumars", (byte) 4, "Joe-D", (byte) 7);
-		Jugador dennisRodman = new Jugador((byte) 66, "Dennis Keith", "Rodman", (byte) 10, "The Worm", (byte) 7);
-		Jugador isaiahThomas = new Jugador((byte) 67, "Isiah Lord", "Thomas", (byte) 11, "Zeke", (byte) 7);
-		Jugador vinnieJhonson = new Jugador((byte) 68, "Vincent", "Jhonson", (byte) 15, "Microwave", (byte) 7);
-		Jugador bobLanier = new Jugador((byte) 69, "Robert Jerry", "Lanier", (byte) 16, "Bob Lanier", (byte) 7);
-		Jugador daveBing = new Jugador((byte) 70, "David ", "Bing", (byte) 21, "Duke", (byte) 7);
-		Jugador richardHamilton = new Jugador((byte) 71, "Richard Clay", "Hamilton", (byte) 32, "The Man in the Mask",
+		Jugador chaunceyBillups = new Jugador((short) 62, "Chauncey", "Billups", (byte) 1, "Mr. Big Shot", (byte) 7);
+		Jugador chuckDaily = new Jugador((short) 63, "Charles Jerome ", "Daily", (byte) 2, "Chuck Daly", (byte) 7);
+		Jugador benWallace = new Jugador((short) 64, "Ben", "Wallace", (byte) 6, "Big Ben", (byte) 7);
+		Jugador joeDumars = new Jugador((short) 65, "Joe", "Dumars", (byte) 4, "Joe-D", (byte) 7);
+		Jugador dennisRodman = new Jugador((short) 66, "Dennis Keith", "Rodman", (byte) 10, "The Worm", (byte) 7);
+		Jugador isaiahThomas = new Jugador((short) 67, "Isiah Lord", "Thomas", (byte) 11, "Zeke", (byte) 7);
+		Jugador vinnieJhonson = new Jugador((short) 68, "Vincent", "Jhonson", (byte) 15, "Microwave", (byte) 7);
+		Jugador bobLanier = new Jugador((short) 69, "Robert Jerry", "Lanier", (byte) 16, "Bob Lanier", (byte) 7);
+		Jugador daveBing = new Jugador((short) 70, "David ", "Bing", (byte) 21, "Duke", (byte) 7);
+		Jugador richardHamilton = new Jugador((short) 71, "Richard Clay", "Hamilton", (byte) 32, "The Man in the Mask",
 				(byte) 7);
-		Jugador billLaimbeer = new Jugador((byte) 72, "William J.", "Laimbeer", (byte) 40, "Bill Laimbeer", (byte) 7);
+		Jugador billLaimbeer = new Jugador((short) 72, "William J.", "Laimbeer", (byte) 40, "Bill Laimbeer", (byte) 7);
 
-		Jugador wiltChamberlain = new Jugador((byte) 73, "Wilton Norman", "Chamberlain", (byte) 13, "Wilt the Stilt",
+		Jugador wiltChamberlain = new Jugador((short) 73, "Wilton Norman", "Chamberlain", (byte) 13, "Wilt the Stilt",
 				(byte) 18);
-		Jugador thomMeschery = new Jugador((byte) 74, "Thomas Nicholas  ", "Meschery", (byte) 14, "Thom Meschery",
+		Jugador thomMeschery = new Jugador((short) 74, "Thomas Nicholas  ", "Meschery", (byte) 14, "Thom Meschery",
 				(byte) 18);
-		Jugador alAttles = new Jugador((byte) 75, "Alvin", "Attles", (byte) 16, "Destroyer", (byte) 18);
-		Jugador chrisMullin = new Jugador((byte) 76, "Christopher Paul", "Dumars", (byte) 17, "Chris Mullin",
+		Jugador alAttles = new Jugador((short) 75, "Alvin", "Attles", (byte) 16, "Destroyer", (byte) 18);
+		Jugador chrisMullin = new Jugador((short) 76, "Christopher Paul", "Dumars", (byte) 17, "Chris Mullin",
 				(byte) 18);
-		Jugador rickBarry = new Jugador((byte) 77, "Richard Francis Dennis", "Barry |||", (byte) 24, "Greyhound",
+		Jugador rickBarry = new Jugador((short) 77, "Richard Francis Dennis", "Barry |||", (byte) 24, "Greyhound",
 				(byte) 18);
-		Jugador nateThurmondWarriors = new Jugador((byte) 78, "Nathaniel", "Thurmond", (byte) 42, "Nate the Great",
+		Jugador nateThurmondWarriors = new Jugador((short) 78, "Nathaniel", "Thurmond", (byte) 42, "Nate the Great",
 				(byte) 18);
 
-		Jugador yaoMing = new Jugador((byte) 79, "Yao", "Ming", (byte) 11, "Yao's dinasty", (byte) 19);
-		Jugador clydeDrexler = new Jugador((byte) 80, "Clyde Austin", "Drexler ", (byte) 22, "The Glide", (byte) 19);
-		Jugador calvinMurphy = new Jugador((byte) 81, "Calvin Jerome", "Murphy ", (byte) 23, "Destroyer", (byte) 19);
-		Jugador mosesMalone = new Jugador((byte) 82, "Moses Eugene", "Malone", (byte) 24, "Moses Malone", (byte) 19);
-		Jugador hakeemOlajuwon = new Jugador((byte) 83, "Hakeem Abdul", "Olajuwon", (byte) 34, "The Dream", (byte) 19);
-		Jugador rudyTomjanovich = new Jugador((byte) 84, "Rudolph ", "Tomjanovich", (byte) 45, "Rudy Tomjanovich",
+		//Jugador yaoMing = new Jugador((short) 79, "Yao", "Ming", (byte) 11, "Yao's dinasty", (byte) 19);
+		Jugador clydeDrexler = new Jugador((short) 80, "Clyde Austin", "Drexler ", (byte) 22, "The Glide", (byte) 19);
+		Jugador calvinMurphy = new Jugador((short) 81, "Calvin Jerome", "Murphy ", (byte) 23, "Destroyer", (byte) 19);
+		Jugador mosesMalone = new Jugador((short) 82, "Moses Eugene", "Malone", (byte) 24, "Moses Malone", (byte) 19);
+		Jugador hakeemOlajuwon = new Jugador((short) 83, "Hakeem Abdul", "Olajuwon", (byte) 34, "The Dream", (byte) 19);
+		Jugador rudyTomjanovich = new Jugador((short) 84, "Rudolph ", "Tomjanovich", (byte) 45, "Rudy Tomjanovich",
 				(byte) 19);
 
-		Jugador georgemcGinnis = new Jugador((byte) 85, "George", "McGinnis", (byte) 30, (byte) 8);
-		Jugador reggieMiller = new Jugador((byte) 86, "Reginald Wayne", "Miller ", (byte) 31, "Miller Time", (byte) 8);
-		Jugador melDaniels = new Jugador((byte) 87, "Melvin Joe", "Daniels ", (byte) 34, "Melvin Joe", (byte) 8);
-		Jugador rogerBrown = new Jugador((byte) 88, "Roger William", "Brown", (byte) 35, "The Rajah", (byte) 8);
-		Jugador slickLeonard = new Jugador((byte) 89, "William Robert", "Leonard", (byte) 529, "Slick Leonard",
+		Jugador georgemcGinnis = new Jugador((short) 85, "George", "McGinnis", (byte) 30, (byte) 8);
+		Jugador reggieMiller = new Jugador((short) 86, "Reginald Wayne", "Miller ", (byte) 31, "Miller Time", (byte) 8);
+		Jugador melDaniels = new Jugador((short) 87, "Melvin Joe", "Daniels ", (byte) 34, "Melvin Joe", (byte) 8);
+		Jugador rogerBrown = new Jugador((short) 88, "Roger William", "Brown", (byte) 35, "The Rajah", (byte) 8);
+		Jugador slickLeonard = new Jugador((short) 89, "William Robert", "Leonard", (byte) 529, "Slick Leonard",
 				(byte) 8);
 
-		Jugador kobe8 = new Jugador((byte) 90, "Kobe ", "Bryant", (byte) 8, "Black mamba", (byte) 21);
-		Jugador wiltChamberlainLakers = new Jugador((byte) 91, "Wilton Norman", "Chamberlain", (byte) 13,
+		Jugador kobe8 = new Jugador((short) 90, "Kobe ", "Bryant", (byte) 8, "Black mamba", (byte) 21);
+		Jugador wiltChamberlainLakers = new Jugador((short) 91, "Wilton Norman", "Chamberlain", (byte) 13,
 				"Wilt the Stilt", (byte) 21);
-		Jugador elginBaylor = new Jugador((byte) 92, "Elgin Gay", "Baylor ", (byte) 22, "Elgin Baylor", (byte) 21);
-		Jugador kobe24 = new Jugador((byte) 93, "Kobe ", "Bryant", (byte) 24, "Black mamba", (byte) 21);
-		Jugador gailGoodrich = new Jugador((byte) 94, "Gail Charles", "Goodrich", (byte) 25, "The Stump", (byte) 21);
-		Jugador magicJhonson = new Jugador((byte) 95, "Earvin", "Jhonson", (byte) 32, "Magic Jhonson", (byte) 21);
-		Jugador kareemAbdulJabbar = new Jugador((byte) 96, "Kareem ", "Abdul-Jabbar", (byte) 33, "The sky Hook",
+		Jugador elginBaylor = new Jugador((short) 92, "Elgin Gay", "Baylor ", (byte) 22, "Elgin Baylor", (byte) 21);
+		Jugador kobe24 = new Jugador((short) 93, "Kobe ", "Bryant", (byte) 24, "Black mamba", (byte) 21);
+		Jugador gailGoodrich = new Jugador((short) 94, "Gail Charles", "Goodrich", (byte) 25, "The Stump", (byte) 21);
+		Jugador magicJhonson = new Jugador((short) 95, "Earvin", "Jhonson", (byte) 32, "Magic Jhonson", (byte) 21);
+		Jugador kareemAbdulJabbar = new Jugador((short) 96, "Kareem ", "Abdul-Jabbar", (byte) 33, "The sky Hook",
 				(byte) 21);
-		Jugador shaquilleOneal = new Jugador((byte) 97, "Shaquille Rashaun", "O'Neal ", (byte) 34, "Shaq Attack",
+		//Jugador shaquilleOneal = new Jugador((short) 97, "Shaquille Rashaun", "O'Neal ", (byte) 34, "Shaq Attack",
+			//	(byte) 21);
+		Jugador jamesWorthy = new Jugador((short) 98, "James Ager ", "Worthy", (byte) 42, "Big Game James", (byte) 21);
+		Jugador jerryWest = new Jugador((short) 99, "Jerome Alan", "West", (byte) 44, "The Logo", (byte) 21);
+		Jugador jamalWilkes = new Jugador((short) 100, "Jamaal Abdul-Lateef", "Wilkes", (byte) 52, "Smooth as Silk",
 				(byte) 21);
-		Jugador jamesWorthy = new Jugador((byte) 98, "James Ager ", "Worthy", (byte) 42, "Big Game James", (byte) 21);
-		Jugador jerryWest = new Jugador((byte) 99, "Jerome Alan", "West", (byte) 44, "The Logo", (byte) 21);
-		Jugador jamalWilkes = new Jugador((byte) 100, "Jamaal Abdul-Lateef", "Wilkes", (byte) 52, "Smooth as Silk",
+		Jugador jimPollard = new Jugador((short) 101, "James Clifford", "Pollard", (byte) 17, "The Kangaroo Kid",
 				(byte) 21);
-		Jugador jimPollard = new Jugador((byte) 101, "James Clifford", "Pollard", (byte) 17, "The Kangaroo Kid",
+		Jugador vernMikelsen = new Jugador((short) 102, "Arild Verner Agerskov", "Mikkelsen", (byte) 19, "Ven Mikkelsen",
 				(byte) 21);
-		Jugador vernMikelsen = new Jugador((byte) 102, "Arild Verner Agerskov", "Mikkelsen", (byte) 19, "Ven Mikkelsen",
+		Jugador slaterMartin = new Jugador((short) 103, "Slater Nelson", "Martin", (byte) 22, "Dugie", (byte) 21);
+		Jugador clydeLovellete = new Jugador((short) 104, "Clyde Edward", "Lovellette", (byte) 34, "Clyde Lovellette",
 				(byte) 21);
-		Jugador slaterMartin = new Jugador((byte) 103, "Slater Nelson", "Martin", (byte) 22, "Dugie", (byte) 21);
-		Jugador clydeLovellete = new Jugador((byte) 104, "Clyde Edward", "Lovellette", (byte) 34, "Clyde Lovellette",
-				(byte) 21);
-		Jugador georgeMikan = new Jugador((byte) 105, "George Lawrence", "Mikan", (byte) 99, "Mr. Basketball",
+		Jugador georgeMikan = new Jugador((short) 105, "George Lawrence", "Mikan", (byte) 99, "Mr. Basketball",
 				(byte) 21);
 
-		Jugador zachRandolph = new Jugador((byte) 106, "Zachary McKenley", "Randolph", (byte) 50, "Z-Bo", (byte) 24);
+		Jugador zachRandolph = new Jugador((short) 106, "Zachary McKenley", "Randolph", (byte) 50, "Z-Bo", (byte) 24);
 
-		Jugador chrisBosh = new Jugador((byte) 107, "Christopher Wesson ", "Bosh", (byte) 1, "Boshasaurus", (byte) 9);
-		Jugador dwayneWade = new Jugador((byte) 108, "Dwyane Tyrone", "Wade ", (byte) 3, "Flash", (byte) 9);
-		Jugador timHardaway = new Jugador((byte) 109, "Timothy Duane", "Hardaway", (byte) 10, "Tim Bug", (byte) 9);
-		Jugador danMarino = new Jugador((byte) 110, "Daniel Constantine ", "Marino", (byte) 13, (byte) 9);
-		Jugador michaelJordanHeat = new Jugador((byte) 111, "Michael", "Jordan", (byte) 23, "Air Jordan", (byte) 9);
-		Jugador shaquilleOnealHeat = new Jugador((byte) 112, "Shaquille Rashaun", "O'Neal ", (byte) 32, "Shaq Attack",
-				(byte) 9);
-		Jugador alonzoMourning = new Jugador((byte) 113, "Alonzo Harding ", "Mourning", (byte) 33, "Zo", (byte) 9);
+		Jugador chrisBosh = new Jugador((short) 107, "Christopher Wesson ", "Bosh", (byte) 1, "Boshasaurus", (byte) 9);
+		Jugador dwayneWade = new Jugador((short) 108, "Dwyane Tyrone", "Wade ", (byte) 3, "Flash", (byte) 9);
+		Jugador timHardaway = new Jugador((short) 109, "Timothy Duane", "Hardaway", (byte) 10, "Tim Bug", (byte) 9);
+		Jugador danMarino = new Jugador((short) 110, "Daniel Constantine ", "Marino", (byte) 13, (byte) 9);
+		Jugador michaelJordanHeat = new Jugador((short) 111, "Michael", "Jordan", (byte) 23, "Air Jordan", (byte) 9);
+	//	Jugador shaquilleOnealHeat = new Jugador((short) 112, "Shaquille Rashaun", "O'Neal ", (byte) 32, "Shaq Attack",
+			//	(byte) 9);
+		Jugador alonzoMourning = new Jugador((short) 113, "Alonzo Harding ", "Mourning", (byte) 33, "Zo", (byte) 9);
 
-		Jugador oscarRobertson = new Jugador((byte) 114, "Oscar Palmer", "Robertson", (byte) 1, "Mr.Triple-Double",
+		Jugador oscarRobertson = new Jugador((short) 114, "Oscar Palmer", "Robertson", (byte) 1, "Mr.Triple-Double",
 				(byte) 10);
-		Jugador juniorBridgeman = new Jugador((byte) 115, "Ulysses Lee", "Bridgeman ", (byte) 2, "Junior Bridgeman",
+		Jugador juniorBridgeman = new Jugador((short) 115, "Ulysses Lee", "Bridgeman ", (byte) 2, "Junior Bridgeman",
 				(byte) 10);
-		Jugador sidneyMoncrief = new Jugador((byte) 116, "Sidney Alvin", "Moncrief", (byte) 4, "The squid", (byte) 10);
-		Jugador marquesJhonson = new Jugador((byte) 117, "Marques Kevin", "Johnson", (byte) 8, "Slammer", (byte) 10);
-		Jugador jonMcGlockin = new Jugador((byte) 118, "Jon P.", "McGlockin", (byte) 14, "Jonny Mac", (byte) 10);
-		Jugador bobLanierBucks = new Jugador((byte) 119, "Robert Jerry", "Lanier", (byte) 16, "Bob Lanier", (byte) 10);
-		Jugador brianWinters = new Jugador((byte) 120, "Brian Joseph", "Winters", (byte) 32, "Lurch", (byte) 10);
-		Jugador kareemAbdulJabbarBucks = new Jugador((byte) 121, "Kareem ", "Abdul-Jabbar", (byte) 33, "The sky Hook",
+		Jugador sidneyMoncrief = new Jugador((short) 116, "Sidney Alvin", "Moncrief", (byte) 4, "The squid", (byte) 10);
+		Jugador marquesJhonson = new Jugador((short) 117, "Marques Kevin", "Johnson", (byte) 8, "Slammer", (byte) 10);
+		Jugador jonMcGlockin = new Jugador((short) 118, "Jon P.", "McGlockin", (byte) 14, "Jonny Mac", (byte) 10);
+		Jugador bobLanierBucks = new Jugador((short) 119, "Robert Jerry", "Lanier", (byte) 16, "Bob Lanier", (byte) 10);
+		Jugador brianWinters = new Jugador((short) 120, "Brian Joseph", "Winters", (byte) 32, "Lurch", (byte) 10);
+		Jugador kareemAbdulJabbarBucks = new Jugador((short) 121, "Kareem ", "Abdul-Jabbar", (byte) 33, "The sky Hook",
 				(byte) 10);
 
-		Jugador malikSealy = new Jugador((byte) 122, "Malik", "Sealy", (byte) 2, "Silk", (byte) 22);
+		Jugador malikSealy = new Jugador((short) 122, "Malik", "Sealy", (byte) 2, "Silk", (byte) 22);
 
-		Jugador peteMaravichPelicans = new Jugador((byte) 123, "Pete", "Maravich", (byte) 7, "Pistol Pete", (byte) 23);
+		Jugador peteMaravichPelicans = new Jugador((short) 123, "Pete", "Maravich", (byte) 7, "Pistol Pete", (byte) 23);
 
-		Jugador waltFrazier = new Jugador((byte) 124, "Walter", "Frazier", (byte) 10, "Clyde", (byte) 11);
-		Jugador dickBarnet = new Jugador((byte) 125, "Richard", "Barnett ", (byte) 12, "Dick Barnett", (byte) 11);
-		Jugador earlMonroe = new Jugador((byte) 126, "Vernon Earl", "Monroe", (byte) 15, "The Pearl", (byte) 11);
-		Jugador dickMcGuire = new Jugador((byte) 127, "Richard Josephn", "McGuire", (byte) 15, "Dick the Knick",
+		Jugador waltFrazier = new Jugador((short) 124, "Walter", "Frazier", (byte) 10, "Clyde", (byte) 11);
+		Jugador dickBarnet = new Jugador((short) 125, "Richard", "Barnett ", (byte) 12, "Dick Barnett", (byte) 11);
+		Jugador earlMonroe = new Jugador((short) 126, "Vernon Earl", "Monroe", (byte) 15, "The Pearl", (byte) 11);
+		Jugador dickMcGuire = new Jugador((short) 127, "Richard Josephn", "McGuire", (byte) 15, "Dick the Knick",
 				(byte) 11);
-		Jugador willisReed = new Jugador((byte) 128, "Willis", "Reed", (byte) 19, (byte) 11);
-		Jugador daveDeBusschere = new Jugador((byte) 129, "David Albert", "DeBusschere", (byte) 22, "Big D", (byte) 11);
-		Jugador billBradley = new Jugador((byte) 130, "William Warren ", "Bradley", (byte) 24, "Bill Bradley",
+		Jugador willisReed = new Jugador((short) 128, "Willis", "Reed", (byte) 19, (byte) 11);
+		Jugador daveDeBusschere = new Jugador((short) 129, "David Albert", "DeBusschere", (byte) 22, "Big D", (byte) 11);
+		Jugador billBradley = new Jugador((short) 130, "William Warren ", "Bradley", (byte) 24, "Bill Bradley",
 				(byte) 11);
-		Jugador patrickEwing = new Jugador((byte) 131, "Patrick Aloysius", "Ewing", (byte) 33, "Big Pat", (byte) 11);
-		Jugador redHolzman = new Jugador((byte) 132, "William", "Holzman", (byte) 613, "Big D", (byte) 11);
+		Jugador patrickEwing = new Jugador((short) 131, "Patrick Aloysius", "Ewing", (byte) 33, "Big Pat", (byte) 11);
+		Jugador redHolzman = new Jugador((short) 132, "William", "Holzman", (byte) 613, "Big D", (byte) 11);
 
-		Jugador aficion = new Jugador((byte) 133, "Afición", "", (byte) 6, (byte) 12);
+		Jugador aficion = new Jugador((short) 133, "Afición", "", (byte) 6, (byte) 12);
 
-		Jugador mosesMalonePhilly = new Jugador((byte) 134, "Moses Eugene", "Malone", (byte) 2, "Moses Malone",
+		Jugador mosesMalonePhilly = new Jugador((short) 134, "Moses Eugene", "Malone", (byte) 2, "Moses Malone",
 				(byte) 13);
-		Jugador allenIverson = new Jugador((byte) 135, "Allen Ezail", "Iverson ", (byte) 3, "The Answer", (byte) 13);
-		Jugador juliusErvingPhilly = new Jugador((byte) 136, "Julius Winfield", "Earving ||", (byte) 6, "Dr J",
+		Jugador allenIverson = new Jugador((short) 135, "Allen Ezail", "Iverson ", (byte) 3, "The Answer", (byte) 13);
+		Jugador juliusErvingPhilly = new Jugador((short) 136, "Julius Winfield", "Earving ||", (byte) 6, "Dr J",
 				(byte) 13);
-		Jugador mauriceCheeks = new Jugador((byte) 137, "Maurice Edward", "Cheeks", (byte) 10, "Little Mo", (byte) 13);
-		Jugador wiltChamberlainSixers = new Jugador((byte) 138, "Wilton Norman", "Chamberlain", (byte) 13,
+		Jugador mauriceCheeks = new Jugador((short) 137, "Maurice Edward", "Cheeks", (byte) 10, "Little Mo", (byte) 13);
+		Jugador wiltChamberlainSixers = new Jugador((short) 138, "Wilton Norman", "Chamberlain", (byte) 13,
 				"Wilt the Stilt", (byte) 13);
-		Jugador halGreer = new Jugador((byte) 139, "Harold Everett", "Greer", (byte) 15, "Hal Greer", (byte) 13);
-		Jugador bobbyJones = new Jugador((byte) 140, "Robert Clyde", "Jones", (byte) 22, "Bobby Jones", (byte) 13);
-		Jugador billyChunningham = new Jugador((byte) 141, "William John", "Cunningham ", (byte) 32, "Bily Cunningham",
+		Jugador halGreer = new Jugador((short) 139, "Harold Everett", "Greer", (byte) 15, "Hal Greer", (byte) 13);
+		Jugador bobbyJones = new Jugador((short) 140, "Robert Clyde", "Jones", (byte) 22, "Bobby Jones", (byte) 13);
+		Jugador billyChunningham = new Jugador((short) 141, "William John", "Cunningham ", (byte) 32, "Bily Cunningham",
 				(byte) 13);
-		Jugador charlesBarkley = new Jugador((byte) 142, "Charles Wade", "Barkley", (byte) 34, "El Gordo", (byte) 13);
+		Jugador charlesBarkley = new Jugador((short) 142, "Charles Wade", "Barkley", (byte) 34, "El Gordo", (byte) 13);
 
-		Jugador dickVanArsdale = new Jugador((byte) 143, "Richard Albert", "Van Arsdale", (byte) 5, "Dick Van Arsdale",
+		Jugador dickVanArsdale = new Jugador((short) 143, "Richard Albert", "Van Arsdale", (byte) 5, "Dick Van Arsdale",
 				(byte) 26);
-		Jugador walterDavis = new Jugador((byte) 144, "Walter Paul", "Davis ", (byte) 6, "Sweet D", (byte) 26);
-		Jugador kevinJhonson = new Jugador((byte) 145, "Kevin Maurice", "Jhonson", (byte) 7, "K.J", (byte) 26);
-		Jugador danMajerle = new Jugador((byte) 146, "Daniel Lewis", "Majerle", (byte) 9, "Thunder Dan", (byte) 26);
-		Jugador steveNash = new Jugador((byte) 147, "Stephen John", "Nash", (byte) 13, "Nasty Nash", (byte) 26);
-		Jugador tomChambers = new Jugador((byte) 148, "Thomas Doane", "Chambers ", (byte) 24, "Tommy Gun", (byte) 26);
-		Jugador alvanAdams = new Jugador((byte) 149, "Alvan Leigh", "Adams  ", (byte) 33, "Double A", (byte) 26);
-		Jugador charlesBarkleySuns = new Jugador((byte) 150, "Charles Wade", "Barkley", (byte) 34, "El Gordo",
+		Jugador walterDavis = new Jugador((short) 144, "Walter Paul", "Davis ", (byte) 6, "Sweet D", (byte) 26);
+		Jugador kevinJhonson = new Jugador((short) 145, "Kevin Maurice", "Jhonson", (byte) 7, "K.J", (byte) 26);
+		Jugador danMajerle = new Jugador((short) 146, "Daniel Lewis", "Majerle", (byte) 9, "Thunder Dan", (byte) 26);
+		Jugador steveNash = new Jugador((short) 147, "Stephen John", "Nash", (byte) 13, "Nasty Nash", (byte) 26);
+		Jugador tomChambers = new Jugador((short) 148, "Thomas Doane", "Chambers ", (byte) 24, "Tommy Gun", (byte) 26);
+		Jugador alvanAdams = new Jugador((short) 149, "Alvan Leigh", "Adams  ", (byte) 33, "Double A", (byte) 26);
+		Jugador charlesBarkleySuns = new Jugador((short) 150, "Charles Wade", "Barkley", (byte) 34, "El Gordo",
 				(byte) 26);
-		Jugador connieHawkins = new Jugador((byte) 151, "Cornelius ", "Hawkins", (byte) 42, "The Hawk", (byte) 26);
-		Jugador paulWestphal = new Jugador((byte) 152, "Paul Douglas", "Westphal ", (byte) 44, "Paul Westphal",
+		Jugador connieHawkins = new Jugador((short) 151, "Cornelius ", "Hawkins", (byte) 42, "The Hawk", (byte) 26);
+		Jugador paulWestphal = new Jugador((short) 152, "Paul Douglas", "Westphal ", (byte) 44, "Paul Westphal",
 				(byte) 26);
-		Jugador cottonFitzsimmons = new Jugador((byte) 153, "Lowell", "Fitzsimmons ", (byte) 42, "Cotton Fitzsimmons",
+		Jugador cottonFitzsimmons = new Jugador((short) 153, "Lowell", "Fitzsimmons ", (byte) 42, "Cotton Fitzsimmons",
 				(byte) 26);
 
-		Jugador larryWeinberg = new Jugador((byte) 154, "Larry", "Weinberg", (byte) 1, (byte) 27);
-		Jugador davidTwardzik = new Jugador((byte) 155, "David", "Twardzik", (byte) 13, (byte) 27);
-		Jugador lionelHollins = new Jugador((byte) 156, "Lionel Eugene", "Hollins", (byte) 14, "L-Train", (byte) 27);
-		Jugador larrySteele = new Jugador((byte) 157, "Maurice D.", "Steele ", (byte) 15, "Man of steele", (byte) 27);
-		Jugador mauriceLucas = new Jugador((byte) 158, "Stephen John", "Lucas", (byte) 20, "Mo Lucas", (byte) 27);
-		Jugador clydeDrexlerBlazers = new Jugador((byte) 159, "Clyde Austin", "Drexler ", (byte) 22, "The Glide",
+		Jugador larryWeinberg = new Jugador((short) 154, "Larry", "Weinberg", (byte) 1, (byte) 27);
+		Jugador davidTwardzik = new Jugador((short) 155, "David", "Twardzik", (byte) 13, (byte) 27);
+		Jugador lionelHollins = new Jugador((short) 156, "Lionel Eugene", "Hollins", (byte) 14, "L-Train", (byte) 27);
+		Jugador larrySteele = new Jugador((short) 157, "Maurice D.", "Steele ", (byte) 15, "Man of steele", (byte) 27);
+		Jugador mauriceLucas = new Jugador((short) 158, "Stephen John", "Lucas", (byte) 20, "Mo Lucas", (byte) 27);
+		Jugador clydeDrexlerBlazers = new Jugador((short) 159, "Clyde Austin", "Drexler ", (byte) 22, "The Glide",
 				(byte) 27);
-		Jugador bobGross = new Jugador((byte) 160, "Robert Edwin", "Gross ", (byte) 30, "Bob Gross", (byte) 27);
-		Jugador terryPorter = new Jugador((byte) 161, "Terry", "Porter", (byte) 30, (byte) 27);
-		Jugador billWalton = new Jugador((byte) 162, "William Theodore", "Walton", (byte) 32, "Big Red-Head",
+		Jugador bobGross = new Jugador((short) 160, "Robert Edwin", "Gross ", (byte) 30, "Bob Gross", (byte) 27);
+		Jugador terryPorter = new Jugador((short) 161, "Terry", "Porter", (byte) 30, (byte) 27);
+		Jugador billWalton = new Jugador((short) 162, "William Theodore", "Walton", (byte) 32, "Big Red-Head",
 				(byte) 27);
-		Jugador lloydNeal = new Jugador((byte) 163, "Lloyd ", "Neal ", (byte) 36, (byte) 27);
-		Jugador geoffPetrie = new Jugador((byte) 164, "Geoffrey Michael", "Petrie ", (byte) 45, "Geoff Petrie",
+		Jugador lloydNeal = new Jugador((short) 163, "Lloyd ", "Neal ", (byte) 36, (byte) 27);
+		Jugador geoffPetrie = new Jugador((short) 164, "Geoffrey Michael", "Petrie ", (byte) 45, "Geoff Petrie",
 				(byte) 27);
-		Jugador jackRamsay = new Jugador((byte) 165, "Dr. John T.", "Ramsay ", (byte) 77, (byte) 27);
+		Jugador jackRamsay = new Jugador((short) 165, "Dr. John T.", "Ramsay ", (byte) 77, (byte) 27);
 
-		Jugador nateArchibal = new Jugador((byte) 166, "Nathaniel", "Archibald", (byte) 1, "Nate Tiny Archibald",
+		Jugador nateArchibal = new Jugador((short) 166, "Nathaniel", "Archibald", (byte) 1, "Nate Tiny Archibald",
 				(byte) 28);
-		Jugador mithcRichmond = new Jugador((byte) 167, "Mitchell James", "Richmond", (byte) 2, "Hammer", (byte) 28);
-		Jugador chrisWebber = new Jugador((byte) 168, "Mayce Edward Christopher", "Webber ", (byte) 4, "Chris Webber",
+		Jugador mithcRichmond = new Jugador((short) 167, "Mitchell James", "Richmond", (byte) 2, "Hammer", (byte) 28);
+		Jugador chrisWebber = new Jugador((short) 168, "Mayce Edward Christopher", "Webber ", (byte) 4, "Chris Webber",
 				(byte) 28);
-		Jugador aficionKings = new Jugador((byte) 169, "Afición", "", (byte) 6, (byte) 28);
-		Jugador bobDavies = new Jugador((byte) 170, "Robert Edris", "Davies", (byte) 11, "The Harrisburg Houdini",
+		Jugador aficionKings = new Jugador((short) 169, "Afición", "", (byte) 6, (byte) 28);
+		Jugador bobDavies = new Jugador((short) 170, "Robert Edris", "Davies", (byte) 11, "The Harrisburg Houdini",
 				(byte) 28);
-		Jugador mauriceStokes = new Jugador((byte) 171, "Maurice", "Stokes", (byte) 12, "Mo Stokes", (byte) 28);
-		Jugador oscarRobertsonKings = new Jugador((byte) 172, "Oscar Palmer", "Robertson", (byte) 14,
+		Jugador mauriceStokes = new Jugador((short) 171, "Maurice", "Stokes", (byte) 12, "Mo Stokes", (byte) 28);
+		Jugador oscarRobertsonKings = new Jugador((short) 172, "Oscar Palmer", "Robertson", (byte) 14,
 				"Mr.Triple-Double", (byte) 28);
-		Jugador predragStojakovic = new Jugador((byte) 173, "Predrag Peđa", "Stojaković", (byte) 16, "Peja Stojaković",
+		Jugador predragStojakovic = new Jugador((short) 173, "Predrag Peđa", "Stojaković", (byte) 16, "Peja Stojaković",
 				(byte) 28);
-		Jugador vladeDivac = new Jugador((byte) 174, "Vlade", "Divac", (byte) 21, "Vittorio Gassman", (byte) 28);
-		Jugador jackTwynam = new Jugador((byte) 175, "John Kennedy", "Twyman", (byte) 27, "Jack Twyman", (byte) 28);
-		Jugador samLacey = new Jugador((byte) 176, "Samuel", "Lacey ", (byte) 44, "Slammin' Sam", (byte) 28);
+		Jugador vladeDivac = new Jugador((short) 174, "Vlade", "Divac", (byte) 21, "Vittorio Gassman", (byte) 28);
+		Jugador jackTwynam = new Jugador((short) 175, "John Kennedy", "Twyman", (byte) 27, "Jack Twyman", (byte) 28);
+	//	Jugador samLacey = new Jugador((short) 176, "Samuel", "Lacey ", (byte) 44, "Slammin' Sam", (byte) 28);
 
-		Jugador jhonnyMoore = new Jugador((byte) 177, "John Brian", "Moore", (byte) 00, "Johnny Moore", (byte) 29);
-		Jugador averyJhonson = new Jugador((byte) 178, "Avery", "Johnson", (byte) 6, "Taz", (byte) 29);
-		Jugador tonyParker = new Jugador((byte) 179, "William Anthony", "Parker ", (byte) 9, "Parisian Torpedo",
+		Jugador jhonnyMoore = new Jugador((short) 177, "John Brian", "Moore", (byte) 00, "Johnny Moore", (byte) 29);
+		Jugador averyJhonson = new Jugador((short) 178, "Avery", "Johnson", (byte) 6, "Taz", (byte) 29);
+		Jugador tonyParker = new Jugador((short) 179, "William Anthony", "Parker ", (byte) 9, "Parisian Torpedo",
 				(byte) 29);
-		Jugador bruceBowen = new Jugador((byte) 180, "Bruce Eric", "Bowen", (byte) 12, (byte) 29);
-		Jugador jamesSilas = new Jugador((byte) 181, "James Edward", "Silas", (byte) 13, "Captain Late", (byte) 29);
-		Jugador manuGinobii = new Jugador((byte) 182, "Emanuel David", "Ginóbili", (byte) 20, "Manu Ginóbili",
+		Jugador bruceBowen = new Jugador((short) 180, "Bruce Eric", "Bowen", (byte) 12, (byte) 29);
+		Jugador jamesSilas = new Jugador((short) 181, "James Edward", "Silas", (byte) 13, "Captain Late", (byte) 29);
+		Jugador manuGinobii = new Jugador((short) 182, "Emanuel David", "Ginóbili", (byte) 20, "Manu Ginóbili",
 				(byte) 29);
-		Jugador timDuncan = new Jugador((byte) 183, "Timothy Theodore", "Duncan", (byte) 21, "The Big Fundamental",
+		Jugador timDuncan = new Jugador((short) 183, "Timothy Theodore", "Duncan", (byte) 21, "The Big Fundamental",
 				(byte) 29);
-		Jugador seanElliot = new Jugador((byte) 184, "Sean", "Elliott", (byte) 32, (byte) 29);
-		Jugador georgeGervin = new Jugador((byte) 185, "George", "Gervin", (byte) 44, "The Iceman", (byte) 29);
-		Jugador davidRobinson = new Jugador((byte) 186, "David Maurice", "Robinson", (byte) 50, "The Admiral",
+		Jugador seanElliot = new Jugador((short) 184, "Sean", "Elliott", (byte) 32, (byte) 29);
+		Jugador georgeGervin = new Jugador((short) 185, "George", "Gervin", (byte) 44, "The Iceman", (byte) 29);
+		Jugador davidRobinson = new Jugador((short) 186, "David Maurice", "Robinson", (byte) 50, "The Admiral",
 				(byte) 29);
 
-		Jugador gusWilliams = new Jugador((byte) 187, "Gus", "Williams", (byte) 1, "The Wizard", (byte) 25);
-		Jugador nickCollison = new Jugador((byte) 188, "Nicholas John", "Collison", (byte) 4, (byte) 25);
-		Jugador nateMcMillan = new Jugador((byte) 189, "Nathaniel", "McMillan", (byte) 10, "Nate McMillan", (byte) 25);
-		Jugador lennyWilkens = new Jugador((byte) 190, "Leonard Randolph", "Wilkens", (byte) 19, "Lenny Wilkens",
+		Jugador gusWilliams = new Jugador((short) 187, "Gus", "Williams", (byte) 1, "The Wizard", (byte) 25);
+		Jugador nickCollison = new Jugador((short) 188, "Nicholas John", "Collison", (byte) 4, (byte) 25);
+		Jugador nateMcMillan = new Jugador((short) 189, "Nathaniel", "McMillan", (byte) 10, "Nate McMillan", (byte) 25);
+		Jugador lennyWilkens = new Jugador((short) 190, "Leonard Randolph", "Wilkens", (byte) 19, "Lenny Wilkens",
 				(byte) 25);
-		Jugador spencerHaywood = new Jugador((byte) 191, "Spencer", "Haywood", (byte) 24, (byte) 25);
-		Jugador fredBrwon = new Jugador((byte) 192, "Fred", "Brown", (byte) 32, "Downtown", (byte) 25);
-		Jugador jackSikman = new Jugador((byte) 193, "Jack Wayne", "Sikma", (byte) 44, "Goldilocks", (byte) 25);
+		Jugador spencerHaywood = new Jugador((short) 191, "Spencer", "Haywood", (byte) 24, (byte) 25);
+		Jugador fredBrwon = new Jugador((short) 192, "Fred", "Brown", (byte) 32, "Downtown", (byte) 25);
+		Jugador jackSikman = new Jugador((short) 193, "Jack Wayne", "Sikma", (byte) 44, "Goldilocks", (byte) 25);
 
-		Jugador frankLayden = new Jugador((byte) 194, "Frank", "Layden", (byte) 1, (byte) 30);
-		Jugador adrianDantley = new Jugador((byte) 195, "Adrian Delano", "Dantley", (byte) 4, "The teacher", (byte) 30);
-		Jugador peteMaravichJazz = new Jugador((byte) 196, "Pete", "Maravich", (byte) 7, "Pistol Pete", (byte) 30);
-		Jugador johnStockton = new Jugador((byte) 197, "John", "Stockton", (byte) 12, (byte) 30);
-		Jugador jeffHornacek = new Jugador((byte) 198, "Jeffrey John", "Hornacek", (byte) 14, "Horny", (byte) 30);
-		Jugador karlMalone = new Jugador((byte) 199, "Karl", "Malone", (byte) 32, "The Mailman", (byte) 30);
-		Jugador darrelGriffith = new Jugador((byte) 200, "Darrell Steven", "Griffith", (byte) 35, "Dr. Dunkenstein",
+		Jugador frankLayden = new Jugador((short) 194, "Frank", "Layden", (byte) 1, (byte) 30);
+		Jugador adrianDantley = new Jugador((short) 195, "Adrian Delano", "Dantley", (byte) 4, "The teacher", (byte) 30);
+		Jugador peteMaravichJazz = new Jugador((short) 196, "Pete", "Maravich", (byte) 7, "Pistol Pete", (byte) 30);
+		Jugador johnStockton = new Jugador((short) 197, "John", "Stockton", (byte) 12, (byte) 30);
+		Jugador jeffHornacek = new Jugador((short) 198, "Jeffrey John", "Hornacek", (byte) 14, "Horny", (byte) 30);
+		Jugador karlMalone = new Jugador((short) 199, "Karl", "Malone", (byte) 32, "The Mailman", (byte) 30);
+		Jugador darrelGriffith = new Jugador((short) 200, "Darrell Steven", "Griffith", (byte) 35, "Dr. Dunkenstein",
 				(byte) 30);
-		Jugador markEaton = new Jugador((byte) 200, "Mark", "Eaton", (byte) 53, (byte) 30);
-		Jugador geraldSloan = new Jugador((byte) 201, "Gerald Eugene", "Sloan", (byte) 1223, "Jerry Sloan", (byte) 30);
+		Jugador markEaton = new Jugador((short) 201, "Mark", "Eaton", (byte) 53, (byte) 30);
+		Jugador geraldSloan = new Jugador((short) 202, "Gerald Eugene", "Sloan", (byte) 1223, "Jerry Sloan", (byte) 30);
 
-		Jugador earlMonroeWizards = new Jugador((byte) 202, "Vernon Earl", "Monroe", (byte) 10, "The Pearl", (byte) 15);
-		Jugador elvinHayes = new Jugador((byte) 203, "Elvin Ernest", "Hayes", (byte) 11, "The Big E", (byte) 15);
-		Jugador gusJohnson = new Jugador((byte) 204, "Gus", "Johnson", (byte) 25, "Honeycomb", (byte) 15);
-		Jugador wesUnseld = new Jugador((byte) 205, "Westley Sissel", "Unseld", (byte) 41, "Wes Unseld", (byte) 15);
-		Jugador philChenier = new Jugador((byte) 206, "Philip ", "Chenier ", (byte) 45, "Phil Chenier", (byte) 15);
-
+		Jugador earlMonroeWizards = new Jugador((short) 203, "Vernon Earl", "Monroe", (byte) 10, "The Pearl", (byte) 15);
+		Jugador elvinHayes = new Jugador((short) 204, "Elvin Ernest", "Hayes", (byte) 11, "The Big E", (byte) 15);
+		Jugador gusJohnson = new Jugador((short) 205, "Gus", "Johnson", (byte) 25, "Honeycomb", (byte) 15);
+		Jugador wesUnseld = new Jugador((short) 206, "Westley Sissel", "Unseld", (byte) 41, "Wes Unseld", (byte) 15);
+		Jugador philChenier = new Jugador((short) 207, "Philip ", "Chenier ", (byte) 45, "Phil Chenier", (byte) 15);
+/*
 		Jugador traeYoung = new Jugador((byte) 207, "Trae", "Young", (byte) 11, "Ice Trae", Posicion.BASE, 8.32f,
 				(byte) 2, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.B,
