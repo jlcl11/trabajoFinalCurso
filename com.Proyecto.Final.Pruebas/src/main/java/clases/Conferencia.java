@@ -15,7 +15,7 @@ public class Conferencia extends ObjetoConNombre {
 		super(nombre);
 
 		Statement query = utilsDB.conectarBBDD();
-		if (query.executeUpdate("INSERT INTO conferencia VALUES(" + partidos_fk + ",'" + nombre + "',"
+		if (query.executeUpdate("INSERT INTO conferencia(partidos,nombre,liga_conferencias) VALUES(" + partidos_fk + ",'" + nombre + "',"
 				+ liga_conferencias + ");") > 0) {
 			this.partidos_fk = partidos_fk;
 			this.liga_conferencias = liga_conferencias;

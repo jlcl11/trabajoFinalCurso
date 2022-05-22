@@ -4,8 +4,10 @@ use trabajoFinal;
 
 CREATE TABLE conferencia (
     partidos INT AUTO_INCREMENT PRIMARY KEY,
-    liga_conferencias int NOT NULL
+    liga_conferencias int NOT NULL,
+    nombre varchar(200)
 );
+
 
 CREATE TABLE equipo (
     eq_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -16,9 +18,9 @@ CREATE TABLE equipo (
     limitesalarial NUMERIC(6, 2),
     estadio VARCHAR(200),
     propietario VARCHAR(200),
-    partidoallstar_parta_id INT NOT NULL,
+    partidoallstar_parta_id INT ,
     jugadores VARCHAR(200),
-    playoffs_playoff_id INT NOT NULL,
+    playoffs_playoff_id INT ,
     nombre VARCHAR(200)
 );
 
@@ -61,7 +63,7 @@ CREATE TABLE jugador (
 );
 
 CREATE TABLE liga (
-    conferencias INT AUTO_INCREMENT PRIMARY KEY
+    conferencias INT  PRIMARY KEY
 );
 
 CREATE TABLE partidoallstar (
@@ -99,13 +101,15 @@ ADD
     );
 
 CREATE TABLE playoffs (
-    playoff_id INT AUTO_INCREMENT PRIMARY KEY,
+    playoff_id INT  PRIMARY KEY,
+    nombre varchar(200),
     listaequipos VARCHAR(200),
     lista_rondas INT
 );
 
 CREATE TABLE rondaplayoff (
-    ronda_id INT AUTO_INCREMENT PRIMARY KEY,
+    ronda_id INT  PRIMARY KEY,
+    nombre varchar(200),
     listarondas NUMERIC(3),
     playoffs_playoff_id INT NOT NULL
 );

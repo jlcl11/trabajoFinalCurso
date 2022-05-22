@@ -173,7 +173,7 @@ public class funcionesUtiles {
 		Equipo jazz = new Equipo((byte) 30, "Jazz", (byte) 2, "Utah", "jugadores Retirados", "Justin Zanik", 109.4f,
 				"Estadio", "Ryan Smith", "plantilla", (byte) 1);
 		Estadio vivintArena = new Estadio((byte) 30, "Vivint Arena", (short) 18306, (byte) 30);
-
+/*
 		Jugador bobCousy = new Jugador((byte) 1, "Bob", "Cousy", (byte) 9, (byte) 1);
 		Jugador tedTurner = new Jugador((byte) 2, "Ted", "Turner", (byte) 17, (byte) 1);
 		Jugador dominiqueWilkins = new Jugador((byte) 3, "Dominique", "Wilkins", (byte) 21, (byte) 1);
@@ -1086,6 +1086,6 @@ public class funcionesUtiles {
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 22, Valores.B,
 				Valores.C, Valores.D, Valores.A, (byte) 6, (byte) 6);
-
+*/
 	}
 }
