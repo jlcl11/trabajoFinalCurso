@@ -241,7 +241,7 @@ public class funcionesUtiles {
 
 		Jugador alexEnglish = new Jugador((short) 55, "Alexander", "English", (byte) 2, "Alex English", (byte) 17);
 		Jugador fatLever = new Jugador((short) 56, "Lafayette ", "Lever", (byte) 12, "Fat Lever", (byte) 17);
-		//Jugador davidThompson = new Jugador((short) 57, "David O'Neil", "Thompson", (byte) 33, (byte) 17);
+	Jugador davidThompson = new Jugador((short) 57, "David ONeil", "Thompson", (byte) 33, (byte) 17);
 		Jugador byronbeck = new Jugador((short) 58, "Byrin", "Beck", (byte) 40, (byte) 17);
 		Jugador danIssel = new Jugador((short) 59, "Daniel Paul ", "Issel", (byte) 44, "Dan Issel", (byte) 17);
 		Jugador dikembeMutomboNuggets = new Jugador((short) 60, "Dikembe", "Mutombo", (byte) 55, (byte) 17);
@@ -272,7 +272,7 @@ public class funcionesUtiles {
 		Jugador nateThurmondWarriors = new Jugador((short) 78, "Nathaniel", "Thurmond", (byte) 42, "Nate the Great",
 				(byte) 18);
 
-		//Jugador yaoMing = new Jugador((short) 79, "Yao", "Ming", (byte) 11, "Yao's dinasty", (byte) 19);
+		Jugador yaoMing = new Jugador((short) 79, "Yao", "Ming", (byte) 11, "Yaos dinasty", (byte) 19);
 		Jugador clydeDrexler = new Jugador((short) 80, "Clyde Austin", "Drexler ", (byte) 22, "The Glide", (byte) 19);
 		Jugador calvinMurphy = new Jugador((short) 81, "Calvin Jerome", "Murphy ", (byte) 23, "Destroyer", (byte) 19);
 		Jugador mosesMalone = new Jugador((short) 82, "Moses Eugene", "Malone", (byte) 24, "Moses Malone", (byte) 19);
@@ -296,8 +296,8 @@ public class funcionesUtiles {
 		Jugador magicJhonson = new Jugador((short) 95, "Earvin", "Jhonson", (byte) 32, "Magic Jhonson", (byte) 21);
 		Jugador kareemAbdulJabbar = new Jugador((short) 96, "Kareem ", "Abdul-Jabbar", (byte) 33, "The sky Hook",
 				(byte) 21);
-		//Jugador shaquilleOneal = new Jugador((short) 97, "Shaquille Rashaun", "O'Neal ", (byte) 34, "Shaq Attack",
-			//	(byte) 21);
+		Jugador shaquilleOneal = new Jugador((short) 97, "Shaquille Rashaun", "O Neal ", (byte) 34, "Shaq Attack",
+				(byte) 21);
 		Jugador jamesWorthy = new Jugador((short) 98, "James Ager ", "Worthy", (byte) 42, "Big Game James", (byte) 21);
 		Jugador jerryWest = new Jugador((short) 99, "Jerome Alan", "West", (byte) 44, "The Logo", (byte) 21);
 		Jugador jamalWilkes = new Jugador((short) 100, "Jamaal Abdul-Lateef", "Wilkes", (byte) 52, "Smooth as Silk",
@@ -319,8 +319,8 @@ public class funcionesUtiles {
 		Jugador timHardaway = new Jugador((short) 109, "Timothy Duane", "Hardaway", (byte) 10, "Tim Bug", (byte) 9);
 		Jugador danMarino = new Jugador((short) 110, "Daniel Constantine ", "Marino", (byte) 13, (byte) 9);
 		Jugador michaelJordanHeat = new Jugador((short) 111, "Michael", "Jordan", (byte) 23, "Air Jordan", (byte) 9);
-	//	Jugador shaquilleOnealHeat = new Jugador((short) 112, "Shaquille Rashaun", "O'Neal ", (byte) 32, "Shaq Attack",
-			//	(byte) 9);
+		Jugador shaquilleOnealHeat = new Jugador((short) 112, "Shaquille Rashaun", "O Neal ", (byte) 32, "Shaq Attack",
+				(byte) 9);
 		Jugador alonzoMourning = new Jugador((short) 113, "Alonzo Harding ", "Mourning", (byte) 33, "Zo", (byte) 9);
 
 		Jugador oscarRobertson = new Jugador((short) 114, "Oscar Palmer", "Robertson", (byte) 1, "Mr.Triple-Double",
@@ -414,7 +414,7 @@ public class funcionesUtiles {
 				(byte) 28);
 		Jugador vladeDivac = new Jugador((short) 174, "Vlade", "Divac", (byte) 21, "Vittorio Gassman", (byte) 28);
 		Jugador jackTwynam = new Jugador((short) 175, "John Kennedy", "Twyman", (byte) 27, "Jack Twyman", (byte) 28);
-	//	Jugador samLacey = new Jugador((short) 176, "Samuel", "Lacey ", (byte) 44, "Slammin' Sam", (byte) 28);
+		Jugador samLacey = new Jugador((short) 176, "Samuel", "Lacey ", (byte) 44, "Slammin Sam", (byte) 28);
 
 		Jugador jhonnyMoore = new Jugador((short) 177, "John Brian", "Moore", (byte) 00, "Johnny Moore", (byte) 29);
 		Jugador averyJhonson = new Jugador((short) 178, "Avery", "Johnson", (byte) 6, "Taz", (byte) 29);
