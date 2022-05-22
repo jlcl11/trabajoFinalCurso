@@ -33,7 +33,7 @@ CREATE TABLE jugador (
     jugador_id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(200),
     apellido VARCHAR(200),
-    dorsal NUMERIC(2),
+    dorsal NUMERIC(3),
     apodo VARCHAR(200),
     posicion ENUM('BASE','ESCOLTA','ALERO','ALAPIVOT','PIVOT'),
     salario NUMERIC(4, 2),
@@ -165,13 +165,3 @@ ALTER TABLE
 ADD
     CONSTRAINT rondaplayoff_playoffs_fk FOREIGN KEY (playoffs_playoff_id) REFERENCES playoffs (playoff_id);
     
-    INSERT INTO liga VALUES(999);
-    INSERT INTO conferencia(liga_conferencias) VALUES (999);
-    INSERT INTO playoffs(listaequipos,lista_rondas) VALUES ('ejemplo',99999);
-    INSERT INTO rondaplayoff(listarondas,playoffs_playoff_id) values (999,1);
-    INSERT INTO partidonormal(equipo1,equipo2,marcadorequipo1,marcadorequipo2,fecha,rondaplayoff_ronda_id)  VALUES  ('A','B',999,999,NOW(),1,1);
-    INSERT INTO partidoallstar(equipo1,equipo2,marcadorequipo1,marcadorequipo2,fecha,titulares) VALUES('A','B',999,999,now(),'EJEMPLO');
-    INSERT INTO equipo(conferencia,ciudadlocal,dorsalesretirados,gm,limitesalarial,estadio,propietario,partidoallstar_parta_id,jugadores,playoffs_playoff_id,nombre) VALUES (99,'ejemplo','ejemplo','ejemplo',999,'ejemplo','ejemplo',1,'ejemplo',1,'ejemplo');
-    INSERT INTO partidos (partidonormal_partidonl_id,equipo_eq_id) VALUES(4,1);
-    INSERT INTO estadio(nombre,capacidad,equipo_eq_id) VALUES ('ejemplo',9999,1);
-	INSERT INTO jugador(equipo_eq_id,playoffs_playoff_id) VALUES(1,1);

@@ -44,8 +44,9 @@ public class Jugador extends ObjetoConNombre {
 
 		Statement query = utilsDB.conectarBBDD();
 
-		if (query.executeUpdate("INSERT INTO jugador(jugador_id,nombre,apellido,dorsal,apodo) VALUES (" + jugador_id
-				+ ",'" + nombre + "','" + apellido + "'," + dorsal + ",'" + apodo + "'," + equipo_id + ");") > 0) {
+		if (query.executeUpdate(
+				"INSERT INTO jugador(jugador_id,nombre,apellido,apodo,dorsal,equipo_eq_id) VALUES(" + jugador_id + ",'"
+						+ nombre + "','" + apellido + "','" + apodo + "'," + dorsal + "," + equipo_id + ");") > 0) {
 			this.jugador_id = jugador_id;
 			this.apellido = apellido;
 			this.dorsal = dorsal;
@@ -65,8 +66,8 @@ public class Jugador extends ObjetoConNombre {
 		super(nombre);
 
 		Statement query = utilsDB.conectarBBDD();
-		if (query.executeUpdate("INSERT INTO jugador(jugador_id,nombre,apellido,dorsal) VALUES (" + jugador_id + ",'"
-				+ nombre + "','" + apellido + "'," + dorsal + ",+" + equipo_id + ");") > 0) {
+		if (query.executeUpdate("INSERT INTO jugador(jugador_id,nombre,apellido,dorsal,equipo_eq_id) VALUES("
+				+ jugador_id + ",'" + nombre + "','" + apellido + "'," + dorsal + "," + equipo_id + ");") > 0) {
 			this.jugador_id = jugador_id;
 			this.apellido = apellido;
 			this.dorsal = dorsal;

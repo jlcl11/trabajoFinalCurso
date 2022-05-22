@@ -26,18 +26,18 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Ventana v=new Ventana();
+		//Ventana v=new Ventana();
 
 		try {
 			funcionesUtiles.borrarDatosTablas();
-		//	funcionesUtiles.declararObjetos();
+			funcionesUtiles.declararObjetos();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}/* catch (EquipoMalIntroduciodoException e) {
+		} catch (EquipoMalIntroduciodoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
 		
 
 		
