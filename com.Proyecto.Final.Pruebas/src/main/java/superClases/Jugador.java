@@ -89,12 +89,12 @@ public class Jugador extends ObjetoConNombre {
 
 		Statement query = utilsDB.conectarBBDD();
 		if (query.executeUpdate(
-				" INSERT INTO jugador(jugador_id,nombre,apellido,dorsal,posicion,salario,nominacionesAllStar,anillosDeCampeon,mVP,dpoy,roty,mIP,mVPAllStar,fMVP,premioAnotador,pPG,aPG,rBG,sPG,bPG,mPG,finalizacion,tiro,organizacion,defensa,equipo_eq_id,playoffs_playoff_id) \r\n"
-						+ "   VALUES(" + jugador_id + ",'" + nombre + "','" + apellido + "'," + dorsal + ",'" + posicion
+				" INSERT INTO jugador(jugador_id,nombre,apellido,dorsal,posicion,salario,nominacionesallstar,anillosdecampeon,mvp,dpoy,roty,mip,mvpallstar,fmvp,premioanotador,ppg,apg,rbg,spg,bpg,mpg,finalizacion,tiro,organizacion,defensa,equipo_eq_id,playoffs_playoff_id) \r\n"
+						+ "VALUES(" + jugador_id + ",'" + nombre + "','" + apellido + "'," + dorsal + ",'" + posicion
 						+ "'," + salario + "," + nominacionesAllStar + "," + anillosDeCampeon + "," + mVPs + ","
 						+ defensorDelAño + "," + rookieDelAño + "," + mIP + "," + mVPAllStar + "," + fMVP + ","
 						+ premioAnotador + "," + pPG + "," + aPG + "," + rBG + "," + sPG + "," + bPG + "," + mPG + ",'"
-						+ finalizacion + ",'" + tiro + ",'" + organizacion + "','" + defensas + "'," + equipo_id + ","
+						+ finalizacion + "','" + tiro + "','" + organizacion + "','" + defensas + "'," + equipo_id + ","
 						+ playoffs_Playoff_id + ");") > 0) {
 
 			this.jugador_id = jugador_id;
@@ -140,14 +140,12 @@ public class Jugador extends ObjetoConNombre {
 		super(nombre);
 
 		Statement query = utilsDB.conectarBBDD();
-		if (query.executeUpdate(
-				" INSERT INTO jugador(jugador_id,nombre,apellido,dorsal,apodo,posicion,salario,nominacionesAllStar,anillosDeCampeon,mVP,dpoy,roty,mIP,mVPAllStar,fMVP,premioAnotador,pPG,aPG,rBG,sPG,bPG,mPG,finalizacion,tiro,organizacion,defensa,equipo_eq_id,playoffs_playoff_id) \r\n"
-						+ "   VALUES(" + jugador_id + ",'" + nombre + "','" + apellido + "'," + dorsal + ",'" + apodo
-						+ ",'" + posicion + "'," + salario + "," + nominacionesAllStar + "," + anillosDeCampeon + ","
-						+ mVPs + "," + defensorDelAño + "," + rookieDelAño + "," + mIP + "," + mVPAllStar + "," + fMVP
-						+ "," + premioAnotador + "," + pPG + "," + aPG + "," + rBG + "," + sPG + "," + bPG + "," + mPG
-						+ ",'" + finalizacion + ",'" + tiro + ",'" + organizacion + "','" + defensas + "'," + equipo_id
-						+ "," + playoffs_Playoff_id + ");") > 0) {
+		if (query.executeUpdate(" INSERT INTO jugador VALUES(" + jugador_id + ",'" + nombre + "','" + apellido + "',"
+				+ dorsal + ",'" + apodo + "','" + posicion + "'," + salario + "," + nominacionesAllStar + ","
+				+ anillosDeCampeon + "," + mVPs + "," + defensorDelAño + "," + rookieDelAño + "," + mIP + ","
+				+ mVPAllStar + "," + fMVP + "," + premioAnotador + "," + pPG + "," + aPG + "," + rBG + "," + sPG + ","
+				+ bPG + "," + mPG + ",'" + finalizacion + "','" + tiro + "','" + organizacion + "','" + defensas + "',"
+				+ equipo_id + "," + playoffs_Playoff_id + ");") > 0) {
 
 			this.jugador_id = jugador_id;
 			this.apellido = apellido;
@@ -177,7 +175,6 @@ public class Jugador extends ObjetoConNombre {
 			this.equipo_id = equipo_id;
 			this.playoffs_Playoff_id = playoffs_Playoff_id;
 
-			System.out.println("Jugador unidp con éxitowowu");
 		} else {
 			throw new EquipoMalIntroduciodoException("El jugador no se ha introducido bien");
 		}

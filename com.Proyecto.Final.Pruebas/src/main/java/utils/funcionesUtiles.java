@@ -241,7 +241,7 @@ public class funcionesUtiles {
 
 		Jugador alexEnglish = new Jugador((short) 55, "Alexander", "English", (byte) 2, "Alex English", (byte) 17);
 		Jugador fatLever = new Jugador((short) 56, "Lafayette ", "Lever", (byte) 12, "Fat Lever", (byte) 17);
-	Jugador davidThompson = new Jugador((short) 57, "David ONeil", "Thompson", (byte) 33, (byte) 17);
+		Jugador davidThompson = new Jugador((short) 57, "David ONeil", "Thompson", (byte) 33, (byte) 17);
 		Jugador byronbeck = new Jugador((short) 58, "Byrin", "Beck", (byte) 40, (byte) 17);
 		Jugador danIssel = new Jugador((short) 59, "Daniel Paul ", "Issel", (byte) 44, "Dan Issel", (byte) 17);
 		Jugador dikembeMutomboNuggets = new Jugador((short) 60, "Dikembe", "Mutombo", (byte) 55, (byte) 17);
@@ -304,8 +304,8 @@ public class funcionesUtiles {
 				(byte) 21);
 		Jugador jimPollard = new Jugador((short) 101, "James Clifford", "Pollard", (byte) 17, "The Kangaroo Kid",
 				(byte) 21);
-		Jugador vernMikelsen = new Jugador((short) 102, "Arild Verner Agerskov", "Mikkelsen", (byte) 19, "Ven Mikkelsen",
-				(byte) 21);
+		Jugador vernMikelsen = new Jugador((short) 102, "Arild Verner Agerskov", "Mikkelsen", (byte) 19,
+				"Ven Mikkelsen", (byte) 21);
 		Jugador slaterMartin = new Jugador((short) 103, "Slater Nelson", "Martin", (byte) 22, "Dugie", (byte) 21);
 		Jugador clydeLovellete = new Jugador((short) 104, "Clyde Edward", "Lovellette", (byte) 34, "Clyde Lovellette",
 				(byte) 21);
@@ -345,7 +345,8 @@ public class funcionesUtiles {
 		Jugador dickMcGuire = new Jugador((short) 127, "Richard Josephn", "McGuire", (byte) 15, "Dick the Knick",
 				(byte) 11);
 		Jugador willisReed = new Jugador((short) 128, "Willis", "Reed", (byte) 19, (byte) 11);
-		Jugador daveDeBusschere = new Jugador((short) 129, "David Albert", "DeBusschere", (byte) 22, "Big D", (byte) 11);
+		Jugador daveDeBusschere = new Jugador((short) 129, "David Albert", "DeBusschere", (byte) 22, "Big D",
+				(byte) 11);
 		Jugador billBradley = new Jugador((short) 130, "William Warren ", "Bradley", (byte) 24, "Bill Bradley",
 				(byte) 11);
 		Jugador patrickEwing = new Jugador((short) 131, "Patrick Aloysius", "Ewing", (byte) 33, "Big Pat", (byte) 11);
@@ -441,7 +442,8 @@ public class funcionesUtiles {
 		Jugador jackSikman = new Jugador((short) 193, "Jack Wayne", "Sikma", (byte) 44, "Goldilocks", (byte) 25);
 
 		Jugador frankLayden = new Jugador((short) 194, "Frank", "Layden", (byte) 1, (byte) 30);
-		Jugador adrianDantley = new Jugador((short) 195, "Adrian Delano", "Dantley", (byte) 4, "The teacher", (byte) 30);
+		Jugador adrianDantley = new Jugador((short) 195, "Adrian Delano", "Dantley", (byte) 4, "The teacher",
+				(byte) 30);
 		Jugador peteMaravichJazz = new Jugador((short) 196, "Pete", "Maravich", (byte) 7, "Pistol Pete", (byte) 30);
 		Jugador johnStockton = new Jugador((short) 197, "John", "Stockton", (byte) 12, (byte) 30);
 		Jugador jeffHornacek = new Jugador((short) 198, "Jeffrey John", "Hornacek", (byte) 14, "Horny", (byte) 30);
@@ -451,641 +453,642 @@ public class funcionesUtiles {
 		Jugador markEaton = new Jugador((short) 201, "Mark", "Eaton", (byte) 53, (byte) 30);
 		Jugador geraldSloan = new Jugador((short) 202, "Gerald Eugene", "Sloan", (byte) 1223, "Jerry Sloan", (byte) 30);
 
-		Jugador earlMonroeWizards = new Jugador((short) 203, "Vernon Earl", "Monroe", (byte) 10, "The Pearl", (byte) 15);
+		Jugador earlMonroeWizards = new Jugador((short) 203, "Vernon Earl", "Monroe", (byte) 10, "The Pearl",
+				(byte) 15);
 		Jugador elvinHayes = new Jugador((short) 204, "Elvin Ernest", "Hayes", (byte) 11, "The Big E", (byte) 15);
 		Jugador gusJohnson = new Jugador((short) 205, "Gus", "Johnson", (byte) 25, "Honeycomb", (byte) 15);
 		Jugador wesUnseld = new Jugador((short) 206, "Westley Sissel", "Unseld", (byte) 41, "Wes Unseld", (byte) 15);
 		Jugador philChenier = new Jugador((short) 207, "Philip ", "Chenier ", (byte) 45, "Phil Chenier", (byte) 15);
-/*
-		Jugador traeYoung = new Jugador((byte) 207, "Trae", "Young", (byte) 11, "Ice Trae", Posicion.BASE, 8.32f,
+
+		Jugador traeYoung = new Jugador((short) 208, "Trae", "Young", (byte) 11, "Ice Trae", Posicion.BASE, 8.32f,
 				(byte) 2, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.B,
 				Valores.A, Valores.A, Valores.D, (byte) 1, (byte) 1);
-		Jugador jhonCollins = new Jugador((byte) 1, "Jhon", "Collins", (byte) 20, Posicion.PIVOT, 23f, (byte) 0,
+		Jugador jhonCollins = new Jugador((short) 209, "Jhon", "Collins", (byte) 20, Posicion.PIVOT, 23f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.A,
 				Valores.B, Valores.C, Valores.B, (byte) 1, (byte) 1);
-		Jugador bogdanBogdanovich = new Jugador((byte) 1, "Bogdan", "Bogdanovich", (byte) 13, Posicion.ESCOLTA, 18f,
+		Jugador bogdanBogdanovich = new Jugador((short) 210, "Bogdan", "Bogdanovich", (byte) 13, Posicion.ESCOLTA, 18f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.A, Valores.C, Valores.B, (byte) 1, (byte) 1);
-		Jugador deandreHunter = new Jugador((byte) 1, "De'Andre", "Hunter", (byte) 12, Posicion.ALAPIVOT, 7.75f,
+		Jugador deandreHunter = new Jugador((short) 211, "De Andre", "Hunter", (byte) 12, Posicion.ALAPIVOT, 7.75f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
 				Valores.B, Valores.C, Valores.B, (byte) 1, (byte) 1);
-		Jugador kevinHuerter = new Jugador((byte) 1, "Kevin", "Huerter", (byte) 3, Posicion.ALERO, 4.2f, (byte) 0,
+		Jugador kevinHuerter = new Jugador((short) 212, "Kevin", "Huerter", (byte) 3, Posicion.ALERO, 4.2f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.A, (byte) 1, (byte) 1);
 
-		Jugador jaysonTatum = new Jugador((byte) 1, "Jason", "Tatum", (byte) 0, "JT", Posicion.ALERO, 28.2f, (byte) 3,
-				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
+		Jugador jaysonTatum = new Jugador((short) 213, "Jason", "Tatum", (byte) 0, "JT", Posicion.ALERO, 28.2f,
+				(byte) 3, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 36, Valores.B,
-				Valores.A, Valores.B, Valores.B, (byte) 2, (byte) 2);
-		Jugador jaylenBrown = new Jugador((byte) 2, "Jaylen", "Brown", (byte) 7, Posicion.ESCOLTA, 26.76f, (byte) 1,
+				Valores.A, Valores.B, Valores.B, (byte) 2, (byte) 1);
+		Jugador jaylenBrown = new Jugador((short) 214, "Jaylen", "Brown", (byte) 7, Posicion.ESCOLTA, 26.76f, (byte) 1,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 34, Valores.A,
-				Valores.A, Valores.C, Valores.B, (byte) 2, (byte) 2);
-		Jugador marcusSmart = new Jugador((byte) 2, "Marcus", "Smart", (byte) 16, Posicion.BASE, 14.36f, (byte) 0,
+				Valores.A, Valores.C, Valores.B, (byte) 2, (byte) 1);
+		Jugador marcusSmart = new Jugador((short) 215, "Marcus", "Smart", (byte) 16, Posicion.BASE, 14.36f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 1, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.C,
-				Valores.B, Valores.B, Valores.A, (byte) 2, (byte) 2);
-		Jugador alHorfort = new Jugador((byte) 2, "Al", "Horford", (byte) 42, Posicion.ALAPIVOT, 27f, (byte) 5,
+				Valores.B, Valores.B, Valores.A, (byte) 2, (byte) 1);
+		Jugador alHorfort = new Jugador((short) 216, "Al", "Horford", (byte) 42, Posicion.ALAPIVOT, 27f, (byte) 5,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 29, Valores.C,
-				Valores.B, Valores.C, Valores.A, (byte) 2, (byte) 2);
-		Jugador robertWilliams = new Jugador((byte) 2, "Robert", "Williams ||| ", (byte) 44, Posicion.PIVOT, 3.36f,
+				Valores.B, Valores.C, Valores.A, (byte) 2, (byte) 1);
+		Jugador robertWilliams = new Jugador((short) 217, "Robert", "Williams ||| ", (byte) 44, Posicion.PIVOT, 3.36f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.A, (byte) 2, (byte) 2);
+				Valores.B, Valores.C, Valores.A, (byte) 2, (byte) 1);
 
-		Jugador kevinDurant = new Jugador((byte) 2, "Kevin", "Durant", (byte) 7, "Durantula", Posicion.ALAPIVOT, 42.01f,
-				(byte) 12, (byte) 2, (byte) 1, (byte) 0, true, false, (byte) 2, (byte) 2, (byte) 4, r.nextInt(35) + 1,
-				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.A,
-				Valores.A, Valores.A, Valores.B, (byte) 3, (byte) 2);
-		Jugador sethCurry = new Jugador((byte) 3, "Seth", "Curry", (byte) 30, Posicion.ESCOLTA, 8.2f, (byte) 0,
+		Jugador kevinDurant = new Jugador((short) 218, "Kevin", "Durant", (byte) 7, "Durantula", Posicion.ALAPIVOT,
+				42.01f, (byte) 12, (byte) 2, (byte) 1, (byte) 0, true, false, (byte) 2, (byte) 2, (byte) 4,
+				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35,
+				Valores.A, Valores.A, Valores.A, Valores.B, (byte) 3, (byte) 1);
+		Jugador sethCurry = new Jugador((short) 219, "Seth", "Curry", (byte) 30, Posicion.ESCOLTA, 8.2f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
-				Valores.A, Valores.C, Valores.C, (byte) 3, (byte) 3);
-		Jugador bruceBrown = new Jugador((byte) 3, "Bruce", "Brown", (byte) 1, Posicion.ALERO, 4.73f, (byte) 0,
+				Valores.A, Valores.C, Valores.C, (byte) 3, (byte) 1);
+		Jugador bruceBrown = new Jugador((short) 220, "Bruce", "Brown", (byte) 1, Posicion.ALERO, 4.73f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 25, Valores.B,
-				Valores.B, Valores.C, Valores.A, (byte) 3, (byte) 3);
-		Jugador kyrieIrving = new Jugador((byte) 3, "Kyrie", "Irving", (byte) 11, "Uncle Drew", Posicion.BASE, 35.34f,
-				(byte) 7, (byte) 1, (byte) 0, (byte) 0, false, false, (byte) 1, (byte) 0, (byte) 0, r.nextInt(35) + 1,
-				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.A,
-				Valores.A, Valores.B, Valores.D, (byte) 3, (byte) 3);
-		Jugador lamarcusAldridge = new Jugador((byte) 3, "Lamarcus", "Aldridge", (byte) 2, Posicion.PIVOT, 2.64f,
+				Valores.B, Valores.C, Valores.A, (byte) 3, (byte) 1);
+		Jugador kyrieIrving = new Jugador((short) 221, "Kyrie", "Irving", (byte) 11, "Uncle Drew", Posicion.BASE,
+				35.34f, (byte) 7, (byte) 1, (byte) 0, (byte) 0, false, false, (byte) 1, (byte) 0, (byte) 0,
+				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30,
+				Valores.A, Valores.A, Valores.B, Valores.D, (byte) 3, (byte) 1);
+		Jugador lamarcusAldridge = new Jugador((short) 222, "Lamarcus", "Aldridge", (byte) 2, Posicion.PIVOT, 2.64f,
 				(byte) 7, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 22, Valores.B,
-				Valores.B, Valores.C, Valores.B, (byte) 3, (byte) 3);
+				Valores.B, Valores.C, Valores.B, (byte) 3, (byte) 1);
 
-		Jugador lameloBall = new Jugador((byte) 3, "LaMelo", "Ball", (byte) 2, Posicion.BASE, 8.32f, (byte) 1, (byte) 0,
-				(byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1,
-				r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.B, Valores.B, Valores.A,
-				Valores.C, (byte) 4, (byte) 4);
-		Jugador milesBridges = new Jugador((byte) 4, "Miles", "Bridges", (byte) 0, Posicion.ALERO, 5.56f, (byte) 0,
+		Jugador lameloBall = new Jugador((short) 223, "LaMelo", "Ball", (byte) 2, Posicion.BASE, 8.32f, (byte) 1,
+				(byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
+				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.B,
+				Valores.B, Valores.A, Valores.C, (byte) 4, (byte) 1);
+		Jugador milesBridges = new Jugador((short) 224, "Miles", "Bridges", (byte) 0, Posicion.ALERO, 5.56f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 36, Valores.A,
-				Valores.A, Valores.C, Valores.B, (byte) 4, (byte) 4);
-		Jugador terryRozier = new Jugador((byte) 4, "Terry", "Rozier", (byte) 13, "Scary Terry", Posicion.ESCOLTA, 18f,
+				Valores.A, Valores.C, Valores.B, (byte) 4, (byte) 1);
+		Jugador terryRozier = new Jugador((short) 225, "Terry", "Rozier", (byte) 13, "Scary Terry", Posicion.ESCOLTA, 18f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.B, Valores.D, (byte) 4, (byte) 4);
-		Jugador gordonHayward = new Jugador((byte) 4, "Gordon", "Hayward", (byte) 20, Posicion.ALAPIVOT, 29.92f,
+				Valores.B, Valores.B, Valores.D, (byte) 4, (byte) 1);
+		Jugador gordonHayward = new Jugador((short) 226, "Gordon", "Hayward", (byte) 20, Posicion.ALAPIVOT, 29.92f,
 				(byte) 1, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.B, (byte) 4, (byte) 4);
-		Jugador montrezlHarrel = new Jugador((byte) 4, "Montrezl", "Harrel", (byte) 8, "Trezz", Posicion.ALERO, 4.2f,
+				Valores.B, Valores.C, Valores.B, (byte) 4, (byte) 1);
+		Jugador montrezlHarrel = new Jugador((short) 227, "Montrezl", "Harrel", (byte) 8, "Trezz", Posicion.ALERO, 4.2f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.A, (byte) 4, (byte) 4);
+				Valores.B, Valores.C, Valores.A, (byte) 4, (byte) 1);
 
-		Jugador lonzoBall = new Jugador((byte) 4, "Lonzo", "Ball", (byte) 2, Posicion.BASE, 18.6f, (byte) 0, (byte) 0,
+		Jugador lonzoBall = new Jugador((short) 228, "Lonzo", "Ball", (byte) 2, Posicion.BASE, 18.6f, (byte) 0, (byte) 0,
 				(byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1,
 				r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.B, Valores.A, Valores.A,
-				Valores.A, (byte) 5, (byte) 4);
-		Jugador demarDeRozan = new Jugador((byte) 5, "Demar", "DeRozan", (byte) 10, "King of the Fourth",
+				Valores.A, (byte) 5, (byte) 1);
+		Jugador demarDeRozan = new Jugador((short) 229, "Demar", "DeRozan", (byte) 10, "King of the Fourth",
 				Posicion.ALERO, 26f, (byte) 5, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 36,
-				Valores.A, Valores.A, Valores.C, Valores.C, (byte) 5, (byte) 5);
-		Jugador nikolaVucevic = new Jugador((byte) 5, "Nikola", "Vucevic", (byte) 9, Posicion.PIVOT, 24f, (byte) 1,
+				Valores.A, Valores.A, Valores.C, Valores.C, (byte) 5, (byte) 1);
+		Jugador nikolaVucevic = new Jugador((short) 230, "Nikola", "Vucevic", (byte) 9, Posicion.PIVOT, 24f, (byte) 1,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.C, (byte) 5, (byte) 5);
-		Jugador zachLavine = new Jugador((byte) 5, "Zach", "LaVine", (byte) 8, Posicion.ESCOLTA, 19.5f, (byte) 2,
+				Valores.B, Valores.C, Valores.C, (byte) 5, (byte) 1);
+		Jugador zachLavine = new Jugador((short) 231, "Zach", "LaVine", (byte) 8, Posicion.ESCOLTA, 19.5f, (byte) 2,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.A,
-				Valores.B, Valores.C, Valores.D, (byte) 5, (byte) 5);
-		Jugador patrickWilliams = new Jugador((byte) 5, "Patrick", "Williams", (byte) 44, Posicion.ALAPIVOT, 7.2f,
+				Valores.B, Valores.C, Valores.D, (byte) 5, (byte) 1);
+		Jugador patrickWilliams = new Jugador((short) 232, "Patrick", "Williams", (byte) 44, Posicion.ALAPIVOT, 7.2f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.A, (byte) 5, (byte) 5);
+				Valores.B, Valores.C, Valores.A, (byte) 5, (byte) 1);
 
-		Jugador jarretAllen = new Jugador((byte) 6, "Jarret", "Allen", (byte) 31, Posicion.PIVOT, 20, (byte) 1,
+		Jugador jarretAllen = new Jugador((short) 233, "Jarret", "Allen", (byte) 31, Posicion.PIVOT, 20, (byte) 1,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.A,
-				Valores.D, Valores.D, Valores.A, (byte) 6, (byte) 6);
-		Jugador dariusGarland = new Jugador((byte) 6, "Darius", "Garland", (byte) 10, Posicion.BASE, 10, (byte) 1,
+				Valores.D, Valores.D, Valores.A, (byte) 6, (byte) 1);
+		Jugador dariusGarland = new Jugador((short) 234, "Darius", "Garland", (byte) 10, Posicion.BASE, 10, (byte) 1,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.B,
-				Valores.B, Valores.A, Valores.C, (byte) 6, (byte) 6);
-		Jugador evanMoblaey = new Jugador((byte) 6, "Evan", "Mobley", (byte) 4, Posicion.ALERO, 18f, (byte) 0, (byte) 0,
-				(byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1,
-				r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B, Valores.A, Valores.C,
-				Valores.B, (byte) 6, (byte) 6);
-		Jugador carisLeVert = new Jugador((byte) 6, "Caris", "LeVert", (byte) 3, Posicion.ESCOLTA, 17.75f, (byte) 0,
+				Valores.B, Valores.A, Valores.C, (byte) 6, (byte) 1);
+		Jugador evanMoblaey = new Jugador((short) 235, "Evan", "Mobley", (byte) 4, Posicion.ALERO, 18f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.D, (byte) 6, (byte) 6);
-		Jugador lauriMarkkanen = new Jugador((byte) 6, "Lauri", "Markkanen", (byte) 24, Posicion.ALAPIVOT, 15.69f,
+				Valores.A, Valores.C, Valores.B, (byte) 6, (byte) 1);
+		Jugador carisLeVert = new Jugador((short) 236, "Caris", "LeVert", (byte) 3, Posicion.ESCOLTA, 17.75f, (byte) 0,
+				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
+				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
+				Valores.B, Valores.C, Valores.D, (byte) 6, (byte) 1);
+		Jugador lauriMarkkanen = new Jugador((short) 237, "Lauri", "Markkanen", (byte) 24, Posicion.ALAPIVOT, 15.69f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.B, (byte) 6, (byte) 6);
+				Valores.B, Valores.C, Valores.B, (byte) 6, (byte)1);
 
-		Jugador lukaDoncic = new Jugador((byte) 6, "Luka", "Doncic", (byte) 77, "Luka Magic", Posicion.BASE, 10.74f,
+		Jugador lukaDoncic = new Jugador((short) 238, "Luka", "Doncic", (byte) 77, "Luka Magic", Posicion.BASE, 10.74f,
 				(byte) 3, (byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.A,
-				Valores.A, Valores.A, Valores.C, (byte) 6, (byte) 6);
-		Jugador jalenBrunson = new Jugador((byte) 6, "Jalen", "Brunson", (byte) 13, Posicion.ESCOLTA, 1.8f, (byte) 0,
+				Valores.A, Valores.A, Valores.C, (byte) 16, (byte) 1);
+		Jugador jalenBrunson = new Jugador((short) 239, "Jalen", "Brunson", (byte) 13, Posicion.ESCOLTA, 1.8f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.B,
-				Valores.A, Valores.B, Valores.C, (byte) 6, (byte) 6);
-		Jugador spencerDinwiddie = new Jugador((byte) 6, "Spencer", "Dinwiddie", (byte) 21, Posicion.ALERO, 17.14f,
+				Valores.A, Valores.B, Valores.C, (byte) 16, (byte) 1);
+		Jugador spencerDinwiddie = new Jugador((short) 240, "Spencer", "Dinwiddie", (byte) 21, Posicion.ALERO, 17.14f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 28, Valores.B,
-				Valores.A, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador dorianFinneySmith = new Jugador((byte) 6, "Dorian", "Finney-Smith", (byte) 10, Posicion.PIVOT, 4,
+				Valores.A, Valores.C, Valores.B, (byte) 16, (byte) 1);
+		Jugador dorianFinneySmith = new Jugador((short) 241, "Dorian", "Finney-Smith", (byte) 10, Posicion.PIVOT, 4,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 33, Valores.B,
-				Valores.B, Valores.D, Valores.A, (byte) 6, (byte) 6);
-		Jugador reggieBullock = new Jugador((byte) 6, "Reggie", "Bulloc", (byte) 25, Posicion.ALAPIVOT, 9.53f, (byte) 0,
-				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
+				Valores.B, Valores.D, Valores.A, (byte) 16, (byte) 1);
+		Jugador reggieBullock = new Jugador((short) 242, "Reggie", "Bulloc", (byte) 25, Posicion.ALAPIVOT, 9.53f,
+				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 28, Valores.B,
-				Valores.A, Valores.C, Valores.B, (byte) 6, (byte) 6);
+				Valores.A, Valores.C, Valores.B, (byte) 16, (byte) 1);
 
-		Jugador willBarton = new Jugador((byte) 6, "William", "Barton", (byte) 5, "Will", Posicion.ALERO, 15.62f,
+		Jugador willBarton = new Jugador((short) 243, "William", "Barton", (byte) 5, "Will", Posicion.ALERO, 15.62f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.C,
-				Valores.B, Valores.B, Valores.C, (byte) 6, (byte) 6);
-		Jugador aaronGordon = new Jugador((byte) 6, "Aaron", "Gordon", (byte) 50, Posicion.ALAPIVOT, 16.4f, (byte) 0,
+				Valores.B, Valores.B, Valores.C, (byte) 17, (byte) 1);
+		Jugador aaronGordon = new Jugador((short) 244, "Aaron", "Gordon", (byte) 50, Posicion.ALAPIVOT, 16.4f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.A,
-				Valores.C, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador nikolaJokic = new Jugador((byte) 6, "Nikola", "Jokic", (byte) 15, Posicion.PIVOT, 31.58f, (byte) 4,
+				Valores.C, Valores.C, Valores.B, (byte) 17, (byte) 1);
+		Jugador nikolaJokic = new Jugador((short) 245, "Nikola", "Jokic", (byte) 15, Posicion.PIVOT, 31.58f, (byte) 4,
 				(byte) 1, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.A,
-				Valores.A, Valores.A, Valores.B, (byte) 6, (byte) 6);
-		Jugador jamalMurray = new Jugador((byte) 6, "Jamal", "Murray", (byte) 27, Posicion.ESCOLTA, 29.67F, (byte) 0,
+				Valores.A, Valores.A, Valores.B, (byte) 17, (byte) 1);
+		Jugador jamalMurray = new Jugador((short) 246, "Jamal", "Murray", (byte) 27, Posicion.ESCOLTA, 29.67F, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.A,
-				Valores.B, Valores.B, Valores.C, (byte) 6, (byte) 6);
-		Jugador monteMorris = new Jugador((byte) 6, "Monte", "Morris", (byte) 11, Posicion.BASE, 4.2f, (byte) 0,
+				Valores.B, Valores.B, Valores.C, (byte) 17, (byte) 1);
+		Jugador monteMorris = new Jugador((short) 247, "Monte", "Morris", (byte) 11, Posicion.BASE, 4.2f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.B, Valores.D, (byte) 6, (byte) 6);
+				Valores.B, Valores.B, Valores.D, (byte) 17, (byte) 1);
 
-		Jugador cadeCunningham = new Jugador((byte) 6, "Cade", "Cunningham", (byte) 2, Posicion.BASE, 10.05f, (byte) 0,
+		Jugador cadeCunningham = new Jugador((short) 248, "Cade", "Cunningham", (byte) 2, Posicion.BASE, 10.05f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.A,
-				Valores.C, Valores.B, Valores.D, (byte) 6, (byte) 6);
-		Jugador marvinBagley = new Jugador((byte) 6, "Marvin", "Bagley", (byte) 35, Posicion.PIVOT, 11f, (byte) 0,
+				Valores.C, Valores.B, Valores.D, (byte) 7, (byte) 1);
+		Jugador marvinBagley = new Jugador((short) 249, "Marvin", "Bagley", (byte) 35, Posicion.PIVOT, 11f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 27, Valores.B,
-				Valores.C, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador sadiqqBey = new Jugador((byte) 6, "Sadiqq", "Bey", (byte) 41, Posicion.ALERO, 2.8f, (byte) 0, (byte) 0,
+				Valores.C, Valores.C, Valores.B, (byte) 7, (byte) 1);
+		Jugador sadiqqBey = new Jugador((short) 250, "Sadiqq", "Bey", (byte) 41, Posicion.ALERO, 2.8f, (byte) 0, (byte) 0,
 				(byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1,
 				r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 33, Valores.B, Valores.B, Valores.C,
-				Valores.B, (byte) 6, (byte) 6);
-		Jugador hamidouDiallo = new Jugador((byte) 6, "Hamidou", "Diallo", (byte) 6, Posicion.ESCOLTA, 5.2f, (byte) 0,
+				Valores.B, (byte) 7, (byte) 1);
+		Jugador hamidouDiallo = new Jugador((short) 251, "Hamidou", "Diallo", (byte) 6, Posicion.ESCOLTA, 5.2f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 22, Valores.B,
-				Valores.B, Valores.C, Valores.C, (byte) 6, (byte) 6);
-		Jugador jeramiGrant = new Jugador((byte) 6, "Jerami", "Grant", (byte) 9, Posicion.ALAPIVOT, 20f, (byte) 0,
+				Valores.B, Valores.C, Valores.C, (byte) 7, (byte) 1);
+		Jugador jeramiGrant = new Jugador((short) 252, "Jerami", "Grant", (byte) 9, Posicion.ALAPIVOT, 20f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.C, Valores.C, Valores.B, (byte) 6, (byte) 6);
+				Valores.C, Valores.C, Valores.B, (byte) 7, (byte) 1);
 
-		Jugador stephenCurry = new Jugador((byte) 6, "Stephen", "Curry", (byte) 30, "Chef Curry", Posicion.BASE, 45.78f,
-				(byte) 8, (byte) 3, (byte) 2, (byte) 0, false, false, (byte) 1, (byte) 0, (byte) 2, r.nextInt(35) + 1,
-				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 34, Valores.A,
-				Valores.A, Valores.A, Valores.D, (byte) 6, (byte) 6);
-		Jugador klayThompson = new Jugador((byte) 6, "Klay", "Thompson", (byte) 11, Posicion.ESCOLTA, 37.98f, (byte) 5,
+		Jugador stephenCurry = new Jugador((short) 253, "Stephen", "Curry", (byte) 30, "Chef Curry", Posicion.BASE,
+				45.78f, (byte) 8, (byte) 3, (byte) 2, (byte) 0, false, false, (byte) 1, (byte) 0, (byte) 2,
+				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 34,
+				Valores.A, Valores.A, Valores.A, Valores.D, (byte) 18, (byte) 1);
+		Jugador klayThompson = new Jugador((short) 254, "Klay", "Thompson", (byte) 11, Posicion.ESCOLTA, 37.98f, (byte) 5,
 				(byte) 3, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.B,
-				Valores.A, Valores.C, Valores.A, (byte) 6, (byte) 6);
-		Jugador draymondGreen = new Jugador((byte) 6, "Draymond", "Green", (byte) 13, Posicion.PIVOT, 24, (byte) 4,
+				Valores.A, Valores.C, Valores.A, (byte) 18, (byte) 1);
+		Jugador draymondGreen = new Jugador((short) 255, "Draymond", "Green", (byte) 13, Posicion.PIVOT, 24, (byte) 4,
 				(byte) 3, (byte) 0, (byte) 1, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
-				Valores.C, Valores.A, Valores.A, (byte) 6, (byte) 6);
-		Jugador andrewWiggins = new Jugador((byte) 6, "Andrew", "Hunter", (byte) 22, Posicion.ALAPIVOT, 31.57F,
+				Valores.C, Valores.A, Valores.A, (byte) 18, (byte) 1);
+		Jugador andrewWiggins = new Jugador((short) 256, "Andrew", "Wiggins", (byte) 22, Posicion.ALAPIVOT, 31.57F,
 				(byte) 1, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.A, (byte) 6, (byte) 6);
-		Jugador jordanPoole = new Jugador((byte) 6, "Jordan", "Poole", (byte) 3, Posicion.ALERO, 2.16f, (byte) 0,
+				Valores.B, Valores.C, Valores.A, (byte) 18, (byte) 1);
+		Jugador jordanPoole = new Jugador((short) 257, "Jordan", "Poole", (byte) 3, Posicion.ALERO, 2.16f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.C, (byte) 6, (byte) 6);
+				Valores.B, Valores.C, Valores.C, (byte) 18, (byte) 1);
 
-		Jugador christianWood = new Jugador((byte) 6, "Christian", "Wood", (byte) 35, Posicion.PIVOT, 13.6F, (byte) 0,
+		Jugador christianWood = new Jugador((short) 258, "Christian", "Wood", (byte) 35, Posicion.PIVOT, 13.6F, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.B,
-				Valores.D, Valores.D, Valores.B, (byte) 6, (byte) 6);
-		Jugador jalenGreen = new Jugador((byte) 6, "Jalen", "Green", (byte) 0, Posicion.BASE, 23f, (byte) 0, (byte) 0,
+				Valores.D, Valores.D, Valores.B, (byte) 19, (byte) 1);
+		Jugador jalenGreen = new Jugador((short) 259, "Jalen", "Green", (byte) 0, Posicion.BASE, 23f, (byte) 0, (byte) 0,
 				(byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1,
 				r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.A, Valores.B, Valores.D,
-				Valores.D, (byte) 6, (byte) 6);
-		Jugador kpj = new Jugador((byte) 6, "Kevin", "Porter Jr", (byte) 3, Posicion.ALERO, 1.78F, (byte) 0, (byte) 0,
+				Valores.D, (byte) 19, (byte) 1);
+		Jugador kpj = new Jugador((short) 260, "Kevin", "Porter Jr", (byte) 3, Posicion.ALERO, 1.78F, (byte) 0, (byte) 0,
 				(byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1,
 				r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B, Valores.C, Valores.D,
-				Valores.C, (byte) 6, (byte) 6);
-		Jugador ericGordon = new Jugador((byte) 6, "Eric", "Gordon", (byte) 10, Posicion.ESCOLTA, 18.12f, (byte) 0,
+				Valores.C, (byte) 19, (byte) 1);
+		Jugador ericGordon = new Jugador((short) 261, "Eric", "Gordon", (byte) 10, Posicion.ESCOLTA, 18.12f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
-				Valores.A, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador jaseanTate = new Jugador((byte) 6, "Jae'Sean", "Tate", (byte) 8, Posicion.ALAPIVOT, 1.57f, (byte) 0,
+				Valores.A, Valores.C, Valores.B, (byte) 19, (byte) 1);
+		Jugador jaseanTate = new Jugador((short) 262, "Jae Sean", "Tate", (byte) 8, Posicion.ALAPIVOT, 1.57f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.C, (byte) 6, (byte) 6);
+				Valores.B, Valores.C, Valores.C, (byte) 19, (byte) 1);
 
-		Jugador malcomBrogdon = new Jugador((byte) 6, "Malcom", "Brogdon", (byte) 7, Posicion.BASE, 21.7f, (byte) 0,
+		Jugador malcomBrogdon = new Jugador((short) 263, "Malcom", "Brogdon", (byte) 7, Posicion.BASE, 21.7f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 33, Valores.B,
-				Valores.B, Valores.A, Valores.C, (byte) 6, (byte) 6);
-		Jugador tyreseHaliburton = new Jugador((byte) 6, "Tyrese", "halliburton", (byte) 0, Posicion.ESCOLTA, 4.03f,
+				Valores.B, Valores.A, Valores.C, (byte) 8, (byte) 1);
+		Jugador tyreseHaliburton = new Jugador((short) 264, "Tyrese", "halliburton", (byte) 0, Posicion.ESCOLTA, 4.03f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.C,
-				Valores.A, Valores.C, Valores.C, (byte) 6, (byte) 6);
-		Jugador buddyHield = new Jugador((byte) 6, "Chavano Rainier", "Hield", (byte) 24, "Buddy Hield", Posicion.ALERO,
-				23.08F, (byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0,
-				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30,
-				Valores.B, Valores.A, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador jalenSmith = new Jugador((byte) 6, "Jalen", "Smith", (byte) 25, Posicion.ALAPIVOT, 4.48f, (byte) 0,
+				Valores.A, Valores.C, Valores.C, (byte) 8, (byte) 1);
+		Jugador buddyHield = new Jugador((short) 265, "Chavano Rainier", "Hield", (byte) 24, "Buddy Hield",
+				Posicion.ALERO, 23.08F, (byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0,
+				(byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1,
+				(byte) 30, Valores.B, Valores.A, Valores.C, Valores.B, (byte) 8, (byte) 1);
+		Jugador jalenSmith = new Jugador((short) 266, "Jalen", "Smith", (byte) 25, Posicion.ALAPIVOT, 4.48f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.D, Valores.D, Valores.C, (byte) 6, (byte) 6);
-		Jugador mylesTurner = new Jugador((byte) 6, "Myles", "Turner", (byte) 33, Posicion.PIVOT, 18, (byte) 0,
+				Valores.D, Valores.D, Valores.C, (byte) 8, (byte) 1);
+		Jugador mylesTurner = new Jugador((short) 267, "Myles", "Turner", (byte) 33, Posicion.PIVOT, 18, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.A, (byte) 6, (byte) 6);
+				Valores.B, Valores.C, Valores.A, (byte) 8, (byte) 1);
 
-		Jugador russelWestbrook = new Jugador((byte) 6, "Russel", "Westbrook", (byte) 0, "Westbrick", Posicion.BASE,
+		Jugador russelWestbrook = new Jugador((short) 268, "Russel", "Westbrook", (byte) 0, "Westbrick", Posicion.BASE,
 				44.21f, (byte) 9, (byte) 0, (byte) 1, (byte) 0, false, false, (byte) 2, (byte) 0, (byte) 2,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35,
-				Valores.B, Valores.D, Valores.A, Valores.D, (byte) 6, (byte) 6);
-		Jugador carmeloAnthony = new Jugador((byte) 6, "Carmelo Kyam", "Anthony", (byte) 7, "Melo", Posicion.ALERO,
+				Valores.B, Valores.D, Valores.A, Valores.D, (byte) 21, (byte) 1);
+		Jugador carmeloAnthony = new Jugador((short) 269, "Carmelo Kyam", "Anthony", (byte) 7, "Melo", Posicion.ALERO,
 				2.64f, (byte) 10, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 1,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 26,
-				Valores.B, Valores.A, Valores.C, Valores.D, (byte) 6, (byte) 6);
-		Jugador malikMonk = new Jugador((byte) 6, "Malik", "Monk", (byte) 11, Posicion.ESCOLTA, 1.8f, (byte) 0,
+				Valores.B, Valores.A, Valores.C, Valores.D, (byte) 21, (byte) 1);
+		Jugador malikMonk = new Jugador((short) 270, "Malik", "Monk", (byte) 11, Posicion.ESCOLTA, 1.8f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.D, Valores.D, (byte) 6, (byte) 6);
-		Jugador leBronJames = new Jugador((byte) 6, "LeBron", "James", (byte) 6, "King James", Posicion.ALAPIVOT,
+				Valores.B, Valores.D, Valores.D, (byte) 21, (byte) 1);
+		Jugador leBronJames = new Jugador((short) 271, "LeBron", "James", (byte) 6, "King James", Posicion.ALAPIVOT,
 				41.18f, (byte) 18, (byte) 4, (byte) 4, (byte) 0, true, false, (byte) 3, (byte) 4, (byte) 1,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30,
-				Valores.A, Valores.A, Valores.A, Valores.A, (byte) 6, (byte) 6);
-		Jugador anthonyDavis = new Jugador((byte) 6, "Anthony", "Davis", (byte) 3, "The Brow", Posicion.ALAPIVOT,
+				Valores.A, Valores.A, Valores.A, Valores.A, (byte) 21, (byte) 1);
+		Jugador anthonyDavis = new Jugador((short) 272, "Anthony", "Davis", (byte) 3, "The Brow", Posicion.ALAPIVOT,
 				35.36f, (byte) 8, (byte) 1, (byte) 0, (byte) 0, false, false, (byte) 1, (byte) 0, (byte) 2,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32,
-				Valores.A, Valores.B, Valores.C, Valores.A, (byte) 6, (byte) 6);
+				Valores.A, Valores.B, Valores.C, Valores.A, (byte) 21, (byte) 1);
 
-		Jugador dilonBrooks = new Jugador((byte) 6, "Dilon", "Brooks", (byte) 24, Posicion.ALAPIVOT, 12.2f, (byte) 0,
+		Jugador dilonBrooks = new Jugador((short) 273, "Dilon", "Brooks", (byte) 24, Posicion.ALAPIVOT, 12.2f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 28, Valores.A,
-				Valores.B, Valores.C, Valores.A, (byte) 6, (byte) 6);
-		Jugador desmondBane = new Jugador((byte) 6, "Desmond Michael", "Bane", (byte) 22, Posicion.ESCOLTA, 2.03f,
+				Valores.B, Valores.C, Valores.A, (byte) 24, (byte) 1);
+		Jugador desmondBane = new Jugador((short) 274, "Desmond Michael", "Bane", (byte) 22, Posicion.ESCOLTA, 2.03f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 30, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.B,
-				Valores.A, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador jaMorant = new Jugador((byte) 6, "Temetrius Jamel", "Morant", (byte) 12, "Ja Morant", Posicion.BASE,
-				.603f, (byte) 0, (byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0,
+				Valores.A, Valores.C, Valores.B, (byte) 24, (byte) 1);
+		Jugador jaMorant = new Jugador((short) 275, "Temetrius Jamel", "Morant", (byte) 12, "Ja Morant", Posicion.BASE,
+				.603f, (byte) 0, (byte) 0, (byte) 0, (byte) 0, true, true, (byte) 0, (byte) 0, (byte) 0,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30,
-				Valores.A, Valores.B, Valores.C, Valores.C, (byte) 6, (byte) 6);
-		Jugador brandonClarke = new Jugador((byte) 6, "Brandon", "Clarke", (byte) 15, Posicion.ALERO, 2.72f, (byte) 0,
+				Valores.A, Valores.B, Valores.C, Valores.C, (byte) 24, (byte) 1);
+		Jugador brandonClarke = new Jugador((short) 276, "Brandon", "Clarke", (byte) 15, Posicion.ALERO, 2.72f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 19, Valores.B,
-				Valores.D, Valores.D, Valores.B, (byte) 6, (byte) 6);
-		Jugador stevenAdams = new Jugador((byte) 6, "Steven", "Adams", (byte) 4, Posicion.PIVOT, 17, (byte) 0, (byte) 0,
-				(byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1,
-				r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 10, Valores.B, Valores.D, Valores.C,
-				Valores.A, (byte) 6, (byte) 6);
+				Valores.D, Valores.D, Valores.B, (byte) 24, (byte) 1);
+		Jugador stevenAdams = new Jugador((short) 277, "Steven", "Adams", (byte) 4, Posicion.PIVOT, 17, (byte) 0,
+				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
+				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 10, Valores.B,
+				Valores.D, Valores.C, Valores.A, (byte) 24, (byte) 1);
 
-		Jugador jimmyButler = new Jugador((byte) 6, "Jimmy", "Butler", (byte) 22, "Jimmy Buckets", Posicion.ALERO,
+		Jugador jimmyButler = new Jugador((short) 278, "Jimmy", "Butler", (byte) 22, "Jimmy Buckets", Posicion.ALERO,
 				36.01f, (byte) 6, (byte) 0, (byte) 0, (byte) 0, false, true, (byte) 0, (byte) 0, (byte) 0,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 39,
-				Valores.A, Valores.C, Valores.B, Valores.A, (byte) 6, (byte) 6);
-		Jugador bamAdebayo = new Jugador((byte) 6, "Edrice Femi", "Adebayo", (byte) 5, "Bam", Posicion.PIVOT, 28.1f,
+				Valores.A, Valores.C, Valores.B, Valores.A, (byte) 9, (byte) 1);
+		Jugador bamAdebayo = new Jugador((short) 279, "Edrice Femi", "Adebayo", (byte) 5, "Bam", Posicion.PIVOT, 28.1f,
 				(byte) 1, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.A,
-				Valores.C, Valores.C, Valores.A, (byte) 6, (byte) 6);
-		Jugador kyleLowry = new Jugador((byte) 6, "Kyle", "Lowry", (byte) 7, Posicion.BASE, 26.98f, (byte) 6, (byte) 1,
+				Valores.C, Valores.C, Valores.A, (byte) 9, (byte) 1);
+		Jugador kyleLowry = new Jugador((short) 280, "Kyle", "Lowry", (byte) 7, Posicion.BASE, 26.98f, (byte) 6, (byte) 1,
 				(byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1,
 				r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C, Valores.B, Valores.C,
-				Valores.B, (byte) 6, (byte) 6);
-		Jugador maxStrus = new Jugador((byte) 6, "Max", "Strus", (byte) 31, Posicion.ESCOLTA, 1.67f, (byte) 0, (byte) 0,
-				(byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1,
-				r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C, Valores.B, Valores.C,
-				Valores.B, (byte) 6, (byte) 6);
-		Jugador pjTucker = new Jugador((byte) 6, "Anthony Leon", "Huerter", (byte) 3, "PJ Tucker", Posicion.ALAPIVOT,
+				Valores.B, (byte) 9, (byte) 1);
+		Jugador maxStrus = new Jugador((short) 281, "Max", "Strus", (byte) 31, Posicion.ESCOLTA, 1.67f, (byte) 0,
+				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
+				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
+				Valores.B, Valores.C, Valores.B, (byte) 9, (byte) 1);
+		Jugador pjTucker = new Jugador((short) 282, "Anthony Leon", "Huerter", (byte) 3, "PJ Tucker", Posicion.ALAPIVOT,
 				7f, (byte) 0, (byte) 1, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30,
-				Valores.C, Valores.C, Valores.C, Valores.A, (byte) 6, (byte) 6);
+				Valores.C, Valores.C, Valores.C, Valores.A, (byte) 9, (byte) 1);
 
-		Jugador giannisAntetokoumpo = new Jugador((byte) 6, "Giannis Ougko", "Antetokounmpo", (byte) 34,
+		Jugador giannisAntetokoumpo = new Jugador((short) 283, "Giannis Ougko", "Antetokounmpo", (byte) 34,
 				"The Greek Freak", Posicion.ALAPIVOT, 39.34f, (byte) 6, (byte) 1, (byte) 2, (byte) 1, false, true,
 				(byte) 1, (byte) 1, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1,
-				r.nextInt(5) + 1, (byte) 32, Valores.A, Valores.C, Valores.B, Valores.A, (byte) 6, (byte) 6);
-		Jugador graysonAllen = new Jugador((byte) 6, "Grayson", "Allen", (byte) 7, Posicion.ESCOLTA, 4, (byte) 0,
+				r.nextInt(5) + 1, (byte) 32, Valores.A, Valores.C, Valores.B, Valores.A, (byte) 10, (byte) 1);
+		Jugador graysonAllen = new Jugador((short) 284, "Grayson", "Allen", (byte) 7, Posicion.ESCOLTA, 4, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 27, Valores.B,
-				Valores.A, Valores.B, Valores.B, (byte) 6, (byte) 6);
-		Jugador brookLopez = new Jugador((byte) 6, "Brook", "Lopez", (byte) 11, Posicion.PIVOT, 13.3F, (byte) 0,
+				Valores.A, Valores.B, Valores.B, (byte) 10, (byte) 1);
+		Jugador brookLopez = new Jugador((short) 285, "Brook", "Lopez", (byte) 11, Posicion.PIVOT, 13.3F, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.A, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador jrueHoliday = new Jugador((byte) 6, "Jrue", "Holiday", (byte) 12, Posicion.BASE, 32.43f, (byte) 1,
+				Valores.A, Valores.C, Valores.B, (byte) 10, (byte) 1);
+		Jugador jrueHoliday = new Jugador((short) 286, "Jrue", "Holiday", (byte) 12, Posicion.BASE, 32.43f, (byte) 1,
 				(byte) 1, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
-				Valores.A, Valores.B, Valores.A, (byte) 6, (byte) 6);
-		Jugador khrisMiddleton = new Jugador((byte) 6, "Khris", "Middleton", (byte) 22, Posicion.ALERO, 33.5f, (byte) 3,
-				(byte) 1, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
+				Valores.A, Valores.B, Valores.A, (byte) 10, (byte) 1);
+		Jugador khrisMiddleton = new Jugador((short) 287, "Khris", "Middleton", (byte) 22, Posicion.ALERO, 33.5f,
+				(byte) 3, (byte) 1, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.B, (byte) 6, (byte) 6);
+				Valores.B, Valores.C, Valores.B, (byte) 10, (byte) 1);
 
-		Jugador anthonyEdwards = new Jugador((byte) 6, "Anthony", "Edwards", (byte) 1, "Ant", Posicion.ALERO, 10.25f,
+		Jugador anthonyEdwards = new Jugador((short) 288, "Anthony", "Edwards", (byte) 1, "Ant", Posicion.ALERO, 10.25f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.A,
-				Valores.B, Valores.B, Valores.B, (byte) 6, (byte) 6);
-		Jugador malikBeasly = new Jugador((byte) 6, "Malik", "Beasly", (byte) 5, Posicion.ESCOLTA, 14.91f, (byte) 0,
+				Valores.B, Valores.B, Valores.B, (byte) 22, (byte) 1);
+		Jugador malikBeasly = new Jugador((short) 289, "Malik", "Beasly", (byte) 5, Posicion.ESCOLTA, 14.91f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 25, Valores.B,
-				Valores.B, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador patrickBeverly = new Jugador((byte) 6, "Patrick", "Beverly", (byte) 22, Posicion.BASE, 14.32f, (byte) 0,
-				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
+				Valores.B, Valores.C, Valores.B, (byte) 22, (byte) 1);
+		Jugador patrickBeverly = new Jugador((short) 290, "Patrick", "Beverly", (byte) 22, Posicion.BASE, 14.32f,
+				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 26, Valores.B,
-				Valores.C, Valores.C, Valores.A, (byte) 6, (byte) 6);
-		Jugador kat = new Jugador((byte) 6, "Karl-Anthony", "Towns Cruz", (byte) 32, Posicion.PIVOT, 31.65f, (byte) 3,
+				Valores.C, Valores.C, Valores.A, (byte) 22, (byte) 1);
+		Jugador kat = new Jugador((short) 291, "Karl-Anthony", "Towns Cruz", (byte) 32, Posicion.PIVOT, 31.65f, (byte) 3,
 				(byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.A, Valores.D, Valores.B, (byte) 6, (byte) 6);
-		Jugador jadenMcDanields = new Jugador((byte) 6, "Jaden", "McDanields", (byte) 3, Posicion.ALAPIVOT, 2.06f,
+				Valores.A, Valores.D, Valores.B, (byte) 22, (byte) 1);
+		Jugador jadenMcDanields = new Jugador((short) 293, "Jaden", "McDanields", (byte) 3, Posicion.ALAPIVOT, 2.06f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.A, (byte) 6, (byte) 6);
+				Valores.B, Valores.C, Valores.A, (byte) 22, (byte) 1);
 
-		Jugador cjMcCollum = new Jugador((byte) 6, "Christian James", "McCollum", (byte) 3, "CJ McCollum",
+		Jugador cjMcCollum = new Jugador((short) 294, "Christian James", "McCollum", (byte) 3, "CJ McCollum",
 				Posicion.ESCOLTA, 30.86f, (byte) 0, (byte) 0, (byte) 0, (byte) 0, false, true, (byte) 0, (byte) 0,
 				(byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1,
-				(byte) 35, Valores.B, Valores.B, Valores.C, Valores.D, (byte) 6, (byte) 6);
-		Jugador jaxsonHayes = new Jugador((byte) 6, "Jaxon", "hayes", (byte) 10, Posicion.PIVOT, 5.34f, (byte) 0,
+				(byte) 35, Valores.B, Valores.B, Valores.C, Valores.D, (byte) 23, (byte) 1);
+		Jugador jaxsonHayes = new Jugador((short) 295, "Jaxon", "hayes", (byte) 10, Posicion.PIVOT, 5.34f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.B,
-				Valores.D, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador herbertJones = new Jugador((byte) 6, "Herbert", "Jones", (byte) 5, Posicion.ALERO, 18f, (byte) 0,
+				Valores.D, Valores.C, Valores.B, (byte) 23, (byte) 1);
+		Jugador herbertJones = new Jugador((short) 296, "Herbert", "Jones", (byte) 5, Posicion.ALERO, 18f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
-				Valores.C, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador devonteGraham = new Jugador((byte) 6, "Devonte'", "Graham", (byte) 4, Posicion.BASE, 11f, (byte) 0,
+				Valores.C, Valores.C, Valores.B, (byte) 23, (byte) 1);
+		Jugador devonteGraham = new Jugador((short) 297, "Devonte", "Graham", (byte) 4, Posicion.BASE, 11f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
-				Valores.B, Valores.B, Valores.D, (byte) 6, (byte) 6);
-		Jugador jonasValanciunas = new Jugador((byte) 6, "Jonas", "Valanciunas", (byte) 17, Posicion.ALERO, 14.2f,
+				Valores.B, Valores.B, Valores.D, (byte) 23, (byte) 1);
+		Jugador jonasValanciunas = new Jugador((short) 298, "Jonas", "Valanciunas", (byte) 17, Posicion.ALERO, 14.2f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.A, (byte) 6, (byte) 6);
+				Valores.B, Valores.C, Valores.A, (byte) 23, (byte) 1);
 
-		Jugador rjBarret = new Jugador((byte) 6, "Rowan Alexander", "Barret", (byte) 9, "R.J.", Posicion.ALERO, 8.63f,
+		Jugador rjBarret = new Jugador((short) 299, "Rowan Alexander", "Barret", (byte) 9, "R.J.", Posicion.ALERO, 8.63f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 34, Valores.B,
-				Valores.A, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador evanFournier = new Jugador((byte) 6, "Evan", "Fournier", (byte) 13, Posicion.ESCOLTA, 17.14f, (byte) 0,
+				Valores.A, Valores.C, Valores.B, (byte) 11, (byte) 1);
+		Jugador evanFournier = new Jugador((short) 300, "Evan", "Fournier", (byte) 13, Posicion.ESCOLTA, 17.14f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
-				Valores.B, Valores.B, Valores.C, (byte) 6, (byte) 6);
-		Jugador alecBurks = new Jugador((byte) 6, "Alec", "Burks", (byte) 18, Posicion.ESCOLTA, 9.35f, (byte) 0,
+				Valores.B, Valores.B, Valores.C, (byte) 11, (byte) 1);
+		Jugador alecBurks = new Jugador((short) 301, "Alec", "Burks", (byte) 18, Posicion.BASE, 9.35f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 28, Valores.B,
-				Valores.B, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador mitchellRobinson = new Jugador((byte) 6, "Mitchell", "Robinson", (byte) 23, Posicion.PIVOT, 1.8f,
+				Valores.B, Valores.C, Valores.B, (byte) 11, (byte) 1);
+		Jugador mitchellRobinson = new Jugador((short) 302, "Mitchell", "Robinson", (byte) 23, Posicion.PIVOT, 1.8f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.C, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador juliusRande = new Jugador((byte) 6, "Julius", "The King", (byte) 3, Posicion.ALERO, 4.2f, (byte) 0,
+				Valores.C, Valores.C, Valores.B, (byte) 11, (byte) 1);
+		Jugador juliusRande = new Jugador((short) 303, "Julius", "Randle", (byte) 3, Posicion.ALERO, 4.2f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.A, (byte) 6, (byte) 6);
+				Valores.B, Valores.C, Valores.A, (byte) 11, (byte) 1);
 
-		Jugador coleAnthony = new Jugador((byte) 6, "Cole", "Anthony", (byte) 50, Posicion.BASE, 3.45f, (byte) 0,
+		Jugador coleAnthony = new Jugador((short) 304, "Cole", "Anthony", (byte) 50, Posicion.BASE, 3.45f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.B,
-				Valores.C, Valores.B, Valores.C, (byte) 6, (byte) 6);
-		Jugador jalenSuggs = new Jugador((byte) 6, "Jalen", "Suggs", (byte) 4, Posicion.ESCOLTA, 6.59f, (byte) 0,
+				Valores.C, Valores.B, Valores.C, (byte) 12, (byte) 1);
+		Jugador jalenSuggs = new Jugador((short) 305, "Jalen", "Suggs", (byte) 4, Posicion.ESCOLTA, 6.59f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.C,
-				Valores.B, Valores.C, Valores.D, (byte) 6, (byte) 6);
-		Jugador moBamba = new Jugador((byte) 6, "Mohamed Fakaba", "Bamba", (byte) 5, "Mo Bamba", Posicion.BASE, 7.56f,
+				Valores.B, Valores.C, Valores.D, (byte) 12, (byte) 1);
+		Jugador moBamba = new Jugador((short) 306, "Mohamed Fakaba", "Bamba", (byte) 5, "Mo Bamba", Posicion.BASE, 7.56f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.B,
-				Valores.B, Valores.D, Valores.B, (byte) 6, (byte) 6);
-		Jugador franzWagner = new Jugador((byte) 6, "Franz", "wagner", (byte) 22, Posicion.ALERO, 5f, (byte) 0,
+				Valores.B, Valores.D, Valores.B, (byte) 12, (byte) 1);
+		Jugador franzWagner = new Jugador((short) 307, "Franz", "wagner", (byte) 22, Posicion.ALERO, 5f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
-				Valores.B, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador jonathanIsaac = new Jugador((byte) 6, "Jonathan", "isaac", (byte) 1, Posicion.ALAPIVOT, .17f, (byte) 0,
+				Valores.B, Valores.C, Valores.B, (byte) 12, (byte) 1);
+		Jugador jonathanIsaac = new Jugador((short) 308, "Jonathan", "isaac", (byte) 1, Posicion.ALAPIVOT, .17f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.C, Valores.C, Valores.A, (byte) 6, (byte) 6);
+				Valores.C, Valores.C, Valores.A, (byte) 12, (byte) 1);
 
-		Jugador joelEmbiid = new Jugador((byte) 6, "Joel", "Embiid", (byte) 21, "Jojo", Posicion.PIVOT, 31.54f,
+		Jugador joelEmbiid = new Jugador((short) 309, "Joel", "Embiid", (byte) 21, "Jojo", Posicion.PIVOT, 31.54f,
 				(byte) 5, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 1, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 34, Valores.A,
-				Valores.B, Valores.B, Valores.A, (byte) 6, (byte) 6);
-		Jugador jamesHarden = new Jugador((byte) 6, "James", "Harden", (byte) 13, "The Beard", Posicion.BASE, 44.31f,
+				Valores.B, Valores.B, Valores.A, (byte) 13, (byte) 1);
+		Jugador jamesHarden = new Jugador((short) 310, "James", "Harden", (byte) 13, "The Beard", Posicion.BASE, 44.31f,
 				(byte) 10, (byte) 0, (byte) 1, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 3, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.B,
-				Valores.A, Valores.A, Valores.D, (byte) 6, (byte) 6);
-		Jugador tyreseMaxey = new Jugador((byte) 6, "Tyrese", "Maxey", (byte) 0, Posicion.ESCOLTA, 2.6f, (byte) 0,
+				Valores.A, Valores.A, Valores.D, (byte) 13, (byte) 1);
+		Jugador tyreseMaxey = new Jugador((short) 311, "Tyrese", "Maxey", (byte) 0, Posicion.ESCOLTA, 2.6f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.A, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador tobiasHarris = new Jugador((byte) 6, "Tobias", "Harris", (byte) 12, Posicion.ALAPIVOT, 35.95f, (byte) 0,
-				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
-				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador matisseThybulle = new Jugador((byte) 6, "Mathisse", "Thybulle", (byte) 22, Posicion.ALERO, 2.84f,
+				Valores.A, Valores.C, Valores.B, (byte) 13, (byte) 1);
+		Jugador tobiasHarris = new Jugador((short) 312, "Tobias", "Harris", (byte) 12, Posicion.ALAPIVOT, 35.95f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.C, Valores.C, Valores.A, (byte) 6, (byte) 6);
+				Valores.B, Valores.C, Valores.B, (byte) 13, (byte) 1);
+		Jugador matisseThybulle = new Jugador((short) 313, "Mathisse", "Thybulle", (byte) 22, Posicion.ALERO, 2.84f,
+				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
+				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
+				Valores.C, Valores.C, Valores.A, (byte) 13, (byte) 1);
 
-		Jugador deandreAyton = new Jugador((byte) 6, "Deandre", "Ayton", (byte) 22, Posicion.PIVOT, 12.63f, (byte) 0,
+		Jugador deandreAyton = new Jugador((short) 314, "Deandre", "Ayton", (byte) 22, Posicion.PIVOT, 12.63f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.A,
-				Valores.D, Valores.D, Valores.A, (byte) 6, (byte) 6);
-		Jugador mikalBridges = new Jugador((byte) 6, "Mikal", "Bridges", (byte) 25, Posicion.ALERO, 5.57F, (byte) 0,
+				Valores.D, Valores.D, Valores.A, (byte) 26, (byte) 1);
+		Jugador mikalBridges = new Jugador((short) 315, "Mikal", "Bridges", (byte) 25, Posicion.ALERO, 5.57F, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.B,
-				Valores.A, Valores.B, Valores.A, (byte) 6, (byte) 6);
-		Jugador devinBooker = new Jugador((byte) 6, "Devin", "Booker", (byte) 1, "D-Book", Posicion.ESCOLTA, 31.65f,
+				Valores.A, Valores.B, Valores.A, (byte) 26, (byte) 1);
+		Jugador devinBooker = new Jugador((short) 316, "Devin", "Booker", (byte) 1, "D-Book", Posicion.ESCOLTA, 31.65f,
 				(byte) 3, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.A,
-				Valores.A, Valores.B, Valores.C, (byte) 6, (byte) 6);
-		Jugador jaeCrowder = new Jugador((byte) 6, "Jae", "Crowder", (byte) 99, Posicion.ALAPIVOT, 9.72f, (byte) 0,
+				Valores.A, Valores.B, Valores.C, (byte) 26, (byte) 1);
+		Jugador jaeCrowder = new Jugador((short) 317, "Jae", "Crowder", (byte) 99, Posicion.ALAPIVOT, 9.72f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 28, Valores.B,
-				Valores.A, Valores.C, Valores.A, (byte) 6, (byte) 6);
-		Jugador chrisPaul = new Jugador((byte) 6, "Chris", "Paul", (byte) 3, Posicion.BASE, 30.8f, (byte) 12, (byte) 0,
+				Valores.A, Valores.C, Valores.A, (byte) 26, (byte) 1);
+		Jugador chrisPaul = new Jugador((short) 318, "Chris", "Paul", (byte) 3,"CP3", Posicion.BASE, 30.8f, (byte) 12, (byte) 0,
 				(byte) 0, (byte) 0, true, false, (byte) 1, (byte) 0, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1,
 				r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B, Valores.B, Valores.A,
-				Valores.A, (byte) 6, (byte) 6);
+				Valores.A, (byte) 26, (byte) 1);
 
-		Jugador damianLillard = new Jugador((byte) 6, "Damian", "Lillard", (byte) 0, "Dame Time", Posicion.BASE, 39.34f,
-				(byte) 6, (byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
-				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.B,
-				Valores.A, Valores.A, Valores.D, (byte) 6, (byte) 6);
-		Jugador anferneeSimons = new Jugador((byte) 6, "Anfernee", "Simons", (byte) 1, Posicion.ESCOLTA, 3.9f, (byte) 0,
-				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
+		Jugador damianLillard = new Jugador((short) 319, "Damian", "Lillard", (byte) 0, "Dame Time", Posicion.BASE,
+				39.34f, (byte) 6, (byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0,
+				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35,
+				Valores.B, Valores.A, Valores.A, Valores.D, (byte) 27, (byte) 1);
+		Jugador anferneeSimons = new Jugador((short) 320, "Anfernee", "Simons", (byte) 1, Posicion.ESCOLTA, 3.9f,
+				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.C,
-				Valores.B, Valores.C, Valores.C, (byte) 6, (byte) 6);
-		Jugador cjjElleby = new Jugador((byte) 6, "CJ", "Elleby", (byte) 16, Posicion.ALERO, 1.15f, (byte) 0, (byte) 0,
+				Valores.B, Valores.C, Valores.C, (byte) 27, (byte) 1);
+		Jugador cjjElleby = new Jugador((short) 321, "CJ", "Elleby", (byte) 16, Posicion.ALERO, 1.15f, (byte) 0, (byte) 0,
 				(byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1,
 				r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 20, Valores.C, Valores.C, Valores.D,
-				Valores.C, (byte) 6, (byte) 6);
-		Jugador justiceWinslow = new Jugador((byte) 6, "Justice", "Winslow", (byte) 26, Posicion.ALAPIVOT, 3.9f,
+				Valores.C, (byte) 27, (byte) 1);
+		Jugador justiceWinslow = new Jugador((short) 322, "Justice", "Winslow", (byte) 26, Posicion.ALAPIVOT, 3.9f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.C, Valores.C, Valores.C, (byte) 6, (byte) 6);
-		Jugador jusufNurkic = new Jugador((byte) 6, "Jusuf", "Nurkic", (byte) 27, Posicion.PIVOT, 12f, (byte) 0,
+				Valores.C, Valores.C, Valores.C, (byte) 27, (byte) 1);
+		Jugador jusufNurkic = new Jugador((short) 323, "Jusuf", "Nurkic", (byte) 27, Posicion.PIVOT, 12f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.D, Valores.C, Valores.B, (byte) 6, (byte) 6);
+				Valores.D, Valores.C, Valores.B, (byte) 27, (byte) 1);
 
-		Jugador deAaronFox = new Jugador((byte) 6, "De'Aaron", "Fox", (byte) 5, Posicion.BASE, 28.1f, (byte) 0,
+		Jugador deAaronFox = new Jugador((short) 324, "De Aaron", "Fox", (byte) 5, Posicion.BASE, 28.1f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.A,
-				Valores.B, Valores.B, Valores.D, (byte) 6, (byte) 6);
-		Jugador harrisonBarnes = new Jugador((byte) 6, "Harrison", "Barnes", (byte) 40, Posicion.ALERO, 20.29f,
+				Valores.B, Valores.B, Valores.D, (byte) 28, (byte) 1);
+		Jugador harrisonBarnes = new Jugador((short) 325, "Harrison", "Barnes", (byte) 40, Posicion.ALERO, 20.29f,
 				(byte) 0, (byte) 1, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 34, Valores.B,
-				Valores.A, Valores.C, Valores.C, (byte) 6, (byte) 6);
-		Jugador justinHoliday = new Jugador((byte) 6, "Justin", "Holiday", (byte) 9, Posicion.ESCOLTA, 6f, (byte) 1,
+				Valores.A, Valores.C, Valores.C, (byte) 28, (byte) 1);
+		Jugador justinHoliday = new Jugador((short) 326, "Justin", "Holiday", (byte) 9, Posicion.ESCOLTA, 6f, (byte) 1,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
-				Valores.B, Valores.D, Valores.B, (byte) 6, (byte) 6);
-		Jugador domantasSabonis = new Jugador((byte) 6, "Domantas", "Sabonis", (byte) 10, Posicion.PIVOT, 19.8f,
+				Valores.B, Valores.D, Valores.B, (byte) 28, (byte) 1);
+		Jugador domantasSabonis = new Jugador((short) 327, "Domantas", "Sabonis", (byte) 10, Posicion.PIVOT, 19.8f,
 				(byte) 2, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.D, Valores.B, (byte) 6, (byte) 6);
-		Jugador mauriceHarkless = new Jugador((byte) 6, "Maurice", "Harkless", (byte) 8, "Moe Harkless",
+				Valores.B, Valores.D, Valores.B, (byte) 28, (byte) 1);
+		Jugador mauriceHarkless = new Jugador((short) 328, "Maurice", "Harkless", (byte) 8, "Moe Harkless",
 				Posicion.ALAPIVOT, 4.2f, (byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0,
 				(byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1,
-				(byte) 30, Valores.C, Valores.D, Valores.C, Valores.B, (byte) 6, (byte) 6);
+				(byte) 30, Valores.C, Valores.D, Valores.C, Valores.B, (byte) 28, (byte) 1);
 
-		Jugador dejounteMurray = new Jugador((byte) 6, "Dejounte", "Murray", (byte) 5, Posicion.BASE, 15.24f, (byte) 1,
+		Jugador dejounteMurray = new Jugador((short) 329, "Dejounte", "Murray", (byte) 5, Posicion.BASE, 15.24f, (byte) 1,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.B,
-				Valores.B, Valores.B, Valores.B, (byte) 6, (byte) 6);
-		Jugador lonnieWalker = new Jugador((byte) 6, "Lonnie", "Walker IV", (byte) 1, Posicion.ESCOLTA, 4.47f, (byte) 0,
-				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
+				Valores.B, Valores.B, Valores.B, (byte) 29, (byte) 1);
+		Jugador lonnieWalker = new Jugador((short) 330, "Lonnie", "Walker IV", (byte) 1, Posicion.ESCOLTA, 4.47f,
+				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.C,
-				Valores.B, Valores.C, Valores.C, (byte) 6, (byte) 6);
-		Jugador keldonJhonson = new Jugador((byte) 6, "Keldon", "Jhonson", (byte) 3, Posicion.ALAPIVOT, 18f, (byte) 0,
+				Valores.B, Valores.C, Valores.C, (byte) 29, (byte) 1);
+		Jugador keldonJhonson = new Jugador((short) 331, "Keldon", "Jhonson", (byte) 3, Posicion.ALAPIVOT, 18f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.D, Valores.B, (byte) 6, (byte) 6);
-		Jugador douMcDermott = new Jugador((byte) 6, "Doug", "McDermott", (byte) 17, Posicion.ALERO, 7.75f, (byte) 0,
+				Valores.B, Valores.D, Valores.B, (byte) 29, (byte) 1);
+		Jugador douMcDermott = new Jugador((short) 332, "Doug", "McDermott", (byte) 17, Posicion.ALERO, 7.75f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
-				Valores.C, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador jakobPoeltl = new Jugador((byte) 6, "Jakob", "Poeltl", (byte) 25, Posicion.PIVOT, 4.2f, (byte) 0,
+				Valores.C, Valores.C, Valores.B, (byte) 29, (byte) 1);
+		Jugador jakobPoeltl = new Jugador((short) 333, "Jakob", "Poeltl", (byte) 25, Posicion.PIVOT, 4.2f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.D, Valores.D, Valores.B, (byte) 6, (byte) 6);
+				Valores.D, Valores.D, Valores.B, (byte) 29, (byte) 1);
 
-		Jugador luguentzDortz = new Jugador((byte) 6, "Luguentz", "Dortz", (byte) 5, "Lu Dortz", Posicion.ALERO, 1.78f,
+		Jugador luguentzDortz = new Jugador((short) 334, "Luguentz", "Dortz", (byte) 5, "Lu Dortz", Posicion.ALERO, 1.78f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.B,
-				Valores.B, Valores.C, Valores.A, (byte) 6, (byte) 6);
-		Jugador dariusBazley = new Jugador((byte) 6, "Darius", "Bazley", (byte) 7, Posicion.ALAPIVOT, 2.5f, (byte) 0,
+				Valores.B, Valores.C, Valores.A, (byte) 25, (byte) 1);
+		Jugador dariusBazley = new Jugador((short) 335, "Darius", "Bazley", (byte) 7, Posicion.ALAPIVOT, 2.5f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 28, Valores.C,
-				Valores.C, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador joshGiddey = new Jugador((byte) 6, "josh", "Giddey", (byte) 3, Posicion.ESCOLTA, 18f, (byte) 0,
+				Valores.C, Valores.C, Valores.B, (byte) 25, (byte) 1);
+		Jugador joshGiddey = new Jugador((short) 336, "josh", "Giddey", (byte) 3, Posicion.ESCOLTA, 18f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.B, Valores.C, (byte) 6, (byte) 6);
-		Jugador kenrichWilliams = new Jugador((byte) 6, "Kenrich", "Williams", (byte) 34, Posicion.PIVOT, 2f, (byte) 0,
+				Valores.B, Valores.B, Valores.C, (byte) 25, (byte) 1);
+		Jugador kenrichWilliams = new Jugador((short) 337, "Kenrich", "Williams", (byte) 34, Posicion.PIVOT, 2f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
-				Valores.D, Valores.D, Valores.C, (byte) 6, (byte) 6);
-		Jugador sga = new Jugador((byte) 6, "Shai", "Gilgeous-Alexander", (byte) 2, Posicion.BASE, 5.49f, (byte) 0,
+				Valores.D, Valores.D, Valores.C, (byte) 25, (byte) 1);
+		Jugador sga = new Jugador((short) 338, "Shai", "Gilgeous-Alexander", (byte) 2, Posicion.BASE, 5.49f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.D, (byte) 6, (byte) 6);
+				Valores.B, Valores.C, Valores.D, (byte) 25, (byte) 1);
 
-		Jugador mikeConley = new Jugador((byte) 6, "Mike", "Conley", (byte) 11, Posicion.BASE, 21f, (byte) 1, (byte) 0,
+		Jugador mikeConley = new Jugador((short) 339, "Mike", "Conley", (byte) 11, Posicion.BASE, 21f, (byte) 1, (byte) 0,
 				(byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1,
 				r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 4.7, Valores.B, Valores.A, Valores.A,
-				Valores.D, (byte) 6, (byte) 6);
-		Jugador bojanBogdanovich = new Jugador((byte) 6, "Bojan", "Bogdanovich", (byte) 44, Posicion.ALAPIVOT, 18.7f,
+				Valores.D, (byte) 30, (byte) 1);
+		Jugador bojanBogdanovich = new Jugador((short) 340, "Bojan", "Bogdanovich", (byte) 44, Posicion.ALAPIVOT, 18.7f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.B,
-				Valores.A, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador donovanMitchell = new Jugador((byte) 6, "Donovan", "Mitchell", (byte) 45, "Spida Mitchell",
+				Valores.A, Valores.C, Valores.B, (byte) 30, (byte) 1);
+		Jugador donovanMitchell = new Jugador((short) 341, "Donovan", "Mitchell", (byte) 45, "Spida Mitchell",
 				Posicion.ESCOLTA, 28.1f, (byte) 3, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0,
 				(byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1,
-				(byte) 30, Valores.A, Valores.A, Valores.C, Valores.C, (byte) 6, (byte) 6);
-		Jugador jordanClarkson = new Jugador((byte) 6, "Jordan", "Clarkson", (byte) 00, Posicion.ALERO, 12.42f,
+				(byte) 30, Valores.A, Valores.A, Valores.C, Valores.C, (byte) 30, (byte) 1);
+		Jugador jordanClarkson = new Jugador((short) 342, "Jordan", "Clarkson", (byte) 00, Posicion.ALERO, 12.42f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 27, Valores.B,
-				Valores.A, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador rudyGobert = new Jugador((byte) 6, "Rudy", "Gobert", (byte) 27, "The French Bulldog", Posicion.PIVOT,
+				Valores.A, Valores.C, Valores.B, (byte) 30, (byte) 1);
+		Jugador rudyGobert = new Jugador((short) 343, "Rudy", "Gobert", (byte) 27, "The French Bulldog", Posicion.PIVOT,
 				35.34f, (byte) 3, (byte) 0, (byte) 0, (byte) 3, false, false, (byte) 0, (byte) 0, (byte) 0,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30,
-				Valores.B, Valores.D, Valores.D, Valores.A, (byte) 6, (byte) 6);
+				Valores.B, Valores.D, Valores.D, Valores.A, (byte) 30, (byte) 1);
 
-		Jugador bradleyBeal = new Jugador((byte) 6, "Bradley", "Beal", (byte) 3, Posicion.BASE, 33.72F, (byte) 3,
+		Jugador bradleyBeal = new Jugador((short) 344, "Bradley", "Beal", (byte) 3, Posicion.BASE, 33.72F, (byte) 3,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 36, Valores.A,
-				Valores.A, Valores.B, Valores.C, (byte) 6, (byte) 6);
-		Jugador daniAvdija = new Jugador((byte) 6, "Deni", "Advija", (byte) 9, Posicion.ALERO, 4.69f, (byte) 0,
+				Valores.A, Valores.B, Valores.C, (byte) 15, (byte) 1);
+		Jugador daniAvdija = new Jugador((short) 345, "Deni", "Advija", (byte) 9, Posicion.ALERO, 4.69f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 24, Valores.B,
-				Valores.A, Valores.C, Valores.A, (byte) 6, (byte) 6);
-		Jugador kcp = new Jugador((byte) 6, "kentavius", "Cadwell-Pope", (byte) 1, "KCP", Posicion.ESCOLTA, 13.03f,
+				Valores.A, Valores.C, Valores.A, (byte) 15, (byte) 1);
+		Jugador kcp = new Jugador((short) 346, "kentavius", "Cadwell-Pope", (byte) 1, "KCP", Posicion.ESCOLTA, 13.03f,
 				(byte) 0, (byte) 1, (byte) 0, (byte) 0, false, true, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.A, (byte) 6, (byte) 6);
-		Jugador thomasBryant = new Jugador((byte) 6, "Thomas", "Bryant", (byte) 13, Posicion.PIVOT, 8.63f, (byte) 0,
+				Valores.B, Valores.C, Valores.A, (byte) 15, (byte) 1);
+		Jugador thomasBryant = new Jugador((short) 347, "Thomas", "Bryant", (byte) 13, Posicion.PIVOT, 8.63f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 16, Valores.B,
-				Valores.C, Valores.D, Valores.B, (byte) 6, (byte) 6);
-		Jugador kristapsPorzingis = new Jugador((byte) 6, "Kristaps", "Porzingis", (byte) 6, Posicion.ALAPIVOT, 31.65f,
+				Valores.C, Valores.D, Valores.B, (byte) 15, (byte) 1);
+		Jugador kristapsPorzingis = new Jugador((short) 348, "Kristaps", "Porzingis", (byte) 6, Posicion.ALAPIVOT, 31.65f,
 				(byte) 1, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.D, Valores.C, (byte) 6, (byte) 6);
+				Valores.B, Valores.D, Valores.C, (byte) 15, (byte) 1);
 
-		Jugador scottieBarnes = new Jugador((byte) 6, "Scott Wayne", "Barnes", (byte) 4, "Scottie", Posicion.ALERO,
+		Jugador scottieBarnes = new Jugador((short) 349, "Scott Wayne", "Barnes", (byte) 4, "Scottie", Posicion.ALERO,
 				7.28f, (byte) 0, (byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35,
-				Valores.B, Valores.C, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador ogAnunoby = new Jugador((byte) 6, "Ogugua", "Anunoby", (byte) 3, "OG", Posicion.ALAPIVOT, 16, (byte) 0,
+				Valores.B, Valores.C, Valores.C, Valores.B, (byte) 14, (byte) 1);
+		Jugador ogAnunoby = new Jugador((short) 350, "Ogugua", "Anunoby", (byte) 3, "OG", Posicion.ALAPIVOT, 16, (byte) 0,
 				(byte) 1, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 36, Valores.B,
-				Valores.B, Valores.B, Valores.A, (byte) 6, (byte) 6);
-		Jugador fredVanVleet = new Jugador((byte) 6, "Fred", "VanVleet", (byte) 23, Posicion.BASE, 19.67f, (byte) 1,
+				Valores.B, Valores.B, Valores.A, (byte) 14, (byte) 1);
+		Jugador fredVanVleet = new Jugador((short) 351, "Fred", "VanVleet", (byte) 23, Posicion.BASE, 19.67f, (byte) 1,
 				(byte) 1, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.C,
-				Valores.B, Valores.C, Valores.D, (byte) 6, (byte) 6);
-		Jugador pascalSiakam = new Jugador((byte) 6, "Pascal", "Siakam", (byte) 43, "Spicy P", Posicion.PIVOT, 33f,
+				Valores.B, Valores.C, Valores.D, (byte) 14, (byte) 1);
+		Jugador pascalSiakam = new Jugador((short) 352, "Pascal", "Siakam", (byte) 43, "Spicy P", Posicion.PIVOT, 33f,
 				(byte) 1, (byte) 1, (byte) 0, (byte) 0, false, true, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.D, Valores.A, (byte) 6, (byte) 6);
-		Jugador garyTrentJr = new Jugador((byte) 6, "Gary", "Trent Jr", (byte) 33, Posicion.ALERO, 16f, (byte) 0,
+				Valores.B, Valores.D, Valores.A, (byte) 14, (byte) 1);
+		Jugador garyTrentJr = new Jugador((short) 353, "Gary", "Trent Jr", (byte) 33, Posicion.ALERO, 16f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.B, Valores.C, Valores.C, (byte) 6, (byte) 6);
+				Valores.B, Valores.C, Valores.C, (byte) 14, (byte) 1);
 
-		Jugador reggieJackson = new Jugador((byte) 6, "Reggie", "Jackson", (byte) 1, Posicion.BASE, 10.38f, (byte) 0,
+		Jugador reggieJackson = new Jugador((short) 354, "Reggie", "Jackson", (byte) 1, Posicion.BASE, 10.38f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.C,
-				Valores.B, Valores.C, Valores.C, (byte) 6, (byte) 6);
-		Jugador paulGeorge = new Jugador((byte) 6, "Paul", "George", (byte) 13, "PG13", Posicion.ESCOLTA, 39.34f,
+				Valores.B, Valores.C, Valores.C, (byte) 20, (byte) 1);
+		Jugador paulGeorge = new Jugador((short) 355, "Paul", "George", (byte) 13, "PG13", Posicion.ESCOLTA, 39.34f,
 				(byte) 7, (byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 31, Valores.A,
-				Valores.B, Valores.C, Valores.B, (byte) 6, (byte) 6);
-		Jugador kawhiLeonard = new Jugador((byte) 6, "Kawhi", "Leonard", (byte) 2, "Mr Fun Guy", Posicion.ALERO, 39.34f,
-				(byte) 5, (byte) 2, (byte) 0, (byte) 2, false, false, (byte) 1, (byte) 2, (byte) 0, r.nextInt(35) + 1,
-				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.A,
-				Valores.A, Valores.C, Valores.A, (byte) 6, (byte) 6);
-		Jugador ivicaZubac = new Jugador((byte) 6, "Ivica", "Zubac", (byte) 40, Posicion.PIVOT, 7.5f, (byte) 0,
+				Valores.B, Valores.C, Valores.B, (byte) 20, (byte) 1);
+		Jugador kawhiLeonard = new Jugador((short) 356, "Kawhi", "Leonard", (byte) 2, "Mr Fun Guy", Posicion.ALERO,
+				39.34f, (byte) 5, (byte) 2, (byte) 0, (byte) 2, false, false, (byte) 1, (byte) 2, (byte) 0,
+				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30,
+				Valores.A, Valores.A, Valores.C, Valores.A, (byte) 20, (byte) 1);
+		Jugador ivicaZubac = new Jugador((short) 357, "Ivica", "Zubac", (byte) 40, Posicion.PIVOT, 7.5f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
-				Valores.D, Valores.D, Valores.B, (byte) 6, (byte) 6);
-		Jugador robertCovington = new Jugador((byte) 6, "Robert", "Covington", (byte) 23, Posicion.PIVOT, 12.98f,
+				Valores.D, Valores.D, Valores.B, (byte) 20, (byte) 1);
+		Jugador robertCovington = new Jugador((short) 358, "Robert", "Covington", (byte) 23, Posicion.PIVOT, 12.98f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 22, Valores.B,
-				Valores.C, Valores.D, Valores.A, (byte) 6, (byte) 6);
-*/
+				Valores.C, Valores.D, Valores.A, (byte) 20, (byte) 1);
+
 	}
 }
