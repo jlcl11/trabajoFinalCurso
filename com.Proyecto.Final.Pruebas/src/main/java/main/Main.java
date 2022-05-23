@@ -25,8 +25,6 @@ import utils.utilsDB;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		//Ventana v=new Ventana();
 
 		try {
 			funcionesUtiles.borrarDatosTablas();
@@ -38,9 +36,13 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 
-		
+		try {
+			Ventana v = new Ventana();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 

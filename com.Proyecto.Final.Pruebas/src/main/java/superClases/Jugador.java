@@ -181,6 +181,10 @@ public class Jugador extends ObjetoConNombre {
 		utilsDB.desconectarBBDD();
 	}
 
+	public Jugador() {
+		
+	}
+
 	public short getJugador_id() {
 		return jugador_id;
 	}

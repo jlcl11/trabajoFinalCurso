@@ -8,18 +8,23 @@ import java.awt.Font;
 import java.awt.Insets;
 
 import javax.swing.ButtonGroup;
+import javax.swing.ButtonModel;
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
+
 import javax.swing.JRadioButton;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 
+import utils.funcionesUtiles;
+
 public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 	private Ventana ventana;
 
-	public PantallaEscogerEquipoDatosFranquicia(final Ventana ventana) {
+	public PantallaEscogerEquipoDatosFranquicia(final Ventana ventana)   {
 		super();
 		this.ventana = ventana;
 		GridBagLayout gridBagLayout = new GridBagLayout();
@@ -234,6 +239,8 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 		add(escogerWizards, gbc_escogerWizards);
 
 		grupoEquipos.add(escogerWizards);
+		
+		
 
 		JRadioButton escogerMavs = new JRadioButton("Dallas Mavericks");
 		escogerMavs.setBackground(Color.WHITE);
@@ -456,6 +463,9 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 		gbc_botonEquipoEscogido.gridy = 25;
 		add(botonEquipoEscogido, gbc_botonEquipoEscogido);
 
+	
+		
+		
 	}
 
 }

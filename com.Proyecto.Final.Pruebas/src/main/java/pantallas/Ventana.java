@@ -2,6 +2,7 @@ package pantallas;
 
 import java.awt.Point;
 import java.awt.Toolkit;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -12,7 +13,7 @@ import javax.swing.JPanel;
 public class Ventana extends JFrame {
 	private HashMap<String, JPanel> pantallas;
 
-	public Ventana() {
+	public Ventana() throws SQLException {
 		pantallas = new HashMap<String, JPanel>();
 		pantallas.put("inicial", new PantallaInicial(this));
 		pantallas.put("primerMenu", new PantallaInicioPrimerMenu(this));
@@ -23,7 +24,7 @@ public class Ventana extends JFrame {
 		pantallas.put("Playoffs", new PantallaPlayOffs(this));
 		pantallas.put("ticket", new pantallaTicket(this));
 
-		this.setSize(1400, 800);
+		this.setSize(1300, 800);
 		this.setLocationRelativeTo(null);
 		this.setTitle("JuegoIndie2kNBA.exe");
 		this.setIconImage(new ImageIcon("./imagenes/logoPrograma.png").getImage());
