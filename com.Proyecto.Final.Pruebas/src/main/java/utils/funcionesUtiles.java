@@ -32,7 +32,6 @@ public class funcionesUtiles {
 		query.executeUpdate("DELETE FROM playoffs;");
 		query.executeUpdate("DELETE FROM conferencia;");
 		query.executeUpdate("DELETE FROM liga;");
-		System.err.println("Bien borrao");
 
 		utilsDB.desconectarBBDD();
 	}
@@ -1094,15 +1093,13 @@ public class funcionesUtiles {
 
 	}
 
-
-	
-	public static ArrayList<Jugador> getJugadores() {
+	public static  ArrayList<Jugador> getJugadores() {
 		Statement smt = utilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
 		ArrayList<Jugador> ret = new ArrayList<Jugador>();
 
 		try {
-			ResultSet cursor = smt.executeQuery("select * from usuario WHERE salario>0");
+			ResultSet cursor = smt.executeQuery("select * from jugador WHERE salario>0");
 			while (cursor.next()) {
 				Jugador actual = new Jugador();
 
@@ -1110,7 +1107,7 @@ public class funcionesUtiles {
 				actual.setApellido(cursor.getString("apellido"));
 				actual.setDorsal(cursor.getByte("dorsal"));
 				actual.setApodo(cursor.getString("apodo"));
-				//actual.setPosicion(cursor.getString("posicion"));
+				// actual.setPosicion(cursor.getString("posicion "));
 				actual.setSalario(cursor.getFloat("salario"));
 				actual.setNominacionesAllStar(cursor.getByte("nominacionesallstar"));
 				actual.setAnillosDeCampeon(cursor.getByte("anillosdecampeon"));
@@ -1119,7 +1116,7 @@ public class funcionesUtiles {
 				actual.setRookieDelAño(cursor.getBoolean("roty"));
 				actual.setMIP(cursor.getBoolean("mip"));
 				actual.setMVPAllStar(cursor.getByte("mvpallstar"));
-				actual.setFMVP(cursor.getByte("fvmp"));
+				actual.setFMVP(cursor.getByte("fmvp"));
 				actual.setPremioAnotador(cursor.getByte("premioanotador"));
 				actual.setPPG(cursor.getFloat("ppg"));
 				actual.setAPG(cursor.getFloat("apg"));
@@ -1127,10 +1124,12 @@ public class funcionesUtiles {
 				actual.setSPG(cursor.getFloat("spg"));
 				actual.setBPG(cursor.getFloat("bpg"));
 				actual.setMPG(cursor.getByte("mpg"));
-				/*actual.setFinalizacion(cursor.getString("finalizacion"));
-				actual.setTiro(cursor.getString("tiro"));
-				actual.setOrganizacion(cursor.getString("organizacion"));
-				actual.setDefensas(cursor.getString("defensa"));*/
+				/*
+				 * actual.setFinalizacion(cursor.getString("finalizacion"));
+				 * actual.setTiro(cursor.getString("tiro"));
+				 * actual.setOrganizacion(cursor.getString("organizacion"));
+				 * actual.setDefensas(cursor.getString("defensa"));
+				 */
 				actual.setEquipo_id(cursor.getByte("equipo_eq_id"));
 				actual.setPlayoffs_Playoff_id(cursor.getByte("playoffs_playoff_id"));
 
@@ -1147,4 +1146,5 @@ public class funcionesUtiles {
 		utilsDB.desconectarBBDD();
 		return ret;
 	}
+
 }

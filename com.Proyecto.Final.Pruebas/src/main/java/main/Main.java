@@ -17,6 +17,7 @@ import clases.Partidos;
 import clases.Playoff;
 import clases.RondaPlayoffs;
 import exceptions.EquipoMalIntroduciodoException;
+import pantallas.PantallaEscogerEquipoDatosFranquicia;
 import pantallas.Ventana;
 import superClases.Jugador;
 import utils.funcionesUtiles;
@@ -36,13 +37,17 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println(funcionesUtiles.getJugadores());
 
-		try {
+		/*try {
 			Ventana v = new Ventana();
+
+			
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 
 	}
 

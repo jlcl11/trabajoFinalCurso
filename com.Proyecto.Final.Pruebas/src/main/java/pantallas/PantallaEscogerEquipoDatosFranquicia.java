@@ -23,6 +23,7 @@ import utils.funcionesUtiles;
 
 public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 	private Ventana ventana;
+	private String texto;
 
 	public PantallaEscogerEquipoDatosFranquicia(final Ventana ventana)   {
 		super();

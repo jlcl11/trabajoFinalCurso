@@ -401,4 +401,18 @@ public class Jugador extends ObjetoConNombre {
 		this.playoffs_Playoff_id = playoffs_Playoff_id;
 	}
 
+	@Override
+	public String toString() {
+		return "Jugador [jugador_id=" + jugador_id + ", apellido=" + apellido + ", dorsal=" + dorsal + ", apodo="
+				+ apodo + ", posicion=" + posicion + ", salario=" + salario + ", nominacionesAllStar="
+				+ nominacionesAllStar + ", anillosDeCampeon=" + anillosDeCampeon + ", MVPs=" + MVPs
+				+ ", defensorDelAño=" + defensorDelAño + ", rookieDelAño=" + rookieDelAño + ", MIP=" + MIP
+				+ ", MVPAllStar=" + MVPAllStar + ", FMVP=" + FMVP + ", premioAnotador=" + premioAnotador + ", PPG="
+				+ PPG + ", APG=" + APG + ", RBG=" + RBG + ", SPG=" + SPG + ", BPG=" + BPG + ", MPG=" + MPG
+				+ ", finalizacion=" + finalizacion + ", tiro=" + tiro + ", organizacion=" + organizacion + ", defensas="
+				+ defensas + ", equipo_id=" + equipo_id + ", playoffs_Playoff_id=" + playoffs_Playoff_id + "]";
+	}
+
+	
+	
 }
