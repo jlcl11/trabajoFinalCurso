@@ -10,7 +10,6 @@ import java.util.Random;
 import clases.Conferencia;
 import clases.Equipo;
 import clases.Estadio;
-import clases.JugadorNormal;
 import clases.Liga;
 import clases.PartidoAllStar;
 import clases.Playoff;
@@ -1183,7 +1182,7 @@ public class funcionesUtiles {
 
 		for (short i = 1; i < jugadoresNormalesNBA.size(); i++) {
 
-			statsJugador = jugadoresNormalesNBA.get(i).getAPG() + jugadoresNormalesNBA.get(i).getPPG()
+			statsJugador =
 					+ jugadoresNormalesNBA.get(i).getRBG() + jugadoresNormalesNBA.get(i).getSPG()
 					+ jugadoresNormalesNBA.get(i).getBPG();
 
@@ -1196,4 +1195,25 @@ public class funcionesUtiles {
 		return ret;
 
 	}
+	public static String devolverPremioAnotador() {
+		String ret = "";
+
+		ArrayList<Jugador> jugadoresNormalesNBA = getJugadores();
+
+		Jugador max_jugador = jugadoresNormalesNBA.get(0);
+		float max = max_jugador.getPPG();
+		float statsJugador = 0;
+
+		for (short i = 1; i < jugadoresNormalesNBA.size(); i++) {
+
+			statsJugador = jugadoresNormalesNBA.get(i).getPPG();
+
+			if (statsJugador > max) {
+				max_jugador = jugadoresNormalesNBA.get(i);
+				max = statsJugador;
+			}
+		}
+		ret += "\n" + max_jugador + "\n";
+		return ret;
+}
 }

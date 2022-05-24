@@ -38,7 +38,8 @@ public class Main {
 			e.printStackTrace();
 		}
 		System.out.println(funcionesUtiles.devolverMVP());
-
+		System.out.println(funcionesUtiles.devolverDPOY());
+		System.out.println(funcionesUtiles.devolverPremioAnotador());
 		/*try {
 			Ventana v = new Ventana();
 
