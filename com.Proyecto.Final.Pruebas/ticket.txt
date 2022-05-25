@@ -2,25 +2,19 @@
 |                                                                         |
 |                                                                         |
 |                    EL MVP DE LA TEMPORADA HA SIDO                       |
-
-Jae SeanJugador [jugador_id=0, apellido=Tate, dorsal=8, apodo=null, posicion=null, salario=1.57, nominacionesAllStar=0, anillosDeCampeon=0, MVPs=0, defensorDelAño=0, rookieDelAño=false, MIP=false, MVPAllStar=0, FMVP=0, premioAnotador=0, PPG=35.0, APG=8.0, RBG=19.0, SPG=2.0, BPG=4.0, MPG=30, finalizacion=null, tiro=null, organizacion=null, defensas=null, equipo_id=19, playoffs_Playoff_id=1]
-
+ZachJugador [jugador_id=0, apellido=LaVine, dorsal=8, apodo=null, posicion=null, salario=19.5, nominacionesAllStar=2, anillosDeCampeon=0, MVPs=0, defensorDelAño=0, rookieDelAño=false, MIP=false, MVPAllStar=0, FMVP=0, premioAnotador=0, PPG=35.0, APG=10.0, RBG=16.0, SPG=2.0, BPG=4.0, MPG=30, finalizacion=null, tiro=null, organizacion=null, defensas=null, equipo_id=5, playoffs_Playoff_id=1]
 |                                                                         |
 |                                                                         |
 |                                                                         |
 |                                                                         |
 |                    EL DEFENSOR  DE LA TEMPORADA HA SIDO                 |
-
-ChristianJugador [jugador_id=0, apellido=Wood, dorsal=35, apodo=null, posicion=null, salario=13.6, nominacionesAllStar=0, anillosDeCampeon=0, MVPs=0, defensorDelAño=0, rookieDelAño=false, MIP=false, MVPAllStar=0, FMVP=0, premioAnotador=0, PPG=2.0, APG=7.0, RBG=20.0, SPG=1.0, BPG=5.0, MPG=35, finalizacion=null, tiro=null, organizacion=null, defensas=null, equipo_id=19, playoffs_Playoff_id=1]
-
+DorianJugador [jugador_id=0, apellido=Finney-Smith, dorsal=10, apodo=null, posicion=null, salario=4.0, nominacionesAllStar=0, anillosDeCampeon=0, MVPs=0, defensorDelAño=0, rookieDelAño=false, MIP=false, MVPAllStar=0, FMVP=0, premioAnotador=0, PPG=5.0, APG=3.0, RBG=19.0, SPG=2.0, BPG=5.0, MPG=33, finalizacion=null, tiro=null, organizacion=null, defensas=null, equipo_id=16, playoffs_Playoff_id=1]
 |                                                                         |
 |                                                                         |
 |                                                                         |
 |                                                                         |
 |            EL PREMIO DEL MEJOR ANOTADOR DE LA TEMPORADA HA SIDO         |
-
-MonteJugador [jugador_id=0, apellido=Morris, dorsal=11, apodo=null, posicion=null, salario=4.2, nominacionesAllStar=0, anillosDeCampeon=0, MVPs=0, defensorDelAño=0, rookieDelAño=false, MIP=false, MVPAllStar=0, FMVP=0, premioAnotador=0, PPG=35.0, APG=3.0, RBG=2.0, SPG=2.0, BPG=2.0, MPG=30, finalizacion=null, tiro=null, organizacion=null, defensas=null, equipo_id=17, playoffs_Playoff_id=1]
-
+ZachJugador [jugador_id=0, apellido=LaVine, dorsal=8, apodo=null, posicion=null, salario=19.5, nominacionesAllStar=2, anillosDeCampeon=0, MVPs=0, defensorDelAño=0, rookieDelAño=false, MIP=false, MVPAllStar=0, FMVP=0, premioAnotador=0, PPG=35.0, APG=10.0, RBG=16.0, SPG=2.0, BPG=4.0, MPG=30, finalizacion=null, tiro=null, organizacion=null, defensas=null, equipo_id=5, playoffs_Playoff_id=1]
 |                                                                         |
 |                                                                         |
 |                                                                         |

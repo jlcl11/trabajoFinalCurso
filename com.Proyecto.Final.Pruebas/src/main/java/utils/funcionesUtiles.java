@@ -1126,6 +1126,7 @@ public class funcionesUtiles {
 				actual.setRBG(cursor.getFloat("rbg"));
 				actual.setSPG(cursor.getFloat("spg"));
 				actual.setBPG(cursor.getFloat("bpg"));
+				actual.setBPG(cursor.getFloat("bpg"));
 				actual.setMPG(cursor.getByte("mpg"));
 				/*
 				 * actual.setFinalizacion(cursor.getString("finalizacion"));
@@ -1150,8 +1151,7 @@ public class funcionesUtiles {
 		return ret;
 	}
 
-	public static String devolverMVP() {
-		String ret = "";
+	public static Jugador devolverMVP() {
 
 		ArrayList<Jugador> jugadoresNormalesNBA = getJugadores();
 
@@ -1171,13 +1171,12 @@ public class funcionesUtiles {
 				max = statsJugador;
 			}
 		}
-		ret += "\n" + max_jugador + "\n";
-		return ret;
+
+		return max_jugador;
 
 	}
 
-	public static String devolverDPOY() {
-		String ret = "";
+	public static Jugador devolverDPOY() {
 
 		ArrayList<Jugador> jugadoresNormalesNBA = getJugadores();
 
@@ -1195,13 +1194,12 @@ public class funcionesUtiles {
 				max = statsJugador;
 			}
 		}
-		ret += "\n" + max_jugador + "\n";
-		return ret;
+
+		return max_jugador;
 
 	}
 
-	public static String devolverPremioAnotador() {
-		String ret = "";
+	public static Jugador devolverPremioAnotador() {
 
 		ArrayList<Jugador> jugadoresNormalesNBA = getJugadores();
 
@@ -1218,8 +1216,8 @@ public class funcionesUtiles {
 				max = statsJugador;
 			}
 		}
-		ret += "\n" + max_jugador + "\n";
-		return ret;
+
+		return max_jugador;
 	}
 
 	public static void imprimeTicket() throws IOException {
@@ -1234,19 +1232,19 @@ public class funcionesUtiles {
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                    EL MVP DE LA TEMPORADA HA SIDO                       |\n");
-		escritor.write(""+funcionesUtiles.devolverMVP()+"\n");
+		escritor.write("" + funcionesUtiles.devolverMVP() + "\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                    EL DEFENSOR  DE LA TEMPORADA HA SIDO                 |\n");
-		escritor.write(""+funcionesUtiles.devolverDPOY()+"\n");
+		escritor.write("" + funcionesUtiles.devolverDPOY() + "\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|            EL PREMIO DEL MEJOR ANOTADOR DE LA TEMPORADA HA SIDO         |\n");
-		escritor.write(""+funcionesUtiles.devolverPremioAnotador()+"\n");
+		escritor.write("" + funcionesUtiles.devolverPremioAnotador() + "\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");

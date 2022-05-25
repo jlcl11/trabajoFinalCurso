@@ -38,10 +38,21 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println(funcionesUtiles.devolverMVP());
-		System.out.println(funcionesUtiles.devolverDPOY());
-		System.out.println(funcionesUtiles.devolverPremioAnotador());
-		
+		System.out.println(funcionesUtiles.devolverMVP().getNombre() + " " + funcionesUtiles.devolverMVP().getApellido()
+				+ " ha anotado " + funcionesUtiles.devolverMVP().getPPG() + " puntos por partido,ha repartido "
+				+ funcionesUtiles.devolverMVP().getAPG() + " asistencias por partido,ha recogido "
+				+ funcionesUtiles.devolverMVP().getRBG() + " rebotes por partido,ha robado "
+				+ funcionesUtiles.devolverMVP().getSPG() + " y ha taponado " + funcionesUtiles.devolverMVP().getBPG()
+				+ " balones por partido");
+		System.out
+				.println(funcionesUtiles.devolverDPOY().getNombre() + " " + funcionesUtiles.devolverDPOY().getApellido()
+						+ " ha anotado " + funcionesUtiles.devolverDPOY().getRBG() + " rebotes por partido,ha robado "
+						+ funcionesUtiles.devolverDPOY().getSPG() + " balones por partido y ha taponado "
+						+ funcionesUtiles.devolverDPOY().getTiro());
+		System.out.println(funcionesUtiles.devolverPremioAnotador().getNombre() + " "
+				+ funcionesUtiles.devolverPremioAnotador().getApellido() + " ha anotado "
+				+ funcionesUtiles.devolverPremioAnotador().getPPG() + " puntos por partido");
+
 		try {
 			funcionesUtiles.imprimeTicket();
 		} catch (IOException e) {
@@ -50,8 +61,6 @@ public class Main {
 		}
 		try {
 			Ventana v = new Ventana();
-
-			
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

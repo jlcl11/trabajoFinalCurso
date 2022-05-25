@@ -45,7 +45,7 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 				pantallitaDPOY p=new pantallitaDPOY();
 				p.setVisible(true);
 				p.setAlwaysOnTop(true);
-				p.setSize(300,500);
+				p.setSize(630,805);
 				p.setLocationRelativeTo(null);
 			}
 		});

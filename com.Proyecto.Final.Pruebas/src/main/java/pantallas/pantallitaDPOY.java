@@ -30,7 +30,7 @@ public class pantallitaDPOY extends JFrame{
 		gbc_lblNewLabel_1.gridy = 0;
 		getContentPane().add(lblNewLabel_1, gbc_lblNewLabel_1);
 		
-		JLabel lblNewLabel = new JLabel(funcionesUtiles.devolverMVP());
+		JLabel lblNewLabel = new JLabel(""+funcionesUtiles.devolverMVP().getNombre());
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.fill = GridBagConstraints.BOTH;
