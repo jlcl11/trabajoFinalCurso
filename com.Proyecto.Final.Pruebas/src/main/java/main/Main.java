@@ -1,5 +1,6 @@
 package main;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDate;
@@ -40,7 +41,14 @@ public class Main {
 		System.out.println(funcionesUtiles.devolverMVP());
 		System.out.println(funcionesUtiles.devolverDPOY());
 		System.out.println(funcionesUtiles.devolverPremioAnotador());
-		/*try {
+		
+		try {
+			funcionesUtiles.imprimeTicket();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
 			Ventana v = new Ventana();
 
 			
@@ -48,7 +56,7 @@ public class Main {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
 
 	}
 

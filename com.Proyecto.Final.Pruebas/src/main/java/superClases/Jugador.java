@@ -403,7 +403,7 @@ public class Jugador extends ObjetoConNombre {
 
 	@Override
 	public String toString() {
-		return "Jugador [jugador_id=" + jugador_id + ", apellido=" + apellido + ", dorsal=" + dorsal + ", apodo="
+		return super.toString()+"Jugador [jugador_id=" + jugador_id + ", apellido=" + apellido + ", dorsal=" + dorsal + ", apodo="
 				+ apodo + ", posicion=" + posicion + ", salario=" + salario + ", nominacionesAllStar="
 				+ nominacionesAllStar + ", anillosDeCampeon=" + anillosDeCampeon + ", MVPs=" + MVPs
 				+ ", defensorDelAño=" + defensorDelAño + ", rookieDelAño=" + rookieDelAño + ", MIP=" + MIP

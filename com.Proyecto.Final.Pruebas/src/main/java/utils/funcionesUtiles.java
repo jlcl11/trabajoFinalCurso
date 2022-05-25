@@ -1,5 +1,8 @@
 package utils;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -1093,7 +1096,7 @@ public class funcionesUtiles {
 
 	}
 
-	private static  ArrayList<Jugador> getJugadores() {
+	private static ArrayList<Jugador> getJugadores() {
 		Statement smt = utilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
 		ArrayList<Jugador> ret = new ArrayList<Jugador>();
@@ -1146,6 +1149,7 @@ public class funcionesUtiles {
 		utilsDB.desconectarBBDD();
 		return ret;
 	}
+
 	public static String devolverMVP() {
 		String ret = "";
 
@@ -1171,6 +1175,7 @@ public class funcionesUtiles {
 		return ret;
 
 	}
+
 	public static String devolverDPOY() {
 		String ret = "";
 
@@ -1182,8 +1187,7 @@ public class funcionesUtiles {
 
 		for (short i = 1; i < jugadoresNormalesNBA.size(); i++) {
 
-			statsJugador =
-					+ jugadoresNormalesNBA.get(i).getRBG() + jugadoresNormalesNBA.get(i).getSPG()
+			statsJugador = +jugadoresNormalesNBA.get(i).getRBG() + jugadoresNormalesNBA.get(i).getSPG()
 					+ jugadoresNormalesNBA.get(i).getBPG();
 
 			if (statsJugador > max) {
@@ -1195,6 +1199,7 @@ public class funcionesUtiles {
 		return ret;
 
 	}
+
 	public static String devolverPremioAnotador() {
 		String ret = "";
 
@@ -1215,5 +1220,39 @@ public class funcionesUtiles {
 		}
 		ret += "\n" + max_jugador + "\n";
 		return ret;
-}
+	}
+
+	public static void imprimeTicket() throws IOException {
+
+		File archivo = new File("./ticket.txt");
+		if (archivo.exists()) {
+			archivo.delete();
+		}
+		archivo.createNewFile();
+		FileWriter escritor = new FileWriter(archivo);
+		escritor.write("---------------------------------------------------------------------------\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                    EL MVP DE LA TEMPORADA HA SIDO                       |\n");
+		escritor.write(""+funcionesUtiles.devolverMVP()+"\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                    EL DEFENSOR  DE LA TEMPORADA HA SIDO                 |\n");
+		escritor.write(""+funcionesUtiles.devolverDPOY()+"\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|            EL PREMIO DEL MEJOR ANOTADOR DE LA TEMPORADA HA SIDO         |\n");
+		escritor.write(""+funcionesUtiles.devolverPremioAnotador()+"\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("---------------------------------------------------------------------------\n");
+		escritor.flush();
+		escritor.close();
+	}
+
 }
