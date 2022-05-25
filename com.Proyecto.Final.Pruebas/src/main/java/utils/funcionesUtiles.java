@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Random;
-
 import clases.Conferencia;
 import clases.Equipo;
 import clases.Estadio;
@@ -55,10 +54,6 @@ public class funcionesUtiles {
 		RondaPlayoffs ronda2 = new RondaPlayoffs("Semifinales de conferencia", (byte) 2, (byte) 2, (byte) 1);
 		RondaPlayoffs ronda3 = new RondaPlayoffs("Finales de conferencia", (byte) 3, (byte) 2, (byte) 1);
 		RondaPlayoffs ronda4 = new RondaPlayoffs("Finales NBA", (byte) 4, (byte) 2, (byte) 1);
-
-		PartidoAllStar allStar = new PartidoAllStar((byte) 1, (short) ((short) r.nextInt(160) + 1),
-				(short) ((short) r.nextInt(160) + 1), LocalDateTime.of(2022, 02, 17, 21, 30), "Equipo 1", "Equipo 2",
-				"Titulares");
 
 		Equipo hawks = new Equipo((byte) 1, "Hawks", (byte) 1, "Atlanta", "jugadores Retirados", "Anthony Ressler",
 				109.6f, "Estadio", "Travis Schlenk", "plantilla", (byte) 1);
@@ -1399,6 +1394,18 @@ public class funcionesUtiles {
 		}
 
 		return maximo;
+	}
+
+	public static PartidoAllStar partidoAllStar() throws SQLException {
+
+		Random r = new Random();
+
+		PartidoAllStar allStar = new PartidoAllStar((byte) 1, (short) ((short) r.nextInt(160) + 1),
+				(short) ((short) r.nextInt(160) + 1), LocalDateTime.of(2022, 02, 17, 21, 30), "Equipo 1", "Equipo 2",
+				"Titulares");
+		Equipo equipo1 = new Equipo("Equipo Este", (byte) 31, (byte) 1);
+		Equipo equipo2 = new Equipo("Equipo Oeste", (byte) 32, (byte) 1);
+		return allStar;
 	}
 
 }

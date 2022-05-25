@@ -15,4 +15,28 @@ public class Partido {
 		this.fecha = fecha;
 	}
 
+	public short getMarcadorLocal() {
+		return marcadorLocal;
+	}
+
+	public void setMarcadorLocal(short marcadorLocal) {
+		this.marcadorLocal = marcadorLocal;
+	}
+
+	public short getMarcadorVisitante() {
+		return marcadorVisitante;
+	}
+
+	public void setMarcadorVisitante(short marcadorVisitante) {
+		this.marcadorVisitante = marcadorVisitante;
+	}
+
+	public LocalDateTime getFecha() {
+		return fecha;
+	}
+
+	public void setFecha(LocalDateTime fecha) {
+		this.fecha = fecha;
+	}
+
 }

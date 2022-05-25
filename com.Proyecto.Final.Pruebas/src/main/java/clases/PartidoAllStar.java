@@ -63,5 +63,6 @@ public class PartidoAllStar extends Partido {
 	public void setTitulares(String titulares) {
 		this.titulares = titulares;
 	}
+	
 
 }

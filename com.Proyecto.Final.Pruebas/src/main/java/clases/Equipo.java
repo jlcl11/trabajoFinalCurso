@@ -50,7 +50,6 @@ public class Equipo extends ObjetoConNombre {
 			String plantilla, byte playoffs_playoff_id) throws SQLException {
 		super(nombre);
 
-
 		Statement query = utilsDB.conectarBBDD();
 		if (query.executeUpdate(
 				"INSERT INTO equipo(eq_id,conferencia,ciudadlocal,dorsalesretirados,gm,limitesalarial,estadio,propietario,jugadores,nombre) \r\n"
@@ -69,6 +68,19 @@ public class Equipo extends ObjetoConNombre {
 			this.playoffs_playoff_id = playoffs_playoff_id;
 		}
 		utilsDB.desconectarBBDD();
+	}
+
+	public Equipo(String nombre, byte eq_id, byte partidoAllStar_id) throws SQLException {
+		super(nombre);
+
+		Statement query = utilsDB.conectarBBDD();
+		if (query.executeUpdate("INSERT INTO equipo(eq_id,nombre,partidoallstar_parta_id) VALUES(" + eq_id + ",'"
+				+ nombre + "'," + partidoAllStar_id + ");\r\n" + "") > 0) {
+			this.eq_id = eq_id;
+			this.partidoAllStar_id = partidoAllStar_id;
+		}
+		utilsDB.desconectarBBDD();
+
 	}
 
 	public String getEstadio() {

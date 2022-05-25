@@ -62,7 +62,7 @@ public class PantallaMenuAllStar extends JPanel {
 		gbc_botonTitulares.gridy = 4;
 		add(botonTitulares, gbc_botonTitulares);
 
-		JButton botonEquipoDelEste = new JButton("Ver los titulares del AllStar");
+		JButton botonEquipoDelEste = new JButton("Ver el marcador del AllStar");
 		botonEquipoDelEste.setBackground(Color.BLUE);
 		botonEquipoDelEste.setForeground(Color.WHITE);
 		botonEquipoDelEste.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -98,7 +98,7 @@ public class PantallaMenuAllStar extends JPanel {
 		gbc_botonTitularesE.gridy = 7;
 		add(botonTitularesE, gbc_botonTitularesE);
 
-		JButton botonMarcador = new JButton("Ver el marcador del All Star");
+		JButton botonMarcador = new JButton("Ver el ganador del concurso de habilidades");
 		botonMarcador.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		botonMarcador.setForeground(Color.WHITE);
 		botonMarcador.setBackground(Color.BLUE);
