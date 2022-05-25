@@ -42,7 +42,7 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 		botonMVP.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				pantallitaDPOY p=new pantallitaDPOY();
+				pantallitaMVP p=new pantallitaMVP();
 				p.setVisible(true);
 				p.setAlwaysOnTop(true);
 				p.setSize(630,805);
@@ -61,6 +61,18 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 		add(botonMVP, gbc_botonMVP);
 		
 		JButton botonDPOY = new JButton("Ver el defensor del A\u00F1o");
+		botonDPOY.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+
+				pantallitaDPOY p=new pantallitaDPOY();
+				p.setVisible(true);
+				p.setAlwaysOnTop(true);
+				p.setSize(630,805);
+				p.setLocationRelativeTo(null);
+			
+			}
+		});
 		botonDPOY.setForeground(Color.WHITE);
 		botonDPOY.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		botonDPOY.setBackground(Color.BLUE);
@@ -73,6 +85,18 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 		add(botonDPOY, gbc_botonDPOY);
 		
 		JButton botonAnotador = new JButton("Ver el m\u00E1ximo anotador");
+		botonAnotador.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+
+				pantallitaMaxAnotador p=new pantallitaMaxAnotador();
+				p.setVisible(true);
+				p.setAlwaysOnTop(true);
+				p.setSize(630,805);
+				p.setLocationRelativeTo(null);
+			
+			}
+		});
 		botonAnotador.setForeground(Color.WHITE);
 		botonAnotador.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		botonAnotador.setBackground(Color.BLUE);

@@ -48,7 +48,7 @@ public class Main {
 				.println(funcionesUtiles.devolverDPOY().getNombre() + " " + funcionesUtiles.devolverDPOY().getApellido()
 						+ " ha anotado " + funcionesUtiles.devolverDPOY().getRBG() + " rebotes por partido,ha robado "
 						+ funcionesUtiles.devolverDPOY().getSPG() + " balones por partido y ha taponado "
-						+ funcionesUtiles.devolverDPOY().getTiro());
+						+ funcionesUtiles.devolverDPOY().getBPG()+" balones por partido");
 		System.out.println(funcionesUtiles.devolverPremioAnotador().getNombre() + " "
 				+ funcionesUtiles.devolverPremioAnotador().getApellido() + " ha anotado "
 				+ funcionesUtiles.devolverPremioAnotador().getPPG() + " puntos por partido");
@@ -59,7 +59,7 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		try {
+		 try {
 			Ventana v = new Ventana();
 
 		} catch (SQLException e) {

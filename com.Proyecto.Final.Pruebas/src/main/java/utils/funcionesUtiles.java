@@ -1232,19 +1232,29 @@ public class funcionesUtiles {
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                    EL MVP DE LA TEMPORADA HA SIDO                       |\n");
-		escritor.write("" + funcionesUtiles.devolverMVP() + "\n");
+		escritor.write("" + funcionesUtiles.devolverMVP().getNombre() + " " + funcionesUtiles.devolverMVP().getApellido()
+				+ " ha anotado " + funcionesUtiles.devolverMVP().getPPG() + " puntos por partido,ha repartido "
+				+ funcionesUtiles.devolverMVP().getAPG() + " asistencias por partido,ha recogido "
+				+ funcionesUtiles.devolverMVP().getRBG() + " rebotes por partido,ha robado "
+				+ funcionesUtiles.devolverMVP().getSPG() + " y ha taponado " + funcionesUtiles.devolverMVP().getBPG()
+				+ " balones por partido" + "\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                    EL DEFENSOR  DE LA TEMPORADA HA SIDO                 |\n");
-		escritor.write("" + funcionesUtiles.devolverDPOY() + "\n");
+		escritor.write("" + funcionesUtiles.devolverDPOY().getNombre() + " " + funcionesUtiles.devolverDPOY().getApellido()
+				+ " ha anotado " + funcionesUtiles.devolverDPOY().getRBG() + " rebotes por partido,ha robado "
+				+ funcionesUtiles.devolverDPOY().getSPG() + " balones por partido y ha taponado "
+				+ funcionesUtiles.devolverDPOY().getBPG()+" balones por partido" + "\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|            EL PREMIO DEL MEJOR ANOTADOR DE LA TEMPORADA HA SIDO         |\n");
-		escritor.write("" + funcionesUtiles.devolverPremioAnotador() + "\n");
+		escritor.write("" + funcionesUtiles.devolverPremioAnotador().getNombre() + " "
+				+ funcionesUtiles.devolverPremioAnotador().getApellido() + " ha anotado "
+				+ funcionesUtiles.devolverPremioAnotador().getPPG() + " puntos por partido" + "\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");

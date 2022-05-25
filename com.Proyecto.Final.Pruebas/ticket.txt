@@ -2,19 +2,19 @@
 |                                                                         |
 |                                                                         |
 |                    EL MVP DE LA TEMPORADA HA SIDO                       |
-ZachJugador [jugador_id=0, apellido=LaVine, dorsal=8, apodo=null, posicion=null, salario=19.5, nominacionesAllStar=2, anillosDeCampeon=0, MVPs=0, defensorDelAño=0, rookieDelAño=false, MIP=false, MVPAllStar=0, FMVP=0, premioAnotador=0, PPG=35.0, APG=10.0, RBG=16.0, SPG=2.0, BPG=4.0, MPG=30, finalizacion=null, tiro=null, organizacion=null, defensas=null, equipo_id=5, playoffs_Playoff_id=1]
+Jalen Brunson ha anotado 35.0 puntos por partido,ha repartido 10.0 asistencias por partido,ha recogido 19.0 rebotes por partido,ha robado 2.0 y ha taponado 1.0 balones por partido
 |                                                                         |
 |                                                                         |
 |                                                                         |
 |                                                                         |
 |                    EL DEFENSOR  DE LA TEMPORADA HA SIDO                 |
-DorianJugador [jugador_id=0, apellido=Finney-Smith, dorsal=10, apodo=null, posicion=null, salario=4.0, nominacionesAllStar=0, anillosDeCampeon=0, MVPs=0, defensorDelAño=0, rookieDelAño=false, MIP=false, MVPAllStar=0, FMVP=0, premioAnotador=0, PPG=5.0, APG=3.0, RBG=19.0, SPG=2.0, BPG=5.0, MPG=33, finalizacion=null, tiro=null, organizacion=null, defensas=null, equipo_id=16, playoffs_Playoff_id=1]
+Nikola Vucevic ha anotado 18.0 rebotes por partido,ha robado 2.0 balones por partido y ha taponado 5.0 balones por partido
 |                                                                         |
 |                                                                         |
 |                                                                         |
 |                                                                         |
 |            EL PREMIO DEL MEJOR ANOTADOR DE LA TEMPORADA HA SIDO         |
-ZachJugador [jugador_id=0, apellido=LaVine, dorsal=8, apodo=null, posicion=null, salario=19.5, nominacionesAllStar=2, anillosDeCampeon=0, MVPs=0, defensorDelAño=0, rookieDelAño=false, MIP=false, MVPAllStar=0, FMVP=0, premioAnotador=0, PPG=35.0, APG=10.0, RBG=16.0, SPG=2.0, BPG=4.0, MPG=30, finalizacion=null, tiro=null, organizacion=null, defensas=null, equipo_id=5, playoffs_Playoff_id=1]
+Jaylen Brown ha anotado 35.0 puntos por partido
 |                                                                         |
 |                                                                         |
 |                                                                         |
