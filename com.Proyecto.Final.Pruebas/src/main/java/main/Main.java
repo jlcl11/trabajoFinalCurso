@@ -48,10 +48,31 @@ public class Main {
 				.println(funcionesUtiles.devolverDPOY().getNombre() + " " + funcionesUtiles.devolverDPOY().getApellido()
 						+ " ha anotado " + funcionesUtiles.devolverDPOY().getRBG() + " rebotes por partido,ha robado "
 						+ funcionesUtiles.devolverDPOY().getSPG() + " balones por partido y ha taponado "
-						+ funcionesUtiles.devolverDPOY().getBPG()+" balones por partido");
+						+ funcionesUtiles.devolverDPOY().getBPG() + " balones por partido");
 		System.out.println(funcionesUtiles.devolverPremioAnotador().getNombre() + " "
 				+ funcionesUtiles.devolverPremioAnotador().getApellido() + " ha anotado "
 				+ funcionesUtiles.devolverPremioAnotador().getPPG() + " puntos por partido");
+
+		System.out.println(
+				funcionesUtiles.getAllStarMVP().getNombre() + " " + funcionesUtiles.getAllStarMVP().getApellido());
+		System.out.println("Titulares All Star :\n");
+		for (byte i = 0; i < funcionesUtiles.getTitularesAllStar().size(); i++) {
+			System.out.println(funcionesUtiles.getTitularesAllStar().get(i).getNombre() + " "
+					+ funcionesUtiles.getTitularesAllStar().get(i).getApellido() + "\n");
+		}
+		System.out.println("Los jugadores del equipo 1 son \n");
+
+		for (byte i = 0; i < funcionesUtiles.getJugadoresEquipo1().size(); i++) {
+			System.out.println(funcionesUtiles.getJugadoresEquipo1().get(i).getNombre() + " "
+					+ funcionesUtiles.getJugadoresEquipo1().get(i).getApellido()+"\n");
+		}
+
+		System.out.println("Los jugadores del equipo 2 son \n");
+
+		for (byte i = 0; i < funcionesUtiles.getJugadoresEquipo2().size(); i++) {
+			System.out.println(funcionesUtiles.getJugadoresEquipo2().get(i).getNombre() + " "
+					+ funcionesUtiles.getJugadoresEquipo2().get(i).getApellido()+"\n");
+		}
 
 		try {
 			funcionesUtiles.imprimeTicket();
@@ -59,6 +80,7 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		 try {
 			Ventana v = new Ventana();
 

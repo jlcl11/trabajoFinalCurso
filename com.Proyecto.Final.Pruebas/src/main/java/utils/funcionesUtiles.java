@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Random;
 
 import clases.Conferencia;
@@ -1232,21 +1234,22 @@ public class funcionesUtiles {
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                    EL MVP DE LA TEMPORADA HA SIDO                       |\n");
-		escritor.write("" + funcionesUtiles.devolverMVP().getNombre() + " " + funcionesUtiles.devolverMVP().getApellido()
-				+ " ha anotado " + funcionesUtiles.devolverMVP().getPPG() + " puntos por partido,ha repartido "
-				+ funcionesUtiles.devolverMVP().getAPG() + " asistencias por partido,ha recogido "
-				+ funcionesUtiles.devolverMVP().getRBG() + " rebotes por partido,ha robado "
-				+ funcionesUtiles.devolverMVP().getSPG() + " y ha taponado " + funcionesUtiles.devolverMVP().getBPG()
-				+ " balones por partido" + "\n");
+		escritor.write("" + funcionesUtiles.devolverMVP().getNombre() + " "
+				+ funcionesUtiles.devolverMVP().getApellido() + " ha anotado " + funcionesUtiles.devolverMVP().getPPG()
+				+ " puntos por partido,ha repartido " + funcionesUtiles.devolverMVP().getAPG()
+				+ " asistencias por partido,ha recogido " + funcionesUtiles.devolverMVP().getRBG()
+				+ " rebotes por partido,ha robado " + funcionesUtiles.devolverMVP().getSPG() + " y ha taponado "
+				+ funcionesUtiles.devolverMVP().getBPG() + " balones por partido" + "\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                    EL DEFENSOR  DE LA TEMPORADA HA SIDO                 |\n");
-		escritor.write("" + funcionesUtiles.devolverDPOY().getNombre() + " " + funcionesUtiles.devolverDPOY().getApellido()
-				+ " ha anotado " + funcionesUtiles.devolverDPOY().getRBG() + " rebotes por partido,ha robado "
-				+ funcionesUtiles.devolverDPOY().getSPG() + " balones por partido y ha taponado "
-				+ funcionesUtiles.devolverDPOY().getBPG()+" balones por partido" + "\n");
+		escritor.write(
+				"" + funcionesUtiles.devolverDPOY().getNombre() + " " + funcionesUtiles.devolverDPOY().getApellido()
+						+ " ha anotado " + funcionesUtiles.devolverDPOY().getRBG() + " rebotes por partido,ha robado "
+						+ funcionesUtiles.devolverDPOY().getSPG() + " balones por partido y ha taponado "
+						+ funcionesUtiles.devolverDPOY().getBPG() + " balones por partido" + "\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
@@ -1261,6 +1264,141 @@ public class funcionesUtiles {
 		escritor.write("---------------------------------------------------------------------------\n");
 		escritor.flush();
 		escritor.close();
+	}
+
+	public static ArrayList<Jugador> getTitularesAllStar() {
+		ArrayList<Jugador> jugadores = funcionesUtiles.getJugadores();
+
+		Collections.sort(jugadores, new Comparator<Jugador>() {
+
+			public int compare(Jugador o1, Jugador o2) {
+
+				if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) > (o2.getPPG() + o2.getAPG()
+						+ o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return 1;
+				} else if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) < (o2.getPPG()
+						+ o2.getAPG() + o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return -1;
+				} else {
+					return 0;
+				}
+
+			}
+
+		});
+
+		ArrayList<Jugador> allStars = new ArrayList<Jugador>();
+
+		for (short i = 0; i < jugadores.size(); i++) {
+			if (i >= 140) {
+				allStars.add(jugadores.get(i));
+			}
+		}
+
+		return allStars;
+	}
+
+	public static ArrayList<Jugador> getJugadoresEquipo1() {
+		ArrayList<Jugador> jugadores = funcionesUtiles.getJugadores();
+
+		Collections.sort(jugadores, new Comparator<Jugador>() {
+
+			public int compare(Jugador o1, Jugador o2) {
+
+				if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) > (o2.getPPG() + o2.getAPG()
+						+ o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return 1;
+				} else if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) < (o2.getPPG()
+						+ o2.getAPG() + o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return -1;
+				} else {
+					return 0;
+				}
+
+			}
+
+		});
+
+		ArrayList<Jugador> allStarsEquipo1 = new ArrayList<Jugador>();
+
+		for (short i = 0; i < jugadores.size(); i++) {
+			if (i >= 130 && i <= 134) {
+				allStarsEquipo1.add(jugadores.get(i));
+			}
+			if (i >= 140 && i <= 145) {
+				allStarsEquipo1.add(jugadores.get(i));
+			}
+		}
+
+		return allStarsEquipo1;
+	}
+
+	public static ArrayList<Jugador> getJugadoresEquipo2() {
+		ArrayList<Jugador> jugadores = funcionesUtiles.getJugadores();
+
+		Collections.sort(jugadores, new Comparator<Jugador>() {
+
+			public int compare(Jugador o1, Jugador o2) {
+
+				if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) > (o2.getPPG() + o2.getAPG()
+						+ o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return 1;
+				} else if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) < (o2.getPPG()
+						+ o2.getAPG() + o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return -1;
+				} else {
+					return 0;
+				}
+
+			}
+
+		});
+
+		ArrayList<Jugador> allStarsEquipo2 = new ArrayList<Jugador>();
+
+		for (short i = 0; i < jugadores.size(); i++) {
+			if (i >= 135 && i <= 139) {
+				allStarsEquipo2.add(jugadores.get(i));
+			}
+			if (i >= 146 && i <= 150) {
+				allStarsEquipo2.add(jugadores.get(i));
+			}
+		}
+
+		return allStarsEquipo2;
+	}
+
+	public static Jugador getAllStarMVP() {
+		ArrayList<Jugador> jugadores = funcionesUtiles.getJugadores();
+
+		Collections.sort(jugadores, new Comparator<Jugador>() {
+
+			public int compare(Jugador o1, Jugador o2) {
+
+				if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) > (o2.getPPG() + o2.getAPG()
+						+ o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return 1;
+				} else if ((o1.getPPG() + o1.getAPG() + o1.getBPG() + o1.getSPG() + o1.getBPG()) < (o2.getPPG()
+						+ o2.getAPG() + o2.getBPG() + o2.getSPG() + o2.getBPG())) {
+					return -1;
+				} else {
+					return 0;
+				}
+
+			}
+
+		});
+
+		Jugador maximo = null;
+
+		for (short i = 0; i < jugadores.size(); i++) {
+			if (i == 149) {
+				maximo = jugadores.get(i);
+			}
+
+		}
+
+		return maximo;
 	}
 
 }
