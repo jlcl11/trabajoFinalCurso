@@ -8,26 +8,33 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
+import utils.funcionesUtiles;
+
 import java.awt.GridBagLayout;
 import javax.swing.ImageIcon;
 
-public class PantallaInicioPrimerMenu extends JPanel{
+public class PantallaInicioPrimerMenu extends JPanel {
 	private Ventana ventana;
 
 	public PantallaInicioPrimerMenu(final Ventana ventana) {
 		super();
 		this.ventana = ventana;
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0,
+				Double.MIN_VALUE };
+		gridBagLayout.rowWeights = new double[] { 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0,
+				0.0, 0.0, Double.MIN_VALUE };
 		setLayout(gridBagLayout);
-		
+
 		JLabel botonTitulo = new JLabel("Qu\u00E9 quieres hacer?");
 		botonTitulo.setForeground(Color.WHITE);
 		botonTitulo.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
@@ -111,13 +118,12 @@ public class PantallaInicioPrimerMenu extends JPanel{
 
 		JButton botonVolver = new JButton("Volver");
 		botonVolver.addMouseListener(new MouseAdapter() {
-		    @Override
-		    public void mouseClicked(MouseEvent e) {
-		        ventana.cambiarAPantalla("inicial");
-		    }
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("inicial");
+			}
 		});
-		
-		
+
 		JLabel lblNewLabel = new JLabel("New label");
 		lblNewLabel.setIcon(new ImageIcon(".\\imagenes\\NBA-2K22.jpeg"));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
@@ -127,13 +133,20 @@ public class PantallaInicioPrimerMenu extends JPanel{
 		gbc_lblNewLabel.gridx = 0;
 		gbc_lblNewLabel.gridy = 0;
 		add(lblNewLabel, gbc_lblNewLabel);
-		
-		
+
 		JButton botonTicket = new JButton("Imprimir un ticket con los ganadores de la temporada");
 		botonTicket.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("ticket");
+				try {
+					funcionesUtiles.imprimeTicket();
+					JOptionPane.showMessageDialog(ventana, "Ticket impreso con éxito", ventana.getName(),
+							JOptionPane.PLAIN_MESSAGE);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					JOptionPane.showMessageDialog(ventana, "El ticket no pudo imprimirse", ventana.getName(),
+							JOptionPane.ERROR_MESSAGE);
+				}
 			}
 		});
 		botonTicket.setForeground(Color.WHITE);
