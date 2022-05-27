@@ -19,13 +19,14 @@ import javax.swing.JRadioButton;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 
+import clases.Equipo;
 import utils.funcionesUtiles;
 
 public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 	private Ventana ventana;
 	private String texto;
 
-	public PantallaEscogerEquipoDatosFranquicia(final Ventana ventana)   {
+	public PantallaEscogerEquipoDatosFranquicia(final Ventana ventana) throws SQLException   {
 		super();
 		this.ventana = ventana;
 		GridBagLayout gridBagLayout = new GridBagLayout();
@@ -71,6 +72,11 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 		gbc_escogerHawks.gridy = 5;
 		add(escogerHawks, gbc_escogerHawks);
 
+		if(escogerHawks.isSelected()) {
+			//Hacer dentro de boton
+			
+			this.ventana.miEquipo=new Equipo(escogerHawks.getText());
+		}
 		grupoEquipos.add(escogerHawks);
 
 		JRadioButton escogerCeltics = new JRadioButton("Boston Celtics");

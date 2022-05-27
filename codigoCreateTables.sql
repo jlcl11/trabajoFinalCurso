@@ -4,7 +4,7 @@ use trabajoFinal;
 
 CREATE TABLE conferencia (
     partidos INT AUTO_INCREMENT PRIMARY KEY,
-    liga_conferencias int NOT NULL,
+    liga_conferencias int ,
     nombre varchar(200)
 );
 
@@ -58,8 +58,8 @@ CREATE TABLE jugador (
     tiro ENUM('A','B','C','D'),
     organizacion ENUM('A','B','C','D'),
     defensa ENUM('A','B','C','D'),
-    equipo_eq_id INT NOT NULL,
-    playoffs_playoff_id INT NOT NULL
+    equipo_eq_id INT ,
+    playoffs_playoff_id INT 
 );
 
 CREATE TABLE liga (
@@ -83,8 +83,8 @@ CREATE TABLE partidonormal (
     marcadorequipo1 NUMERIC(3),
     marcadorequipo2 NUMERIC(3),
     fecha DATE,
-    conferencia_partidos INT NOT NULL,
-    rondaplayoff_ronda_id INT NOT NULL
+    conferencia_partidos INT ,
+    rondaplayoff_ronda_id INT 
 );
 
 CREATE TABLE partidos (
@@ -111,7 +111,7 @@ CREATE TABLE rondaplayoff (
     ronda_id INT  PRIMARY KEY,
     nombre varchar(200),
     listarondas NUMERIC(3),
-    playoffs_playoff_id INT NOT NULL
+    playoffs_playoff_id INT 
 );
 
 ALTER TABLE
@@ -169,3 +169,4 @@ ALTER TABLE
 ADD
     CONSTRAINT rondaplayoff_playoffs_fk FOREIGN KEY (playoffs_playoff_id) REFERENCES playoffs (playoff_id);
     
+

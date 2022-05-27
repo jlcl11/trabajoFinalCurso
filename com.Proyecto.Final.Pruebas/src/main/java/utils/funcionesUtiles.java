@@ -1144,7 +1144,7 @@ public class funcionesUtiles {
 		// Si no hay usuarios en la tabla, va a devolver un arraylist vacio.
 		// Si la consulta fue erronea se devuelve un arraylist null, que son cosas
 		// distintas.
-		utilsDB.desconectarBBDD();
+	//	utilsDB.desconectarBBDD();
 		return ret;
 	}
 
@@ -1401,11 +1401,112 @@ public class funcionesUtiles {
 		Random r = new Random();
 
 		PartidoAllStar allStar = new PartidoAllStar((byte) 1, (short) ((short) r.nextInt(160) + 1),
-				(short) ((short) r.nextInt(160) + 1), LocalDateTime.of(2022, 02, 17, 21, 30), "Equipo 1", "Equipo 2",
+				(short) ((short) r.nextInt(160) + 1), LocalDateTime.of(2022, 02, 17, 21, 30), "Equipow 1", "Equipo 2",
 				"Titulares");
 		Equipo equipo1 = new Equipo("Equipo Este", (byte) 31, (byte) 1);
 		Equipo equipo2 = new Equipo("Equipo Oeste", (byte) 32, (byte) 1);
 		return allStar;
 	}
 
+	
+	public static ArrayList<Jugador> getJugadoresEquipoAllStarEste() {
+		Statement smt = utilsDB.conectarBBDD();
+		ArrayList<Jugador> ret = getJugadoresEquipo1();
+
+		try {
+			ResultSet cursor = smt.executeQuery("select * from jugador WHERE salario>0");
+			while (cursor.next()) {
+				Jugador actual = new Jugador();
+
+				actual.setNombre(cursor.getString("nombre"));
+				actual.setApellido(cursor.getString("apellido"));
+				actual.setDorsal(cursor.getByte("dorsal"));
+				actual.setApodo(cursor.getString("apodo"));	
+				actual.setPPG(cursor.getFloat("ppg"));
+				actual.setAPG(cursor.getFloat("apg"));
+				actual.setRBG(cursor.getFloat("rbg"));
+				actual.setSPG(cursor.getFloat("spg"));
+				actual.setBPG(cursor.getFloat("bpg"));
+				actual.setBPG(cursor.getFloat("bpg"));
+			
+	
+
+				ret.add(actual);
+			}
+		} catch (SQLException e) {
+			// Si la conuslta falla no hay nada que devolver.
+			e.printStackTrace();
+			return null;
+		}
+	utilsDB.desconectarBBDD();
+		return ret;
+	}
+	public static ArrayList<Jugador> getJugadoresEquipoAllStarOeste() {
+		Statement smt = utilsDB.conectarBBDD();
+		ArrayList<Jugador> ret = getJugadoresEquipo2();
+
+		try {
+			ResultSet cursor = smt.executeQuery("select * from jugador WHERE salario>0");
+			while (cursor.next()) {
+				Jugador actual = new Jugador();
+
+				actual.setNombre(cursor.getString("nombre"));
+				actual.setApellido(cursor.getString("apellido"));
+				actual.setDorsal(cursor.getByte("dorsal"));
+				actual.setApodo(cursor.getString("apodo"));	
+				actual.setPPG(cursor.getFloat("ppg"));
+				actual.setAPG(cursor.getFloat("apg"));
+				actual.setRBG(cursor.getFloat("rbg"));
+				actual.setSPG(cursor.getFloat("spg"));
+				actual.setBPG(cursor.getFloat("bpg"));
+				actual.setBPG(cursor.getFloat("bpg"));
+			
+	
+
+				ret.add(actual);
+			}
+		} catch (SQLException e) {
+			// Si la conuslta falla no hay nada que devolver.
+			e.printStackTrace();
+			return null;
+		}
+	utilsDB.desconectarBBDD();
+		return ret;
+	}
+	
+	public static ArrayList<Jugador> getStartersEquipoAllStar() {
+		Statement smt = utilsDB.conectarBBDD();
+		ArrayList<Jugador> ret = getTitularesAllStar();
+
+		try {
+			ResultSet cursor = smt.executeQuery("select * from jugador WHERE salario>0");
+			while (cursor.next()) {
+				Jugador actual = new Jugador();
+
+				actual.setNombre(cursor.getString("nombre"));
+				actual.setApellido(cursor.getString("apellido"));
+				actual.setDorsal(cursor.getByte("dorsal"));
+				actual.setApodo(cursor.getString("apodo"));	
+				actual.setPPG(cursor.getFloat("ppg"));
+				actual.setAPG(cursor.getFloat("apg"));
+				actual.setRBG(cursor.getFloat("rbg"));
+				actual.setSPG(cursor.getFloat("spg"));
+				actual.setBPG(cursor.getFloat("bpg"));
+				actual.setBPG(cursor.getFloat("bpg"));
+			
+	
+
+				ret.add(actual);
+			}
+		} catch (SQLException e) {
+			// Si la conuslta falla no hay nada que devolver.
+			e.printStackTrace();
+			return null;
+		}
+	utilsDB.desconectarBBDD();
+		return ret;
+	}
+	
+	
+	
 }

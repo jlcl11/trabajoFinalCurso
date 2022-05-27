@@ -83,6 +83,14 @@ public class Equipo extends ObjetoConNombre {
 
 	}
 
+	public Equipo(String text) throws SQLException {
+		Statement query=utilsDB.conectarBBDD();
+		if(query.executeUpdate("SELECT * FROM equipo WHERE nombre='"+text+"'")>0) {
+			
+		}
+		utilsDB.desconectarBBDD();
+	}
+
 	public String getEstadio() {
 		return estadio;
 	}

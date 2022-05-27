@@ -16,7 +16,6 @@ import utlis.funcionesUtiles;
 import utlis.utilsDB;
 
 public class Equipo extends ObjetoConNombre {
-	private short equipoID;
 	private Conferencia conferencia;
 	private String ciudadLocal;
 	private String dorsalesRetirados;

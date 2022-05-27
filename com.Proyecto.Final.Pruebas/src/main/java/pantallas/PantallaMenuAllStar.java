@@ -63,6 +63,12 @@ public class PantallaMenuAllStar extends JPanel {
 		add(botonTitulares, gbc_botonTitulares);
 
 		JButton botonEquipoDelEste = new JButton("Ver el marcador del AllStar");
+		botonEquipoDelEste.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("resultAllStar");
+			}
+		});
 		botonEquipoDelEste.setBackground(Color.BLUE);
 		botonEquipoDelEste.setForeground(Color.WHITE);
 		botonEquipoDelEste.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
