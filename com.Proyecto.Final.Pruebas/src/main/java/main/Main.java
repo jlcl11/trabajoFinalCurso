@@ -31,9 +31,7 @@ public class Main {
 		try {
 			funcionesUtiles.borrarDatosTablas();
 			funcionesUtiles.declararObjetos();
-		/*	for(byte i=0;i<funcionesUtiles.getStartersEquipoAllStar().size();i++) {
-				System.out.println(funcionesUtiles.getStartersEquipoAllStar().get(i)+"\n");
-			}*/
+	
 			Ventana v = new Ventana();
 		
 		} catch (SQLException e) {

@@ -1,23 +1,19 @@
 package pantallas;
 
-import javax.swing.JFrame;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Insets;
+
+import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 import utils.funcionesUtiles;
 
-import java.awt.GridBagConstraints;
-import java.awt.Font;
-import java.awt.FlowLayout;
-import javax.swing.BoxLayout;
-import java.awt.GridLayout;
-import java.awt.Insets;
-import java.awt.Color;
-import javax.swing.SwingConstants;
-import javax.swing.ImageIcon;
-
-public class pantallitaDPOY extends JFrame {
-	public pantallitaDPOY() {
+public class MVPAllStar extends JFrame {
+	public MVPAllStar() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0 };
@@ -26,7 +22,7 @@ public class pantallitaDPOY extends JFrame {
 		getContentPane().setLayout(gridBagLayout);
 
 		JLabel nombre = new JLabel(
-				funcionesUtiles.devolverDPOY().getNombre() + " " + funcionesUtiles.devolverDPOY().getApellido());
+				funcionesUtiles.getAllStarMVP().getNombre() + " " + funcionesUtiles.getAllStarMVP().getApellido());
 		nombre.setHorizontalAlignment(SwingConstants.CENTER);
 		nombre.setForeground(Color.BLACK);
 		nombre.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -36,8 +32,9 @@ public class pantallitaDPOY extends JFrame {
 		gbc_nums.gridy = 3;
 		getContentPane().add(nombre, gbc_nums);
 
-		JLabel stats = new JLabel(funcionesUtiles.devolverDPOY().getRBG() + " RPG "
-				+ funcionesUtiles.devolverDPOY().getSPG() + " SPG " + funcionesUtiles.devolverDPOY().getBPG() + " BPG");
+		JLabel stats = new JLabel(funcionesUtiles.getAllStarMVP().getPPG() + " Puntos "
+				+ funcionesUtiles.getAllStarMVP().getAPG() + " Asistencias" + funcionesUtiles.getAllStarMVP().getRBG() + " Rebotes "
+				+ funcionesUtiles.getAllStarMVP().getSPG() + " robos " + funcionesUtiles.getAllStarMVP().getBPG() + " tapones");
 		stats.setForeground(Color.BLACK);
 		stats.setHorizontalAlignment(SwingConstants.CENTER);
 		stats.setFont(new Font("Segoe UI Semibold", Font.BOLD, 15));

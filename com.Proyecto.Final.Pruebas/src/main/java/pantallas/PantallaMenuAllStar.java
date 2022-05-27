@@ -87,6 +87,12 @@ public class PantallaMenuAllStar extends JPanel {
 		add(botonEquipoDelEste, gbc_botonEquipoDelEste);
 
 		JButton botonTitularesW = new JButton("Ver los titulares del Oeste");
+		botonTitularesW.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("AllStar Oeste");
+			}
+		});
 		botonTitularesW.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		botonTitularesW.setForeground(Color.WHITE);
 		botonTitularesW.setBackground(Color.BLUE);
@@ -99,6 +105,12 @@ public class PantallaMenuAllStar extends JPanel {
 		add(botonTitularesW, gbc_botonTitularesW);
 
 		JButton botonTitularesE = new JButton("Ver los titulares del Este");
+		botonTitularesE.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("AllStars Este");
+			}
+		});
 		botonTitularesE.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		botonTitularesE.setBackground(Color.BLUE);
 		botonTitularesE.setForeground(Color.WHITE);
@@ -123,6 +135,18 @@ public class PantallaMenuAllStar extends JPanel {
 		add(botonMarcador, gbc_botonMarcador);
 
 		JButton botonMVPAllStar = new JButton("Ver el MVP del AllStar");
+		botonMVPAllStar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+
+				MVPAllStar p = new MVPAllStar();
+				p.setVisible(true);
+				p.setAlwaysOnTop(true);
+				p.setSize(630, 805);
+				p.setLocationRelativeTo(null);
+
+			}
+		});
 		botonMVPAllStar.setForeground(Color.WHITE);
 		botonMVPAllStar.setBackground(Color.BLUE);
 		botonMVPAllStar.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));

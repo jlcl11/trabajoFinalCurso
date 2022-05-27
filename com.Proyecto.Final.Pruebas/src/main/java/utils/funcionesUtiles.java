@@ -776,7 +776,7 @@ public class funcionesUtiles {
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30,
 				Valores.C, Valores.C, Valores.C, Valores.A, (byte) 9, (byte) 1);
 
-		Jugador giannisAntetokoumpo = new Jugador((short) 283, "Giannis Ougko", "Antetokounmpo", (byte) 34,
+		Jugador giannisAntetokoumpo = new Jugador((short) 283, "Giannis", "Antetokounmpo", (byte) 34,
 				"The Greek Freak", Posicion.ALAPIVOT, 39.34f, (byte) 6, (byte) 1, (byte) 2, (byte) 1, false, true,
 				(byte) 1, (byte) 1, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1,
 				r.nextInt(5) + 1, (byte) 32, Valores.A, Valores.C, Valores.B, Valores.A, (byte) 10, (byte) 1);
