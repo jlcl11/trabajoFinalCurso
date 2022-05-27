@@ -31,8 +31,11 @@ public class Main {
 		try {
 			funcionesUtiles.borrarDatosTablas();
 			funcionesUtiles.declararObjetos();
-			//Ventana v = new Ventana();
-			System.out.println(funcionesUtiles.getJugadoresEquipoAllStarEste());
+		/*	for(byte i=0;i<funcionesUtiles.getStartersEquipoAllStar().size();i++) {
+				System.out.println(funcionesUtiles.getStartersEquipoAllStar().get(i)+"\n");
+			}*/
+			Ventana v = new Ventana();
+		
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

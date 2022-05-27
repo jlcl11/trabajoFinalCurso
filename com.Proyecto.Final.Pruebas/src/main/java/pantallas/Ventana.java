@@ -25,15 +25,15 @@ public class Ventana extends JFrame {
 		pantallas.put("Premios De Temporada", new PantallaMenusPremiosDeTemporada(this));
 		pantallas.put("Menu AllStar", new PantallaMenuAllStar(this));
 		pantallas.put("Playoffs", new PantallaPlayOffs(this));
-		//pantallas.put("resultAllStar", new PantallaResultadoAllStar(this));
-
+		pantallas.put("titularesAllStar", new PantallaTitularesAllStar(this));
+		
 		this.setSize(1300, 800);
 		this.setLocationRelativeTo(null);
 		this.setTitle("JuegoIndie2kNBA.exe");
 		this.setIconImage(new ImageIcon("./imagenes/logoPrograma.png").getImage());
 		this.setAlwaysOnTop(true);
-		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
-				new ImageIcon("./imagenes/logoPrograma.png").getImage(), new Point(0, 0), "custom cursor"));
+		/*setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+				new ImageIcon("./imagenes/logoPrograma.png").getImage(), new Point(0, 0), "custom cursor"));*/
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setBackground(getBackground());
 

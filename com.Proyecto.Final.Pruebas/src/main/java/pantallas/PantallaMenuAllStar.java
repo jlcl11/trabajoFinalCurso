@@ -51,6 +51,12 @@ public class PantallaMenuAllStar extends JPanel {
 		});
 
 		JButton botonTitulares = new JButton("Ver los titulares del AllStar");
+		botonTitulares.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("titularesAllStar");
+			}
+		});
 		botonTitulares.setForeground(Color.WHITE);
 		botonTitulares.setBackground(Color.BLUE);
 		botonTitulares.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
