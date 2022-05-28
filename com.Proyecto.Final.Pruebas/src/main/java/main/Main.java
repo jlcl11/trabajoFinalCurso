@@ -33,8 +33,8 @@ public class Main {
 			funcionesUtiles.declararObjetos();
 	
 			String nombre="Hawks";
-			for(int i=0;i<funcionesUtiles.getJugadoresReitrados(nombre).size();i++) {
-				System.out.println(funcionesUtiles.getJugadoresReitrados(nombre).get(i));
+			for(int i=0;i<funcionesUtiles.getPlantilla(nombre).size();i++) {
+				System.out.println(funcionesUtiles.getPlantilla(nombre).get(i));
 			}
 		//	Ventana v = new Ventana();
 		

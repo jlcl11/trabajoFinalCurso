@@ -1169,6 +1169,34 @@ public class funcionesUtiles {
 		 utilsDB.desconectarBBDD();
 		return ret;
 	}
+	public static ArrayList<Jugador> getPlantilla(String nombre) {
+		Statement smt = utilsDB.conectarBBDD();
+		// Inicializamos un ArrayList para devolver.
+		ArrayList<Jugador> ret = new ArrayList<Jugador>();
+
+		try {
+			ResultSet cursor = smt.executeQuery("SELECT * FROM jugador j JOIN equipo e ON j.equipo_eq_id=e.eq_id WHERE j.salario>0 AND e.nombre='"+nombre+"';");
+			while (cursor.next()) {
+				Jugador actual = new Jugador();
+
+				actual.setNombre(cursor.getString("nombre"));
+				actual.setApellido(cursor.getString("apellido"));
+				actual.setDorsal(cursor.getByte("dorsal"));
+				actual.setApodo(cursor.getString("apodo"));
+
+				ret.add(actual);
+			}
+		} catch (SQLException e) {
+			// Si la conuslta falla no hay nada que devolver.
+			e.printStackTrace();
+			return null;
+		}
+		// Si no hay usuarios en la tabla, va a devolver un arraylist vacio.
+		// Si la consulta fue erronea se devuelve un arraylist null, que son cosas
+		// distintas.
+		 utilsDB.desconectarBBDD();
+		return ret;
+	}
 
 	public static Jugador devolverMVP() {
 
