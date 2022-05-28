@@ -61,7 +61,7 @@ public class PantallaDatosFranquicia extends JPanel {
 		botonVerPropietario.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Popietario");
+				ventana.cambiarAPantalla("Propietario");
 			}
 		});
 		botonVerPropietario.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
