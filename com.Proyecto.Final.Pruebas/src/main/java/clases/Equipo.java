@@ -91,6 +91,12 @@ public class Equipo extends ObjetoConNombre {
 		utilsDB.desconectarBBDD();
 	}
 
+	public Equipo() {
+		
+	}
+
+
+
 	public String getEstadio() {
 		return estadio;
 	}

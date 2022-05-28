@@ -33,9 +33,8 @@ public class Main {
 			funcionesUtiles.declararObjetos();
 	
 			String nombre="Hawks";
-			for(int i=0;i<funcionesUtiles.getPlantilla(nombre).size();i++) {
-				System.out.println(funcionesUtiles.getPlantilla(nombre).get(i));
-			}
+			String gm="ciudadLocal";
+			System.out.println(funcionesUtiles.getDatosEquipo("Hawks").getCiudadLocal());
 		//	Ventana v = new Ventana();
 		
 		} catch (SQLException e) {
