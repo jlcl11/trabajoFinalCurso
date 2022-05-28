@@ -40,6 +40,12 @@ public class PantallaDatosFranquicia extends JPanel {
 		add(escogerDatoFranquicia, gbc_escogerDatoFranquicia);
 
 		JButton botonDatosEstadio = new JButton("Ver el estadio");
+		botonDatosEstadio.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				System.out.println(ventana.miEquipo.getNombre());
+			}
+		});
 		botonDatosEstadio.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		botonDatosEstadio.setForeground(Color.WHITE);
 		botonDatosEstadio.setBackground(Color.BLUE);

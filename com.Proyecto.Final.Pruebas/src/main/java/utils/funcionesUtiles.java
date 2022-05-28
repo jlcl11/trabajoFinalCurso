@@ -1231,7 +1231,7 @@ public class funcionesUtiles {
 		escritor.write("|                    EL MVP DE LA TEMPORADA HA SIDO                       |\n");
 		escritor.write("" + funcionesUtiles.devolverMVP().getNombre() + " "
 				+ funcionesUtiles.devolverMVP().getApellido() + " ha anotado " + funcionesUtiles.devolverMVP().getPPG()
-				+ " puntos por partido,ha repartido " + funcionesUtiles.devolverMVP().getAPG()
+				+ " puntos por partido \n,ha repartido " + funcionesUtiles.devolverMVP().getAPG()
 				+ " asistencias por partido,ha recogido " + funcionesUtiles.devolverMVP().getRBG()
 				+ " rebotes por partido,ha robado " + funcionesUtiles.devolverMVP().getSPG() + " y ha taponado "
 				+ funcionesUtiles.devolverMVP().getBPG() + " balones por partido" + "\n");
