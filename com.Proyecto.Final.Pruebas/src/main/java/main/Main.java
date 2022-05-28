@@ -32,7 +32,11 @@ public class Main {
 			funcionesUtiles.borrarDatosTablas();
 			funcionesUtiles.declararObjetos();
 	
-			Ventana v = new Ventana();
+			String nombre="Hawks";
+			for(int i=0;i<funcionesUtiles.getJugadoresReitrados(nombre).size();i++) {
+				System.out.println(funcionesUtiles.getJugadoresReitrados(nombre).get(i));
+			}
+		//	Ventana v = new Ventana();
 		
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

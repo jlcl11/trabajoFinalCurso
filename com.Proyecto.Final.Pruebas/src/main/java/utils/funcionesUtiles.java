@@ -776,10 +776,10 @@ public class funcionesUtiles {
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30,
 				Valores.C, Valores.C, Valores.C, Valores.A, (byte) 9, (byte) 1);
 
-		Jugador giannisAntetokoumpo = new Jugador((short) 283, "Giannis", "Antetokounmpo", (byte) 34,
-				"The Greek Freak", Posicion.ALAPIVOT, 39.34f, (byte) 6, (byte) 1, (byte) 2, (byte) 1, false, true,
-				(byte) 1, (byte) 1, (byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1,
-				r.nextInt(5) + 1, (byte) 32, Valores.A, Valores.C, Valores.B, Valores.A, (byte) 10, (byte) 1);
+		Jugador giannisAntetokoumpo = new Jugador((short) 283, "Giannis", "Antetokounmpo", (byte) 34, "The Greek Freak",
+				Posicion.ALAPIVOT, 39.34f, (byte) 6, (byte) 1, (byte) 2, (byte) 1, false, true, (byte) 1, (byte) 1,
+				(byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1,
+				(byte) 32, Valores.A, Valores.C, Valores.B, Valores.A, (byte) 10, (byte) 1);
 		Jugador graysonAllen = new Jugador((short) 284, "Grayson", "Allen", (byte) 7, Posicion.ESCOLTA, 4, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 27, Valores.B,
@@ -1125,14 +1125,36 @@ public class funcionesUtiles {
 				actual.setBPG(cursor.getFloat("bpg"));
 				actual.setBPG(cursor.getFloat("bpg"));
 				actual.setMPG(cursor.getByte("mpg"));
-				/*
-				 * actual.setFinalizacion(cursor.getString("finalizacion"));
-				 * actual.setTiro(cursor.getString("tiro"));
-				 * actual.setOrganizacion(cursor.getString("organizacion"));
-				 * actual.setDefensas(cursor.getString("defensa"));
-				 */
+			
 				actual.setEquipo_id(cursor.getByte("equipo_eq_id"));
 				actual.setPlayoffs_Playoff_id(cursor.getByte("playoffs_playoff_id"));
+
+				ret.add(actual);
+			}
+		} catch (SQLException e) {
+			// Si la conuslta falla no hay nada que devolver.
+			e.printStackTrace();
+			return null;
+		}
+	
+		 utilsDB.desconectarBBDD();
+		return ret;
+	}
+
+	public static ArrayList<Jugador> getJugadoresReitrados(String nombre) {
+		Statement smt = utilsDB.conectarBBDD();
+		// Inicializamos un ArrayList para devolver.
+		ArrayList<Jugador> ret = new ArrayList<Jugador>();
+
+		try {
+			ResultSet cursor = smt.executeQuery("SELECT * FROM jugador j JOIN equipo e ON j.equipo_eq_id=e.eq_id WHERE j.salario IS NULL AND e.nombre='"+nombre+"';");
+			while (cursor.next()) {
+				Jugador actual = new Jugador();
+
+				actual.setNombre(cursor.getString("nombre"));
+				actual.setApellido(cursor.getString("apellido"));
+				actual.setDorsal(cursor.getByte("dorsal"));
+				actual.setApodo(cursor.getString("apodo"));
 
 				ret.add(actual);
 			}
@@ -1144,7 +1166,7 @@ public class funcionesUtiles {
 		// Si no hay usuarios en la tabla, va a devolver un arraylist vacio.
 		// Si la consulta fue erronea se devuelve un arraylist null, que son cosas
 		// distintas.
-		// utilsDB.desconectarBBDD();
+		 utilsDB.desconectarBBDD();
 		return ret;
 	}
 
