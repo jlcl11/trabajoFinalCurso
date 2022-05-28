@@ -16,6 +16,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 
+import elementosVisuales.ElementoListRetirados;
 import elementosVisuales.ElementoListaJugador;
 import superClases.Jugador;
 import utils.funcionesUtiles;
@@ -56,7 +57,7 @@ public PantallaDorsalesRetirados(final Ventana ventana) {
 
 	ArrayList<Jugador> todos = funcionesUtiles.getTitularesAllStar();
 	for (int i = 0; i < todos.size(); i++) {
-		listaTitulares.add(new ElementoListaJugador(ventana, todos.get(i)));
+		listaTitulares.add(new ElementoListRetirados(ventana, todos.get(i)));
 	}
 
 	JButton volver = new JButton("Volver");
