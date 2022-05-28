@@ -43,7 +43,7 @@ public class PantallaDatosFranquicia extends JPanel {
 		botonDatosEstadio.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				System.out.println(ventana.miEquipo.getNombre());
+				ventana.cambiarAPantalla("Estadio");
 			}
 		});
 		botonDatosEstadio.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -58,6 +58,12 @@ public class PantallaDatosFranquicia extends JPanel {
 		add(botonDatosEstadio, gbc_botonDatosEstadio);
 
 		JButton botonVerPropietario = new JButton("Ver el propietario del equipo");
+		botonVerPropietario.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("Popietario");
+			}
+		});
 		botonVerPropietario.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		botonVerPropietario.setForeground(Color.WHITE);
 		botonVerPropietario.setBackground(Color.BLUE);
@@ -70,6 +76,12 @@ public class PantallaDatosFranquicia extends JPanel {
 		add(botonVerPropietario, gbc_botonVerPropietario);
 
 		JButton botonVerGM = new JButton("Ver el General Manager del equipo");
+		botonVerGM.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("GM");
+			}
+		});
 		botonVerGM.setForeground(Color.WHITE);
 		botonVerGM.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		botonVerGM.setBackground(Color.BLUE);
@@ -81,7 +93,13 @@ public class PantallaDatosFranquicia extends JPanel {
 		gbc_botonVerGM.gridy = 6;
 		add(botonVerGM, gbc_botonVerGM);
 
-		JButton botonLimiteSalarial = new JButton("Ver el l\u00EDmite salarial del equipo");
+		JButton botonLimiteSalarial = new JButton("Ver el límite salarial del equipo");
+		botonLimiteSalarial.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("Limite");
+			}
+		});
 		botonLimiteSalarial.setForeground(Color.WHITE);
 		botonLimiteSalarial.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		botonLimiteSalarial.setBackground(Color.BLUE);
@@ -94,6 +112,12 @@ public class PantallaDatosFranquicia extends JPanel {
 		add(botonLimiteSalarial, gbc_botonLimiteSalarial);
 
 		JButton btnNewButton_2 = new JButton("Ver los dorsales retirados del equipo");
+		btnNewButton_2.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("Dorsales Retirados");
+			}
+		});
 		btnNewButton_2.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		btnNewButton_2.setForeground(Color.WHITE);
 		btnNewButton_2.setBackground(Color.BLUE);
@@ -106,6 +130,12 @@ public class PantallaDatosFranquicia extends JPanel {
 		add(btnNewButton_2, gbc_btnNewButton_2);
 
 		JButton btnNewButton_5 = new JButton("Ver la plantilla");
+		btnNewButton_5.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				ventana.cambiarAPantalla("Plantilla");
+			}
+		});
 		btnNewButton_5.setForeground(Color.WHITE);
 		btnNewButton_5.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		btnNewButton_5.setBackground(Color.BLUE);
@@ -118,10 +148,7 @@ public class PantallaDatosFranquicia extends JPanel {
 		add(btnNewButton_5, gbc_btnNewButton_5);
 
 		JButton btnNewButton_6 = new JButton("Volver");
-		btnNewButton_6.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
+
 		btnNewButton_6.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
