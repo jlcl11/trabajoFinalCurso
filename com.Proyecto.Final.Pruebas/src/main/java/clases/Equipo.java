@@ -1,5 +1,6 @@
 package clases;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -84,18 +85,35 @@ public class Equipo extends ObjetoConNombre {
 	}
 
 	public Equipo(String text) throws SQLException {
-		Statement query=utilsDB.conectarBBDD();
-		if(query.executeUpdate("SELECT * FROM equipo WHERE nombre='"+text+"'")>0) {
-			
+		// esto es un constructor en la clase equipo
+		Statement smt = utilsDB.conectarBBDD();
+		// Inicializamos un ArrayList para devolver.
+
+		try {
+			ResultSet cursor = smt.executeQuery("SELECT * FROM equipo WHERE nombre='" + text + "';");
+			while (cursor.next()) {
+
+				this.setCiudadLocal(cursor.getString("ciudadLocal"));
+				this.setGM(cursor.getString("gm"));
+				this.setLimiteSalarial(cursor.getFloat("limitesalarial"));
+				this.setPropietario(cursor.getString("propietario"));
+				this.setNombre(cursor.getString("nombre"));
+			}
+		} catch (SQLException e) {
+			// Si la conuslta falla no hay nada que devolver.
+			e.printStackTrace();
+
 		}
+		// Si no hay usuarios en la tabla, va a devolver un arraylist vacio.
+		// Si la consulta fue erronea se devuelve un arraylist null, que son cosas
+		// distintas.
 		utilsDB.desconectarBBDD();
+
 	}
 
 	public Equipo() {
-		
+
 	}
-
-
 
 	public String getEstadio() {
 		return estadio;
@@ -183,6 +201,15 @@ public class Equipo extends ObjetoConNombre {
 
 	public void setPlayoffs_playoff_id(byte playoffs_playoff_id) {
 		this.playoffs_playoff_id = playoffs_playoff_id;
+	}
+
+	@Override
+	public String toString() {
+		return "Equipo [eq_id=" + eq_id + ", conferencia_id=" + conferencia_id + ", ciudadLocal=" + ciudadLocal
+				+ ", dorsalesJugadoresRetirados_id=" + dorsalesJugadoresRetirados_id + ", GM=" + GM
+				+ ", limiteSalarial=" + limiteSalarial + ", estadio=" + estadio + ", propietario=" + propietario
+				+ ", partidoAllStar_id=" + partidoAllStar_id + ", plantilla=" + plantilla + ", playoffs_playoff_id="
+				+ playoffs_playoff_id + "]";
 	}
 
 }

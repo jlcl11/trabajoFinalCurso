@@ -34,11 +34,11 @@ public class Main {
 	
 			String nombre="Hawks";
 			String gm="ciudadLocal";
-			System.out.println(funcionesUtiles.getDatosEquipo("Hawks").getCiudadLocal());
-		//	Ventana v = new Ventana();
+			//System.out.println(funcionesUtiles.getDatosEquipo("Hawks").getCiudadLocal());
+			Ventana v = new Ventana();
 		
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			// TODO Auto-generated catch block9
 			e.printStackTrace();
 		} catch (EquipoMalIntroduciodoException e) {
 			// TODO Auto-generated catch block

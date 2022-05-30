@@ -1093,7 +1093,7 @@ public class funcionesUtiles {
 
 	}
 
-	private static ArrayList<Jugador> getJugadores() {
+	private static ArrayList<Jugador> getJugadores() { //Esta es un public static ArrayList<Jugador> getActivos() en la clase Jugador
 		Statement smt = utilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
 		ArrayList<Jugador> ret = new ArrayList<Jugador>();
@@ -1141,7 +1141,7 @@ public class funcionesUtiles {
 		return ret;
 	}
 
-	public static ArrayList<Jugador> getJugadoresReitrados(String nombre) {
+	public static ArrayList<Jugador> getJugadoresReitrados(String nombre) {  //Esto es public static ArrayList<Jugador> getRetirados() en la clase Jugador
 		Statement smt = utilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
 		ArrayList<Jugador> ret = new ArrayList<Jugador>();
@@ -1172,7 +1172,7 @@ public class funcionesUtiles {
 		return ret;
 	}
 
-	public static ArrayList<Jugador> getPlantilla(String nombre) {
+	public static ArrayList<Jugador> getPlantilla(String nombre) {//Esto va en la clase equipo, sin argumento
 		Statement smt = utilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
 		ArrayList<Jugador> ret = new ArrayList<Jugador>();
@@ -1203,7 +1203,7 @@ public class funcionesUtiles {
 		return ret;
 	}
 
-	public static Equipo getDatosEquipo(String nombre) {
+	public static Equipo getDatosEquipo(String nombre) { //esto es un constructor en la clase equipo
 		Statement smt = utilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
 
@@ -1215,7 +1215,7 @@ public class funcionesUtiles {
 				actual.setCiudadLocal(cursor.getString("ciudadLocal"));
 				actual.setGM(cursor.getString("gm"));
 				actual.setLimiteSalarial(cursor.getFloat("limitesalarial"));
-				actual.setPropietario(cursor.getString("popietario"));
+				actual.setPropietario(cursor.getString("propietario"));
 				actual.setNombre(cursor.getString("nombre"));
 			}
 		} catch (SQLException e) {
@@ -1230,7 +1230,7 @@ public class funcionesUtiles {
 		return actual;
 	}
 
-	public static Jugador devolverMVP() {
+	public static Jugador devolverMVP() { //esto va en la clase liga
 
 		ArrayList<Jugador> jugadoresNormalesNBA = getJugadores();
 
@@ -1255,7 +1255,7 @@ public class funcionesUtiles {
 
 	}
 
-	public static Jugador devolverDPOY() {
+	public static Jugador devolverDPOY() {  //esto va en la clase liga
 
 		ArrayList<Jugador> jugadoresNormalesNBA = getJugadores();
 
@@ -1278,7 +1278,7 @@ public class funcionesUtiles {
 
 	}
 
-	public static Jugador devolverPremioAnotador() {
+	public static Jugador devolverPremioAnotador() {//esto va en liga
 
 		ArrayList<Jugador> jugadoresNormalesNBA = getJugadores();
 
@@ -1299,7 +1299,7 @@ public class funcionesUtiles {
 		return max_jugador;
 	}
 
-	public static void imprimeTicket() throws IOException {
+	public static void imprimeTicket() throws IOException { //esto va en liga
 
 		File archivo = new File("./ticket.txt");
 		if (archivo.exists()) {
@@ -1343,7 +1343,7 @@ public class funcionesUtiles {
 		escritor.close();
 	}
 
-	public static ArrayList<Jugador> getTitularesAllStar() {
+	public static ArrayList<Jugador> getTitularesAllStar() { //Esto va en equipoAllStar
 		ArrayList<Jugador> jugadores = funcionesUtiles.getJugadores();
 
 		Collections.sort(jugadores, new Comparator<Jugador>() {
@@ -1375,7 +1375,7 @@ public class funcionesUtiles {
 		return allStars;
 	}
 
-	public static ArrayList<Jugador> getJugadoresEquipo1() {
+	public static ArrayList<Jugador> getJugadoresEquipo1() {  //La funcionalidad de estas dos funciones debería estar dentro del constructor de partidoAllstar, que no va a necesitar argumentos, en todo caso la fecha
 		ArrayList<Jugador> jugadores = funcionesUtiles.getJugadores();
 
 		Collections.sort(jugadores, new Comparator<Jugador>() {
@@ -1410,7 +1410,7 @@ public class funcionesUtiles {
 		return allStarsEquipo1;
 	}
 
-	public static ArrayList<Jugador> getJugadoresEquipo2() {
+	public static ArrayList<Jugador> getJugadoresEquipo2() { //Esta debe morir
 		ArrayList<Jugador> jugadores = funcionesUtiles.getJugadores();
 
 		Collections.sort(jugadores, new Comparator<Jugador>() {
@@ -1445,7 +1445,7 @@ public class funcionesUtiles {
 		return allStarsEquipo2;
 	}
 
-	public static Jugador getAllStarMVP() {
+	public static Jugador getAllStarMVP() { //Esto va en clase partidoallstar
 		ArrayList<Jugador> jugadores = funcionesUtiles.getJugadores();
 
 		Collections.sort(jugadores, new Comparator<Jugador>() {
@@ -1478,7 +1478,7 @@ public class funcionesUtiles {
 		return maximo;
 	}
 
-	public static PartidoAllStar partidoAllStar() throws SQLException {
+	public static PartidoAllStar partidoAllStar() throws SQLException { //Esto es un constructor de la clase partidoAllStar
 
 		Random r = new Random();
 

@@ -14,6 +14,7 @@ import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.swing.JRadioButton;
 import javax.swing.ImageIcon;
@@ -24,10 +25,12 @@ import utils.funcionesUtiles;
 
 public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 	private Ventana ventana;
+	private ArrayList<JRadioButton> botonesEquipo;
 
 	public PantallaEscogerEquipoDatosFranquicia(final Ventana ventana) throws SQLException {
 		super();
 		this.ventana = ventana;
+		botonesEquipo=new ArrayList<JRadioButton>();
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -61,7 +64,9 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 
 		ButtonGroup grupoEquipos = new ButtonGroup();
 
-		JRadioButton escogerHawks = new JRadioButton("Hawks");
+		final JRadioButton escogerHawks = new JRadioButton("Hawks");
+		botonesEquipo.add(escogerHawks);
+
 		escogerHawks.setBackground(Color.WHITE);
 		escogerHawks.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		GridBagConstraints gbc_escogerHawks = new GridBagConstraints();
@@ -527,6 +532,18 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 		botonEquipoEscogido.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				for(byte i=0;i<botonesEquipo.size();i++) {
+					if(botonesEquipo.get(i).isSelected()) {
+						try {
+							ventana.miEquipo=new Equipo(botonesEquipo.get(i).getText());
+							System.out.println(ventana.miEquipo);
+							break;
+						} catch (SQLException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+					}
+				}
 				ventana.cambiarAPantalla("Datos Franquicia");
 			}
 		});
