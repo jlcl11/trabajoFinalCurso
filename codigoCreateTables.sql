@@ -13,13 +13,10 @@ CREATE TABLE equipo (
     eq_id INT AUTO_INCREMENT PRIMARY KEY,
     conferencia NUMERIC(2),
     ciudadlocal VARCHAR(200),
-    dorsalesretirados VARCHAR(255),
     gm VARCHAR(200),
     limitesalarial NUMERIC(6, 2),
-    estadio VARCHAR(200),
     propietario VARCHAR(200),
     partidoallstar_parta_id INT ,
-    jugadores VARCHAR(200),
     playoffs_playoff_id INT ,
     nombre VARCHAR(200)
 );
@@ -169,4 +166,3 @@ ALTER TABLE
 ADD
     CONSTRAINT rondaplayoff_playoffs_fk FOREIGN KEY (playoffs_playoff_id) REFERENCES playoffs (playoff_id);
     
-

@@ -55,7 +55,7 @@ public PantallaDorsalesRetirados(final Ventana ventana) {
 	scrollPane.setViewportView(listaTitulares);
 	listaTitulares.setLayout(new BoxLayout(listaTitulares, BoxLayout.Y_AXIS));
 
-	ArrayList<Jugador> todos = funcionesUtiles.getTitularesAllStar();
+	ArrayList<Jugador> todos = funcionesUtiles.getJugadoresReitrados(ventana.miEquipo.getNombre());
 	for (int i = 0; i < todos.size(); i++) {
 		listaTitulares.add(new ElementoListRetirados(ventana, todos.get(i)));
 	}

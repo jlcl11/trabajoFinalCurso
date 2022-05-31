@@ -12,60 +12,50 @@ public class Equipo extends ObjetoConNombre {
 	private byte eq_id;
 	private byte conferencia_id;
 	private String ciudadLocal;
-	private String dorsalesJugadoresRetirados_id;
 	private String GM;
 	private float limiteSalarial;
-	private String estadio;
 	private String propietario;
 	private byte partidoAllStar_id;
-	private String plantilla;
 	private byte playoffs_playoff_id;
 
-	public Equipo(String nombre, byte eq_id, byte conferencia_id, String ciudadLocal,
-			String dorsalesJugadoresRetirados_id, String gM, float limiteSalarial, String estadio, String propietario,
-			byte partidoAllStar_id, String plantilla, byte playoffs_playoff_id) throws SQLException {
+	public Equipo(String nombre, byte eq_id, byte conferencia_id, String ciudadLocal, String gM, float limiteSalarial,
+			String propietario, byte partidoAllStar_id, byte playoffs_playoff_id) throws SQLException {
 		super(nombre);
 
 		Statement query = utilsDB.conectarBBDD();
-		if (query.executeUpdate("INSERT INTO EQUIPO VALUES(" + eq_id + "," + conferencia_id + ",'" + ciudadLocal + "','"
-				+ dorsalesJugadoresRetirados_id + "','" + gM + "'," + limiteSalarial + ",'" + estadio + "','"
-				+ propietario + "'," + partidoAllStar_id + ",'" + plantilla + "'," + playoffs_playoff_id + ",'" + nombre
-				+ "');") > 0) {
+		if (query.executeUpdate("INSERT INTO EQUIPO VALUES( " + eq_id + " , " + conferencia_id + ",'" + gM + " ',"
+				+ limiteSalarial + ",'\r\n" + "				 " + propietario + "'," + partidoAllStar_id + ","
+				+ playoffs_playoff_id + ",'" + nombre + "\r\n" + "				');") > 0) {
 			this.eq_id = eq_id;
 			this.conferencia_id = conferencia_id;
 			this.ciudadLocal = ciudadLocal;
-			this.dorsalesJugadoresRetirados_id = dorsalesJugadoresRetirados_id;
 			GM = gM;
 			this.limiteSalarial = limiteSalarial;
-			this.estadio = estadio;
 			this.propietario = propietario;
 			this.partidoAllStar_id = partidoAllStar_id;
-			this.plantilla = plantilla;
 			this.playoffs_playoff_id = playoffs_playoff_id;
 		}
 		utilsDB.desconectarBBDD();
 	}
 
-	public Equipo(byte eq_id, String nombre, byte conferencia_id, String ciudadLocal,
-			String dorsalesJugadoresRetirados_id, String gM, float limiteSalarial, String estadio, String propietario,
-			String plantilla, byte playoffs_playoff_id) throws SQLException {
+	public Equipo(byte eq_id, String nombre, byte conferencia_id, String ciudadLocal, String gM, float limiteSalarial,
+			String propietario, byte playoffs_playoff_id) throws SQLException {
 		super(nombre);
 
 		Statement query = utilsDB.conectarBBDD();
 		if (query.executeUpdate(
-				"INSERT INTO equipo(eq_id,conferencia,ciudadlocal,dorsalesretirados,gm,limitesalarial,estadio,propietario,jugadores,nombre) \r\n"
-						+ "VALUES(" + eq_id + "," + conferencia_id + ",'" + ciudadLocal + "','"
-						+ dorsalesJugadoresRetirados_id + "','" + gM + "'," + limiteSalarial + ",'" + estadio + "','"
-						+ propietario + "','" + plantilla + "','" + nombre + "');") > 0) {
+				"INSERT INTO equipo(eq_id,conferencia,ciudadlocal,dorsalesretirados,gm,limitesalarial,estadio,propietario,jugadores,nombre)  VALUES( "
+						+ eq_id + " ," + conferencia_id + ", '" + ciudadLocal + "',\r\n" + "						 '"
+						+ gM + "'," + limiteSalarial + ",'" + propietario + "' , '" + nombre + "' );") > 0) {
 			this.eq_id = eq_id;
 			this.conferencia_id = conferencia_id;
 			this.ciudadLocal = ciudadLocal;
-			this.dorsalesJugadoresRetirados_id = dorsalesJugadoresRetirados_id;
+
 			GM = gM;
 			this.limiteSalarial = limiteSalarial;
-			this.estadio = estadio;
+
 			this.propietario = propietario;
-			this.plantilla = plantilla;
+
 			this.playoffs_playoff_id = playoffs_playoff_id;
 		}
 		utilsDB.desconectarBBDD();
@@ -115,14 +105,6 @@ public class Equipo extends ObjetoConNombre {
 
 	}
 
-	public String getEstadio() {
-		return estadio;
-	}
-
-	public void setEstadio(String estadio) {
-		this.estadio = estadio;
-	}
-
 	public byte getEq_id() {
 		return eq_id;
 	}
@@ -145,14 +127,6 @@ public class Equipo extends ObjetoConNombre {
 
 	public void setCiudadLocal(String ciudadLocal) {
 		this.ciudadLocal = ciudadLocal;
-	}
-
-	public String getDorsalesJugadoresRetirados_id() {
-		return dorsalesJugadoresRetirados_id;
-	}
-
-	public void setDorsalesJugadoresRetirados_id(String dorsalesJugadoresRetirados_id) {
-		this.dorsalesJugadoresRetirados_id = dorsalesJugadoresRetirados_id;
 	}
 
 	public String getGM() {
@@ -187,14 +161,6 @@ public class Equipo extends ObjetoConNombre {
 		this.partidoAllStar_id = partidoAllStar_id;
 	}
 
-	public String getPlantilla() {
-		return plantilla;
-	}
-
-	public void setPlantilla(String plantilla) {
-		this.plantilla = plantilla;
-	}
-
 	public byte getPlayoffs_playoff_id() {
 		return playoffs_playoff_id;
 	}
@@ -206,10 +172,8 @@ public class Equipo extends ObjetoConNombre {
 	@Override
 	public String toString() {
 		return "Equipo [eq_id=" + eq_id + ", conferencia_id=" + conferencia_id + ", ciudadLocal=" + ciudadLocal
-				+ ", dorsalesJugadoresRetirados_id=" + dorsalesJugadoresRetirados_id + ", GM=" + GM
-				+ ", limiteSalarial=" + limiteSalarial + ", estadio=" + estadio + ", propietario=" + propietario
-				+ ", partidoAllStar_id=" + partidoAllStar_id + ", plantilla=" + plantilla + ", playoffs_playoff_id="
-				+ playoffs_playoff_id + "]";
+				+ ", GM=" + GM + ", limiteSalarial=" + limiteSalarial + ", propietario=" + propietario
+				+ ", partidoAllStar_id=" + partidoAllStar_id + ", playoffs_playoff_id=" + playoffs_playoff_id + "]";
 	}
 
 }

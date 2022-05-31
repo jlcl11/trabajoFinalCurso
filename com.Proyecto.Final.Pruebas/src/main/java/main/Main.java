@@ -30,20 +30,19 @@ public class Main {
 
 		try {
 			funcionesUtiles.borrarDatosTablas();
-			funcionesUtiles.declararObjetos();
-	
-			String nombre="Hawks";
-			String gm="ciudadLocal";
-			//System.out.println(funcionesUtiles.getDatosEquipo("Hawks").getCiudadLocal());
+			//funcionesUtiles.devolverEquiposPlayoffEstePrimeraRonda();
+			//funcionesUtiles.devolverEquiposPlayoffOestePrimeraRonda();
+		//	funcionesUtiles.declararObjetos();
+			
 			Ventana v = new Ventana();
-		
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block9
 			e.printStackTrace();
-		} catch (EquipoMalIntroduciodoException e) {
+		} /*catch (EquipoMalIntroduciodoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 
 	}
 

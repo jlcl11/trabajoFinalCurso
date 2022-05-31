@@ -17,6 +17,7 @@ public class Ventana extends JFrame {
 	private HashMap<String, JPanel> pantallas;
 
 	public Ventana() throws SQLException {
+		miEquipo = new Equipo("Hawks");
 		pantallas = new HashMap<String, JPanel>();
 		pantallas.put("inicial", new PantallaInicial(this));
 		pantallas.put("primerMenu", new PantallaInicioPrimerMenu(this));
@@ -56,6 +57,7 @@ public class Ventana extends JFrame {
 		this.setResizable(false);
 		this.setVisible(true);
 	}
+
 
 	public void cambiarAPantalla(String nombrePantalla) {
 		Iterator it = this.pantallas.values().iterator();

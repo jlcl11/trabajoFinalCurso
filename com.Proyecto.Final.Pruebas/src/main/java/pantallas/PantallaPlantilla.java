@@ -32,7 +32,7 @@ public PantallaPlantilla(final Ventana ventana) {
 	gridBagLayout.rowWeights = new double[] { 0.0, 1.0, 0.0, Double.MIN_VALUE };
 	setLayout(gridBagLayout);
 
-	JLabel titulo = new JLabel("Dorsales Retirados");
+	JLabel titulo = new JLabel("PLANTILLA");
 	titulo.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
 	GridBagConstraints gbc_titulo = new GridBagConstraints();
 	gbc_titulo.gridwidth = 4;
@@ -54,7 +54,7 @@ public PantallaPlantilla(final Ventana ventana) {
 	scrollPane.setViewportView(listaTitulares);
 	listaTitulares.setLayout(new BoxLayout(listaTitulares, BoxLayout.Y_AXIS));
 
-	ArrayList<Jugador> todos = funcionesUtiles.getTitularesAllStar();
+	ArrayList<Jugador> todos = funcionesUtiles.getPlantilla(ventana.miEquipo.getNombre());
 	for (int i = 0; i < todos.size(); i++) {
 		listaTitulares.add(new ElementoListaJugador(ventana, todos.get(i)));
 	}
