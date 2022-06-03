@@ -55,8 +55,8 @@ public class FuncionesUtiles {
 		RondaPlayoffs ronda3 = new RondaPlayoffs("Finales de conferencia", (byte) 3, (byte) 2, (byte) 1);
 		RondaPlayoffs ronda4 = new RondaPlayoffs("Finales NBA", (byte) 4, (byte) 2, (byte) 1);
 
-		FuncionesUtiles.devolverEquiposPlayoffEstePrimeraRonda();
-		FuncionesUtiles.devolverEquiposPlayoffOestePrimeraRonda();
+		FuncionesUtiles.declararEquiposEste();
+		FuncionesUtiles.declararEquiposOeste();
 
 		Jugador bobCousy = new Jugador((short) 1, "Bob", "Cousy", (byte) 9, (byte) 1);
 		Jugador tedTurner = new Jugador((short) 2, "Ted", "Turner", (byte) 17, (byte) 1);
@@ -1385,8 +1385,7 @@ public class FuncionesUtiles {
 		return allStar;
 	}
 
-	public static ArrayList<Equipo> devolverEquiposPlayoffOestePrimeraRonda() throws SQLException {
-		ArrayList<Equipo> confOestePlayoffs = new ArrayList<Equipo>();
+	private static void declararEquiposOeste() throws SQLException {
 
 		Equipo mavs = new Equipo((byte) 16, "Mavericks", (byte) 2, "Dallas", "Nico Harrison", 109.4f, "Mark Cuban",
 				(byte) 1);
@@ -1447,132 +1446,73 @@ public class FuncionesUtiles {
 		Equipo jazz = new Equipo((byte) 30, "Jazz", (byte) 2, "Utah", "Justin Zanik", 109.4f, "Ryan Smith", (byte) 1);
 		Estadio vivintArena = new Estadio((byte) 30, "Vivint Arena", (short) 18306, (byte) 30);
 
-		confOestePlayoffs.add(mavs);
-		confOestePlayoffs.add(nuggets);
-		confOestePlayoffs.add(warriors);
-		confOestePlayoffs.add(rockets);
-		confOestePlayoffs.add(clippers);
-		confOestePlayoffs.add(lakers);
-		confOestePlayoffs.add(wolves);
-		confOestePlayoffs.add(pelicans);
-		confOestePlayoffs.add(grizzlies);
-		confOestePlayoffs.add(okc);
-		confOestePlayoffs.add(suns);
-		confOestePlayoffs.add(blazers);
-		confOestePlayoffs.add(kings);
-		confOestePlayoffs.add(spurs);
-		confOestePlayoffs.add(jazz);
-
-		ArrayList<Equipo> equiposASegundaRonda = new ArrayList<Equipo>();
-		for (byte i = 0; i < confOestePlayoffs.size() - 8; i++) {
-			Random r = new Random();
-			confOestePlayoffs.remove(r.nextInt((confOestePlayoffs.size()) + 1));
-		}
-
-		return confOestePlayoffs;
-
 	}
 
-	public static ArrayList<Equipo> devolverEquiposPlayoffEstePrimeraRonda() throws SQLException {
-		ArrayList<Equipo> eqConE = new ArrayList<Equipo>();
+	private static void declararEquiposEste() throws SQLException {
+
 		Equipo hawks = new Equipo((byte) 1, "Hawks", (byte) 1, "Atlanta", "Anthony Ressler", 109.6f, "Travis Schlenk",
 				(byte) 1);
 		Estadio stateFarmArena = new Estadio((byte) 1, "State Farm Arena", (short) 16600, (byte) 1);
-
-		eqConE.add(hawks);
 
 		Equipo celtics = new Equipo((byte) 2, "Celtics", (byte) 1, "Boston", "Brad Stevens", 109.6f,
 				"Boston basketball partners", (byte) 1);
 		Estadio tdGarden = new Estadio((byte) 2, "TD Garden", (short) 18624, (byte) 2);
 
-		eqConE.add(celtics);
-
 		Equipo nets = new Equipo((byte) 3, "Nets", (byte) 1, "Brooklyn", "Sean marks", 109.4f, "Joseph Tsai", (byte) 1);
 		Estadio barclaysCenter = new Estadio((byte) 3, "Barclays Center", (short) 17732, (byte) 3);
-
-		eqConE.add(nets);
 
 		Equipo hornets = new Equipo((byte) 4, "Hornets", (byte) 1, "Charlotte", "Mitch Kupchak", 109.4f,
 				"Michael Jordan", (byte) 1);
 		Estadio spectrumCenter = new Estadio((byte) 4, "Spectrum center", (short) 19077, (byte) 4);
 
-		eqConE.add(hornets);
-
 		Equipo bulls = new Equipo((byte) 5, "Bulls", (byte) 1, "Chicago", "Marc Eversley", 109.4f, "Jerry Reinsdorf",
 				(byte) 1);
 		Estadio unitedCenter = new Estadio((byte) 5, "United center", (short) 20917, (byte) 5);
-
-		eqConE.add(bulls);
 
 		Equipo cavs = new Equipo((byte) 6, "Cavaliers", (byte) 1, "Cleveland", "Mike Gansey", 109.4f, "Dan Gilbert",
 				(byte) 1);
 		Estadio rocketMortageFieldHouse = new Estadio((byte) 6, "Rocket Mortgage FieldHouse", (short) 19432, (byte) 6);
 
-		eqConE.add(cavs);
-
 		Equipo pistons = new Equipo((byte) 7, "Pistons", (byte) 1, "Detroit", "Troy Weaver", 109.4f, "Tom Gores",
 				(byte) 1);
 		Estadio littkeCaesarsArena = new Estadio((byte) 7, "Little Caesar Arena", (short) 20332, (byte) 7);
-
-		eqConE.add(pistons);
 
 		Equipo pacers = new Equipo((byte) 8, "Pacers", (byte) 1, "Indiana", "Chad Buchanan", 109.4f, "Herbert Simon",
 				(byte) 1);
 		Estadio bankersLifeFieldHouse = new Estadio((byte) 8, "Bankers Life FieldHouse", (short) 17923, (byte) 8);
 
-		eqConE.add(pacers);
-
 		Equipo heat = new Equipo((byte) 9, "Heat", (byte) 1, "Miami", "Andy Elisburg", 109.4f, "Micky Arison",
 				(byte) 1);
 		Estadio ftxArena = new Estadio((byte) 9, "FTX Arena", (short) 19600, (byte) 9);
-
-		eqConE.add(heat);
 
 		Equipo bucks = new Equipo((byte) 10, "Bucks", (byte) 1, "Milwaukee", "Jon Horst", 109.4f, "Los hermanos Edens",
 				(byte) 1);
 		Estadio fiservForum = new Estadio((byte) 10, "Fiserv Forum", (short) 17341, (byte) 10);
 
-		eqConE.add(bucks);
-
 		Equipo knicks = new Equipo((byte) 11, "Knicks", (byte) 1, "New York", "Scott Perry", 109.4f, "James L Dolan",
 				(byte) 1);
 		Estadio madisonSquareGarde = new Estadio((byte) 11, "Madison Square Garden", (short) 19812, (byte) 11);
-
-		eqConE.add(knicks);
 
 		Equipo magic = new Equipo((byte) 12, "Magic", (byte) 1, "Orlando", "John Hammond", 109.4f, "Richard DeVos",
 				(byte) 1);
 		Estadio amwayCenter = new Estadio((byte) 12, "Amway Center", (short) 18846, (byte) 12);
 
-		eqConE.add(magic);
-
 		Equipo sixers = new Equipo((byte) 13, "76ers", (byte) 1, "Philladelphia", "Elton Brand", 109.4f, "Josh Harris",
 				(byte) 1);
 		Estadio wellsFargoCenter = new Estadio((byte) 13, "Wells Fargo Center", (short) 20478, (byte) 13);
-
-		eqConE.add(sixers);
 
 		Equipo raptors = new Equipo((byte) 14, "Raptors", (byte) 1, "Toronto", "Bobby Webster", 109.4f,
 				"Maple Leaf Sports & Entertainment", (byte) 1);
 		Estadio scotiaBankArena = new Estadio((byte) 14, "Scotia Bank Arena", (short) 19800, (byte) 14);
 
-		eqConE.add(raptors);
-
 		Equipo wizards = new Equipo((byte) 15, "Wizards", (byte) 1, "Washinton", "Tommy Sheppard", 109.4f,
 				"Ted Leonsis", (byte) 1);
 		Estadio capitalOneArena = new Estadio((byte) 15, "Capital One Arena", (short) 20356, (byte) 15);
 
-		eqConE.add(raptors);
-
 		ArrayList<Equipo> aSegundaRonda = new ArrayList<Equipo>();
 
-		for (byte i = 0; i < eqConE.size(); i++) {
-			aSegundaRonda.add(new Equipo(eqConE.get(i).getNombre()));
-
-		}
-
-		return aSegundaRonda;
 	}
+
 	public static ArrayList<Equipo> getEquiposEste() {
 		Statement smt = utilsDB.conectarBBDD();
 
@@ -1602,12 +1542,47 @@ public class FuncionesUtiles {
 		utilsDB.desconectarBBDD();
 		return ret;
 	}
-	public static void prueba() throws SQLException {
-		Equipo s=new Equipo();
-		ArrayList<Equipo> prueba= FuncionesUtiles.getEquiposEste();
-		for(byte i=0;i<prueba.size();i++) {
-			System.out.println(prueba.get(i));
+
+	public static ArrayList<Equipo> getEquiposOeste() {
+		Statement smt = utilsDB.conectarBBDD();
+
+		ArrayList<Equipo> ret = new ArrayList<Equipo>();
+
+		try {
+			ResultSet cursor = smt.executeQuery("select * from equipo where conferencia=2 ");
+			while (cursor.next()) {
+				Equipo actual = new Equipo();
+
+				actual.setEq_id(cursor.getByte("eq_id"));
+				actual.setNombre(cursor.getString("nombre"));
+				actual.setCiudadLocal(cursor.getString("ciudadlocal"));
+				actual.setGM(cursor.getString("gm"));
+				actual.setLimiteSalarial(cursor.getFloat("limitesalarial"));
+				actual.setPropietario(cursor.getString("propietario"));
+				actual.setConferencia_id(cursor.getByte("conferencia"));
+
+				ret.add(actual);
+			}
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+			return null;
 		}
+
+		utilsDB.desconectarBBDD();
+		return ret;
+	}
+
+	public static ArrayList<Equipo> devolverPrimeraRondaEste() {
+		ArrayList<Equipo> ret = FuncionesUtiles.getEquiposEste();
+
+		return ret;
+	}
+
+	public static ArrayList<Equipo> devolverPrimeraRondaOeste() {
+		ArrayList<Equipo> ret = FuncionesUtiles.getEquiposOeste();
+
+		return ret;
 	}
 
 }

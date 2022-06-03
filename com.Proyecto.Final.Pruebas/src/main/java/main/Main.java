@@ -31,11 +31,9 @@ public class Main {
 		try {
 			FuncionesUtiles.borrarDatosTablas();
 			FuncionesUtiles.declararObjetos();
-			FuncionesUtiles.prueba();
-		//	Ventana v = new Ventana();
-			
-				FuncionesUtiles.prueba();
-			
+
+			// Ventana v = new Ventana();
+
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block9
 			e.printStackTrace();
