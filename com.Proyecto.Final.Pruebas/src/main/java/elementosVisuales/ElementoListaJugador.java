@@ -76,7 +76,7 @@ public class ElementoListaJugador extends JPanel {
 		gbc_lblNewLabel.gridy = 1;
 		add(lblNewLabel, gbc_lblNewLabel);
 
-		JLabel lblNewLabel_1 = new JLabel(this.jugador.getApellido() + " APG");
+		JLabel lblNewLabel_1 = new JLabel(this.jugador.getAPG() + " APG");
 		lblNewLabel_1.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
 		gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 5);

@@ -1,6 +1,9 @@
 package pantallas;
 
 import javax.swing.JPanel;
+
+import clases.Estadio;
+
 import java.awt.GridBagLayout;
 import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
@@ -24,7 +27,9 @@ public PantallaVerEstadio(final Ventana ventana) {
 	gridBagLayout.rowWeights = new double[]{0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
 	setLayout(gridBagLayout);
 	
-	JLabel lblNewLabel = new JLabel("El estadio de los xxxx es el xxxx");
+	Estadio estadio=new Estadio(ventana.miEquipo.getEq_id());
+	
+	JLabel lblNewLabel = new JLabel("El estadio de los "+ ventana.miEquipo.getNombre()+" es el "+ estadio.getNombre()+"");
 	lblNewLabel.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
 	GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 	gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);

@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import superClases.Jugador;
 import superClases.ObjetoConNombre;
 import utils.utilsDB;
 
@@ -44,7 +45,9 @@ public class Equipo extends ObjetoConNombre {
 
 		Statement query = utilsDB.conectarBBDD();
 		if (query.executeUpdate(
-				"INSERT INTO equipo(nombre,eq_id,conferencia,ciudadlocal,gm,limitesalarial,propietario,playoffs_playoff_id) VALUES('"+nombre+"',"+eq_id+","+conferencia_id+",'"+ciudadLocal+"','"+gM+"',"+limiteSalarial+",'"+propietario+"',"+playoffs_playoff_id+");") > 0) {
+				"INSERT INTO equipo(nombre,eq_id,conferencia,ciudadlocal,gm,limitesalarial,propietario,playoffs_playoff_id) VALUES('"
+						+ nombre + "'," + eq_id + "," + conferencia_id + ",'" + ciudadLocal + "','" + gM + "',"
+						+ limiteSalarial + ",'" + propietario + "'," + playoffs_playoff_id + ");") > 0) {
 			this.eq_id = eq_id;
 			this.conferencia_id = conferencia_id;
 			this.ciudadLocal = ciudadLocal;
@@ -86,6 +89,7 @@ public class Equipo extends ObjetoConNombre {
 				this.setLimiteSalarial(cursor.getFloat("limitesalarial"));
 				this.setPropietario(cursor.getString("propietario"));
 				this.setNombre(cursor.getString("nombre"));
+				// this.setEq_id(cursor.getByte(conferencia_id));
 			}
 		} catch (SQLException e) {
 			// Si la conuslta falla no hay nada que devolver.
@@ -102,6 +106,8 @@ public class Equipo extends ObjetoConNombre {
 	public Equipo() {
 
 	}
+
+	
 
 	public byte getEq_id() {
 		return eq_id;

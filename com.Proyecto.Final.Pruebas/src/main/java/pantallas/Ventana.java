@@ -17,7 +17,7 @@ public class Ventana extends JFrame {
 	private HashMap<String, JPanel> pantallas;
 
 	public Ventana() throws SQLException {
-		miEquipo = new Equipo("Hawks");
+		miEquipo = new Equipo("Lakers");
 		pantallas = new HashMap<String, JPanel>();
 		pantallas.put("inicial", new PantallaInicial(this));
 		pantallas.put("primerMenu", new PantallaInicioPrimerMenu(this));
@@ -41,11 +41,11 @@ public class Ventana extends JFrame {
 		this.setTitle("JuegoIndie2kNBA.exe");
 		this.setIconImage(new ImageIcon("./imagenes/logoPrograma.png").getImage());
 		this.setAlwaysOnTop(true);
-		/*
-		 * setCursor(Toolkit.getDefaultToolkit().createCustomCursor( new
-		 * ImageIcon("./imagenes/logoPrograma.png").getImage(), new Point(0, 0),
-		 * "custom cursor"));
-		 */
+		
+		  setCursor(Toolkit.getDefaultToolkit().createCustomCursor( new
+		  ImageIcon("./imagenes/logoPrograma.png").getImage(), new Point(0, 0),
+		  "custom cursor"));
+		 
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setBackground(getBackground());
 

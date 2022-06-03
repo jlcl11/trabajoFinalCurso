@@ -27,7 +27,7 @@ public PantallaPropietario(final Ventana ventana) {
 	gridBagLayout.rowWeights = new double[]{0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
 	setLayout(gridBagLayout);
 	
-	JLabel lblNewLabel = new JLabel("El estadio de los xxxx es el xxxx"+ ventana.miEquipo.getPropietario());
+	JLabel lblNewLabel = new JLabel("El estadio de los xxxx es "+ this.ventana.miEquipo.getPropietario());
 	lblNewLabel.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
 	GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 	gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);

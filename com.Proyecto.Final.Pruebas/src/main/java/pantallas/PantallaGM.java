@@ -25,7 +25,7 @@ public class PantallaGM extends JPanel {
 		gridBagLayout.rowWeights = new double[]{0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
 		
-		JLabel lblNewLabel = new JLabel("El estadio de los xxxx es el xxxx");
+		JLabel lblNewLabel = new JLabel("El estadio de los"+ this.ventana.miEquipo.getNombre() +"es el xxxx");
 		lblNewLabel.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);

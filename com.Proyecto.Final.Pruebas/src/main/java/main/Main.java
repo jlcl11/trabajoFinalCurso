@@ -31,16 +31,15 @@ public class Main {
 		try {
 			FuncionesUtiles.borrarDatosTablas();
 			FuncionesUtiles.declararObjetos();
+			FuncionesUtiles.prueba();
+		//	Ventana v = new Ventana();
 			
-			Ventana v = new Ventana();
+				FuncionesUtiles.prueba();
 			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block9
 			e.printStackTrace();
-		} /*catch (EquipoMalIntroduciodoException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/ catch (EquipoMalIntroduciodoException e) {
+		} catch (EquipoMalIntroduciodoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

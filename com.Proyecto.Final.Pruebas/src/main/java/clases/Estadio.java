@@ -1,5 +1,6 @@
 package clases;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -22,6 +23,26 @@ public class Estadio extends ObjetoConNombre {
 			this.equipo_id = equipo_id;
 		}
 		utilsDB.desconectarBBDD();
+	}
+
+	public Estadio(byte equipo_eq_id) {
+		Statement smt = utilsDB.conectarBBDD();
+
+		try {
+			ResultSet cursor = smt.executeQuery("SELECT * FROM estadio WHERE equipo_eq_id='" + equipo_eq_id + "';");
+			while (cursor.next()) {
+
+				this.setNombre(cursor.getString("nombre"));
+				this.setCapacidad(cursor.getShort("capacidad"));
+			}
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+		}
+
+		utilsDB.desconectarBBDD();
+
 	}
 
 	public byte getEstadio_id() {
