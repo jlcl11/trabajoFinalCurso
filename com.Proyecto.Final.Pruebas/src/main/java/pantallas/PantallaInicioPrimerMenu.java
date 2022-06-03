@@ -15,7 +15,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import utils.funcionesUtiles;
+import utils.FuncionesUtiles;
 
 import java.awt.GridBagLayout;
 import javax.swing.ImageIcon;
@@ -139,7 +139,7 @@ public class PantallaInicioPrimerMenu extends JPanel {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				try {
-					funcionesUtiles.imprimeTicket();
+					FuncionesUtiles.imprimeTicket();
 					JOptionPane.showMessageDialog(ventana, "Ticket impreso con éxito", ventana.getName(),
 							JOptionPane.PLAIN_MESSAGE);
 				} catch (IOException e1) {

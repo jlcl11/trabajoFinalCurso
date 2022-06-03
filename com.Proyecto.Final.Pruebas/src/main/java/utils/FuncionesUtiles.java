@@ -23,7 +23,7 @@ import enums.Valores;
 import exceptions.EquipoMalIntroduciodoException;
 import superClases.Jugador;
 
-public class funcionesUtiles {
+public class FuncionesUtiles {
 	public static void borrarDatosTablas() throws SQLException {
 		Statement query = utilsDB.conectarBBDD();
 		query.executeUpdate("DELETE FROM partidos;");
@@ -55,6 +55,8 @@ public class funcionesUtiles {
 		RondaPlayoffs ronda3 = new RondaPlayoffs("Finales de conferencia", (byte) 3, (byte) 2, (byte) 1);
 		RondaPlayoffs ronda4 = new RondaPlayoffs("Finales NBA", (byte) 4, (byte) 2, (byte) 1);
 
+		FuncionesUtiles.devolverEquiposPlayoffEstePrimeraRonda();
+		FuncionesUtiles.devolverEquiposPlayoffOestePrimeraRonda();
 		
 		Jugador bobCousy = new Jugador((short) 1, "Bob", "Cousy", (byte) 9, (byte) 1);
 		Jugador tedTurner = new Jugador((short) 2, "Ted", "Turner", (byte) 17, (byte) 1);
@@ -342,6 +344,8 @@ public class funcionesUtiles {
 		Jugador wesUnseld = new Jugador((short) 206, "Westley Sissel", "Unseld", (byte) 41, "Wes Unseld", (byte) 15);
 		Jugador philChenier = new Jugador((short) 207, "Philip ", "Chenier ", (byte) 45, "Phil Chenier", (byte) 15);
 
+		
+		
 		Jugador traeYoung = new Jugador((short) 208, "Trae", "Young", (byte) 11, "Ice Trae", Posicion.BASE, 8.32f,
 				(byte) 2, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.B,
@@ -1194,30 +1198,30 @@ public class funcionesUtiles {
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                    EL MVP DE LA TEMPORADA HA SIDO                       |\n");
-		escritor.write("" + funcionesUtiles.devolverMVP().getNombre() + " "
-				+ funcionesUtiles.devolverMVP().getApellido() + " ha anotado " + funcionesUtiles.devolverMVP().getPPG()
-				+ " puntos por partido \n,ha repartido " + funcionesUtiles.devolverMVP().getAPG()
-				+ " asistencias por partido,ha recogido " + funcionesUtiles.devolverMVP().getRBG()
-				+ " rebotes por partido,ha robado " + funcionesUtiles.devolverMVP().getSPG() + " y ha taponado "
-				+ funcionesUtiles.devolverMVP().getBPG() + " balones por partido" + "\n");
+		escritor.write("" + FuncionesUtiles.devolverMVP().getNombre() + " "
+				+ FuncionesUtiles.devolverMVP().getApellido() + " ha anotado " + FuncionesUtiles.devolverMVP().getPPG()
+				+ " puntos por partido \n,ha repartido " + FuncionesUtiles.devolverMVP().getAPG()
+				+ " asistencias por partido,ha recogido " + FuncionesUtiles.devolverMVP().getRBG()
+				+ " rebotes por partido,ha robado " + FuncionesUtiles.devolverMVP().getSPG() + " y ha taponado "
+				+ FuncionesUtiles.devolverMVP().getBPG() + " balones por partido" + "\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                    EL DEFENSOR  DE LA TEMPORADA HA SIDO                 |\n");
 		escritor.write(
-				"" + funcionesUtiles.devolverDPOY().getNombre() + " " + funcionesUtiles.devolverDPOY().getApellido()
-						+ " ha anotado " + funcionesUtiles.devolverDPOY().getRBG() + " rebotes por partido,ha robado "
-						+ funcionesUtiles.devolverDPOY().getSPG() + " balones por partido y ha taponado "
-						+ funcionesUtiles.devolverDPOY().getBPG() + " balones por partido" + "\n");
+				"" + FuncionesUtiles.devolverDPOY().getNombre() + " " + FuncionesUtiles.devolverDPOY().getApellido()
+						+ " ha anotado " + FuncionesUtiles.devolverDPOY().getRBG() + " rebotes por partido,ha robado "
+						+ FuncionesUtiles.devolverDPOY().getSPG() + " balones por partido y ha taponado "
+						+ FuncionesUtiles.devolverDPOY().getBPG() + " balones por partido" + "\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|            EL PREMIO DEL MEJOR ANOTADOR DE LA TEMPORADA HA SIDO         |\n");
-		escritor.write("" + funcionesUtiles.devolverPremioAnotador().getNombre() + " "
-				+ funcionesUtiles.devolverPremioAnotador().getApellido() + " ha anotado "
-				+ funcionesUtiles.devolverPremioAnotador().getPPG() + " puntos por partido" + "\n");
+		escritor.write("" + FuncionesUtiles.devolverPremioAnotador().getNombre() + " "
+				+ FuncionesUtiles.devolverPremioAnotador().getApellido() + " ha anotado "
+				+ FuncionesUtiles.devolverPremioAnotador().getPPG() + " puntos por partido" + "\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
@@ -1227,7 +1231,7 @@ public class funcionesUtiles {
 	}
 
 	public static ArrayList<Jugador> getTitularesAllStar() { // Esto va en equipoAllStar
-		ArrayList<Jugador> jugadores = funcionesUtiles.getJugadores();
+		ArrayList<Jugador> jugadores = FuncionesUtiles.getJugadores();
 
 		Collections.sort(jugadores, new Comparator<Jugador>() {
 
@@ -1261,7 +1265,7 @@ public class funcionesUtiles {
 	public static ArrayList<Jugador> getJugadoresEquipo1() { // La funcionalidad de estas dos funciones debería estar
 																// dentro del constructor de partidoAllstar, que no va a
 																// necesitar argumentos, en todo caso la fecha
-		ArrayList<Jugador> jugadores = funcionesUtiles.getJugadores();
+		ArrayList<Jugador> jugadores = FuncionesUtiles.getJugadores();
 
 		Collections.sort(jugadores, new Comparator<Jugador>() {
 
@@ -1296,7 +1300,7 @@ public class funcionesUtiles {
 	}
 
 	public static ArrayList<Jugador> getJugadoresEquipo2() { // Esta debe morir
-		ArrayList<Jugador> jugadores = funcionesUtiles.getJugadores();
+		ArrayList<Jugador> jugadores = FuncionesUtiles.getJugadores();
 
 		Collections.sort(jugadores, new Comparator<Jugador>() {
 
@@ -1331,7 +1335,7 @@ public class funcionesUtiles {
 	}
 
 	public static Jugador getAllStarMVP() { // Esto va en clase partidoallstar
-		ArrayList<Jugador> jugadores = funcionesUtiles.getJugadores();
+		ArrayList<Jugador> jugadores = FuncionesUtiles.getJugadores();
 
 		Collections.sort(jugadores, new Comparator<Jugador>() {
 
@@ -1498,7 +1502,7 @@ public class funcionesUtiles {
 		Estadio bankersLifeFieldHouse = new Estadio((byte) 8, "Bankers Life FieldHouse", (short) 17923, (byte) 8);
 
 		Equipo heat = new Equipo((byte) 9, "Heat", (byte) 2, "Miami", "Andy Elisburg", 109.4f,
-				 "Micky Arison",  (byte) 9);
+				 "Micky Arison",  (byte) 1);
 		Estadio ftxArena = new Estadio((byte) 9, "FTX Arena", (short) 19600, (byte) 9);
 
 		Equipo bucks = new Equipo((byte) 10, "Bucks", (byte) 1, "Milwaukee",  "Jon Horst", 109.4f,

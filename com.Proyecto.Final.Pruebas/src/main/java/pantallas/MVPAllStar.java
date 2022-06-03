@@ -10,7 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-import utils.funcionesUtiles;
+import utils.FuncionesUtiles;
 
 public class MVPAllStar extends JFrame {
 	public MVPAllStar() {
@@ -22,7 +22,7 @@ public class MVPAllStar extends JFrame {
 		getContentPane().setLayout(gridBagLayout);
 
 		JLabel nombre = new JLabel(
-				funcionesUtiles.getAllStarMVP().getNombre() + " " + funcionesUtiles.getAllStarMVP().getApellido());
+				FuncionesUtiles.getAllStarMVP().getNombre() + " " + FuncionesUtiles.getAllStarMVP().getApellido());
 		nombre.setHorizontalAlignment(SwingConstants.CENTER);
 		nombre.setForeground(Color.BLACK);
 		nombre.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -32,9 +32,9 @@ public class MVPAllStar extends JFrame {
 		gbc_nums.gridy = 3;
 		getContentPane().add(nombre, gbc_nums);
 
-		JLabel stats = new JLabel(funcionesUtiles.getAllStarMVP().getPPG() + " Puntos "
-				+ funcionesUtiles.getAllStarMVP().getAPG() + " Asistencias" + funcionesUtiles.getAllStarMVP().getRBG() + " Rebotes "
-				+ funcionesUtiles.getAllStarMVP().getSPG() + " robos " + funcionesUtiles.getAllStarMVP().getBPG() + " tapones");
+		JLabel stats = new JLabel(FuncionesUtiles.getAllStarMVP().getPPG() + " Puntos "
+				+ FuncionesUtiles.getAllStarMVP().getAPG() + " Asistencias" + FuncionesUtiles.getAllStarMVP().getRBG() + " Rebotes "
+				+ FuncionesUtiles.getAllStarMVP().getSPG() + " robos " + FuncionesUtiles.getAllStarMVP().getBPG() + " tapones");
 		stats.setForeground(Color.BLACK);
 		stats.setHorizontalAlignment(SwingConstants.CENTER);
 		stats.setFont(new Font("Segoe UI Semibold", Font.BOLD, 15));

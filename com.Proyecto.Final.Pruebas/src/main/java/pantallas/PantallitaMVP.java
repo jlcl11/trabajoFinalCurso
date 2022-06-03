@@ -10,12 +10,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-import utils.funcionesUtiles;
+import utils.FuncionesUtiles;
 import javax.swing.ImageIcon;
 
-public class pantallitaMVP extends JFrame {
+public class PantallitaMVP extends JFrame {
 
-	public pantallitaMVP() {
+	public PantallitaMVP() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -24,7 +24,7 @@ public class pantallitaMVP extends JFrame {
 		getContentPane().setLayout(gridBagLayout);
 
 		JLabel nombre = new JLabel(
-				funcionesUtiles.devolverMVP().getNombre() + " " + funcionesUtiles.devolverMVP().getApellido());
+				FuncionesUtiles.devolverMVP().getNombre() + " " + FuncionesUtiles.devolverMVP().getApellido());
 		nombre.setHorizontalAlignment(SwingConstants.CENTER);
 		nombre.setForeground(Color.WHITE);
 		nombre.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -34,9 +34,9 @@ public class pantallitaMVP extends JFrame {
 		gbc_nums.gridy = 1;
 		getContentPane().add(nombre, gbc_nums);
 
-		JLabel stats = new JLabel(funcionesUtiles.devolverMVP().getPPG() + " PPG "
-				+ funcionesUtiles.devolverMVP().getAPG() + " APG " + funcionesUtiles.devolverMVP().getRBG() + " RBG "
-				+ funcionesUtiles.devolverMVP().getSPG() + " SPG " + funcionesUtiles.devolverMVP().getBPG() + " BPG");
+		JLabel stats = new JLabel(FuncionesUtiles.devolverMVP().getPPG() + " PPG "
+				+ FuncionesUtiles.devolverMVP().getAPG() + " APG " + FuncionesUtiles.devolverMVP().getRBG() + " RBG "
+				+ FuncionesUtiles.devolverMVP().getSPG() + " SPG " + FuncionesUtiles.devolverMVP().getBPG() + " BPG");
 		stats.setForeground(Color.WHITE);
 		stats.setHorizontalAlignment(SwingConstants.CENTER);
 		stats.setFont(new Font("Segoe UI Semibold", Font.BOLD, 15));

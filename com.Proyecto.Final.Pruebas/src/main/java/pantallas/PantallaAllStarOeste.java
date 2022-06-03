@@ -18,12 +18,12 @@ import javax.swing.SwingConstants;
 
 import elementosVisuales.ElementoListaJugador;
 import superClases.Jugador;
-import utils.funcionesUtiles;
+import utils.FuncionesUtiles;
 
-public class pantallaAllStarOeste extends JPanel {
+public class PantallaAllStarOeste extends JPanel {
 	private Ventana ventana;
 
-	public pantallaAllStarOeste(final Ventana ventana) {
+	public PantallaAllStarOeste(final Ventana ventana) {
 		this.ventana = ventana;
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0 };
@@ -54,7 +54,7 @@ public class pantallaAllStarOeste extends JPanel {
 		scrollPane.setViewportView(listaTitulares);
 		listaTitulares.setLayout(new BoxLayout(listaTitulares, BoxLayout.Y_AXIS));
 
-		ArrayList<Jugador> todos = funcionesUtiles.getJugadoresEquipo2();
+		ArrayList<Jugador> todos = FuncionesUtiles.getJugadoresEquipo2();
 		for (int i = 0; i < todos.size(); i++) {
 			listaTitulares.add(new ElementoListaJugador(ventana, todos.get(i)));
 		}

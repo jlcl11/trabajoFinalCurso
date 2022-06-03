@@ -13,7 +13,7 @@ import javax.swing.SwingConstants;
 import elementosVisuales.ElementoListaJugador;
 
 import superClases.Jugador;
-import utils.funcionesUtiles;
+import utils.FuncionesUtiles;
 import javax.swing.JButton;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
@@ -56,7 +56,7 @@ public class PantallaTitularesAllStar extends JPanel {
 		scrollPane.setViewportView(listaTitulares);
 		listaTitulares.setLayout(new BoxLayout(listaTitulares, BoxLayout.Y_AXIS));
 
-		ArrayList<Jugador> todos = funcionesUtiles.getTitularesAllStar();
+		ArrayList<Jugador> todos = FuncionesUtiles.getTitularesAllStar();
 		for (int i = 0; i < todos.size(); i++) {
 			listaTitulares.add(new ElementoListaJugador(ventana, todos.get(i)));
 		}

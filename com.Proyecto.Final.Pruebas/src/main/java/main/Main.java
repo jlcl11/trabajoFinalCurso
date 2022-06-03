@@ -21,7 +21,7 @@ import exceptions.EquipoMalIntroduciodoException;
 import pantallas.PantallaEscogerEquipoDatosFranquicia;
 import pantallas.Ventana;
 import superClases.Jugador;
-import utils.funcionesUtiles;
+import utils.FuncionesUtiles;
 import utils.utilsDB;
 
 public class Main {
@@ -29,10 +29,8 @@ public class Main {
 	public static void main(String[] args) {
 
 		try {
-			funcionesUtiles.borrarDatosTablas();
-			//funcionesUtiles.devolverEquiposPlayoffEstePrimeraRonda();
-			//funcionesUtiles.devolverEquiposPlayoffOestePrimeraRonda();
-		//	funcionesUtiles.declararObjetos();
+			FuncionesUtiles.borrarDatosTablas();
+			FuncionesUtiles.declararObjetos();
 			
 			Ventana v = new Ventana();
 			
@@ -42,7 +40,10 @@ public class Main {
 		} /*catch (EquipoMalIntroduciodoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}*/ catch (EquipoMalIntroduciodoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 

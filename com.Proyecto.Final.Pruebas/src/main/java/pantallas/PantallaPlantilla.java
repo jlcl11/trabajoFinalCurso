@@ -18,7 +18,7 @@ import javax.swing.SwingConstants;
 
 import elementosVisuales.ElementoListaJugador;
 import superClases.Jugador;
-import utils.funcionesUtiles;
+import utils.FuncionesUtiles;
 
 public class PantallaPlantilla extends JPanel{
 private Ventana ventana;
@@ -54,7 +54,7 @@ public PantallaPlantilla(final Ventana ventana) {
 	scrollPane.setViewportView(listaTitulares);
 	listaTitulares.setLayout(new BoxLayout(listaTitulares, BoxLayout.Y_AXIS));
 
-	ArrayList<Jugador> todos = funcionesUtiles.getPlantilla(ventana.miEquipo.getNombre());
+	ArrayList<Jugador> todos = FuncionesUtiles.getPlantilla(ventana.miEquipo.getNombre());
 	for (int i = 0; i < todos.size(); i++) {
 		listaTitulares.add(new ElementoListaJugador(ventana, todos.get(i)));
 	}

@@ -21,7 +21,7 @@ import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 
 import clases.Equipo;
-import utils.funcionesUtiles;
+import utils.FuncionesUtiles;
 
 public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 	private Ventana ventana;

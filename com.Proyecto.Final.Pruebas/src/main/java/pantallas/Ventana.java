@@ -28,7 +28,7 @@ public class Ventana extends JFrame {
 		pantallas.put("Playoffs", new PantallaPlayOffs(this));
 		pantallas.put("titularesAllStar", new PantallaTitularesAllStar(this));
 		pantallas.put("AllStars Este", new PantallaAllStarEste(this));
-		pantallas.put("AllStar Oeste", new pantallaAllStarOeste(this));
+		pantallas.put("AllStar Oeste", new PantallaAllStarOeste(this));
 		pantallas.put("Dorsales Retirados", new PantallaDorsalesRetirados(this));
 		pantallas.put("GM", new PantallaGM(this));
 		pantallas.put("Limite", new PantallaLimiteSalarial(this));

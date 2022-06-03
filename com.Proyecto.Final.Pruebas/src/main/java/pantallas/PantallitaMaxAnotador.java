@@ -10,10 +10,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-import utils.funcionesUtiles;
+import utils.FuncionesUtiles;
 
-public class pantallitaMaxAnotador extends JFrame{
-	public pantallitaMaxAnotador() {
+public class PantallitaMaxAnotador extends JFrame{
+	public PantallitaMaxAnotador() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0, 0};
 		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0};
@@ -21,7 +21,7 @@ public class pantallitaMaxAnotador extends JFrame{
 		gridBagLayout.rowWeights = new double[]{0.0, 1.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
 		getContentPane().setLayout(gridBagLayout);
 		
-		JLabel nombre = new JLabel(funcionesUtiles.devolverPremioAnotador().getNombre() + " " + funcionesUtiles.devolverPremioAnotador().getApellido());
+		JLabel nombre = new JLabel(FuncionesUtiles.devolverPremioAnotador().getNombre() + " " + FuncionesUtiles.devolverPremioAnotador().getApellido());
 		nombre.setHorizontalAlignment(SwingConstants.CENTER);
 		nombre.setForeground(Color.BLACK);
 		nombre.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -31,7 +31,7 @@ public class pantallitaMaxAnotador extends JFrame{
 		gbc_nums.gridy = 3;
 		getContentPane().add(nombre, gbc_nums);
 		
-		JLabel stats = new JLabel(funcionesUtiles.devolverPremioAnotador().getPPG()+" PPG");
+		JLabel stats = new JLabel(FuncionesUtiles.devolverPremioAnotador().getPPG()+" PPG");
 		stats.setForeground(Color.BLACK);
 		stats.setHorizontalAlignment(SwingConstants.CENTER);
 		stats.setFont(new Font("Segoe UI Semibold", Font.BOLD, 15));

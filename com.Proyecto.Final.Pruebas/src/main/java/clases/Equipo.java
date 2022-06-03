@@ -44,9 +44,7 @@ public class Equipo extends ObjetoConNombre {
 
 		Statement query = utilsDB.conectarBBDD();
 		if (query.executeUpdate(
-				"INSERT INTO equipo(eq_id,conferencia,ciudadlocal,dorsalesretirados,gm,limitesalarial,estadio,propietario,jugadores,nombre)  VALUES( "
-						+ eq_id + " ," + conferencia_id + ", '" + ciudadLocal + "',\r\n" + "						 '"
-						+ gM + "'," + limiteSalarial + ",'" + propietario + "' , '" + nombre + "' );") > 0) {
+				"INSERT INTO equipo(nombre,eq_id,conferencia,ciudadlocal,gm,limitesalarial,propietario,playoffs_playoff_id) VALUES('"+nombre+"',"+eq_id+","+conferencia_id+",'"+ciudadLocal+"','"+gM+"',"+limiteSalarial+",'"+propietario+"',"+playoffs_playoff_id+");") > 0) {
 			this.eq_id = eq_id;
 			this.conferencia_id = conferencia_id;
 			this.ciudadLocal = ciudadLocal;

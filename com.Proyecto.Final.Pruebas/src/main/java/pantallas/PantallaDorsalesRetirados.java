@@ -19,7 +19,7 @@ import javax.swing.SwingConstants;
 import elementosVisuales.ElementoListRetirados;
 import elementosVisuales.ElementoListaJugador;
 import superClases.Jugador;
-import utils.funcionesUtiles;
+import utils.FuncionesUtiles;
 
 public class PantallaDorsalesRetirados extends JPanel{
 private Ventana ventana;
@@ -55,8 +55,8 @@ public PantallaDorsalesRetirados(final Ventana ventana) {
 	scrollPane.setViewportView(listaTitulares);
 	listaTitulares.setLayout(new BoxLayout(listaTitulares, BoxLayout.Y_AXIS));
 
-	ArrayList<Jugador> todos = funcionesUtiles.getJugadoresReitrados(ventana.miEquipo.getNombre());
-	for (int i = 0; i < todos.size(); i++) {
+	ArrayList<Jugador> todos = FuncionesUtiles.getJugadoresReitrados(ventana.miEquipo.getNombre());
+	for (int i = 0; i < todos.size(); i++) {  
 		listaTitulares.add(new ElementoListRetirados(ventana, todos.get(i)));
 	}
 

@@ -42,7 +42,7 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 		botonMVP.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				pantallitaMVP p=new pantallitaMVP();
+				PantallitaMVP p=new PantallitaMVP();
 				p.setVisible(true);
 				p.setAlwaysOnTop(true);
 				p.setSize(630,805);
@@ -65,7 +65,7 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
-				pantallitaDPOY p=new pantallitaDPOY();
+				PantallitaDPOY p=new PantallitaDPOY();
 				p.setVisible(true);
 				p.setAlwaysOnTop(true);
 				p.setSize(630,805);
@@ -89,7 +89,7 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
-				pantallitaMaxAnotador p=new pantallitaMaxAnotador();
+				PantallitaMaxAnotador p=new PantallitaMaxAnotador();
 				p.setVisible(true);
 				p.setAlwaysOnTop(true);
 				p.setSize(630,805);

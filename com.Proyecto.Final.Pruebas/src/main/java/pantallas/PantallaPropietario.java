@@ -12,7 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import utils.funcionesUtiles;
+import utils.FuncionesUtiles;
 
 public class PantallaPropietario extends JPanel{
 private Ventana ventana;
