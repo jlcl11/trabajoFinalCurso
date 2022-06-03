@@ -32,7 +32,7 @@ public class Main {
 			FuncionesUtiles.borrarDatosTablas();
 			FuncionesUtiles.declararObjetos();
 
-			// Ventana v = new Ventana();
+			 Ventana v = new Ventana();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block9
