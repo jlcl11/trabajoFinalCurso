@@ -107,8 +107,6 @@ public class Equipo extends ObjetoConNombre {
 
 	}
 
-	
-
 	public byte getEq_id() {
 		return eq_id;
 	}
@@ -175,9 +173,7 @@ public class Equipo extends ObjetoConNombre {
 
 	@Override
 	public String toString() {
-		return "Equipo [eq_id=" + eq_id + ", conferencia_id=" + conferencia_id + ", ciudadLocal=" + ciudadLocal
-				+ ", GM=" + GM + ", limiteSalarial=" + limiteSalarial + ", propietario=" + propietario
-				+ ", partidoAllStar_id=" + partidoAllStar_id + ", playoffs_playoff_id=" + playoffs_playoff_id + "]";
+		return super.toString();
 	}
 
 }

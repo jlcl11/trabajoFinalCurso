@@ -1574,14 +1574,26 @@ public class FuncionesUtiles {
 	}
 
 	public static ArrayList<Equipo> devolverPrimeraRondaEste() {
-		ArrayList<Equipo> ret = FuncionesUtiles.getEquiposEste();
+		ArrayList<Equipo> todos=FuncionesUtiles.getEquiposEste();
+		ArrayList<Equipo> ret = new ArrayList<Equipo>();
+		int limite=todos.size()-1;
+		int [] indicesAleatorios=new Random().ints(0,limite).distinct().limit(8).toArray();
 
+		for(byte i=0;i<indicesAleatorios.length;i++) {
+			ret.add(todos.get(indicesAleatorios[i]));
+		}
 		return ret;
 	}
 
 	public static ArrayList<Equipo> devolverPrimeraRondaOeste() {
-		ArrayList<Equipo> ret = FuncionesUtiles.getEquiposOeste();
+		ArrayList<Equipo> todos=FuncionesUtiles.getEquiposOeste();
+		ArrayList<Equipo> ret = new ArrayList<Equipo>();
+		int limite=todos.size()-1;
+		int [] indicesAleatorios=new Random().ints(0,limite).distinct().limit(8).toArray();
 
+		for(byte i=0;i<indicesAleatorios.length;i++) {
+			ret.add(todos.get(indicesAleatorios[i]));
+		}
 		return ret;
 	}
 

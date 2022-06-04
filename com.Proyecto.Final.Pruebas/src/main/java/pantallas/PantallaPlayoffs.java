@@ -69,7 +69,7 @@ public class PantallaPlayoffs extends JPanel {
 		scrollPanePrimeraRondaOeste.setViewportView(panelPrimeraRondaOeste);
 		panelPrimeraRondaOeste.setLayout(new BoxLayout(panelPrimeraRondaOeste, BoxLayout.Y_AXIS));
 		
-		ArrayList<Equipo> PrimeraRondaOeste = FuncionesUtiles.getEquiposOeste();
+		ArrayList<Equipo> PrimeraRondaOeste = FuncionesUtiles.devolverPrimeraRondaOeste();
 		for (int i = 0; i < PrimeraRondaOeste.size(); i++) {
 			panelPrimeraRondaOeste.add(new ElementoListEquipos(ventana, PrimeraRondaOeste.get(i)));
 		}
@@ -146,7 +146,7 @@ public class PantallaPlayoffs extends JPanel {
 		JPanel panelPrimeraRondaEste = new JPanel();
 		scrollPanePrimeraRondaEste.setViewportView(panelPrimeraRondaEste);
 		panelPrimeraRondaEste.setLayout(new BoxLayout(panelPrimeraRondaEste, BoxLayout.Y_AXIS));
-		ArrayList<Equipo> PrimeraRondaEste = FuncionesUtiles.getEquiposEste();
+		ArrayList<Equipo> PrimeraRondaEste = FuncionesUtiles.devolverPrimeraRondaEste();
 		for (int i = 0; i < PrimeraRondaEste.size(); i++) {
 			panelPrimeraRondaEste.add(new ElementoListEquipos(ventana, PrimeraRondaEste.get(i)));
 		}
