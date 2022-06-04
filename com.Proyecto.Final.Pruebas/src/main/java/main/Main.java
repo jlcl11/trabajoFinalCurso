@@ -32,8 +32,6 @@ public class Main {
 			FuncionesUtiles.borrarDatosTablas();
 			FuncionesUtiles.declararObjetos();
 
-		
-			
 			Ventana v = new Ventana();
 
 		} catch (SQLException e) {

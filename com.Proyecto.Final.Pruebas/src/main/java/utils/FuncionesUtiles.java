@@ -1574,26 +1574,95 @@ public class FuncionesUtiles {
 	}
 
 	public static ArrayList<Equipo> devolverPrimeraRondaEste() {
-		ArrayList<Equipo> todos=FuncionesUtiles.getEquiposEste();
+		ArrayList<Equipo> todos = FuncionesUtiles.getEquiposEste();
 		ArrayList<Equipo> ret = new ArrayList<Equipo>();
-		int limite=todos.size()-1;
-		int [] indicesAleatorios=new Random().ints(0,limite).distinct().limit(8).toArray();
+		int limite = todos.size() - 1;
+		int[] indicesAleatorios = new Random().ints(0, limite).distinct().limit(8).toArray();
 
-		for(byte i=0;i<indicesAleatorios.length;i++) {
+		for (byte i = 0; i < indicesAleatorios.length; i++) {
 			ret.add(todos.get(indicesAleatorios[i]));
 		}
 		return ret;
 	}
 
 	public static ArrayList<Equipo> devolverPrimeraRondaOeste() {
-		ArrayList<Equipo> todos=FuncionesUtiles.getEquiposOeste();
+		ArrayList<Equipo> todos = FuncionesUtiles.getEquiposOeste();
 		ArrayList<Equipo> ret = new ArrayList<Equipo>();
-		int limite=todos.size()-1;
-		int [] indicesAleatorios=new Random().ints(0,limite).distinct().limit(8).toArray();
+		int limite = todos.size() - 1;
+		int[] indicesAleatorios = new Random().ints(0, limite).distinct().limit(8).toArray();
 
-		for(byte i=0;i<indicesAleatorios.length;i++) {
+		for (byte i = 0; i < indicesAleatorios.length; i++) {
 			ret.add(todos.get(indicesAleatorios[i]));
 		}
+		return ret;
+	}
+
+	public static ArrayList<Equipo> devolverSegundaRondaEste() {
+		ArrayList<Equipo> todos = FuncionesUtiles.devolverPrimeraRondaEste();
+		ArrayList<Equipo> ret = new ArrayList<Equipo>();
+		int limite = todos.size() - 1;
+		int[] indicesAleatorios = new Random().ints(0, limite).distinct().limit(4).toArray();
+
+		for (byte i = 0; i < indicesAleatorios.length; i++) {
+			ret.add(todos.get(indicesAleatorios[i]));
+		}
+		return ret;
+	}
+
+	public static ArrayList<Equipo> devolverSegundaRondaOeste() {
+		ArrayList<Equipo> todos = FuncionesUtiles.devolverPrimeraRondaOeste();
+		ArrayList<Equipo> ret = new ArrayList<Equipo>();
+		int limite = todos.size() - 1;
+		int[] indicesAleatorios = new Random().ints(0, limite).distinct().limit(4).toArray();
+
+		for (byte i = 0; i < indicesAleatorios.length; i++) {
+			ret.add(todos.get(indicesAleatorios[i]));
+		}
+		return ret;
+	}
+
+	public static ArrayList<Equipo> devolverFinalEste() {
+		ArrayList<Equipo> todos = FuncionesUtiles.devolverSegundaRondaEste();
+		ArrayList<Equipo> ret = new ArrayList<Equipo>();
+		int limite = todos.size() - 1;
+		int[] indicesAleatorios = new Random().ints(0, limite).distinct().limit(2).toArray();
+
+		for (byte i = 0; i < indicesAleatorios.length; i++) {
+			ret.add(todos.get(indicesAleatorios[i]));
+		}
+		return ret;
+	}
+
+	public static ArrayList<Equipo> devolverFinalOeste() {
+		ArrayList<Equipo> todos = FuncionesUtiles.devolverSegundaRondaOeste();
+		ArrayList<Equipo> ret = new ArrayList<Equipo>();
+		int limite = todos.size() - 1;
+		int[] indicesAleatorios = new Random().ints(0, limite).distinct().limit(2).toArray();
+
+		for (byte i = 0; i < indicesAleatorios.length; i++) {
+			ret.add(todos.get(indicesAleatorios[i]));
+		}
+		return ret;
+	}
+
+	public static Equipo devolverFinalistaEste() {
+		ArrayList<Equipo> todos = FuncionesUtiles.devolverFinalEste();
+		Random r = new Random();
+
+		return todos.get(r.nextInt(1));
+	}
+
+	public static Equipo devolverFinalistaOeste() {
+		ArrayList<Equipo> todos = FuncionesUtiles.devolverFinalOeste();
+		Random r = new Random();
+
+		return todos.get(r.nextInt(1));
+	}
+
+	public static ArrayList<Equipo> finalistasParaMostrarlos() {
+		ArrayList<Equipo> ret = new ArrayList<Equipo>();
+		ret.add(devolverFinalistaEste());
+		ret.add(devolverFinalistaOeste());
 		return ret;
 	}
 

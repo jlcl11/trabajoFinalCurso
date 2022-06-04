@@ -25,9 +25,9 @@ public class ElementoListEquipos extends JPanel{
 		this.equipo = equipo;
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0, 0};
-		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0};
+		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0};
 		gridBagLayout.columnWeights = new double[]{1.0, 1.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 1.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
 		
 		JLabel ciudadEquipo = new JLabel(this.equipo.getCiudadLocal());
@@ -36,7 +36,7 @@ public class ElementoListEquipos extends JPanel{
 		gbc_ciudadEquipo.anchor = GridBagConstraints.EAST;
 		gbc_ciudadEquipo.insets = new Insets(0, 0, 5, 5);
 		gbc_ciudadEquipo.gridx = 0;
-		gbc_ciudadEquipo.gridy = 3;
+		gbc_ciudadEquipo.gridy = 2;
 		add(ciudadEquipo, gbc_ciudadEquipo);
 		
 		JLabel equipoNombre = new JLabel(this.equipo.getNombre());
@@ -45,7 +45,7 @@ public class ElementoListEquipos extends JPanel{
 		gbc_equipoNombre.anchor = GridBagConstraints.WEST;
 		gbc_equipoNombre.insets = new Insets(0, 0, 5, 0);
 		gbc_equipoNombre.gridx = 1;
-		gbc_equipoNombre.gridy = 3;
+		gbc_equipoNombre.gridy = 2;
 		add(equipoNombre, gbc_equipoNombre);
 	}
 	
