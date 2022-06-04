@@ -1,25 +1,28 @@
 package elementosVisuales;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+
+import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.SoftBevelBorder;
 
 import clases.Equipo;
 import pantallas.Ventana;
-import superClases.Jugador;
-import java.awt.GridBagLayout;
-import javax.swing.JLabel;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import java.awt.Font;
-import javax.swing.border.SoftBevelBorder;
-import javax.swing.border.BevelBorder;
-import java.awt.Color;
 
-public class ElementoListEquipos extends JPanel{
+public class ElementoListEquiposFinal extends JPanel {
+
+
 	private Ventana ventana;
 	private Equipo equipo;
 	
-	public ElementoListEquipos(Ventana ventana, Equipo equipo) {
+	public ElementoListEquiposFinal(Ventana ventana, Equipo equipo) {
 		super();
+		setBackground(new Color(51, 204, 0));
 		setBorder(new SoftBevelBorder(BevelBorder.RAISED, Color.BLACK, Color.BLACK, Color.BLACK, Color.BLACK));
 		this.ventana = ventana;
 		this.equipo = equipo;
@@ -31,6 +34,8 @@ public class ElementoListEquipos extends JPanel{
 		setLayout(gridBagLayout);
 		
 		JLabel ciudadEquipo = new JLabel(this.equipo.getCiudadLocal());
+		ciudadEquipo.setBackground(Color.GRAY);
+		ciudadEquipo.setForeground(Color.WHITE);
 		ciudadEquipo.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 15));
 		GridBagConstraints gbc_ciudadEquipo = new GridBagConstraints();
 		gbc_ciudadEquipo.anchor = GridBagConstraints.EAST;
@@ -40,6 +45,8 @@ public class ElementoListEquipos extends JPanel{
 		add(ciudadEquipo, gbc_ciudadEquipo);
 		
 		JLabel equipoNombre = new JLabel(this.equipo.getNombre());
+		equipoNombre.setBackground(Color.GRAY);
+		equipoNombre.setForeground(Color.WHITE);
 		equipoNombre.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 15));
 		GridBagConstraints gbc_equipoNombre = new GridBagConstraints();
 		gbc_equipoNombre.anchor = GridBagConstraints.WEST;
@@ -50,4 +57,8 @@ public class ElementoListEquipos extends JPanel{
 	}
 	
 	
+
+
+
+
 }

@@ -16,7 +16,7 @@ public class Ventana extends JFrame {
 	protected Equipo miEquipo;
 	private HashMap<String, JPanel> pantallas;
 
-	public Ventana() throws SQLException {
+	public Ventana() throws SQLException, InterruptedException {
 		miEquipo = new Equipo("Lakers");
 		pantallas = new HashMap<String, JPanel>();
 		pantallas.put("inicial", new PantallaInicial(this));
