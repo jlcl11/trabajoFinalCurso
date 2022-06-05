@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import exceptions.SetterEquipoNoFuncionaAsiException;
+import exceptions.SetterJugadorNoFuncionaAsiException;
 import superClases.ObjetoConNombre;
 import utils.UtilsDB;
 
@@ -75,9 +77,8 @@ public class Equipo extends ObjetoConNombre {
 	}
 
 	public Equipo(String text) throws SQLException {
-		// esto es un constructor en la clase equipo
+
 		Statement smt = UtilsDB.conectarBBDD();
-		// Inicializamos un ArrayList para devolver.
 
 		try {
 			ResultSet cursor = smt.executeQuery("SELECT * FROM equipo WHERE nombre='" + text + "';");
@@ -88,16 +89,17 @@ public class Equipo extends ObjetoConNombre {
 				this.setLimiteSalarial(cursor.getFloat("limitesalarial"));
 				this.setPropietario(cursor.getString("propietario"));
 				this.setNombre(cursor.getString("nombre"));
-				// this.setEq_id(cursor.getByte(conferencia_id));
+				this.setEq_id(cursor.getByte("eq_id"));
 			}
 		} catch (SQLException e) {
-			// Si la conuslta falla no hay nada que devolver.
+
 			e.printStackTrace();
 
+		} catch (SetterEquipoNoFuncionaAsiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		// Si no hay usuarios en la tabla, va a devolver un arraylist vacio.
-		// Si la consulta fue erronea se devuelve un arraylist null, que son cosas
-		// distintas.
+
 		UtilsDB.desconectarBBDD();
 
 	}
@@ -110,14 +112,13 @@ public class Equipo extends ObjetoConNombre {
 		return eq_id;
 	}
 
-	public void setEq_id(byte eq_id) throws SQLException {
-		Statement smt = UtilsDB.conectarBBDD();
+	public void setEq_id(byte eq_id) throws SetterEquipoNoFuncionaAsiException {
 
-		if (smt.executeUpdate(
-				"UPDATE equipo SET liga_conferencias = " + eq_id + "WHERE eq_id=" + this.eq_id + ";") > 0) {
+		if (eq_id >= 0) {
 			this.eq_id = eq_id;
+		} else {
+			throw new SetterEquipoNoFuncionaAsiException("No puede ser negativo");
 		}
-		UtilsDB.desconectarBBDD();
 
 	}
 
@@ -125,15 +126,13 @@ public class Equipo extends ObjetoConNombre {
 		return conferencia_id;
 	}
 
-	public void setConferencia_id(byte conferencia_id) throws SQLException {
+	public void setConferencia_id(byte conferencia_id) throws SetterEquipoNoFuncionaAsiException {
 
-		Statement smt = UtilsDB.conectarBBDD();
-
-		if (smt.executeUpdate(
-				"UPDATE equipo SET conferencia_id = " + conferencia_id + "WHERE eq_id=" + this.eq_id + ";") > 0) {
+		if (conferencia_id >= 0) {
 			this.conferencia_id = conferencia_id;
+		} else {
+			throw new SetterEquipoNoFuncionaAsiException("No puede ser negativo");
 		}
-		UtilsDB.desconectarBBDD();
 
 	}
 
@@ -141,42 +140,39 @@ public class Equipo extends ObjetoConNombre {
 		return ciudadLocal;
 	}
 
-	public void setCiudadLocal(String ciudadLocal) throws SQLException {
-		Statement smt = UtilsDB.conectarBBDD();
+	public void setCiudadLocal(String ciudadLocal) throws SetterEquipoNoFuncionaAsiException {
 
-		if (smt.executeUpdate(
-				"UPDATE equipo set ciudadLocal='" + ciudadLocal + "' WHERE eq_id=" + this.eq_id + ";") > 0) {
+		if (!ciudadLocal.isBlank()) {
 			this.ciudadLocal = ciudadLocal;
+		} else {
+			throw new SetterEquipoNoFuncionaAsiException("No puede estar vacío");
 		}
-		UtilsDB.desconectarBBDD();
-
 	}
 
 	public String getGM() {
 		return GM;
 	}
 
-	public void setGM(String gM) throws SQLException {
-		Statement smt = UtilsDB.conectarBBDD();
+	public void setGM(String gM) throws SetterEquipoNoFuncionaAsiException {
 
-		if (smt.executeUpdate("UPDATE equipo set GM='" + GM + "' WHERE eq_id=" + this.eq_id + ";") > 0) {
+		if (!gM.isBlank()) {
 			this.GM = gM;
+		} else {
+			throw new SetterEquipoNoFuncionaAsiException("No puede estar vacío");
 		}
-		UtilsDB.desconectarBBDD();
 	}
 
 	public float getLimiteSalarial() {
 		return limiteSalarial;
 	}
 
-	public void setLimiteSalarial(float limiteSalarial) throws SQLException {
-		Statement smt = UtilsDB.conectarBBDD();
+	public void setLimiteSalarial(float limiteSalarial) throws SetterEquipoNoFuncionaAsiException {
 
-		if (smt.executeUpdate(
-				"UPDATE equipo SET limiteSalarial = " + limiteSalarial + "WHERE eq_id=" + this.eq_id + ";") > 0) {
+		if (limiteSalarial >= 0) {
 			this.limiteSalarial = limiteSalarial;
+		} else {
+			throw new SetterEquipoNoFuncionaAsiException("No puede ser negativo");
 		}
-		UtilsDB.desconectarBBDD();
 
 	}
 
@@ -184,43 +180,39 @@ public class Equipo extends ObjetoConNombre {
 		return propietario;
 	}
 
-	public void setPropietario(String propietario) throws SQLException {
-		Statement smt = UtilsDB.conectarBBDD();
+	public void setPropietario(String propietario) throws SetterEquipoNoFuncionaAsiException {
 
-		if (smt.executeUpdate(
-				"UPDATE equipo set propietario='" + propietario + "' WHERE eq_id=" + this.eq_id + ";") > 0) {
+		if (!propietario.isBlank()) {
 			this.propietario = propietario;
+		} else {
+			throw new SetterEquipoNoFuncionaAsiException("No puede estar vacío");
 		}
-		UtilsDB.desconectarBBDD();
-		this.propietario = propietario;
 	}
 
 	public byte getPartidoAllStar_id() {
 		return partidoAllStar_id;
 	}
 
-	public void setPartidoAllStar_id(byte partidoAllStar_id) throws SQLException {
-		Statement smt = UtilsDB.conectarBBDD();
+	public void setPartidoAllStar_id(byte partidoAllStar_id) throws SetterEquipoNoFuncionaAsiException {
 
-		if (smt.executeUpdate(
-				"UPDATE equipo SET partidoAllStar_id = " + partidoAllStar_id + "WHERE eq_id=" + this.eq_id + ";") > 0) {
+		if (partidoAllStar_id >= 0) {
 			this.partidoAllStar_id = partidoAllStar_id;
+		} else {
+			throw new SetterEquipoNoFuncionaAsiException("No puede ser negativo");
 		}
-		UtilsDB.desconectarBBDD();
 	}
 
 	public byte getPlayoffs_playoff_id() {
 		return playoffs_playoff_id;
 	}
 
-	public void setPlayoffs_playoff_id(byte playoffs_playoff_id) throws SQLException {
-		Statement smt = UtilsDB.conectarBBDD();
+	public void setPlayoffs_playoff_id(byte playoffs_playoff_id) throws SetterEquipoNoFuncionaAsiException {
 
-		if (smt.executeUpdate("UPDATE equipo SET playoffs_playoff_id = " + playoffs_playoff_id + "WHERE eq_id="
-				+ this.eq_id + ";") > 0) {
+		if (playoffs_playoff_id >= 0) {
 			this.playoffs_playoff_id = playoffs_playoff_id;
+		} else {
+			throw new SetterEquipoNoFuncionaAsiException("No puede ser negativo");
 		}
-		UtilsDB.desconectarBBDD();
 
 	}
 

@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import exceptions.CapacidadImposibleException;
 import superClases.ObjetoConNombre;
 import utils.UtilsDB;
 
@@ -39,6 +40,9 @@ public class Estadio extends ObjetoConNombre {
 
 			e.printStackTrace();
 
+		} catch (CapacidadImposibleException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 		UtilsDB.desconectarBBDD();
@@ -64,14 +68,14 @@ public class Estadio extends ObjetoConNombre {
 		return capacidad;
 	}
 
-	public void setCapacidad(short capacidad) throws SQLException {
-		Statement smt = UtilsDB.conectarBBDD();
+	public void setCapacidad(short capacidad) throws SQLException, CapacidadImposibleException {
 
-		if (smt.executeUpdate(
-				"UPDATE estadio SET capacidad = " + capacidad + "WHERE eq_id=" + this.estadio_id + ";") > 0) {
+		if (capacidad > 15000 && capacidad < 22000) {
 			this.capacidad = capacidad;
+		} else {
+			throw new CapacidadImposibleException("No ningún estadio de esa capacidad");
 		}
-		UtilsDB.desconectarBBDD();
+
 	}
 
 	public byte getEquipo_id() {

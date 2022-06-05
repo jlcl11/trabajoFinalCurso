@@ -19,6 +19,7 @@ import clases.Partidos;
 import clases.Playoff;
 import clases.RondaPlayoffs;
 import exceptions.EquipoMalIntroduciodoException;
+import exceptions.JugadorMalIntroduciodoException;
 import pantallas.PantallaEscogerEquipoDatosFranquicia;
 import pantallas.Ventana;
 import utils.FuncionesUtiles;
@@ -41,6 +42,9 @@ public class Main {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (JugadorMalIntroduciodoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

@@ -22,6 +22,9 @@ import clases.RondaPlayoffs;
 import enums.Posicion;
 import enums.Valores;
 import exceptions.EquipoMalIntroduciodoException;
+import exceptions.JugadorMalIntroduciodoException;
+import exceptions.SetterEquipoNoFuncionaAsiException;
+import exceptions.SetterJugadorNoFuncionaAsiException;
 
 public class FuncionesUtiles {
 	public static void borrarDatosTablas() throws SQLException {
@@ -40,7 +43,7 @@ public class FuncionesUtiles {
 		UtilsDB.desconectarBBDD();
 	}
 
-	public static void declararObjetos() throws SQLException, EquipoMalIntroduciodoException {
+	public static void declararObjetos() throws SQLException, EquipoMalIntroduciodoException, JugadorMalIntroduciodoException {
 		Random r = new Random();
 
 		Liga liga = new Liga((byte) 1);
@@ -1019,6 +1022,9 @@ public class FuncionesUtiles {
 			// Si la conuslta falla no hay nada que devolver.
 			e.printStackTrace();
 			return null;
+		} catch (SetterJugadorNoFuncionaAsiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 		UtilsDB.desconectarBBDD();
@@ -1049,6 +1055,9 @@ public class FuncionesUtiles {
 			// Si la conuslta falla no hay nada que devolver.
 			e.printStackTrace();
 			return null;
+		} catch (SetterJugadorNoFuncionaAsiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		// Si no hay usuarios en la tabla, va a devolver un arraylist vacio.
 		// Si la consulta fue erronea se devuelve un arraylist null, que son cosas
@@ -1087,6 +1096,9 @@ public class FuncionesUtiles {
 			// Si la conuslta falla no hay nada que devolver.
 			e.printStackTrace();
 			return null;
+		} catch (SetterJugadorNoFuncionaAsiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		// Si no hay usuarios en la tabla, va a devolver un arraylist vacio.
 		// Si la consulta fue erronea se devuelve un arraylist null, que son cosas
@@ -1114,6 +1126,9 @@ public class FuncionesUtiles {
 			// Si la conuslta falla no hay nada que devolver.
 			e.printStackTrace();
 			return null;
+		} catch (SetterEquipoNoFuncionaAsiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		// Si no hay usuarios en la tabla, va a devolver un arraylist vacio.
 		// Si la consulta fue erronea se devuelve un arraylist null, que son cosas
@@ -1537,6 +1552,9 @@ public class FuncionesUtiles {
 
 			e.printStackTrace();
 			return null;
+		} catch (SetterEquipoNoFuncionaAsiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 		UtilsDB.desconectarBBDD();
@@ -1567,6 +1585,9 @@ public class FuncionesUtiles {
 
 			e.printStackTrace();
 			return null;
+		} catch (SetterEquipoNoFuncionaAsiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 		UtilsDB.desconectarBBDD();
