@@ -14,6 +14,7 @@ import java.util.Random;
 import clases.Conferencia;
 import clases.Equipo;
 import clases.Estadio;
+import clases.Jugador;
 import clases.Liga;
 import clases.PartidoAllStar;
 import clases.Playoff;
@@ -21,11 +22,10 @@ import clases.RondaPlayoffs;
 import enums.Posicion;
 import enums.Valores;
 import exceptions.EquipoMalIntroduciodoException;
-import superClases.Jugador;
 
 public class FuncionesUtiles {
 	public static void borrarDatosTablas() throws SQLException {
-		Statement query = utilsDB.conectarBBDD();
+		Statement query = UtilsDB.conectarBBDD();
 		query.executeUpdate("DELETE FROM partidos;");
 		query.executeUpdate("DELETE FROM estadio;");
 		query.executeUpdate("DELETE FROM jugador;");
@@ -37,7 +37,7 @@ public class FuncionesUtiles {
 		query.executeUpdate("DELETE FROM conferencia;");
 		query.executeUpdate("DELETE FROM liga;");
 
-		utilsDB.desconectarBBDD();
+		UtilsDB.desconectarBBDD();
 	}
 
 	public static void declararObjetos() throws SQLException, EquipoMalIntroduciodoException {
@@ -978,7 +978,7 @@ public class FuncionesUtiles {
 
 	private static ArrayList<Jugador> getJugadores() { // Esta es un public static ArrayList<Jugador> getActivos() en la
 														// clase Jugador
-		Statement smt = utilsDB.conectarBBDD();
+		Statement smt = UtilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
 		ArrayList<Jugador> ret = new ArrayList<Jugador>();
 
@@ -1021,13 +1021,13 @@ public class FuncionesUtiles {
 			return null;
 		}
 
-		utilsDB.desconectarBBDD();
+		UtilsDB.desconectarBBDD();
 		return ret;
 	}
 
 	public static ArrayList<Jugador> getJugadoresReitrados(String nombre) { // Esto es public static ArrayList<Jugador>
 																			// getRetirados() en la clase Jugador
-		Statement smt = utilsDB.conectarBBDD();
+		Statement smt = UtilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
 		ArrayList<Jugador> ret = new ArrayList<Jugador>();
 
@@ -1053,12 +1053,12 @@ public class FuncionesUtiles {
 		// Si no hay usuarios en la tabla, va a devolver un arraylist vacio.
 		// Si la consulta fue erronea se devuelve un arraylist null, que son cosas
 		// distintas.
-		utilsDB.desconectarBBDD();
+		UtilsDB.desconectarBBDD();
 		return ret;
 	}
 
 	public static ArrayList<Jugador> getPlantilla(String nombre) {// Esto va en la clase equipo, sin argumento
-		Statement smt = utilsDB.conectarBBDD();
+		Statement smt = UtilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
 		ArrayList<Jugador> ret = new ArrayList<Jugador>();
 
@@ -1091,12 +1091,12 @@ public class FuncionesUtiles {
 		// Si no hay usuarios en la tabla, va a devolver un arraylist vacio.
 		// Si la consulta fue erronea se devuelve un arraylist null, que son cosas
 		// distintas.
-		utilsDB.desconectarBBDD();
+		UtilsDB.desconectarBBDD();
 		return ret;
 	}
 
 	public static Equipo getDatosEquipo(String nombre) { // esto es un constructor en la clase equipo
-		Statement smt = utilsDB.conectarBBDD();
+		Statement smt = UtilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
 
 		Equipo actual = new Equipo();
@@ -1118,7 +1118,7 @@ public class FuncionesUtiles {
 		// Si no hay usuarios en la tabla, va a devolver un arraylist vacio.
 		// Si la consulta fue erronea se devuelve un arraylist null, que son cosas
 		// distintas.
-		utilsDB.desconectarBBDD();
+		UtilsDB.desconectarBBDD();
 		return actual;
 	}
 
@@ -1514,7 +1514,7 @@ public class FuncionesUtiles {
 	}
 
 	public static ArrayList<Equipo> getEquiposEste() {
-		Statement smt = utilsDB.conectarBBDD();
+		Statement smt = UtilsDB.conectarBBDD();
 
 		ArrayList<Equipo> ret = new ArrayList<Equipo>();
 
@@ -1539,12 +1539,12 @@ public class FuncionesUtiles {
 			return null;
 		}
 
-		utilsDB.desconectarBBDD();
+		UtilsDB.desconectarBBDD();
 		return ret;
 	}
 
 	public static ArrayList<Equipo> getEquiposOeste() {
-		Statement smt = utilsDB.conectarBBDD();
+		Statement smt = UtilsDB.conectarBBDD();
 
 		ArrayList<Equipo> ret = new ArrayList<Equipo>();
 
@@ -1569,7 +1569,7 @@ public class FuncionesUtiles {
 			return null;
 		}
 
-		utilsDB.desconectarBBDD();
+		UtilsDB.desconectarBBDD();
 		return ret;
 	}
 

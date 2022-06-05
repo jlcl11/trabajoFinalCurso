@@ -11,8 +11,8 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
+import clases.Jugador;
 import pantallas.Ventana;
-import superClases.Jugador;
 
 public class ElementoListRetirados extends JPanel {
 	private Ventana ventana;

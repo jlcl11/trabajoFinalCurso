@@ -3,7 +3,7 @@ package elementosVisuales;
 import javax.swing.JPanel;
 
 import pantallas.Ventana;
-import superClases.Jugador;
+
 import java.awt.GridLayout;
 import java.awt.GridBagLayout;
 import javax.swing.JLabel;
@@ -11,6 +11,9 @@ import java.awt.GridBagConstraints;
 import java.awt.Font;
 import java.awt.Insets;
 import javax.swing.border.LineBorder;
+
+import clases.Jugador;
+
 import java.awt.Color;
 import javax.swing.SwingConstants;
 

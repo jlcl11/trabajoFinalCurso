@@ -11,6 +11,7 @@ import java.util.Random;
 import clases.Conferencia;
 import clases.Equipo;
 import clases.Estadio;
+import clases.Jugador;
 import clases.Liga;
 import clases.PartidoAllStar;
 import clases.PartidoNormal;
@@ -20,9 +21,8 @@ import clases.RondaPlayoffs;
 import exceptions.EquipoMalIntroduciodoException;
 import pantallas.PantallaEscogerEquipoDatosFranquicia;
 import pantallas.Ventana;
-import superClases.Jugador;
 import utils.FuncionesUtiles;
-import utils.utilsDB;
+import utils.UtilsDB;
 
 public class Main {
 

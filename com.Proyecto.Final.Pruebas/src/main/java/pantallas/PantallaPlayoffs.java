@@ -14,12 +14,12 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 
 import clases.Equipo;
+import clases.Jugador;
 import elementosVisuales.ElementoListEquiposFinal;
 import elementosVisuales.ElementoListEquiposFinalConferencia;
 import elementosVisuales.ElementoListEquiposPrimeraRonda;
 import elementosVisuales.ElementoListEquiposSegundaRonda;
 import elementosVisuales.ElementoListaJugador;
-import superClases.Jugador;
 import utils.FuncionesUtiles;
 
 import javax.swing.ImageIcon;

@@ -3,7 +3,7 @@ package clases;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import utils.utilsDB;
+import utils.UtilsDB;
 
 public class Partidos {
 	private byte partidonormal_partidonl_id;
@@ -12,30 +12,43 @@ public class Partidos {
 	public Partidos(byte partidonormal_partidonl_id, byte equipo_eq_id) throws SQLException {
 		super();
 
-		Statement query = utilsDB.conectarBBDD();
+		Statement query = UtilsDB.conectarBBDD();
 		if (query.executeUpdate(
 				"INSERT INTO partidos VALUES(" + partidonormal_partidonl_id + "," + equipo_eq_id + ");") > 0) {
 			this.partidonormal_partidonl_id = partidonormal_partidonl_id;
 			this.equipo_eq_id = equipo_eq_id;
 			System.out.println("partidos introducidos con exito");
 		}
-		utilsDB.desconectarBBDD();
+		UtilsDB.desconectarBBDD();
 	}
 
 	public byte getPartidonormal_partidonl_id() {
 		return partidonormal_partidonl_id;
 	}
 
-	public void setPartidonormal_partidonl_id(byte partidonormal_partidonl_id) {
-		this.partidonormal_partidonl_id = partidonormal_partidonl_id;
+	public void setPartidonormal_partidonl_id(byte partidonormal_partidonl_id) throws SQLException {
+		Statement smt = UtilsDB.conectarBBDD();
+
+		if (smt.executeUpdate("UPDATE partidos set partidonormal_partidonl_id=" + partidonormal_partidonl_id
+				+ " WHERE partidonormal_partidonl_id=" + this.partidonormal_partidonl_id + " AND equipo_eq_id="
+				+ this.equipo_eq_id + ";") > 0) {
+			this.partidonormal_partidonl_id = partidonormal_partidonl_id;
+		}
+		UtilsDB.desconectarBBDD();
 	}
 
 	public byte getEquipo_eq_id() {
 		return equipo_eq_id;
 	}
 
-	public void setEquipo_eq_id(byte equipo_eq_id) {
-		this.equipo_eq_id = equipo_eq_id;
+	public void setEquipo_eq_id(byte equipo_eq_id) throws SQLException {
+		Statement smt = UtilsDB.conectarBBDD();
+
+		if (smt.executeUpdate("UPDATE partidos set equipo_eq_id=" + equipo_eq_id + " WHERE partidonormal_partidonl_id="
+				+ this.partidonormal_partidonl_id + " AND equipo_eq_id=" + this.equipo_eq_id + ";") > 0) {
+			this.equipo_eq_id = equipo_eq_id;
+		}
+		UtilsDB.desconectarBBDD();
 	}
 
 }

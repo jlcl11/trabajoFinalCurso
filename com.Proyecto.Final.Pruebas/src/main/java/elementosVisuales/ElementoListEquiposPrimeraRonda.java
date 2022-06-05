@@ -3,8 +3,9 @@ package elementosVisuales;
 import javax.swing.JPanel;
 
 import clases.Equipo;
+import clases.Jugador;
 import pantallas.Ventana;
-import superClases.Jugador;
+
 import java.awt.GridBagLayout;
 import javax.swing.JLabel;
 import java.awt.GridBagConstraints;

@@ -5,9 +5,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import superClases.Jugador;
 import superClases.ObjetoConNombre;
-import utils.utilsDB;
+import utils.UtilsDB;
 
 public class Equipo extends ObjetoConNombre {
 	private byte eq_id;
@@ -23,7 +22,7 @@ public class Equipo extends ObjetoConNombre {
 			String propietario, byte partidoAllStar_id, byte playoffs_playoff_id) throws SQLException {
 		super(nombre);
 
-		Statement query = utilsDB.conectarBBDD();
+		Statement query = UtilsDB.conectarBBDD();
 		if (query.executeUpdate("INSERT INTO EQUIPO VALUES( " + eq_id + " , " + conferencia_id + ",'" + gM + " ',"
 				+ limiteSalarial + ",'\r\n" + "				 " + propietario + "'," + partidoAllStar_id + ","
 				+ playoffs_playoff_id + ",'" + nombre + "\r\n" + "				');") > 0) {
@@ -36,14 +35,14 @@ public class Equipo extends ObjetoConNombre {
 			this.partidoAllStar_id = partidoAllStar_id;
 			this.playoffs_playoff_id = playoffs_playoff_id;
 		}
-		utilsDB.desconectarBBDD();
+		UtilsDB.desconectarBBDD();
 	}
 
 	public Equipo(byte eq_id, String nombre, byte conferencia_id, String ciudadLocal, String gM, float limiteSalarial,
 			String propietario, byte playoffs_playoff_id) throws SQLException {
 		super(nombre);
 
-		Statement query = utilsDB.conectarBBDD();
+		Statement query = UtilsDB.conectarBBDD();
 		if (query.executeUpdate(
 				"INSERT INTO equipo(nombre,eq_id,conferencia,ciudadlocal,gm,limitesalarial,propietario,playoffs_playoff_id) VALUES('"
 						+ nombre + "'," + eq_id + "," + conferencia_id + ",'" + ciudadLocal + "','" + gM + "',"
@@ -59,25 +58,25 @@ public class Equipo extends ObjetoConNombre {
 
 			this.playoffs_playoff_id = playoffs_playoff_id;
 		}
-		utilsDB.desconectarBBDD();
+		UtilsDB.desconectarBBDD();
 	}
 
 	public Equipo(String nombre, byte eq_id, byte partidoAllStar_id) throws SQLException {
 		super(nombre);
 
-		Statement query = utilsDB.conectarBBDD();
+		Statement query = UtilsDB.conectarBBDD();
 		if (query.executeUpdate("INSERT INTO equipo(eq_id,nombre,partidoallstar_parta_id) VALUES(" + eq_id + ",'"
 				+ nombre + "'," + partidoAllStar_id + ");\r\n" + "") > 0) {
 			this.eq_id = eq_id;
 			this.partidoAllStar_id = partidoAllStar_id;
 		}
-		utilsDB.desconectarBBDD();
+		UtilsDB.desconectarBBDD();
 
 	}
 
 	public Equipo(String text) throws SQLException {
 		// esto es un constructor en la clase equipo
-		Statement smt = utilsDB.conectarBBDD();
+		Statement smt = UtilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
 
 		try {
@@ -99,7 +98,7 @@ public class Equipo extends ObjetoConNombre {
 		// Si no hay usuarios en la tabla, va a devolver un arraylist vacio.
 		// Si la consulta fue erronea se devuelve un arraylist null, que son cosas
 		// distintas.
-		utilsDB.desconectarBBDD();
+		UtilsDB.desconectarBBDD();
 
 	}
 
@@ -111,47 +110,88 @@ public class Equipo extends ObjetoConNombre {
 		return eq_id;
 	}
 
-	public void setEq_id(byte eq_id) {
-		this.eq_id = eq_id;
+	public void setEq_id(byte eq_id) throws SQLException {
+		Statement smt = UtilsDB.conectarBBDD();
+
+		if (smt.executeUpdate(
+				"UPDATE equipo SET liga_conferencias = " + eq_id + "WHERE eq_id=" + this.eq_id + ";") > 0) {
+			this.eq_id = eq_id;
+		}
+		UtilsDB.desconectarBBDD();
+
 	}
 
 	public byte getConferencia_id() {
 		return conferencia_id;
 	}
 
-	public void setConferencia_id(byte conferencia_id) {
-		this.conferencia_id = conferencia_id;
+	public void setConferencia_id(byte conferencia_id) throws SQLException {
+
+		Statement smt = UtilsDB.conectarBBDD();
+
+		if (smt.executeUpdate(
+				"UPDATE equipo SET conferencia_id = " + conferencia_id + "WHERE eq_id=" + this.eq_id + ";") > 0) {
+			this.conferencia_id = conferencia_id;
+		}
+		UtilsDB.desconectarBBDD();
+
 	}
 
 	public String getCiudadLocal() {
 		return ciudadLocal;
 	}
 
-	public void setCiudadLocal(String ciudadLocal) {
-		this.ciudadLocal = ciudadLocal;
+	public void setCiudadLocal(String ciudadLocal) throws SQLException {
+		Statement smt = UtilsDB.conectarBBDD();
+
+		if (smt.executeUpdate(
+				"UPDATE equipo set ciudadLocal='" + ciudadLocal + "' WHERE eq_id=" + this.eq_id + ";") > 0) {
+			this.ciudadLocal = ciudadLocal;
+		}
+		UtilsDB.desconectarBBDD();
+
 	}
 
 	public String getGM() {
 		return GM;
 	}
 
-	public void setGM(String gM) {
-		GM = gM;
+	public void setGM(String gM) throws SQLException {
+		Statement smt = UtilsDB.conectarBBDD();
+
+		if (smt.executeUpdate("UPDATE equipo set GM='" + GM + "' WHERE eq_id=" + this.eq_id + ";") > 0) {
+			this.GM = gM;
+		}
+		UtilsDB.desconectarBBDD();
 	}
 
 	public float getLimiteSalarial() {
 		return limiteSalarial;
 	}
 
-	public void setLimiteSalarial(float limiteSalarial) {
-		this.limiteSalarial = limiteSalarial;
+	public void setLimiteSalarial(float limiteSalarial) throws SQLException {
+		Statement smt = UtilsDB.conectarBBDD();
+
+		if (smt.executeUpdate(
+				"UPDATE equipo SET limiteSalarial = " + limiteSalarial + "WHERE eq_id=" + this.eq_id + ";") > 0) {
+			this.limiteSalarial = limiteSalarial;
+		}
+		UtilsDB.desconectarBBDD();
+
 	}
 
 	public String getPropietario() {
 		return propietario;
 	}
 
-	public void setPropietario(String propietario) {
+	public void setPropietario(String propietario) throws SQLException {
+		Statement smt = UtilsDB.conectarBBDD();
+
+		if (smt.executeUpdate(
+				"UPDATE equipo set propietario='" + propietario + "' WHERE eq_id=" + this.eq_id + ";") > 0) {
+			this.propietario = propietario;
+		}
+		UtilsDB.desconectarBBDD();
 		this.propietario = propietario;
 	}
 
@@ -159,16 +199,29 @@ public class Equipo extends ObjetoConNombre {
 		return partidoAllStar_id;
 	}
 
-	public void setPartidoAllStar_id(byte partidoAllStar_id) {
-		this.partidoAllStar_id = partidoAllStar_id;
+	public void setPartidoAllStar_id(byte partidoAllStar_id) throws SQLException {
+		Statement smt = UtilsDB.conectarBBDD();
+
+		if (smt.executeUpdate(
+				"UPDATE equipo SET partidoAllStar_id = " + partidoAllStar_id + "WHERE eq_id=" + this.eq_id + ";") > 0) {
+			this.partidoAllStar_id = partidoAllStar_id;
+		}
+		UtilsDB.desconectarBBDD();
 	}
 
 	public byte getPlayoffs_playoff_id() {
 		return playoffs_playoff_id;
 	}
 
-	public void setPlayoffs_playoff_id(byte playoffs_playoff_id) {
-		this.playoffs_playoff_id = playoffs_playoff_id;
+	public void setPlayoffs_playoff_id(byte playoffs_playoff_id) throws SQLException {
+		Statement smt = UtilsDB.conectarBBDD();
+
+		if (smt.executeUpdate("UPDATE equipo SET playoffs_playoff_id = " + playoffs_playoff_id + "WHERE eq_id="
+				+ this.eq_id + ";") > 0) {
+			this.playoffs_playoff_id = playoffs_playoff_id;
+		}
+		UtilsDB.desconectarBBDD();
+
 	}
 
 	@Override

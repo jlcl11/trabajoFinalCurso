@@ -10,9 +10,8 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 
+import clases.Jugador;
 import elementosVisuales.ElementoListaJugador;
-
-import superClases.Jugador;
 import utils.FuncionesUtiles;
 import javax.swing.JButton;
 import java.awt.GridBagLayout;
