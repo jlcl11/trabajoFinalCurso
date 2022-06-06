@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import utils.FuncionesUtiles;
+import javax.swing.ImageIcon;
 
 public class PantallaPropietario extends JPanel{
 private Ventana ventana;
@@ -27,7 +28,7 @@ public PantallaPropietario(final Ventana ventana) {
 	gridBagLayout.rowWeights = new double[]{0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
 	setLayout(gridBagLayout);
 	
-	JLabel lblNewLabel = new JLabel("El estadio de los xxxx es "+ this.ventana.miEquipo.getPropietario());
+	JLabel lblNewLabel = new JLabel("El estadio de los "+this.ventana.miEquipo.getNombre()+" es "+ this.ventana.miEquipo.getPropietario());
 	lblNewLabel.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
 	GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 	gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
@@ -35,7 +36,9 @@ public PantallaPropietario(final Ventana ventana) {
 	gbc_lblNewLabel.gridy = 2;
 	add(lblNewLabel, gbc_lblNewLabel);
 	
-	JLabel foto = new JLabel("placeHolderDeFoto");
+	JLabel foto = new JLabel("");
+	String propietario=".\\com.Proyecto.Final.Pruebas\\imagenes\\"+this.ventana.miEquipo.getNombre()+"PROPIETARIO.jpg";
+	foto.setIcon(new ImageIcon(propietario));
 	GridBagConstraints gbc_foto = new GridBagConstraints();
 	gbc_foto.gridheight = 2;
 	gbc_foto.insets = new Insets(0, 0, 5, 5);
