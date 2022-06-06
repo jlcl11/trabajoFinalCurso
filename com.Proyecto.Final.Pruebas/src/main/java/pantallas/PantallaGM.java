@@ -5,6 +5,8 @@ import java.awt.GridBagLayout;
 import javax.swing.JLabel;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import java.awt.Color;
@@ -17,6 +19,7 @@ public class PantallaGM extends JPanel {
 
 	public PantallaGM(final Ventana ventana) {
 		super();
+		setBackground(Color.BLACK);
 		this.ventana = ventana;
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0, 0};
@@ -25,15 +28,18 @@ public class PantallaGM extends JPanel {
 		gridBagLayout.rowWeights = new double[]{0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
 		
-		JLabel lblNewLabel = new JLabel("El estadio de los"+ this.ventana.miEquipo.getNombre() +"es el xxxx");
-		lblNewLabel.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
+		JLabel lblNewLabel = new JLabel("El General Manager de los "+this.ventana.miEquipo.getNombre()+" es "+this.ventana.miEquipo.getGM());
+		lblNewLabel.setForeground(Color.WHITE);
+		lblNewLabel.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 40));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel.gridx = 2;
 		gbc_lblNewLabel.gridy = 2;
 		add(lblNewLabel, gbc_lblNewLabel);
 		
-		JLabel foto = new JLabel("placeHolderDeFoto");
+		JLabel foto = new JLabel("");
+		String propietario=".\\\\imagenes\\\\"+this.ventana.miEquipo.getNombre()+"GM.jpg";
+		foto.setIcon(new ImageIcon(propietario));
 		GridBagConstraints gbc_foto = new GridBagConstraints();
 		gbc_foto.gridheight = 2;
 		gbc_foto.insets = new Insets(0, 0, 5, 5);
@@ -56,6 +62,6 @@ public class PantallaGM extends JPanel {
 		gbc_Volver.gridx = 1;
 		gbc_Volver.gridy = 7;
 		add(Volver, gbc_Volver);
-}
+	}
 
 }

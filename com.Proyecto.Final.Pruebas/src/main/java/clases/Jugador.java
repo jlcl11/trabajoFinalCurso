@@ -210,7 +210,7 @@ public class Jugador extends ObjetoConNombre {
 		if (!apellido.isBlank()) {
 			this.apellido = apellido;
 		} else {
-			throw new SetterJugadorNoFuncionaAsiException("El apodo no puede ser nulo");
+			throw new SetterJugadorNoFuncionaAsiException("El apellido no puede ser nulo");
 		}
 
 	}

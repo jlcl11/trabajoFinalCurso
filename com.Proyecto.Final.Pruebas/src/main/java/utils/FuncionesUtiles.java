@@ -132,7 +132,7 @@ public class FuncionesUtiles {
 		Jugador byronbeck = new Jugador((short) 58, "Byrin", "Beck", (byte) 40, (byte) 17);
 		Jugador danIssel = new Jugador((short) 59, "Daniel Paul ", "Issel", (byte) 44, "Dan Issel", (byte) 17);
 		Jugador dikembeMutomboNuggets = new Jugador((short) 60, "Dikembe", "Mutombo", (byte) 55, (byte) 17);
-		Jugador dougMoe = new Jugador((short) 61, "Douglas Edwin", "Moe", (byte) 432, "Doug Moe", (byte) 17);
+		Jugador dougMoe = new Jugador((short) 61, "Douglas Edwin", "Moe", (byte) 43, "Doug Moe", (byte) 17);
 
 		Jugador chaunceyBillups = new Jugador((short) 62, "Chauncey", "Billups", (byte) 1, "Mr. Big Shot", (byte) 7);
 		Jugador chuckDaily = new Jugador((short) 63, "Charles Jerome ", "Daily", (byte) 2, "Chuck Daly", (byte) 7);
@@ -171,7 +171,7 @@ public class FuncionesUtiles {
 		Jugador reggieMiller = new Jugador((short) 86, "Reginald Wayne", "Miller ", (byte) 31, "Miller Time", (byte) 8);
 		Jugador melDaniels = new Jugador((short) 87, "Melvin Joe", "Daniels ", (byte) 34, "Melvin Joe", (byte) 8);
 		Jugador rogerBrown = new Jugador((short) 88, "Roger William", "Brown", (byte) 35, "The Rajah", (byte) 8);
-		Jugador slickLeonard = new Jugador((short) 89, "William Robert", "Leonard", (byte) 529, "Slick Leonard",
+		Jugador slickLeonard = new Jugador((short) 89, "William Robert", "Leonard", (byte) 52, "Slick Leonard",
 				(byte) 8);
 
 		Jugador kobe8 = new Jugador((short) 90, "Kobe ", "Bryant", (byte) 8, "Black mamba", (byte) 21);
@@ -237,7 +237,7 @@ public class FuncionesUtiles {
 		Jugador billBradley = new Jugador((short) 130, "William Warren ", "Bradley", (byte) 24, "Bill Bradley",
 				(byte) 11);
 		Jugador patrickEwing = new Jugador((short) 131, "Patrick Aloysius", "Ewing", (byte) 33, "Big Pat", (byte) 11);
-		Jugador redHolzman = new Jugador((short) 132, "William", "Holzman", (byte) 613, "Big D", (byte) 11);
+		Jugador redHolzman = new Jugador((short) 132, "William", "Holzman", (byte) 61, "Big D", (byte) 11);
 
 		Jugador aficion = new Jugador((short) 133, "Afición", "", (byte) 6, (byte) 12);
 
@@ -338,7 +338,7 @@ public class FuncionesUtiles {
 		Jugador darrelGriffith = new Jugador((short) 200, "Darrell Steven", "Griffith", (byte) 35, "Dr. Dunkenstein",
 				(byte) 30);
 		Jugador markEaton = new Jugador((short) 201, "Mark", "Eaton", (byte) 53, (byte) 30);
-		Jugador geraldSloan = new Jugador((short) 202, "Gerald Eugene", "Sloan", (byte) 1223, "Jerry Sloan", (byte) 30);
+		Jugador geraldSloan = new Jugador((short) 202, "Gerald Eugene", "Sloan", (byte) 99, "Jerry Sloan", (byte) 30);
 
 		Jugador earlMonroeWizards = new Jugador((short) 203, "Vernon Earl", "Monroe", (byte) 10, "The Pearl",
 				(byte) 15);
@@ -1407,11 +1407,11 @@ public class FuncionesUtiles {
 		Estadio americanAirlinesCenter = new Estadio((byte) 16, "American Airlines Center", (short) 19200, (byte) 16);
 
 		Equipo nuggets = new Equipo((byte) 17, "Nuggets", (byte) 2, "Denver", "Calvin Booth", 109.4f,
-				"Kroenke Sports & Entertainment", (byte) 1);
+				"Kroenke Sports", (byte) 1);
 		Estadio ballCenter = new Estadio((byte) 17, "Ball Center", (short) 19520, (byte) 17);
 
 		Equipo warriors = new Equipo((byte) 18, "Golden State Warriors", (byte) 2, "San Francisco", "Bob Myers", 109.4f,
-				"Joe Lacob,Peter Guber", (byte) 1);
+				"Joe Lacob", (byte) 1);
 		Estadio chaseCenter = new Estadio((byte) 18, "Chase Center", (short) 18064, (byte) 18);
 
 		Equipo rockets = new Equipo((byte) 19, "Rockets", (byte) 2, "Houston", "Rafael Stone", 109.4f,
@@ -1470,7 +1470,7 @@ public class FuncionesUtiles {
 		Estadio stateFarmArena = new Estadio((byte) 1, "State Farm Arena", (short) 16600, (byte) 1);
 
 		Equipo celtics = new Equipo((byte) 2, "Celtics", (byte) 1, "Boston", "Brad Stevens", 109.6f,
-				"Boston basketball partners", (byte) 1);
+				"Boston bball partners", (byte) 1);
 		Estadio tdGarden = new Estadio((byte) 2, "TD Garden", (short) 18624, (byte) 2);
 
 		Equipo nets = new Equipo((byte) 3, "Nets", (byte) 1, "Brooklyn", "Sean marks", 109.4f, "Joseph Tsai", (byte) 1);
@@ -1496,7 +1496,7 @@ public class FuncionesUtiles {
 				(byte) 1);
 		Estadio bankersLifeFieldHouse = new Estadio((byte) 8, "Bankers Life FieldHouse", (short) 17923, (byte) 8);
 
-		Equipo heat = new Equipo((byte) 9, "Heat", (byte) 1, "Miami", "Andy Elisburg", 109.4f, "Micky Arison",
+		Equipo heat = new Equipo((byte) 9, "Heat", (byte) 1, "Miami", "Pat Riley", 109.4f, "Micky Arison",
 				(byte) 1);
 		Estadio ftxArena = new Estadio((byte) 9, "FTX Arena", (short) 19600, (byte) 9);
 

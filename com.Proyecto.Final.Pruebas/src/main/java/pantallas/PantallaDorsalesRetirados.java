@@ -25,6 +25,7 @@ public class PantallaDorsalesRetirados extends JPanel{
 private Ventana ventana;
 
 public PantallaDorsalesRetirados(final Ventana ventana) {
+	setBackground(Color.BLACK);
 	this.ventana = ventana;
 	GridBagLayout gridBagLayout = new GridBagLayout();
 	gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0 };
@@ -34,6 +35,7 @@ public PantallaDorsalesRetirados(final Ventana ventana) {
 	setLayout(gridBagLayout);
 
 	JLabel titulo = new JLabel("Dorsales Retirados");
+	titulo.setForeground(Color.WHITE);
 	titulo.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
 	GridBagConstraints gbc_titulo = new GridBagConstraints();
 	gbc_titulo.gridwidth = 4;

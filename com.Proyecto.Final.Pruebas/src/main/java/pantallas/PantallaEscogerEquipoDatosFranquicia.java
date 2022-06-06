@@ -474,6 +474,7 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 					if (botonesEquipo.get(i).isSelected()) {
 						try {
 							ventana.miEquipo = new Equipo(botonesEquipo.get(i).getText());
+							ventana.setMiEquipo(new Equipo(botonesEquipo.get(i).getText()));
 							break;
 						} catch (SQLException e1) {
 							// TODO Auto-generated catch block

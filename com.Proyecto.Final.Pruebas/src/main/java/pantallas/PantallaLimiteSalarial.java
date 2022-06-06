@@ -17,6 +17,7 @@ public class PantallaLimiteSalarial extends JPanel{
 
 	public PantallaLimiteSalarial(final Ventana ventana) {
 		super();
+		setBackground(Color.BLACK);
 		this.ventana = ventana;
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0, 0};
@@ -25,21 +26,14 @@ public class PantallaLimiteSalarial extends JPanel{
 		gridBagLayout.rowWeights = new double[]{0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
 		
-		JLabel lblNewLabel = new JLabel("El estadio de los xxxx es el xxxx");
+		JLabel lblNewLabel = new JLabel("El límite salarial de los "+ventana.miEquipo.getNombre());
+		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel.gridx = 2;
 		gbc_lblNewLabel.gridy = 2;
 		add(lblNewLabel, gbc_lblNewLabel);
-		
-		JLabel foto = new JLabel("placeHolderDeFoto");
-		GridBagConstraints gbc_foto = new GridBagConstraints();
-		gbc_foto.gridheight = 2;
-		gbc_foto.insets = new Insets(0, 0, 5, 5);
-		gbc_foto.gridx = 2;
-		gbc_foto.gridy = 4;
-		add(foto, gbc_foto);
 		
 		JButton Volver = new JButton("Volver");
 		Volver.addMouseListener(new MouseAdapter() {
@@ -48,6 +42,15 @@ public class PantallaLimiteSalarial extends JPanel{
 				ventana.cambiarAPantalla("Datos Franquicia");
 			}
 		});
+		
+		JLabel foto = new JLabel("es de "+ventana.miEquipo.getLimiteSalarial()+" millones de dólares");
+		foto.setForeground(Color.WHITE);
+		foto.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
+		GridBagConstraints gbc_foto = new GridBagConstraints();
+		gbc_foto.insets = new Insets(0, 0, 5, 5);
+		gbc_foto.gridx = 2;
+		gbc_foto.gridy = 3;
+		add(foto, gbc_foto);
 		Volver.setForeground(Color.WHITE);
 		Volver.setBackground(Color.RED);
 		GridBagConstraints gbc_Volver = new GridBagConstraints();

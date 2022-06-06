@@ -24,6 +24,7 @@ public class PantallaPlantilla extends JPanel{
 private Ventana ventana;
 
 public PantallaPlantilla(final Ventana ventana) {
+	setBackground(Color.BLACK);
 	this.ventana = ventana;
 	GridBagLayout gridBagLayout = new GridBagLayout();
 	gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0 };
@@ -32,7 +33,8 @@ public PantallaPlantilla(final Ventana ventana) {
 	gridBagLayout.rowWeights = new double[] { 0.0, 1.0, 0.0, Double.MIN_VALUE };
 	setLayout(gridBagLayout);
 
-	JLabel titulo = new JLabel("PLANTILLA");
+	JLabel titulo = new JLabel("Plantilla");
+	titulo.setForeground(Color.WHITE);
 	titulo.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
 	GridBagConstraints gbc_titulo = new GridBagConstraints();
 	gbc_titulo.gridwidth = 4;

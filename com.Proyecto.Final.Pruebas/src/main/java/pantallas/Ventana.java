@@ -17,7 +17,7 @@ public class Ventana extends JFrame {
 	private HashMap<String, JPanel> pantallas;
 
 	public Ventana() throws SQLException, InterruptedException {
-		miEquipo = new Equipo("Lakers");
+		miEquipo = new Equipo("Wizards");
 		pantallas = new HashMap<String, JPanel>();
 		pantallas.put("inicial", new PantallaInicial(this));
 		pantallas.put("primerMenu", new PantallaInicioPrimerMenu(this));
@@ -68,5 +68,16 @@ public class Ventana extends JFrame {
 		this.pantallas.get(nombrePantalla).setVisible(true);
 		this.setContentPane(this.pantallas.get(nombrePantalla));
 	}
+
+
+	public Equipo getMiEquipo() {
+		return miEquipo;
+	}
+
+
+	public void setMiEquipo(Equipo miEquipo) {
+		this.miEquipo = miEquipo;
+	}
+	
 
 }

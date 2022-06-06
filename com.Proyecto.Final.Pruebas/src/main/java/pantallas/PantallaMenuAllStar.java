@@ -68,24 +68,6 @@ public class PantallaMenuAllStar extends JPanel {
 		gbc_botonTitulares.gridy = 4;
 		add(botonTitulares, gbc_botonTitulares);
 
-		JButton botonEquipoDelEste = new JButton("Ver el marcador del AllStar");
-		botonEquipoDelEste.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("resultAllStar");
-			}
-		});
-		botonEquipoDelEste.setBackground(Color.BLUE);
-		botonEquipoDelEste.setForeground(Color.WHITE);
-		botonEquipoDelEste.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
-		GridBagConstraints gbc_botonEquipoDelEste = new GridBagConstraints();
-		gbc_botonEquipoDelEste.fill = GridBagConstraints.BOTH;
-		gbc_botonEquipoDelEste.gridheight = 2;
-		gbc_botonEquipoDelEste.insets = new Insets(0, 0, 5, 5);
-		gbc_botonEquipoDelEste.gridx = 7;
-		gbc_botonEquipoDelEste.gridy = 4;
-		add(botonEquipoDelEste, gbc_botonEquipoDelEste);
-
 		JButton botonTitularesW = new JButton("Ver los titulares del Oeste");
 		botonTitularesW.addMouseListener(new MouseAdapter() {
 			@Override
@@ -93,6 +75,30 @@ public class PantallaMenuAllStar extends JPanel {
 				ventana.cambiarAPantalla("AllStar Oeste");
 			}
 		});
+
+		JButton botonMVPAllStar = new JButton("Ver el MVP del AllStar");
+		botonMVPAllStar.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+
+				MVPAllStar p = new MVPAllStar();
+				p.setVisible(true);
+				p.setAlwaysOnTop(true);
+				p.setSize(630, 805);
+				p.setLocationRelativeTo(null);
+
+			}
+		});
+		botonMVPAllStar.setForeground(Color.WHITE);
+		botonMVPAllStar.setBackground(Color.BLUE);
+		botonMVPAllStar.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
+		GridBagConstraints gbc_botonMVPAllStar = new GridBagConstraints();
+		gbc_botonMVPAllStar.fill = GridBagConstraints.BOTH;
+		gbc_botonMVPAllStar.gridheight = 2;
+		gbc_botonMVPAllStar.insets = new Insets(0, 0, 5, 5);
+		gbc_botonMVPAllStar.gridx = 7;
+		gbc_botonMVPAllStar.gridy = 4;
+		add(botonMVPAllStar, gbc_botonMVPAllStar);
 		botonTitularesW.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		botonTitularesW.setForeground(Color.WHITE);
 		botonTitularesW.setBackground(Color.BLUE);
@@ -121,66 +127,6 @@ public class PantallaMenuAllStar extends JPanel {
 		gbc_botonTitularesE.gridx = 7;
 		gbc_botonTitularesE.gridy = 7;
 		add(botonTitularesE, gbc_botonTitularesE);
-
-		JButton botonMarcador = new JButton("Ver el ganador del concurso de habilidades");
-		botonMarcador.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
-		botonMarcador.setForeground(Color.WHITE);
-		botonMarcador.setBackground(Color.BLUE);
-		GridBagConstraints gbc_botonMarcador = new GridBagConstraints();
-		gbc_botonMarcador.fill = GridBagConstraints.BOTH;
-		gbc_botonMarcador.gridheight = 2;
-		gbc_botonMarcador.insets = new Insets(0, 0, 5, 5);
-		gbc_botonMarcador.gridx = 5;
-		gbc_botonMarcador.gridy = 10;
-		add(botonMarcador, gbc_botonMarcador);
-
-		JButton botonMVPAllStar = new JButton("Ver el MVP del AllStar");
-		botonMVPAllStar.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-
-				MVPAllStar p = new MVPAllStar();
-				p.setVisible(true);
-				p.setAlwaysOnTop(true);
-				p.setSize(630, 805);
-				p.setLocationRelativeTo(null);
-
-			}
-		});
-		botonMVPAllStar.setForeground(Color.WHITE);
-		botonMVPAllStar.setBackground(Color.BLUE);
-		botonMVPAllStar.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
-		GridBagConstraints gbc_botonMVPAllStar = new GridBagConstraints();
-		gbc_botonMVPAllStar.fill = GridBagConstraints.BOTH;
-		gbc_botonMVPAllStar.gridheight = 2;
-		gbc_botonMVPAllStar.insets = new Insets(0, 0, 5, 5);
-		gbc_botonMVPAllStar.gridx = 7;
-		gbc_botonMVPAllStar.gridy = 10;
-		add(botonMVPAllStar, gbc_botonMVPAllStar);
-
-		JButton botonConcursoTriples = new JButton("Ver el ganador del concurso de triples");
-		botonConcursoTriples.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
-		botonConcursoTriples.setForeground(Color.WHITE);
-		botonConcursoTriples.setBackground(Color.BLUE);
-		GridBagConstraints gbc_botonConcursoTriples = new GridBagConstraints();
-		gbc_botonConcursoTriples.fill = GridBagConstraints.BOTH;
-		gbc_botonConcursoTriples.gridheight = 2;
-		gbc_botonConcursoTriples.insets = new Insets(0, 0, 5, 5);
-		gbc_botonConcursoTriples.gridx = 5;
-		gbc_botonConcursoTriples.gridy = 13;
-		add(botonConcursoTriples, gbc_botonConcursoTriples);
-
-		JButton botonConcursoMates = new JButton("Ver el ganador del concurso de mates");
-		botonConcursoMates.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
-		botonConcursoMates.setForeground(Color.WHITE);
-		botonConcursoMates.setBackground(Color.BLUE);
-		GridBagConstraints gbc_botonConcursoMates = new GridBagConstraints();
-		gbc_botonConcursoMates.fill = GridBagConstraints.BOTH;
-		gbc_botonConcursoMates.gridheight = 2;
-		gbc_botonConcursoMates.insets = new Insets(0, 0, 5, 5);
-		gbc_botonConcursoMates.gridx = 7;
-		gbc_botonConcursoMates.gridy = 13;
-		add(botonConcursoMates, gbc_botonConcursoMates);
 		btnNewButton.setForeground(Color.WHITE);
 		btnNewButton.setBackground(Color.RED);
 		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
