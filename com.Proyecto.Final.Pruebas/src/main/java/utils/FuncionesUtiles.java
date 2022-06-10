@@ -94,7 +94,7 @@ public class FuncionesUtiles {
 		Jugador paulPierce = new Jugador((short) 30, "Paul", "Pierce", (byte) 34, "the truth", (byte) 2);
 		Jugador reggieLewis = new Jugador((short) 31, "Reginald", "Lewis", (byte) 35, "Reggie Lewis", (byte) 2);
 
-		Jugador drazenPetrovich = new Jugador((short) 32, "Dražen ", "Petrović", (byte) 3, (byte) 3);
+		Jugador drazenPetrovich = new Jugador((short) 32, "DraÅ¾en ", "PetroviÄ‡", (byte) 3, (byte) 3);
 		Jugador wendellLadner = new Jugador((short) 33, "Wendell", "Ladner", (byte) 4, (byte) 3);
 		Jugador jasonKidd = new Jugador((short) 34, "Jason", "Kidd", (byte) 5, (byte) 3);
 		Jugador jhonWilliamson = new Jugador((short) 35, "Jhon Lee", "Williamson", (byte) 23, "John Williamson",
@@ -112,7 +112,7 @@ public class FuncionesUtiles {
 		Jugador jerrySloan = new Jugador((byte) 43, "Jerry", "Sloan", (byte) 4, (byte) 5);
 
 		Jugador bingoSmith = new Jugador((short) 44, "Robert", "Smith", (byte) 7, "Bingo Smith", (byte) 6);
-		Jugador zydrunasilgaukas = new Jugador((short) 45, "Žydrūnas ", "Ilgauskas", (byte) 11, (byte) 6);
+		Jugador zydrunasilgaukas = new Jugador((short) 45, "Å½ydrÅ«nas ", "Ilgauskas", (byte) 11, (byte) 6);
 		Jugador larryNance = new Jugador((short) 46, "Larry Donnel", "Nance Sr", (byte) 2, "Larry Nance", (byte) 6);
 		Jugador markPrice = new Jugador((short) (byte) 47, "William Mark", "Price", (byte) 25, "Mark Price", (byte) 6);
 		Jugador austinCarr = new Jugador((short) 48, "Austin George ", "Carr", (byte) 34, "Austin Carr", (byte) 6);
@@ -239,7 +239,7 @@ public class FuncionesUtiles {
 		Jugador patrickEwing = new Jugador((short) 131, "Patrick Aloysius", "Ewing", (byte) 33, "Big Pat", (byte) 11);
 		Jugador redHolzman = new Jugador((short) 132, "William", "Holzman", (byte) 61, "Big D", (byte) 11);
 
-		Jugador aficion = new Jugador((short) 133, "Afición", "", (byte) 6, (byte) 12);
+		Jugador aficion = new Jugador((short) 133, "AficiÃ³n", "", (byte) 6, (byte) 12);
 
 		Jugador mosesMalonePhilly = new Jugador((short) 134, "Moses Eugene", "Malone", (byte) 2, "Moses Malone",
 				(byte) 13);
@@ -292,13 +292,13 @@ public class FuncionesUtiles {
 		Jugador mithcRichmond = new Jugador((short) 167, "Mitchell James", "Richmond", (byte) 2, "Hammer", (byte) 28);
 		Jugador chrisWebber = new Jugador((short) 168, "Mayce Edward Christopher", "Webber ", (byte) 4, "Chris Webber",
 				(byte) 28);
-		Jugador aficionKings = new Jugador((short) 169, "Afición", "", (byte) 6, (byte) 28);
+		Jugador aficionKings = new Jugador((short) 169, "AficiÃ³n", "", (byte) 6, (byte) 28);
 		Jugador bobDavies = new Jugador((short) 170, "Robert Edris", "Davies", (byte) 11, "The Harrisburg Houdini",
 				(byte) 28);
 		Jugador mauriceStokes = new Jugador((short) 171, "Maurice", "Stokes", (byte) 12, "Mo Stokes", (byte) 28);
 		Jugador oscarRobertsonKings = new Jugador((short) 172, "Oscar Palmer", "Robertson", (byte) 14,
 				"Mr.Triple-Double", (byte) 28);
-		Jugador predragStojakovic = new Jugador((short) 173, "Predrag Peđa", "Stojaković", (byte) 16, "Peja Stojaković",
+		Jugador predragStojakovic = new Jugador((short) 173, "Predrag PeÄ‘a", "StojakoviÄ‡", (byte) 16, "Peja StojakoviÄ‡",
 				(byte) 28);
 		Jugador vladeDivac = new Jugador((short) 174, "Vlade", "Divac", (byte) 21, "Vittorio Gassman", (byte) 28);
 		Jugador jackTwynam = new Jugador((short) 175, "John Kennedy", "Twyman", (byte) 27, "Jack Twyman", (byte) 28);
@@ -310,7 +310,7 @@ public class FuncionesUtiles {
 				(byte) 29);
 		Jugador bruceBowen = new Jugador((short) 180, "Bruce Eric", "Bowen", (byte) 12, (byte) 29);
 		Jugador jamesSilas = new Jugador((short) 181, "James Edward", "Silas", (byte) 13, "Captain Late", (byte) 29);
-		Jugador manuGinobii = new Jugador((short) 182, "Emanuel David", "Ginóbili", (byte) 20, "Manu Ginóbili",
+		Jugador manuGinobii = new Jugador((short) 182, "Emanuel David", "GinÃ³bili", (byte) 20, "Manu GinÃ³bili",
 				(byte) 29);
 		Jugador timDuncan = new Jugador((short) 183, "Timothy Theodore", "Duncan", (byte) 21, "The Big Fundamental",
 				(byte) 29);
@@ -1282,7 +1282,7 @@ public class FuncionesUtiles {
 		return allStars;
 	}
 
-	public static ArrayList<Jugador> getJugadoresEquipo1() { // La funcionalidad de estas dos funciones debería estar
+	public static ArrayList<Jugador> getJugadoresEquipo1() { // La funcionalidad de estas dos funciones deberÃ­a estar
 																// dentro del constructor de partidoAllstar, que no va a
 																// necesitar argumentos, en todo caso la fecha
 		ArrayList<Jugador> jugadores = FuncionesUtiles.getJugadores();
@@ -1418,11 +1418,11 @@ public class FuncionesUtiles {
 				"Tilman Fertitta", (byte) 1);
 		Estadio toyotaCenter = new Estadio((byte) 19, "Toyota Center", (short) 18055, (byte) 19);
 
-		Equipo clippers = new Equipo((byte) 20, "Clippers", (byte) 2, "Los Ángeles", "Michael Winger", 109.4f,
+		Equipo clippers = new Equipo((byte) 20, "Clippers", (byte) 2, "Los Ã�ngeles", "Michael Winger", 109.4f,
 				"Steve Ballmer", (byte) 1);
 		Estadio cryptocomArenaClippers = new Estadio((byte) 20, "Crypto.com Arena", (short) 19060, (byte) 20);
 
-		Equipo lakers = new Equipo((byte) 21, "Lakers", (byte) 2, "Los Ángeles", "Rob Pelinka", 109.4f, "Jeanie Buss",
+		Equipo lakers = new Equipo((byte) 21, "Lakers", (byte) 2, "Los Ã�ngeles", "Rob Pelinka", 109.4f, "Jeanie Buss",
 				(byte) 1);
 		Estadio cryptocomArena = new Estadio((byte) 21, "Crypto.com Arena", (short) 19060, (byte) 21);
 
@@ -1450,7 +1450,7 @@ public class FuncionesUtiles {
 				"Paul Allen", (byte) 1);
 		Estadio modaCenter = new Estadio((byte) 27, "Moda Center", (short) 19393, (byte) 27);
 
-		Equipo kings = new Equipo((byte) 28, "Kings", (byte) 2, "Sacramento", "Monte McNair", 109.4f, "Vivek Ranadivé",
+		Equipo kings = new Equipo((byte) 28, "Kings", (byte) 2, "Sacramento", "Monte McNair", 109.4f, "Vivek RanadivÃ©",
 				(byte) 1);
 		Estadio golden1Center = new Estadio((byte) 28, "Golden 1 Center", (short) 17608, (byte) 28);
 

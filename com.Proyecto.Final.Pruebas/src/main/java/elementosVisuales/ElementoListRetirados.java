@@ -14,10 +14,29 @@ import javax.swing.border.LineBorder;
 import clases.Jugador;
 import pantallas.Ventana;
 
+/**
+ * Clase que representa el elemento visual que muestra un jugador retirado cuyo
+ * dorsal ha sido retirado por algún equipo
+ * 
+ * @author jcorr
+ *
+ */
 public class ElementoListRetirados extends JPanel {
+	/*
+	 * ventana en la que se muestra esta pantalla,sirve para conseguir datos
+	 * dinámicos
+	 */
 	private Ventana ventana;
+	/* jugador del que se muestran los datos,así se puede hacer todo dinámico */
 	private Jugador jugador;
 
+	/**
+	 * Constructor del elemento visual,hay que resaltar que depende si el jugador
+	 * tiene o no apodo,pone el label en el que se muestra el apodo.
+	 * 
+	 * @param ventana ventana en la que se muestra esta pantalla
+	 * @param jugador jugador del que se muestran los datos
+	 */
 	public ElementoListRetirados(Ventana ventana, Jugador jugador) {
 		super();
 		setBorder(new LineBorder(Color.WHITE, 3, true));

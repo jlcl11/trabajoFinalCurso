@@ -15,10 +15,28 @@ import javax.swing.border.SoftBevelBorder;
 import javax.swing.border.BevelBorder;
 import java.awt.Color;
 
-public class ElementoListEquiposPrimeraRonda extends JPanel{
+/**
+ * Clase que representa el elemento visual que muestra un equipo que participa
+ * en la primera ronda de playoffs
+ * 
+ * @author jcorr
+ *
+ */
+public class ElementoListEquiposPrimeraRonda extends JPanel {
+	/*
+	 * ventana en la que se muestra esta pantalla,sirve para conseguir datos
+	 * dinámicos
+	 */
 	private Ventana ventana;
+	/* equipo del que se muestran los datos,así se puede hacer todo dinámico */
 	private Equipo equipo;
-	
+
+	/**
+	 * Constructor del elemento visual
+	 * 
+	 * @param ventana ventana en la que se muestra esta pantalla
+	 * @param equipo  equipo del que se muestran los datos
+	 */
 	public ElementoListEquiposPrimeraRonda(Ventana ventana, Equipo equipo) {
 		super();
 		setBackground(Color.RED);
@@ -26,12 +44,12 @@ public class ElementoListEquiposPrimeraRonda extends JPanel{
 		this.ventana = ventana;
 		this.equipo = equipo;
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{0, 0, 0};
-		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0};
-		gridBagLayout.columnWeights = new double[]{1.0, 1.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.columnWidths = new int[] { 0, 0, 0 };
+		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0 };
+		gridBagLayout.columnWeights = new double[] { 1.0, 1.0, Double.MIN_VALUE };
+		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE };
 		setLayout(gridBagLayout);
-		
+
 		JLabel ciudadEquipo = new JLabel(this.equipo.getCiudadLocal());
 		ciudadEquipo.setForeground(Color.WHITE);
 		ciudadEquipo.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 15));
@@ -41,7 +59,7 @@ public class ElementoListEquiposPrimeraRonda extends JPanel{
 		gbc_ciudadEquipo.gridx = 0;
 		gbc_ciudadEquipo.gridy = 2;
 		add(ciudadEquipo, gbc_ciudadEquipo);
-		
+
 		JLabel equipoNombre = new JLabel(this.equipo.getNombre());
 		equipoNombre.setForeground(Color.WHITE);
 		equipoNombre.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 15));
@@ -52,6 +70,5 @@ public class ElementoListEquiposPrimeraRonda extends JPanel{
 		gbc_equipoNombre.gridy = 2;
 		add(equipoNombre, gbc_equipoNombre);
 	}
-	
-	
+
 }

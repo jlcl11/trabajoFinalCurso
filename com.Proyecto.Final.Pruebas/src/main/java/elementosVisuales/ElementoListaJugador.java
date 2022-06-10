@@ -17,10 +17,30 @@ import clases.Jugador;
 import java.awt.Color;
 import javax.swing.SwingConstants;
 
+/**
+ * Clase que representa el elemento visual que muestra un jugador en activo
+ * 
+ * @author jcorr
+ *
+ */
 public class ElementoListaJugador extends JPanel {
+	/*
+	 * ventana en la que se muestra esta pantalla,sirve para conseguir datos
+	 * dinámicos
+	 */
 	private Ventana ventana;
+	/* jugador del que se muestran los datos,así se puede hacer todo dinámico */
 	private Jugador jugador;
 
+	/**
+	 * Constructor del elemento visual,hay que resaltar que depende si el jugador
+	 * tiene o no apodo,pone el label en el que se muestra el apodo.Además del
+	 * dorsal,el nombre los apellidos y el mote si tuviese muestra lás estadísticas
+	 * de la temporada
+	 * 
+	 * @param ventana ventana en la que se muestra esta pantalla
+	 * @param jugador jugador del que se muestran los datos
+	 */
 	public ElementoListaJugador(Ventana ventana, Jugador jugador) {
 		super();
 		setBorder(new LineBorder(Color.WHITE, 3, true));
