@@ -9,6 +9,7 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.awt.Font;
 import javax.swing.SwingConstants;
@@ -46,7 +47,12 @@ public class PantallaPlayoffs extends JPanel {
 		botonVolver.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("primerMenu");
+				try {
+					ventana.cambiarAPantalla("primerMenu");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 

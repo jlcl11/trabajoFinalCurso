@@ -20,6 +20,7 @@ import java.awt.Insets;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
 
 public class PantallaTitularesAllStar extends JPanel {
 	private Ventana ventana;
@@ -65,7 +66,12 @@ public class PantallaTitularesAllStar extends JPanel {
 		volver.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Menu AllStar");
+				try {
+					ventana.cambiarAPantalla("Menu AllStar");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		volver.setForeground(Color.WHITE);

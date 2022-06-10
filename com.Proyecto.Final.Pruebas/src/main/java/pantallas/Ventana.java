@@ -11,41 +11,25 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import clases.Equipo;
+import clases.Playoff;
 
 public class Ventana extends JFrame {
 	protected Equipo miEquipo;
-	private HashMap<String, JPanel> pantallas;
+
+	private JPanel pantallaActual;
 
 	public Ventana() throws SQLException, InterruptedException {
 		miEquipo = new Equipo("Wizards");
-		pantallas = new HashMap<String, JPanel>();
-		pantallas.put("inicial", new PantallaInicial(this));
-		pantallas.put("primerMenu", new PantallaInicioPrimerMenu(this));
-		pantallas.put("Escoger Equipos", new PantallaEscogerEquipoDatosFranquicia(this));
-		pantallas.put("Datos Franquicia", new PantallaDatosFranquicia(this));
-		pantallas.put("Premios De Temporada", new PantallaMenusPremiosDeTemporada(this));
-		pantallas.put("Menu AllStar", new PantallaMenuAllStar(this));
-		pantallas.put("Playoffs", new PantallaPlayoffs(this));
-		pantallas.put("titularesAllStar", new PantallaTitularesAllStar(this));
-		pantallas.put("AllStars Este", new PantallaAllStarEste(this));
-		pantallas.put("AllStar Oeste", new PantallaAllStarOeste(this));
-		pantallas.put("Dorsales Retirados", new PantallaDorsalesRetirados(this));
-		pantallas.put("GM", new PantallaGM(this));
-		pantallas.put("Limite", new PantallaLimiteSalarial(this));
-		pantallas.put("Plantilla", new PantallaPlantilla(this));
-		pantallas.put("Propietario", new PantallaPropietario(this));
-		pantallas.put("Estadio", new PantallaVerEstadio(this));
-
+		pantallaActual= new PantallaInicial(this);
 		this.setSize(1300, 800);
 		this.setLocationRelativeTo(null);
 		this.setTitle("JuegoIndie2kNBA.exe");
 		this.setIconImage(new ImageIcon("./imagenes/logoPrograma.png").getImage());
 		this.setAlwaysOnTop(true);
-		
-		  setCursor(Toolkit.getDefaultToolkit().createCustomCursor( new
-		  ImageIcon("./imagenes/logoPrograma.png").getImage(), new Point(0, 0),
-		  "custom cursor"));
-		 
+
+		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+				new ImageIcon("./imagenes/logoPrograma.png").getImage(), new Point(0, 0), "custom cursor"));
+
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setBackground(getBackground());
 
@@ -53,31 +37,79 @@ public class Ventana extends JFrame {
 		// this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		// this.setUndecorated(true);
 
-		this.setContentPane(this.pantallas.get("inicial"));
+		this.setContentPane(pantallaActual);
 		this.setResizable(false);
 		this.setVisible(true);
 	}
 
-
-	public void cambiarAPantalla(String nombrePantalla) {
-		Iterator it = this.pantallas.values().iterator();
-		while (it.hasNext()) {
-			JPanel actual = (JPanel) it.next();
-			actual.setVisible(false);
+	public void cambiarAPantalla(String nombrePantalla) throws InterruptedException, SQLException {
+		if (this.pantallaActual != null) {
+			this.pantallaActual.setVisible(false);
+		} else {
+			this.pantallaActual = null;
 		}
-		this.pantallas.get(nombrePantalla).setVisible(true);
-		this.setContentPane(this.pantallas.get(nombrePantalla));
+
+		switch (nombrePantalla) {
+
+		case "inicial":
+			this.pantallaActual = new PantallaInicial(this);
+			break;
+		case "primerMenu":
+			this.pantallaActual = new PantallaInicioPrimerMenu(this);
+			break;
+		case "Escoger Equipos":
+			this.pantallaActual = new PantallaEscogerEquipoDatosFranquicia(this);
+			break;
+		case "Datos Franquicia":
+			this.pantallaActual = new PantallaDatosFranquicia(this);
+			break;
+
+		case "Premios De Temporada":
+			this.pantallaActual = new PantallaMenusPremiosDeTemporada(this);
+			break;
+
+		case "Menu AllStar":
+			this.pantallaActual = new PantallaMenuAllStar(this);
+			break;
+		case "Playoffs":
+			this.pantallaActual = new PantallaPlayoffs(this);
+			break;
+		case "AllStars Este":
+			this.pantallaActual = new PantallaAllStarEste(this);
+			break;
+		case "titularesAllStar":
+			this.pantallaActual = new PantallaTitularesAllStar(this);
+			break;
+
+		case "AllStar Oeste":
+			this.pantallaActual = new PantallaAllStarOeste(this);
+			break;
+
+		case "Dorsales Retirados":
+			this.pantallaActual = new PantallaDorsalesRetirados(this);
+			break;
+		case "GM":
+			this.pantallaActual = new PantallaGM(this);
+			break;
+
+		case "Limite":
+			this.pantallaActual = new PantallaLimiteSalarial(this);
+			break;
+
+		case "Plantilla":
+			this.pantallaActual = new PantallaPlantilla(this);
+			break;
+		case "Propietario":
+			this.pantallaActual = new PantallaPropietario(this);
+			break;
+
+		case "Estadio":
+			this.pantallaActual = new PantallaVerEstadio(this);
+			break;
+
+		}
+		this.pantallaActual.setVisible(true);
+		this.setContentPane(pantallaActual);
 	}
-
-
-	public Equipo getMiEquipo() {
-		return miEquipo;
-	}
-
-
-	public void setMiEquipo(Equipo miEquipo) {
-		this.miEquipo = miEquipo;
-	}
-	
 
 }

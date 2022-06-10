@@ -10,6 +10,7 @@ import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
@@ -43,7 +44,12 @@ public class PantallaDatosFranquicia extends JPanel {
 		botonDatosEstadio.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Estadio");
+				try {
+					ventana.cambiarAPantalla("Estadio");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		botonDatosEstadio.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -61,7 +67,12 @@ public class PantallaDatosFranquicia extends JPanel {
 		botonVerPropietario.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Propietario");
+				try {
+					ventana.cambiarAPantalla("Propietario");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		botonVerPropietario.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -79,7 +90,12 @@ public class PantallaDatosFranquicia extends JPanel {
 		botonVerGM.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("GM");
+				try {
+					ventana.cambiarAPantalla("GM");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		botonVerGM.setForeground(Color.WHITE);
@@ -97,7 +113,12 @@ public class PantallaDatosFranquicia extends JPanel {
 		botonLimiteSalarial.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Limite");
+				try {
+					ventana.cambiarAPantalla("Limite");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		botonLimiteSalarial.setForeground(Color.WHITE);
@@ -115,7 +136,12 @@ public class PantallaDatosFranquicia extends JPanel {
 		btnNewButton_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Dorsales Retirados");
+				try {
+					ventana.cambiarAPantalla("Dorsales Retirados");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		btnNewButton_2.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -133,7 +159,12 @@ public class PantallaDatosFranquicia extends JPanel {
 		btnNewButton_5.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Plantilla");
+				try {
+					ventana.cambiarAPantalla("Plantilla");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		btnNewButton_5.setForeground(Color.WHITE);
@@ -152,7 +183,12 @@ public class PantallaDatosFranquicia extends JPanel {
 		btnNewButton_6.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Escoger Equipos");
+				try {
+					ventana.cambiarAPantalla("Escoger Equipos");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		btnNewButton_6.setBackground(Color.RED);

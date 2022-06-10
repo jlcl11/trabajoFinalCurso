@@ -7,6 +7,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.BoxLayout;
@@ -67,7 +68,12 @@ public PantallaDorsalesRetirados(final Ventana ventana) {
 	volver.addMouseListener(new MouseAdapter() {
 		@Override
 		public void mouseClicked(MouseEvent e) {
-			ventana.cambiarAPantalla("Datos Franquicia");
+			try {
+				ventana.cambiarAPantalla("Datos Franquicia");
+			} catch (InterruptedException | SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		}
 	});
 	volver.setForeground(Color.WHITE);

@@ -15,6 +15,7 @@ import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
 
 public class PantallaMenuAllStar extends JPanel {
 
@@ -46,7 +47,12 @@ public class PantallaMenuAllStar extends JPanel {
 		btnNewButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("primerMenu");
+				try {
+					ventana.cambiarAPantalla("primerMenu");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 
@@ -54,7 +60,12 @@ public class PantallaMenuAllStar extends JPanel {
 		botonTitulares.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("titularesAllStar");
+				try {
+					ventana.cambiarAPantalla("titularesAllStar");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		botonTitulares.setForeground(Color.WHITE);
@@ -72,7 +83,12 @@ public class PantallaMenuAllStar extends JPanel {
 		botonTitularesW.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("AllStar Oeste");
+				try {
+					ventana.cambiarAPantalla("AllStar Oeste");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 
@@ -114,7 +130,12 @@ public class PantallaMenuAllStar extends JPanel {
 		botonTitularesE.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("AllStars Este");
+				try {
+					ventana.cambiarAPantalla("AllStars Este");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		botonTitularesE.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));

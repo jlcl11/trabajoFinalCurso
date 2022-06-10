@@ -32,8 +32,9 @@ public class Main {
 		try {
 			FuncionesUtiles.borrarDatosTablas();
 			FuncionesUtiles.declararObjetos();
-
+			
 			Ventana v = new Ventana();
+			
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block9
@@ -41,10 +42,13 @@ public class Main {
 		} catch (EquipoMalIntroduciodoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (InterruptedException e) {
+		} /*catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} catch (JugadorMalIntroduciodoException e) {
+		} */catch (JugadorMalIntroduciodoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

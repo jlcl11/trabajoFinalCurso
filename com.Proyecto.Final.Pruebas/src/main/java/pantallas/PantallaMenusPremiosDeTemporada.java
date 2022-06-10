@@ -11,22 +11,24 @@ import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
+
 import javax.swing.ImageIcon;
 
-public class PantallaMenusPremiosDeTemporada extends JPanel{
+public class PantallaMenusPremiosDeTemporada extends JPanel {
 	private Ventana ventana;
 
 	public PantallaMenusPremiosDeTemporada(final Ventana ventana) {
 		super();
 		this.ventana = ventana;
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0,
+				Double.MIN_VALUE };
+		gridBagLayout.rowWeights = new double[] { 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE };
 		setLayout(gridBagLayout);
-		
-		
+
 		JLabel tituloPremios = new JLabel("Qu\u00E9 premio quieres ver?");
 		tituloPremios.setHorizontalAlignment(SwingConstants.CENTER);
 		tituloPremios.setForeground(Color.WHITE);
@@ -37,15 +39,15 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 		gbc_tituloPremios.gridx = 3;
 		gbc_tituloPremios.gridy = 2;
 		add(tituloPremios, gbc_tituloPremios);
-		
+
 		JButton botonMVP = new JButton("Ver MVP de la temporada");
 		botonMVP.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				PantallitaMVP p=new PantallitaMVP();
+				PantallitaMVP p = new PantallitaMVP();
 				p.setVisible(true);
 				p.setAlwaysOnTop(true);
-				p.setSize(630,805);
+				p.setSize(630, 805);
 				p.setLocationRelativeTo(null);
 			}
 		});
@@ -59,18 +61,18 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 		gbc_botonMVP.gridx = 3;
 		gbc_botonMVP.gridy = 5;
 		add(botonMVP, gbc_botonMVP);
-		
+
 		JButton botonDPOY = new JButton("Ver el defensor del A\u00F1o");
 		botonDPOY.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
-				PantallitaDPOY p=new PantallitaDPOY();
+				PantallitaDPOY p = new PantallitaDPOY();
 				p.setVisible(true);
 				p.setAlwaysOnTop(true);
-				p.setSize(630,805);
+				p.setSize(630, 805);
 				p.setLocationRelativeTo(null);
-			
+
 			}
 		});
 		botonDPOY.setForeground(Color.WHITE);
@@ -83,18 +85,18 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 		gbc_botonDPOY.gridx = 5;
 		gbc_botonDPOY.gridy = 5;
 		add(botonDPOY, gbc_botonDPOY);
-		
+
 		JButton botonAnotador = new JButton("Ver el m\u00E1ximo anotador");
 		botonAnotador.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 
-				PantallitaMaxAnotador p=new PantallitaMaxAnotador();
+				PantallitaMaxAnotador p = new PantallitaMaxAnotador();
 				p.setVisible(true);
 				p.setAlwaysOnTop(true);
-				p.setSize(630,805);
+				p.setSize(630, 805);
 				p.setLocationRelativeTo(null);
-			
+
 			}
 		});
 		botonAnotador.setForeground(Color.WHITE);
@@ -107,15 +109,20 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 		gbc_botonAnotador.gridx = 7;
 		gbc_botonAnotador.gridy = 5;
 		add(botonAnotador, gbc_botonAnotador);
-		
+
 		JButton botonVolver = new JButton("Volver");
 		botonVolver.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("primerMenu");
+				try {
+					ventana.cambiarAPantalla("primerMenu");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
-		
+
 		botonVolver.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		botonVolver.setForeground(Color.WHITE);
 		botonVolver.setBackground(Color.RED);
@@ -125,7 +132,7 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 		gbc_botonVolver.gridx = 1;
 		gbc_botonVolver.gridy = 8;
 		add(botonVolver, gbc_botonVolver);
-		
+
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(".\\imagenes\\mvp.jpeg"));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
@@ -136,5 +143,5 @@ public class PantallaMenusPremiosDeTemporada extends JPanel{
 		gbc_lblNewLabel.gridy = 0;
 		add(lblNewLabel, gbc_lblNewLabel);
 	}
-	
+
 }

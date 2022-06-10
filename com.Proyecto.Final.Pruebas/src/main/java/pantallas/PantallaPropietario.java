@@ -7,6 +7,7 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -52,7 +53,12 @@ public PantallaPropietario(final Ventana ventana) {
 	Volver.addMouseListener(new MouseAdapter() {
 		@Override
 		public void mouseClicked(MouseEvent e) {
-			ventana.cambiarAPantalla("Datos Franquicia");
+			try {
+				ventana.cambiarAPantalla("Datos Franquicia");
+			} catch (InterruptedException | SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 		}
 	});
 	Volver.setForeground(Color.WHITE);

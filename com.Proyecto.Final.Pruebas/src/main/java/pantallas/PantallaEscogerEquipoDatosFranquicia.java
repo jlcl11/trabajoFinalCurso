@@ -58,7 +58,12 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 		botonVolver.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("primerMenu");
+				try {
+					ventana.cambiarAPantalla("primerMenu");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 
@@ -474,7 +479,7 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 					if (botonesEquipo.get(i).isSelected()) {
 						try {
 							ventana.miEquipo = new Equipo(botonesEquipo.get(i).getText());
-							ventana.setMiEquipo(new Equipo(botonesEquipo.get(i).getText()));
+
 							break;
 						} catch (SQLException e1) {
 							// TODO Auto-generated catch block
@@ -482,7 +487,12 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 						}
 					}
 				}
-				ventana.cambiarAPantalla("Datos Franquicia");
+				try {
+					ventana.cambiarAPantalla("Datos Franquicia");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 

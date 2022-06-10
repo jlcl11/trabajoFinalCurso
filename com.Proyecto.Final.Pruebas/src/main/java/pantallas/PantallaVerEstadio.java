@@ -16,6 +16,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.SQLException;
 
 public class PantallaVerEstadio extends JPanel {
 	private Ventana ventana;
@@ -57,7 +58,12 @@ public class PantallaVerEstadio extends JPanel {
 		Volver.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Datos Franquicia");
+				try {
+					ventana.cambiarAPantalla("Datos Franquicia");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		Volver.setForeground(Color.WHITE);

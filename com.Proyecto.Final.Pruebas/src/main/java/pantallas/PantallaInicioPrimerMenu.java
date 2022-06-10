@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -48,7 +49,12 @@ public class PantallaInicioPrimerMenu extends JPanel {
 		botonDatosFranquicia.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Escoger Equipos");
+				try {
+					ventana.cambiarAPantalla("Escoger Equipos");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		botonDatosFranquicia.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -66,7 +72,12 @@ public class PantallaInicioPrimerMenu extends JPanel {
 		botonDatosDeTemporada.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Premios De Temporada");
+				try {
+					ventana.cambiarAPantalla("Premios De Temporada");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		botonDatosDeTemporada.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -84,7 +95,12 @@ public class PantallaInicioPrimerMenu extends JPanel {
 		botonSimular.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Playoffs");
+				try {
+					ventana.cambiarAPantalla("Playoffs");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		botonSimular.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -102,7 +118,12 @@ public class PantallaInicioPrimerMenu extends JPanel {
 		botonAllStar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("Menu AllStar");
+				try {
+					ventana.cambiarAPantalla("Menu AllStar");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		botonAllStar.setForeground(Color.WHITE);
@@ -120,7 +141,12 @@ public class PantallaInicioPrimerMenu extends JPanel {
 		botonVolver.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				ventana.cambiarAPantalla("inicial");
+				try {
+					ventana.cambiarAPantalla("inicial");
+				} catch (InterruptedException | SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 
