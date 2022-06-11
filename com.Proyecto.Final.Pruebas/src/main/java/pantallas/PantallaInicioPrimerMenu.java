@@ -41,9 +41,9 @@ public class PantallaInicioPrimerMenu extends JPanel {
 		super();
 
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0,
+		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0,
 				Double.MIN_VALUE };
 		gridBagLayout.rowWeights = new double[] { 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0,
 				0.0, 0.0, Double.MIN_VALUE };
@@ -53,8 +53,9 @@ public class PantallaInicioPrimerMenu extends JPanel {
 		botonTitulo.setForeground(Color.WHITE);
 		botonTitulo.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
 		GridBagConstraints gbc_botonTitulo = new GridBagConstraints();
+		gbc_botonTitulo.gridwidth = 3;
 		gbc_botonTitulo.insets = new Insets(0, 0, 5, 5);
-		gbc_botonTitulo.gridx = 5;
+		gbc_botonTitulo.gridx = 4;
 		gbc_botonTitulo.gridy = 2;
 		add(botonTitulo, gbc_botonTitulo);
 
@@ -162,42 +163,57 @@ public class PantallaInicioPrimerMenu extends JPanel {
 				}
 			}
 		});
-
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon(".\\imagenes\\NBA-2K22.jpeg"));
-		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 0);
-		gbc_lblNewLabel.gridheight = 15;
-		gbc_lblNewLabel.gridwidth = 10;
-		gbc_lblNewLabel.gridx = 0;
-		gbc_lblNewLabel.gridy = 0;
-		add(lblNewLabel, gbc_lblNewLabel);
-
-		JButton botonTicket = new JButton("Imprimir un ticket con los ganadores de la temporada");
-		botonTicket.addMouseListener(new MouseAdapter() {
+		
+			
+		
+				JButton botonTicket = new JButton("Imprimir un ticket con los ganadores de la temporada");
+				botonTicket.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						try {
+							Liga.imprimeTicket();
+							JOptionPane.showMessageDialog(ventana, "Ticket impreso con éxito", ventana.getName(),
+									JOptionPane.PLAIN_MESSAGE);
+							ticketPorPantalla p = new ticketPorPantalla();
+							
+							p.setVisible(true);
+							p.setAlwaysOnTop(true);
+							p.setSize(630, 805);
+							p.setLocationRelativeTo(null);
+						} catch (IOException e1) {
+							// TODO Auto-generated catch block
+							JOptionPane.showMessageDialog(ventana, "El ticket no pudo imprimirse", ventana.getName(),
+									JOptionPane.ERROR_MESSAGE);
+						}
+					}
+				});
+				botonTicket.setForeground(Color.WHITE);
+				botonTicket.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
+				botonTicket.setBackground(Color.BLUE);
+				GridBagConstraints gbc_botonTicket = new GridBagConstraints();
+				gbc_botonTicket.gridheight = 2;
+				gbc_botonTicket.fill = GridBagConstraints.BOTH;
+				gbc_botonTicket.insets = new Insets(0, 0, 5, 5);
+				gbc_botonTicket.gridx = 4;
+				gbc_botonTicket.gridy = 12;
+				add(botonTicket, gbc_botonTicket);
+		
+		JButton buscadorJogadores = new JButton("Buscador de Jugadores");
+		buscadorJogadores.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				try {
-					Liga.imprimeTicket();
-					JOptionPane.showMessageDialog(ventana, "Ticket impreso con éxito", ventana.getName(),
-							JOptionPane.PLAIN_MESSAGE);
-				} catch (IOException e1) {
-					// TODO Auto-generated catch block
-					JOptionPane.showMessageDialog(ventana, "El ticket no pudo imprimirse", ventana.getName(),
-							JOptionPane.ERROR_MESSAGE);
-				}
 			}
 		});
-		botonTicket.setForeground(Color.WHITE);
-		botonTicket.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
-		botonTicket.setBackground(Color.BLUE);
-		GridBagConstraints gbc_botonTicket = new GridBagConstraints();
-		gbc_botonTicket.gridheight = 2;
-		gbc_botonTicket.fill = GridBagConstraints.BOTH;
-		gbc_botonTicket.insets = new Insets(0, 0, 5, 5);
-		gbc_botonTicket.gridx = 5;
-		gbc_botonTicket.gridy = 12;
-		add(botonTicket, gbc_botonTicket);
+		buscadorJogadores.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
+		buscadorJogadores.setForeground(Color.WHITE);
+		buscadorJogadores.setBackground(Color.BLUE);
+		GridBagConstraints gbc_buscadorJogadores = new GridBagConstraints();
+		gbc_buscadorJogadores.gridheight = 2;
+		gbc_buscadorJogadores.fill = GridBagConstraints.BOTH;
+		gbc_buscadorJogadores.insets = new Insets(0, 0, 5, 5);
+		gbc_buscadorJogadores.gridx = 6;
+		gbc_buscadorJogadores.gridy = 12;
+		add(buscadorJogadores, gbc_buscadorJogadores);
 
 		botonVolver.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		botonVolver.setForeground(Color.WHITE);
@@ -207,5 +223,16 @@ public class PantallaInicioPrimerMenu extends JPanel {
 		gbc_botonVolver.gridx = 1;
 		gbc_botonVolver.gridy = 14;
 		add(botonVolver, gbc_botonVolver);
+		
+	
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon(".\\imagenes\\NBA-2K22.jpeg"));
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 0);
+		gbc_lblNewLabel.gridheight = 15;
+		gbc_lblNewLabel.gridwidth = 10;
+		gbc_lblNewLabel.gridx = 0;
+		gbc_lblNewLabel.gridy = 0;
+		add(lblNewLabel, gbc_lblNewLabel);
 	}
 }

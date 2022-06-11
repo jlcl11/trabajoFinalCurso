@@ -355,6 +355,15 @@ public class Equipo extends ObjetoConNombre {
 
 	}
 
+	/**
+	 * Función que según el nombre del equipo selecciona los jugadores desde bbdd y
+	 * los mete en un ArrayList,luego tendremos que recorrerlo para imprimir cada
+	 * uno de los jugadores
+	 * 
+	 * @param nombre es el nombre del equipo que se le pasa por argumentos,gracias a
+	 *               este conseguimos diferenciar los jugadores por plantila
+	 * @return el ArrayList de jugador
+	 */
 	public static ArrayList<Jugador> getPlantilla(String nombre) {
 		Statement smt = UtilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
@@ -382,7 +391,6 @@ public class Equipo extends ObjetoConNombre {
 				ret.add(actual);
 			}
 		} catch (SQLException e) {
-			// Si la conuslta falla no hay nada que devolver.
 			e.printStackTrace();
 			return null;
 		} catch (SetterJugadorNoFuncionaAsiException e) {
@@ -396,6 +404,12 @@ public class Equipo extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Función que declara los equipos y los estadios de la conferencia oeste para
+	 * que se metan en bbdd desde el constructor
+	 * 
+	 * @throws SQLException lanza la excepción porque mete los equipos en bbdd
+	 */
 	public static void declararEquiposOeste() throws SQLException {
 
 		Equipo mavs = new Equipo((byte) 16, "Mavericks", (byte) 2, "Dallas", "Nico Harrison", 109.4f, "Mark Cuban",
@@ -458,7 +472,13 @@ public class Equipo extends ObjetoConNombre {
 		Estadio vivintArena = new Estadio((byte) 30, "Vivint Arena", (short) 18306, (byte) 30);
 
 	}
-	
+
+	/**
+	 * Función que declara los equipos y los estadios de la conferencia este para
+	 * que se metan en bbdd desde el constructor
+	 * 
+	 * @throws SQLException lanza la excepción porque mete los equipos en bbdd
+	 */
 	public static void declararEquiposEste() throws SQLException {
 
 		Equipo hawks = new Equipo((byte) 1, "Hawks", (byte) 1, "Atlanta", "Anthony Ressler", 109.6f, "Travis Schlenk",
@@ -519,11 +539,6 @@ public class Equipo extends ObjetoConNombre {
 				"Ted Leonsis", (byte) 1);
 		Estadio capitalOneArena = new Estadio((byte) 15, "Capital One Arena", (short) 20356, (byte) 15);
 
-		
-
 	}
-	
-	
-	
-	
+
 }

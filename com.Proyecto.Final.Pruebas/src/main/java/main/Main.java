@@ -7,6 +7,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Random;
 import clases.Conferencia;
 import clases.Equipo;
@@ -41,8 +44,15 @@ public class Main {
 
 		try {
 			UtilsDB.borrarDatosTablas();
-			Jugador.buscaJugadores();
-			Ventana v = new Ventana();
+
+			HashMap<String, Jugador> map = Jugador.buscaJugadores();
+		
+			System.out.println("Recorrer solo valores");
+			 System.out.println( map.get("LeBron James"));
+			for (Jugador valor : map.values()) {
+			   
+			}
+			 Ventana v = new Ventana();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block9
