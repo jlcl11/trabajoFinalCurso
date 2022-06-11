@@ -15,12 +15,25 @@ import java.sql.SQLException;
 
 import javax.swing.ImageIcon;
 
+/**
+ * Clase hereda de JPanel, y que enseña los botones que desplegan pop-ups con
+ * los diferentes premios de temporada
+ * 
+ * @author jcorr
+ *
+ */
 public class PantallaMenusPremiosDeTemporada extends JPanel {
-	private Ventana ventana;
-
+	/**
+	 * * Constructor de PantallaMenusPremiosDeTemporada,que inicializa la
+	 * distribución de la información que sale por pantalla,así como su
+	 * Layout.Consiste en unos cuantos botones cuya función es desplegar un JFrame
+	 * aparte con el ganador del premio de temporada seleccionado
+	 * 
+	 * @param ventana
+	 */
 	public PantallaMenusPremiosDeTemporada(final Ventana ventana) {
 		super();
-		this.ventana = ventana;
+
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -116,7 +129,7 @@ public class PantallaMenusPremiosDeTemporada extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("primerMenu");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}

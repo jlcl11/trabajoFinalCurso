@@ -9,13 +9,31 @@ import utils.FuncionesUtiles;
 
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
+import java.awt.Point;
+import java.awt.Toolkit;
+
 import javax.swing.ImageIcon;
 import java.awt.Color;
 
+/**
+ * Clase hereda de JFrame, y que enseña el equipo campeón
+ * 
+ * @author jcorr
+ *
+ */
 public class Campeon extends JFrame {
-	private Equipo equipo;
-
+	/**
+	 * Constructor de Campeon,que inicializa su tamaño, título e icono, y otras
+	 * propiedades como el nombre del equipo y la foto de su estadio.
+	 */
 	public Campeon() {
+		this.setTitle("JuegoIndie2kNBA.exe");
+		this.setIconImage(new ImageIcon("./imagenes/logoPrograma.png").getImage());
+		this.setAlwaysOnTop(true);
+
+		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+				new ImageIcon("./imagenes/logoPrograma.png").getImage(), new Point(0, 0), "custom cursor"));
+
 		getContentPane().setBackground(Color.WHITE);
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0 };
@@ -31,9 +49,9 @@ public class Campeon extends JFrame {
 		gbc_lblNewLabel.gridx = 2;
 		gbc_lblNewLabel.gridy = 2;
 		getContentPane().add(lblNewLabel, gbc_lblNewLabel);
-		
+
 		JLabel lblNewLabel_1 = new JLabel("");
-		String foto=".\\\\imagenes\\\\"+ FuncionesUtiles.devolverCampeon().getNombre()+"ESCUDO.jpg";
+		String foto = ".\\\\imagenes\\\\" + FuncionesUtiles.devolverCampeon().getNombre() + "ESCUDO.jpg";
 		lblNewLabel_1.setIcon(new ImageIcon(foto));
 		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
 		gbc_lblNewLabel_1.gridheight = 2;

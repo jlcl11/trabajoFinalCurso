@@ -21,12 +21,25 @@ import utils.FuncionesUtiles;
 import java.awt.GridBagLayout;
 import javax.swing.ImageIcon;
 
+/**
+ * Clase hereda de JPanel, y que enseña los botones de las características
+ * principales del programa
+ * 
+ * @author jcorr
+ *
+ */
 public class PantallaInicioPrimerMenu extends JPanel {
-	private Ventana ventana;
-
+	/**
+	 * * Constructor de PantallaInicioPrimerMenu,que inicializa la distribuci�n de
+	 * la información que sale por pantalla,así como su Layout.Consiste en unos
+	 * cuantos botones cuya única función es desplazar al usuario a diferentes
+	 * pantallas,básicamente un menú
+	 * 
+	 * @param ventana
+	 */
 	public PantallaInicioPrimerMenu(final Ventana ventana) {
 		super();
-		this.ventana = ventana;
+
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -51,7 +64,7 @@ public class PantallaInicioPrimerMenu extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Escoger Equipos");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -74,7 +87,7 @@ public class PantallaInicioPrimerMenu extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Premios De Temporada");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -97,7 +110,7 @@ public class PantallaInicioPrimerMenu extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Playoffs");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -120,7 +133,7 @@ public class PantallaInicioPrimerMenu extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Menu AllStar");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -143,7 +156,7 @@ public class PantallaInicioPrimerMenu extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("inicial");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -166,7 +179,7 @@ public class PantallaInicioPrimerMenu extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					FuncionesUtiles.imprimeTicket();
-					JOptionPane.showMessageDialog(ventana, "Ticket impreso con �xito", ventana.getName(),
+					JOptionPane.showMessageDialog(ventana, "Ticket impreso con éxito", ventana.getName(),
 							JOptionPane.PLAIN_MESSAGE);
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block

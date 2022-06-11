@@ -5,15 +5,36 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.Point;
+import java.awt.Toolkit;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 import utils.FuncionesUtiles;
 
+/**
+ * Clase hereda de JFrame, y que enseña el MVP del AllStar
+ * 
+ * @author jcorr
+ *
+ */
 public class MVPAllStar extends JFrame {
+	/**
+	 * Constructor de MVPAllStar,que inicializa su tamaño, título e icono, y otras
+	 * propiedades como el nombre del jugador y las estadísticas que ha tenido en la
+	 * temporada
+	 */
 	public MVPAllStar() {
+		this.setTitle("JuegoIndie2kNBA.exe");
+		this.setIconImage(new ImageIcon("./imagenes/logoPrograma.png").getImage());
+		this.setAlwaysOnTop(true);
+
+		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+				new ImageIcon("./imagenes/logoPrograma.png").getImage(), new Point(0, 0), "custom cursor"));
+
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0 };
@@ -33,8 +54,9 @@ public class MVPAllStar extends JFrame {
 		getContentPane().add(nombre, gbc_nums);
 
 		JLabel stats = new JLabel(FuncionesUtiles.getAllStarMVP().getPPG() + " Puntos "
-				+ FuncionesUtiles.getAllStarMVP().getAPG() + " Asistencias" + FuncionesUtiles.getAllStarMVP().getRBG() + " Rebotes "
-				+ FuncionesUtiles.getAllStarMVP().getSPG() + " robos " + FuncionesUtiles.getAllStarMVP().getBPG() + " tapones");
+				+ FuncionesUtiles.getAllStarMVP().getAPG() + " Asistencias" + FuncionesUtiles.getAllStarMVP().getRBG()
+				+ " Rebotes " + FuncionesUtiles.getAllStarMVP().getSPG() + " robos "
+				+ FuncionesUtiles.getAllStarMVP().getBPG() + " tapones");
 		stats.setForeground(Color.BLACK);
 		stats.setHorizontalAlignment(SwingConstants.CENTER);
 		stats.setFont(new Font("Segoe UI Semibold", Font.BOLD, 15));

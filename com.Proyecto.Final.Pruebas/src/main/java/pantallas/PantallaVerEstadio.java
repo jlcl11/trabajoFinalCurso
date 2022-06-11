@@ -18,9 +18,25 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.SQLException;
 
+/**
+ * Clase hereda de JPanel, y que enseña el nombre del estadio en el que juega el
+ * equipo seleccionado así como una foto suya
+ * 
+ * @author jcorr
+ *
+ */
 public class PantallaVerEstadio extends JPanel {
+	/* ventana en la que se muestra la pantalla */
 	private Ventana ventana;
 
+	/**
+	 * Constructor de PantallaVerEstadio,que inicializa la distribución de la
+	 * información que sale por pantalla,así como su Layout.Consiste en una pantalla
+	 * con 2 label, en uno de ellos muestra su nombre y en otro la foto con la
+	 * porpiedad icon del label
+	 * 
+	 * @param ventana ventana en la que se muestra la pantalla
+	 */
 	public PantallaVerEstadio(final Ventana ventana) {
 		super();
 		setBackground(Color.BLACK);
@@ -60,7 +76,7 @@ public class PantallaVerEstadio extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Datos Franquicia");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}

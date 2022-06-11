@@ -17,13 +17,26 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.SQLException;
 
+/**
+ * Clase hereda de JPanel, y que enseña los botones de las características del
+ * menú del AllStar
+ * 
+ * @author jcorr
+ *
+ */
 public class PantallaMenuAllStar extends JPanel {
 
-	private Ventana ventana;
-
-	public PantallaMenuAllStar(final Ventana ventana) throws HeadlessException {
+	/**
+	 * Constructor de PantallaMenuAllStar,que inicializa la distribución de la
+	 * información que sale por pantalla,así como su Layout.Consiste en unos cuantos
+	 * botones cuya única función es desplazar al usuario a diferentes
+	 * pantallas,básicamente un menú
+	 * 
+	 * @param ventana
+	 */
+	public PantallaMenuAllStar(final Ventana ventana) {
 		super();
-		this.ventana = ventana;
+
 		GridBagLayout gridBagLayout_1 = new GridBagLayout();
 		gridBagLayout_1.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 		gridBagLayout_1.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -49,7 +62,7 @@ public class PantallaMenuAllStar extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("primerMenu");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -62,7 +75,7 @@ public class PantallaMenuAllStar extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("titularesAllStar");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -85,7 +98,7 @@ public class PantallaMenuAllStar extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("AllStar Oeste");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -132,7 +145,7 @@ public class PantallaMenuAllStar extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("AllStars Este");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}

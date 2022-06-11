@@ -15,21 +15,38 @@ import java.awt.event.MouseEvent;
 import java.sql.SQLException;
 import java.awt.Font;
 
+/**
+ * Clase hereda de JPanel, y que ense�a el nombre y apellidos del General
+ * Manager as� como un a foto suya
+ * 
+ * @author jcorr
+ *
+ */
 public class PantallaGM extends JPanel {
+	/* ventana en la que se muestra la pantalla */
 	private Ventana ventana;
 
+	/**
+	 * Constructor de PantallaGM,que inicializa la distribuci�n de la informaci�n
+	 * que sale por pantalla,as� como su Layout.Consiste en una pantalla con 2
+	 * label, en uno de ellos muestra su nombre y apellidos y en otro la foto con la
+	 * porpiedad icon del label
+	 * 
+	 * @param ventana ventana en la que se muestra la pantalla
+	 */
 	public PantallaGM(final Ventana ventana) {
 		super();
 		setBackground(Color.BLACK);
 		this.ventana = ventana;
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0, 0, 0};
-		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		gridBagLayout.columnWeights = new double[]{0.0, 1.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0 };
+		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+		gridBagLayout.columnWeights = new double[] { 0.0, 1.0, 0.0, 1.0, 0.0, Double.MIN_VALUE };
+		gridBagLayout.rowWeights = new double[] { 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, Double.MIN_VALUE };
 		setLayout(gridBagLayout);
-		
-		JLabel lblNewLabel = new JLabel("El General Manager de los "+this.ventana.miEquipo.getNombre()+" es "+this.ventana.miEquipo.getGM());
+
+		JLabel lblNewLabel = new JLabel("El General Manager de los " + this.ventana.miEquipo.getNombre() + " es "
+				+ this.ventana.miEquipo.getGM());
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 40));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
@@ -37,9 +54,9 @@ public class PantallaGM extends JPanel {
 		gbc_lblNewLabel.gridx = 2;
 		gbc_lblNewLabel.gridy = 2;
 		add(lblNewLabel, gbc_lblNewLabel);
-		
+
 		JLabel foto = new JLabel("");
-		String propietario=".\\\\imagenes\\\\"+this.ventana.miEquipo.getNombre()+"GM.jpg";
+		String propietario = ".\\\\imagenes\\\\" + this.ventana.miEquipo.getNombre() + "GM.jpg";
 		foto.setIcon(new ImageIcon(propietario));
 		GridBagConstraints gbc_foto = new GridBagConstraints();
 		gbc_foto.gridheight = 2;
@@ -47,14 +64,14 @@ public class PantallaGM extends JPanel {
 		gbc_foto.gridx = 2;
 		gbc_foto.gridy = 4;
 		add(foto, gbc_foto);
-		
+
 		JButton Volver = new JButton("Volver");
 		Volver.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Datos Franquicia");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}

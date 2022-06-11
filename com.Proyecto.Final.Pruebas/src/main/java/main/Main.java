@@ -25,16 +25,26 @@ import pantallas.Ventana;
 import utils.FuncionesUtiles;
 import utils.UtilsDB;
 
+/**
+ * Clase principal que contiene el main
+ * 
+ * @author jcorr
+ *
+ */
 public class Main {
-
+	/**
+	 * Función main del programa.Contiene las funciones que borran los datos de la
+	 * bbdd y los declara de nuevo,además lanza la ventana
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 
 		try {
 			FuncionesUtiles.borrarDatosTablas();
 			FuncionesUtiles.declararObjetos();
-			
+
 			Ventana v = new Ventana();
-			
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block9
@@ -42,13 +52,10 @@ public class Main {
 		} catch (EquipoMalIntroduciodoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} /*catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} */catch (JugadorMalIntroduciodoException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
+		} /*
+			 * catch (InterruptedException e) { // TODO Auto-generated catch block
+			 * e.printStackTrace(); }
+			 */catch (JugadorMalIntroduciodoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

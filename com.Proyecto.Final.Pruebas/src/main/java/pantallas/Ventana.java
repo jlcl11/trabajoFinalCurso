@@ -13,14 +13,32 @@ import javax.swing.JPanel;
 import clases.Equipo;
 import clases.Playoff;
 
+/**
+ * Clase que hereda de JFrame, y que contendr� a las pantallas (Heredera de
+ * JPanel) del programa.
+ * 
+ * @author jcorr
+ *
+ */
 public class Ventana extends JFrame {
+	/*
+	 * Variable que inicializa el equipo que vamos a ir seleccionando,de esta manera
+	 * se queda guardado en el this
+	 */
 	protected Equipo miEquipo;
-
+	/* Pantalla que se va a ir mostrando en la ventana */
 	private JPanel pantallaActual;
 
-	public Ventana() throws SQLException, InterruptedException {
+	/**
+	 * Constructor de Ventana, que inicializa su tamaño, título e icono, y otras
+	 * propiedades.
+	 * 
+	 * @throws SQLException lanza la excepción porque rescata los datos del equipo
+	 *                      desde bbdd
+	 */
+	public Ventana() throws SQLException {
 		miEquipo = new Equipo("Wizards");
-		pantallaActual= new PantallaInicial(this);
+		pantallaActual = new PantallaInicial(this);
 		this.setSize(1300, 800);
 		this.setLocationRelativeTo(null);
 		this.setTitle("JuegoIndie2kNBA.exe");
@@ -42,7 +60,15 @@ public class Ventana extends JFrame {
 		this.setVisible(true);
 	}
 
-	public void cambiarAPantalla(String nombrePantalla) throws InterruptedException, SQLException {
+	/**
+	 * Función que cambia la pantalla en función del nombre que se le asigne
+	 * 
+	 * @param nombrePantalla nombre de la pantalla
+	 * 
+	 * @throws SQLException SQLException lanza la excepción porque rescata los datos
+	 *                      del equipo desde bbdd
+	 */
+	public void cambiarAPantalla(String nombrePantalla) throws SQLException {
 		if (this.pantallaActual != null) {
 			this.pantallaActual.setVisible(false);
 		} else {

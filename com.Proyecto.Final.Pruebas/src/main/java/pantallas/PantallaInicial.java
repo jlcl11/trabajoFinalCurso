@@ -23,13 +23,25 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 
+/**
+ * Clase hereda de JPanel, y se muestra como primera pantalla al iniciar el
+ * programa
+ * 
+ * @author jcorr
+ *
+ */
 public class PantallaInicial extends JPanel {
-
-	private Ventana ventana;
-
+	/**
+	 * Constructor de PantallaInicial,que inicializa la distribución de la
+	 * información que sale por pantalla,así como su Layout.Consiste en una imagen
+	 * de fondo,un botón que pone música,un botón que lleva al menú principal y otro
+	 * que cierra el programa
+	 * 
+	 * @param ventana ventana en la que se muestra la pantalla
+	 */
 	public PantallaInicial(final Ventana ventana) {
 		super();
-		this.ventana = ventana;
+
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -37,26 +49,27 @@ public class PantallaInicial extends JPanel {
 		gridBagLayout.rowWeights = new double[] { 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0,
 				Double.MIN_VALUE };
 		setLayout(gridBagLayout);
-		
+
 		JButton musiquitaMP3 = new JButton("\uD83D\uDD0A");
 		musiquitaMP3.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				try {
-			        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("./rumble.wav").getAbsoluteFile());
-			        Clip clip = AudioSystem.getClip();
-			        clip.open(audioInputStream);
-			        clip.start();
-			       } catch( IOException  ex) {
-			        ex.printStackTrace();
-			       } catch (LineUnavailableException e1) {
+					AudioInputStream audioInputStream = AudioSystem
+							.getAudioInputStream(new File("./rumble.wav").getAbsoluteFile());
+					Clip clip = AudioSystem.getClip();
+					clip.open(audioInputStream);
+					clip.start();
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				} catch (LineUnavailableException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				} catch (UnsupportedAudioFileException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				
+
 			}
 		});
 		musiquitaMP3.setBackground(Color.BLUE);
@@ -85,7 +98,7 @@ public class PantallaInicial extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("primerMenu");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}

@@ -15,12 +15,25 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 
+/**
+ * Clase hereda de JPanel y presenta las opciones de datos de franquicia que
+ * puedes ver
+ * 
+ * @author jcorr
+ *
+ */
 public class PantallaDatosFranquicia extends JPanel {
-	private Ventana ventana;
-
+	/**
+	 * Constructor de PantallaDatosFranquicia,que inicializa la distribución de la
+	 * información que sale por pantalla,así como su Layout.Consiste en 6 botones
+	 * que te envían a diferentes pantallas que muestran diferentes datos sobre la
+	 * franquicia seleccionada,por lo tanto esta pantalla funciona a modo de menú
+	 * 
+	 * @param ventana ventana en la que se muestra la pantalla
+	 */
 	public PantallaDatosFranquicia(final Ventana ventana) {
 		super();
-		this.ventana = ventana;
+
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -46,7 +59,7 @@ public class PantallaDatosFranquicia extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Estadio");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -69,7 +82,7 @@ public class PantallaDatosFranquicia extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Propietario");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -92,7 +105,7 @@ public class PantallaDatosFranquicia extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("GM");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -115,7 +128,7 @@ public class PantallaDatosFranquicia extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Limite");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -138,7 +151,7 @@ public class PantallaDatosFranquicia extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Dorsales Retirados");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -161,7 +174,7 @@ public class PantallaDatosFranquicia extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Plantilla");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -185,7 +198,7 @@ public class PantallaDatosFranquicia extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Escoger Equipos");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}

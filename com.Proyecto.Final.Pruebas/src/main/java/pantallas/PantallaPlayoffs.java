@@ -27,14 +27,27 @@ import javax.swing.ImageIcon;
 import javax.swing.JScrollPane;
 import javax.swing.BoxLayout;
 
+/**
+ * Clase hereda de JPanel, y que enseña diferentes equipos según la ronda que se
+ * esté jugando en playoffs
+ * 
+ * @author jcorr
+ *
+ */
 public class PantallaPlayoffs extends JPanel {
-	private Ventana ventana;
-
-	public PantallaPlayoffs(final Ventana ventana) throws InterruptedException {
+	/**
+	 * Constructor de PantallaPlayoffs,que inicializa la distribución de la
+	 * información que sale por pantalla,así como su Layout.Consiste en 7 JScrolls
+	 * con un JPanel dentro de cada uno que insertan tantos elementos visuales de
+	 * equipo como se requieran en cada ronda de playoffs
+	 * 
+	 * @param ventana ventana en la que se muestra la pantalla
+	 */
+	public PantallaPlayoffs(final Ventana ventana) {
 
 		super();
 		setBackground(Color.WHITE);
-		this.ventana = ventana;
+
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -49,7 +62,7 @@ public class PantallaPlayoffs extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("primerMenu");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -130,8 +143,6 @@ public class PantallaPlayoffs extends JPanel {
 		gbc_botonVolver.gridy = 7;
 		add(botonVolver, gbc_botonVolver);
 
-		Thread.sleep(850);
-
 		JScrollPane scrollPaneSegundaRondaOeste = new JScrollPane();
 		GridBagConstraints gbc_scrollPaneSegundaRondaOeste = new GridBagConstraints();
 		gbc_scrollPaneSegundaRondaOeste.insets = new Insets(0, 0, 5, 5);
@@ -165,7 +176,6 @@ public class PantallaPlayoffs extends JPanel {
 		for (int i = 0; i < segundaRondaEste.size(); i++) {
 			panelSegundaRondaEste.add(new ElementoListEquiposSegundaRonda(ventana, segundaRondaEste.get(i)));
 		}
-		Thread.sleep(850);
 
 		JScrollPane scrollPaneFinalConferenciaOeste = new JScrollPane();
 		GridBagConstraints gbc_scrollPaneFinalConferenciaOeste = new GridBagConstraints();
@@ -200,7 +210,6 @@ public class PantallaPlayoffs extends JPanel {
 		for (int i = 0; i < finalEste.size(); i++) {
 			panelFinalConferenciaEste.add(new ElementoListEquiposFinalConferencia(ventana, finalEste.get(i)));
 		}
-		Thread.sleep(850);
 
 		JScrollPane scrollPaneFinales = new JScrollPane();
 		GridBagConstraints gbc_scrollPaneFinales = new GridBagConstraints();

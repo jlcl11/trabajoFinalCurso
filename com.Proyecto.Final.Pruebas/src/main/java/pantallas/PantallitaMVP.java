@@ -5,6 +5,8 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.Point;
+import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -13,9 +15,27 @@ import javax.swing.SwingConstants;
 import utils.FuncionesUtiles;
 import javax.swing.ImageIcon;
 
+/**
+ * Clase hereda de JFrame, y que enseña el jugador que ha ganado el premio al
+ * mejor jugador de la temporada
+ * 
+ * @author jcorr
+ *
+ */
 public class PantallitaMVP extends JFrame {
-
+	/**
+	 * Constructor de PantallaAllStarEste,que inicializa la distribución de la
+	 * información que sale por pantalla,así como su Layout y otras propiedades.Presenta por pantalla el
+	 * nombre,apellidos y estadísticas del ganador
+	 */
 	public PantallitaMVP() {
+		this.setTitle("JuegoIndie2kNBA.exe");
+		this.setIconImage(new ImageIcon("./imagenes/logoPrograma.png").getImage());
+		this.setAlwaysOnTop(true);
+
+		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+				new ImageIcon("./imagenes/logoPrograma.png").getImage(), new Point(0, 0), "custom cursor"));
+
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0 };

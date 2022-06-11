@@ -21,12 +21,26 @@ import clases.Jugador;
 import elementosVisuales.ElementoListaJugador;
 import utils.FuncionesUtiles;
 
+/**
+ * Clase hereda de JPanel, y que enseña los jugadores que pertenece a la
+ * plantilla del equipo seleccoinado
+ * 
+ * @author jcorr
+ *
+ */
 public class PantallaPlantilla extends JPanel {
-	private Ventana ventana;
 
+	/**
+	 * Constructor de PantallaAllStarEste,que inicializa la distribuci�n de la
+	 * información que sale por pantalla,así como su Layout.Consiste en una lista
+	 * dentro de un JScroll para que inserte 5 elementos de jugador ordenados por
+	 * orden de inserción en la base de datos
+	 * 
+	 * @param ventana ventana en la que se muestra la pantalla
+	 */
 	public PantallaPlantilla(final Ventana ventana) {
 		setBackground(Color.BLACK);
-		this.ventana = ventana;
+
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0 };
@@ -69,7 +83,7 @@ public class PantallaPlantilla extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Datos Franquicia");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}

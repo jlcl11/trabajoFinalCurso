@@ -21,11 +21,24 @@ import clases.Jugador;
 import elementosVisuales.ElementoListaJugador;
 import utils.FuncionesUtiles;
 
+/**
+ * Clase hereda de JPanel, y que enseña los jugadores que han entrado en el
+ * equipo del AllStar del Oeste
+ * 
+ * @author jcorr
+ *
+ */
 public class PantallaAllStarOeste extends JPanel {
-	private Ventana ventana;
 
+	/**
+	 * Constructor de PantallaAllStarEste,que inicializa la distribución de la
+	 * información que sale por pantalla,así como su Layout.Consiste en una lista
+	 * dentro de un JScroll para que inserte 10 elementos de jugador ordenados por
+	 * estadísticas *
+	 * 
+	 * @param ventana ventana en la que se muestra la pantalla
+	 */
 	public PantallaAllStarOeste(final Ventana ventana) {
-		this.ventana = ventana;
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0 };
@@ -33,7 +46,7 @@ public class PantallaAllStarOeste extends JPanel {
 		gridBagLayout.rowWeights = new double[] { 0.0, 1.0, 0.0, Double.MIN_VALUE };
 		setLayout(gridBagLayout);
 
-		JLabel titulo = new JLabel("titulares AllStar");
+		JLabel titulo = new JLabel("AllStar Oeste");
 		titulo.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
 		GridBagConstraints gbc_titulo = new GridBagConstraints();
 		gbc_titulo.gridwidth = 4;
@@ -67,7 +80,7 @@ public class PantallaAllStarOeste extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("Menu AllStar");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}

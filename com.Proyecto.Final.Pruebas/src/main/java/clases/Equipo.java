@@ -16,13 +16,27 @@ import utils.UtilsDB;
  * @author jcorr
  */
 public class Equipo extends ObjetoConNombre {
+	/* atribuye el id del equipo */
 	private byte eq_id;
+	/* diferencia el equipo en conferencia este u oeste */
 	private byte conferencia_id;
+	/* asigna la ciudad local en la que juega el equipo */
 	private String ciudadLocal;
+	/*
+	 * General Manager,básicamente es el señor trajeado que hace los fichajes y los
+	 * traspasos
+	 */
 	private String GM;
+	/* establece el límte salarial */
 	private float limiteSalarial;
+	/* establece el dueño del equipo */
 	private String propietario;
+	/*
+	 * foreign key del partido del AllStar,solo usar si el equipo es uno de los 2
+	 * del AllStar
+	 */
 	private byte partidoAllStar_id;
+	/* foreign key de playoffs,solo usar si el equipo puede entrar a playoffs */
 	private byte playoffs_playoff_id;
 
 	/**
@@ -32,7 +46,7 @@ public class Equipo extends ObjetoConNombre {
 	 * @param eq_id               atribuye el id del equipo
 	 * @param nombre              pone el nombre al equipo
 	 * @param conferencia_id      diferencia el equipo en conferencia este u oeste
-	 * @param ciudadLocal         asigna la ciudad local
+	 * @param ciudadLocal         asigna la ciudad local en la que juega el equipo
 	 * @param gM                  General Manager,básicamente es el señor trajeado
 	 *                            que hace los fichajes y los traspasos
 	 * @param limiteSalarial      establece el límte salarial

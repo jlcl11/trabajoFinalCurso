@@ -23,13 +23,28 @@ import javax.swing.SwingConstants;
 import clases.Equipo;
 import utils.FuncionesUtiles;
 
+/**
+ * Clase hereda de JPanel, y que sirve como menú de elección de equipo
+ * 
+ * @author jcorr
+ *
+ */
 public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
-	private Ventana ventana;
+
+	/* ArrayList que contiene los diferentes botones pulsables en la pantalla */
 	private ArrayList<JRadioButton> botonesEquipo;
 
-	public PantallaEscogerEquipoDatosFranquicia(final Ventana ventana) throws SQLException {
+	/**
+	 * Constructor de PantallaEscogerEquipoDatosFranquicia ,que inicializa la
+	 * distribución de la información que sale por pantalla,así como su
+	 * Layout.Consiste en un grupo de botones pulsables que determinan el equipo que
+	 * se ha seleccionado
+	 * 
+	 * @param ventana ventana en la que se muestra la pantalla
+	 */
+	public PantallaEscogerEquipoDatosFranquicia(final Ventana ventana) {
 		super();
-		this.ventana = ventana;
+
 		botonesEquipo = new ArrayList<JRadioButton>();
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -60,7 +75,7 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 				try {
 					ventana.cambiarAPantalla("primerMenu");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
@@ -489,7 +504,7 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 				}
 				try {
 					ventana.cambiarAPantalla("Datos Franquicia");
-				} catch (InterruptedException | SQLException e1) {
+				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
