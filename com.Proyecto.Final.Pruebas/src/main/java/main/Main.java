@@ -22,7 +22,6 @@ import exceptions.EquipoMalIntroduciodoException;
 import exceptions.JugadorMalIntroduciodoException;
 import pantallas.PantallaEscogerEquipoDatosFranquicia;
 import pantallas.Ventana;
-import utils.FuncionesUtiles;
 import utils.UtilsDB;
 
 /**
@@ -41,21 +40,14 @@ public class Main {
 	public static void main(String[] args) {
 
 		try {
-			FuncionesUtiles.borrarDatosTablas();
-			FuncionesUtiles.declararObjetos();
-
+			UtilsDB.borrarDatosTablas();
+			Jugador.buscaJugadores();
 			Ventana v = new Ventana();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block9
 			e.printStackTrace();
-		} catch (EquipoMalIntroduciodoException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} /*
-			 * catch (InterruptedException e) { // TODO Auto-generated catch block
-			 * e.printStackTrace(); }
-			 */catch (JugadorMalIntroduciodoException e) {
+		} catch (JugadorMalIntroduciodoException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

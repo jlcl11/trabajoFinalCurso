@@ -13,7 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-import utils.FuncionesUtiles;
+import clases.Liga;
 
 /**
  * Clase hereda de JFrame, y que enseña el jugador que ha ganado el premio al
@@ -44,8 +44,8 @@ public class PantallitaMaxAnotador extends JFrame {
 		gridBagLayout.rowWeights = new double[] { 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE };
 		getContentPane().setLayout(gridBagLayout);
 
-		JLabel nombre = new JLabel(FuncionesUtiles.devolverPremioAnotador().getNombre() + " "
-				+ FuncionesUtiles.devolverPremioAnotador().getApellido());
+		JLabel nombre = new JLabel(Liga.devolverPremioAnotador().getNombre() + " "
+				+ Liga.devolverPremioAnotador().getApellido());
 		nombre.setHorizontalAlignment(SwingConstants.CENTER);
 		nombre.setForeground(Color.BLACK);
 		nombre.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -55,7 +55,7 @@ public class PantallitaMaxAnotador extends JFrame {
 		gbc_nums.gridy = 3;
 		getContentPane().add(nombre, gbc_nums);
 
-		JLabel stats = new JLabel(FuncionesUtiles.devolverPremioAnotador().getPPG() + " PPG");
+		JLabel stats = new JLabel(Liga.devolverPremioAnotador().getPPG() + " PPG");
 		stats.setForeground(Color.BLACK);
 		stats.setHorizontalAlignment(SwingConstants.CENTER);
 		stats.setFont(new Font("Segoe UI Semibold", Font.BOLD, 15));

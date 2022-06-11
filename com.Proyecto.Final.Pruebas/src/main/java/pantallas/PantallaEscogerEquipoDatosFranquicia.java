@@ -21,7 +21,6 @@ import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 
 import clases.Equipo;
-import utils.FuncionesUtiles;
 
 /**
  * Clase hereda de JPanel, y que sirve como menú de elección de equipo

@@ -13,7 +13,6 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import utils.FuncionesUtiles;
 import javax.swing.ImageIcon;
 
 /**
@@ -38,7 +37,7 @@ public class PantallaPropietario extends JPanel {
 	public PantallaPropietario(final Ventana ventana) {
 		super();
 		setBackground(Color.BLACK);
-
+		this.ventana = ventana;
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };

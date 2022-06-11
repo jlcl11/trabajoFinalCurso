@@ -3,14 +3,13 @@ CREATE DATABASE trabajoFinal;
 use trabajoFinal;
 
 CREATE TABLE conferencia (
-    partidos INT AUTO_INCREMENT PRIMARY KEY,
+    partidos INT PRIMARY KEY,
     liga_conferencias int ,
     nombre varchar(200)
 );
 
-
 CREATE TABLE equipo (
-    eq_id INT AUTO_INCREMENT PRIMARY KEY,
+    eq_id int PRIMARY KEY,
     conferencia NUMERIC(2),
     ciudadlocal VARCHAR(200),
     gm VARCHAR(200),
@@ -22,14 +21,14 @@ CREATE TABLE equipo (
 );
 
 CREATE TABLE estadio (
-    estadio_id INT AUTO_INCREMENT PRIMARY KEY,
+    estadio_id INT  PRIMARY KEY,
     nombre VARCHAR(200) NOT NULL,
     capacidad NUMERIC(6),
     equipo_eq_id INT NOT NULL
 );
 
 CREATE TABLE jugador (
-    jugador_id INT AUTO_INCREMENT PRIMARY KEY,
+    jugador_id INT  PRIMARY KEY,
     nombre VARCHAR(200),
     apellido VARCHAR(200),
     dorsal NUMERIC(3),
@@ -59,12 +58,13 @@ CREATE TABLE jugador (
     playoffs_playoff_id INT 
 );
 
+
 CREATE TABLE liga (
     conferencias INT  PRIMARY KEY
 );
 
 CREATE TABLE partidoallstar (
-    parta_id INT AUTO_INCREMENT PRIMARY KEY,
+    parta_id INT PRIMARY KEY,
     equipo1 VARCHAR(200),
     equipo2 VARCHAR(200),
     marcadorequipo1 NUMERIC(3),
@@ -74,7 +74,7 @@ CREATE TABLE partidoallstar (
 );
 
 CREATE TABLE partidonormal (
-    partidonl_id INT AUTO_INCREMENT PRIMARY KEY,
+    partidonl_id INT PRIMARY KEY,
     equipo1 VARCHAR(200),
     equipo2 VARCHAR(200),
     marcadorequipo1 NUMERIC(3),
@@ -84,10 +84,12 @@ CREATE TABLE partidonormal (
     rondaplayoff_ronda_id INT 
 );
 
+
 CREATE TABLE partidos (
     partidonormal_partidonl_id INT NOT NULL,
     equipo_eq_id INT NOT NULL
 );
+
 
 ALTER TABLE
     partidos

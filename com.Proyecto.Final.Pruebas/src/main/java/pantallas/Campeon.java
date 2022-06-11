@@ -5,7 +5,7 @@ import java.awt.GridBagLayout;
 import javax.swing.JLabel;
 
 import clases.Equipo;
-import utils.FuncionesUtiles;
+import clases.Playoff;
 
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
@@ -42,8 +42,8 @@ public class Campeon extends JFrame {
 		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE };
 		getContentPane().setLayout(gridBagLayout);
 
-		JLabel lblNewLabel = new JLabel(FuncionesUtiles.devolverCampeon().getCiudadLocal() + " "
-				+ FuncionesUtiles.devolverCampeon().getNombre());
+		JLabel lblNewLabel = new JLabel(Playoff.devolverCampeon().getCiudadLocal() + " "
+				+ Playoff.devolverCampeon().getNombre());
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel.gridx = 2;
@@ -51,7 +51,7 @@ public class Campeon extends JFrame {
 		getContentPane().add(lblNewLabel, gbc_lblNewLabel);
 
 		JLabel lblNewLabel_1 = new JLabel("");
-		String foto = ".\\\\imagenes\\\\" + FuncionesUtiles.devolverCampeon().getNombre() + "ESCUDO.jpg";
+		String foto = ".\\\\imagenes\\\\" + Playoff.devolverCampeon().getNombre() + "ESCUDO.jpg";
 		lblNewLabel_1.setIcon(new ImageIcon(foto));
 		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
 		gbc_lblNewLabel_1.gridheight = 2;

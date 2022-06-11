@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-import utils.FuncionesUtiles;
+import clases.Liga;
 import javax.swing.ImageIcon;
 
 /**
@@ -25,8 +25,9 @@ import javax.swing.ImageIcon;
 public class PantallitaMVP extends JFrame {
 	/**
 	 * Constructor de PantallaAllStarEste,que inicializa la distribución de la
-	 * información que sale por pantalla,así como su Layout y otras propiedades.Presenta por pantalla el
-	 * nombre,apellidos y estadísticas del ganador
+	 * información que sale por pantalla,así como su Layout y otras
+	 * propiedades.Presenta por pantalla el nombre,apellidos y estadísticas del
+	 * ganador
 	 */
 	public PantallitaMVP() {
 		this.setTitle("JuegoIndie2kNBA.exe");
@@ -43,8 +44,7 @@ public class PantallitaMVP extends JFrame {
 		gridBagLayout.rowWeights = new double[] { 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, Double.MIN_VALUE };
 		getContentPane().setLayout(gridBagLayout);
 
-		JLabel nombre = new JLabel(
-				FuncionesUtiles.devolverMVP().getNombre() + " " + FuncionesUtiles.devolverMVP().getApellido());
+		JLabel nombre = new JLabel(Liga.devolverMVP().getNombre() + " " + Liga.devolverMVP().getApellido());
 		nombre.setHorizontalAlignment(SwingConstants.CENTER);
 		nombre.setForeground(Color.WHITE);
 		nombre.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -54,9 +54,9 @@ public class PantallitaMVP extends JFrame {
 		gbc_nums.gridy = 1;
 		getContentPane().add(nombre, gbc_nums);
 
-		JLabel stats = new JLabel(FuncionesUtiles.devolverMVP().getPPG() + " PPG "
-				+ FuncionesUtiles.devolverMVP().getAPG() + " APG " + FuncionesUtiles.devolverMVP().getRBG() + " RBG "
-				+ FuncionesUtiles.devolverMVP().getSPG() + " SPG " + FuncionesUtiles.devolverMVP().getBPG() + " BPG");
+		JLabel stats = new JLabel(Liga.devolverMVP().getPPG() + " PPG " + Liga.devolverMVP().getAPG() + " APG "
+				+ Liga.devolverMVP().getRBG() + " RBG " + Liga.devolverMVP().getSPG() + " SPG "
+				+ Liga.devolverMVP().getBPG() + " BPG");
 		stats.setForeground(Color.WHITE);
 		stats.setHorizontalAlignment(SwingConstants.CENTER);
 		stats.setFont(new Font("Segoe UI Semibold", Font.BOLD, 15));

@@ -57,5 +57,27 @@ public class UtilsDB {
 			}
 		}
 	}
+	/**
+	 * Función que borra los datos que habían en la base de datos de la ejecución
+	 * anterior
+	 * 
+	 * @throws SQLException lanza la exception porque borra los datos de la
+	 *                      ejecución anterior
+	 */
+	public static void borrarDatosTablas() throws SQLException {
+		Statement query = UtilsDB.conectarBBDD();
+		query.executeUpdate("DELETE FROM partidos;");
+		query.executeUpdate("DELETE FROM estadio;");
+		query.executeUpdate("DELETE FROM jugador;");
+		query.executeUpdate("DELETE FROM partidonormal;");
+		query.executeUpdate("DELETE FROM equipo;");
+		query.executeUpdate("DELETE FROM partidoallstar;");
+		query.executeUpdate("DELETE FROM rondaplayoff;");
+		query.executeUpdate("DELETE FROM playoffs;");
+		query.executeUpdate("DELETE FROM conferencia;");
+		query.executeUpdate("DELETE FROM liga;");
+
+		UtilsDB.desconectarBBDD();
+	}
 
 }

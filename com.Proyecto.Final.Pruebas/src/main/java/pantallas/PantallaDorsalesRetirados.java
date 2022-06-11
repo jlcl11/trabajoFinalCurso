@@ -17,10 +17,10 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 
+import clases.Equipo;
 import clases.Jugador;
 import elementosVisuales.ElementoListRetirados;
 import elementosVisuales.ElementoListaJugador;
-import utils.FuncionesUtiles;
 
 /**
  * Clase hereda de JPanel, y que enseña los jugadores cuyos dorsales han sido
@@ -72,7 +72,7 @@ public class PantallaDorsalesRetirados extends JPanel {
 		scrollPane.setViewportView(listaTitulares);
 		listaTitulares.setLayout(new BoxLayout(listaTitulares, BoxLayout.Y_AXIS));
 
-		ArrayList<Jugador> todos = FuncionesUtiles.getJugadoresReitrados(ventana.miEquipo.getNombre());
+		ArrayList<Jugador> todos = Jugador.getJugadoresReitrados(ventana.miEquipo.getNombre());
 		for (int i = 0; i < todos.size(); i++) {
 			listaTitulares.add(new ElementoListRetirados(ventana, todos.get(i)));
 		}

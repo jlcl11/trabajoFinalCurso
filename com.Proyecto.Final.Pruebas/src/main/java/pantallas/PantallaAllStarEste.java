@@ -18,8 +18,8 @@ import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 
 import clases.Jugador;
+import clases.PartidoAllStar;
 import elementosVisuales.ElementoListaJugador;
-import utils.FuncionesUtiles;
 
 /**
  * Clase hereda de JPanel, y que ense�a los jugadores que han entrado en el
@@ -68,7 +68,7 @@ public class PantallaAllStarEste extends JPanel {
 		scrollPane.setViewportView(listaTitulares);
 		listaTitulares.setLayout(new BoxLayout(listaTitulares, BoxLayout.Y_AXIS));
 
-		ArrayList<Jugador> todos = FuncionesUtiles.getJugadoresEquipo1();
+		ArrayList<Jugador> todos = PartidoAllStar.getJugadoresEquipo1();
 		for (int i = 0; i < todos.size(); i++) {
 			listaTitulares.add(new ElementoListaJugador(ventana, todos.get(i)));
 		}

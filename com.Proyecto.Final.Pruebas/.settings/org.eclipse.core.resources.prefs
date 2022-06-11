@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java/clases/Equipo.java=UTF-8
 encoding//src/main/java/clases/PartidoAllStar.java=UTF-8
 encoding//src/main/java/elementosVisuales/ElementoListEquiposSegundaRonda.java=UTF-8
 encoding//src/main/java/pantallas/PantallaDorsalesRetirados.java=UTF-8
@@ -7,4 +8,3 @@ encoding//src/main/java/pantallas/PantallaInicioPrimerMenu.java=UTF-8
 encoding//src/main/java/pantallas/PantallaMenusPremiosDeTemporada.java=UTF-8
 encoding//src/main/java/pantallas/PantallaPlantilla.java=UTF-8
 encoding//src/main/java/pantallas/Ventana.java=UTF-8
-encoding//src/main/java/utils/FuncionesUtiles.java=UTF-8

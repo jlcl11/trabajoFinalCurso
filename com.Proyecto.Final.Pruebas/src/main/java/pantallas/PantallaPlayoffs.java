@@ -16,13 +16,12 @@ import javax.swing.SwingConstants;
 
 import clases.Equipo;
 import clases.Jugador;
+import clases.Playoff;
 import elementosVisuales.ElementoListEquiposFinal;
 import elementosVisuales.ElementoListEquiposFinalConferencia;
 import elementosVisuales.ElementoListEquiposPrimeraRonda;
 import elementosVisuales.ElementoListEquiposSegundaRonda;
 import elementosVisuales.ElementoListaJugador;
-import utils.FuncionesUtiles;
-
 import javax.swing.ImageIcon;
 import javax.swing.JScrollPane;
 import javax.swing.BoxLayout;
@@ -93,7 +92,7 @@ public class PantallaPlayoffs extends JPanel {
 		scrollPaneprimeraRondaOeste.setViewportView(panelprimeraRondaOeste);
 		panelprimeraRondaOeste.setLayout(new BoxLayout(panelprimeraRondaOeste, BoxLayout.Y_AXIS));
 
-		ArrayList<Equipo> primeraRondaOeste = FuncionesUtiles.devolverPrimeraRondaOeste();
+		ArrayList<Equipo> primeraRondaOeste = Playoff.devolverPrimeraRondaOeste();
 		for (int i = 0; i < primeraRondaOeste.size(); i++) {
 			panelprimeraRondaOeste.add(new ElementoListEquiposPrimeraRonda(ventana, primeraRondaOeste.get(i)));
 		}
@@ -108,7 +107,7 @@ public class PantallaPlayoffs extends JPanel {
 		JPanel panelprimeraRondaEste = new JPanel();
 		scrollPaneprimeraRondaEste.setViewportView(panelprimeraRondaEste);
 		panelprimeraRondaEste.setLayout(new BoxLayout(panelprimeraRondaEste, BoxLayout.Y_AXIS));
-		ArrayList<Equipo> primeraRondaEste = FuncionesUtiles.devolverPrimeraRondaEste();
+		ArrayList<Equipo> primeraRondaEste = Playoff.devolverPrimeraRondaEste();
 		for (int i = 0; i < primeraRondaEste.size(); i++) {
 			panelprimeraRondaEste.add(new ElementoListEquiposPrimeraRonda(ventana, primeraRondaEste.get(i)));
 		}
@@ -155,7 +154,7 @@ public class PantallaPlayoffs extends JPanel {
 		scrollPaneSegundaRondaOeste.setViewportView(panelSegundaRondaOeste);
 		panelSegundaRondaOeste.setLayout(new BoxLayout(panelSegundaRondaOeste, BoxLayout.Y_AXIS));
 
-		ArrayList<Equipo> segundaRondaOeste = FuncionesUtiles.devolverSegundaRondaOeste();
+		ArrayList<Equipo> segundaRondaOeste = Playoff.devolverSegundaRondaOeste();
 		for (int i = 0; i < segundaRondaOeste.size(); i++) {
 			panelSegundaRondaOeste.add(new ElementoListEquiposSegundaRonda(ventana, segundaRondaOeste.get(i)));
 		}
@@ -172,7 +171,7 @@ public class PantallaPlayoffs extends JPanel {
 		scrollPaneSegundaRondaEste.setViewportView(panelSegundaRondaEste);
 		panelSegundaRondaEste.setLayout(new BoxLayout(panelSegundaRondaEste, BoxLayout.Y_AXIS));
 
-		ArrayList<Equipo> segundaRondaEste = FuncionesUtiles.devolverSegundaRondaEste();
+		ArrayList<Equipo> segundaRondaEste = Playoff.devolverSegundaRondaEste();
 		for (int i = 0; i < segundaRondaEste.size(); i++) {
 			panelSegundaRondaEste.add(new ElementoListEquiposSegundaRonda(ventana, segundaRondaEste.get(i)));
 		}
@@ -189,7 +188,7 @@ public class PantallaPlayoffs extends JPanel {
 		scrollPaneFinalConferenciaOeste.setViewportView(panelFinalConferenciaOeste);
 		panelFinalConferenciaOeste.setLayout(new BoxLayout(panelFinalConferenciaOeste, BoxLayout.Y_AXIS));
 
-		ArrayList<Equipo> finalOeste = FuncionesUtiles.devolverFinalOeste();
+		ArrayList<Equipo> finalOeste = Playoff.devolverFinalOeste();
 		for (int i = 0; i < finalOeste.size(); i++) {
 			panelFinalConferenciaOeste.add(new ElementoListEquiposFinalConferencia(ventana, finalOeste.get(i)));
 		}
@@ -206,7 +205,7 @@ public class PantallaPlayoffs extends JPanel {
 		scrollPaneFinalConferenciaEste.setViewportView(panelFinalConferenciaEste);
 		panelFinalConferenciaEste.setLayout(new BoxLayout(panelFinalConferenciaEste, BoxLayout.Y_AXIS));
 
-		ArrayList<Equipo> finalEste = FuncionesUtiles.devolverFinalEste();
+		ArrayList<Equipo> finalEste = Playoff.devolverFinalEste();
 		for (int i = 0; i < finalEste.size(); i++) {
 			panelFinalConferenciaEste.add(new ElementoListEquiposFinalConferencia(ventana, finalEste.get(i)));
 		}
@@ -223,7 +222,7 @@ public class PantallaPlayoffs extends JPanel {
 		scrollPaneFinales.setViewportView(panelFinales);
 		panelFinales.setLayout(new BoxLayout(panelFinales, BoxLayout.Y_AXIS));
 
-		ArrayList<Equipo> finalistas = FuncionesUtiles.finalistasParaMostrarlos();
+		ArrayList<Equipo> finalistas = Playoff.finalistasParaMostrarlos();
 		for (int i = 0; i < finalistas.size(); i++) {
 			panelFinales.add(new ElementoListEquiposFinal(ventana, finalistas.get(i)));
 		}

@@ -3,9 +3,6 @@ package pantallas;
 import javax.swing.JFrame;
 import java.awt.GridBagLayout;
 import javax.swing.JLabel;
-
-import utils.FuncionesUtiles;
-
 import java.awt.GridBagConstraints;
 import java.awt.Font;
 import java.awt.FlowLayout;
@@ -16,6 +13,9 @@ import java.awt.Point;
 import java.awt.Toolkit;
 import java.awt.Color;
 import javax.swing.SwingConstants;
+
+import clases.Liga;
+
 import javax.swing.ImageIcon;
 
 /**
@@ -48,8 +48,7 @@ public class PantallitaDPOY extends JFrame {
 		gridBagLayout.rowWeights = new double[] { 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE };
 		getContentPane().setLayout(gridBagLayout);
 
-		JLabel nombre = new JLabel(
-				FuncionesUtiles.devolverDPOY().getNombre() + " " + FuncionesUtiles.devolverDPOY().getApellido());
+		JLabel nombre = new JLabel(Liga.devolverDPOY().getNombre() + " " + Liga.devolverDPOY().getApellido());
 		nombre.setHorizontalAlignment(SwingConstants.CENTER);
 		nombre.setForeground(Color.BLACK);
 		nombre.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -59,8 +58,8 @@ public class PantallitaDPOY extends JFrame {
 		gbc_nums.gridy = 3;
 		getContentPane().add(nombre, gbc_nums);
 
-		JLabel stats = new JLabel(FuncionesUtiles.devolverDPOY().getRBG() + " RPG "
-				+ FuncionesUtiles.devolverDPOY().getSPG() + " SPG " + FuncionesUtiles.devolverDPOY().getBPG() + " BPG");
+		JLabel stats = new JLabel(Liga.devolverDPOY().getRBG() + " RPG " + Liga.devolverDPOY().getSPG() + " SPG "
+				+ Liga.devolverDPOY().getBPG() + " BPG");
 		stats.setForeground(Color.BLACK);
 		stats.setHorizontalAlignment(SwingConstants.CENTER);
 		stats.setFont(new Font("Segoe UI Semibold", Font.BOLD, 15));
