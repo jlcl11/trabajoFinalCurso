@@ -1142,7 +1142,7 @@ public class Jugador extends ObjetoConNombre {
 	 * @throws SQLException
 	 * @throws JugadorMalIntroduciodoException
 	 */
-	public static HashMap<String, Jugador> buscaJugadores() throws SQLException, JugadorMalIntroduciodoException {
+	public static void declaraJugadores() throws SQLException, JugadorMalIntroduciodoException {
 
 		Liga liga = new Liga((byte) 1);
 
@@ -1445,8 +1445,6 @@ public class Jugador extends ObjetoConNombre {
 		Jugador wesUnseld = new Jugador((short) 206, "Westley Sissel", "Unseld", (byte) 41, "Wes Unseld", (byte) 15);
 		Jugador philChenier = new Jugador((short) 207, "Philip ", "Chenier ", (byte) 45, "Phil Chenier", (byte) 15);
 
-		HashMap<String, Jugador> mapa = new HashMap<String, Jugador>();
-
 		Jugador traeYoung = new Jugador((short) 208, "Trae", "Young", (byte) 11, "Ice Trae", Posicion.BASE, 8.32f,
 				(byte) 2, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.B,
@@ -1467,11 +1465,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.A, (byte) 1, (byte) 1);
-		mapa.put(traeYoung.getNombre() + " " + traeYoung.getApellido(), traeYoung);
-		mapa.put(jhonCollins.getNombre() + " " + jhonCollins.getApellido(), jhonCollins);
-		mapa.put(bogdanBogdanovich.getNombre() + " " + bogdanBogdanovich.getApellido(), bogdanBogdanovich);
-		mapa.put(deandreHunter.getNombre() + " " + deandreHunter.getApellido(), deandreHunter);
-		mapa.put(kevinHuerter.getNombre() + " " + kevinHuerter.getApellido(), kevinHuerter);
 
 		Jugador jaysonTatum = new Jugador((short) 213, "Jason", "Tatum", (byte) 0, "JT", Posicion.ALERO, 28.2f,
 				(byte) 3, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
@@ -1494,12 +1487,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.A, (byte) 2, (byte) 1);
 
-		mapa.put(jaysonTatum.getNombre() + " " + jaysonTatum.getApellido(), jaysonTatum);
-		mapa.put(jaylenBrown.getNombre() + " " + jaylenBrown.getApellido(), jaylenBrown);
-		mapa.put(marcusSmart.getNombre() + " " + marcusSmart.getApellido(), marcusSmart);
-		mapa.put(alHorfort.getNombre() + " " + alHorfort.getApellido(), alHorfort);
-		mapa.put(robertWilliams.getNombre() + " " + robertWilliams.getApellido(), robertWilliams);
-
 		Jugador kevinDurant = new Jugador((short) 218, "Kevin", "Durant", (byte) 7, "Durantula", Posicion.ALAPIVOT,
 				42.01f, (byte) 12, (byte) 2, (byte) 1, (byte) 0, true, false, (byte) 2, (byte) 2, (byte) 4,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35,
@@ -1520,12 +1507,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 7, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 22, Valores.B,
 				Valores.B, Valores.C, Valores.B, (byte) 3, (byte) 1);
-
-		mapa.put(kevinDurant.getNombre() + " " + kevinDurant.getApellido(), kevinDurant);
-		mapa.put(sethCurry.getNombre() + " " + sethCurry.getApellido(), sethCurry);
-		mapa.put(bruceBrown.getNombre() + " " + bruceBrown.getApellido(), bruceBrown);
-		mapa.put(kyrieIrving.getNombre() + " " + kyrieIrving.getApellido(), kyrieIrving);
-		mapa.put(lamarcusAldridge.getNombre() + " " + lamarcusAldridge.getApellido(), lamarcusAldridge);
 
 		Jugador lameloBall = new Jugador((short) 223, "LaMelo", "Ball", (byte) 2, Posicion.BASE, 8.32f, (byte) 1,
 				(byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
@@ -1548,12 +1529,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.A, (byte) 4, (byte) 1);
 
-		mapa.put(lameloBall.getNombre() + " " + lameloBall.getApellido(), lameloBall);
-		mapa.put(milesBridges.getNombre() + " " + milesBridges.getApellido(), milesBridges);
-		mapa.put(terryRozier.getNombre() + " " + terryRozier.getApellido(), terryRozier);
-		mapa.put(gordonHayward.getNombre() + " " + gordonHayward.getApellido(), gordonHayward);
-		mapa.put(montrezlHarrel.getNombre() + " " + montrezlHarrel.getApellido(), montrezlHarrel);
-
 		Jugador lonzoBall = new Jugador((short) 228, "Lonzo", "Ball", (byte) 2, Posicion.BASE, 18.6f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.B,
@@ -1574,12 +1549,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.A, (byte) 5, (byte) 1);
-
-		mapa.put(lonzoBall.getNombre() + " " + lonzoBall.getApellido(), lonzoBall);
-		mapa.put(demarDeRozan.getNombre() + " " + demarDeRozan.getApellido(), demarDeRozan);
-		mapa.put(nikolaVucevic.getNombre() + " " + nikolaVucevic.getApellido(), nikolaVucevic);
-		mapa.put(zachLavine.getNombre() + " " + zachLavine.getApellido(), zachLavine);
-		mapa.put(patrickWilliams.getNombre() + " " + patrickWilliams.getApellido(), patrickWilliams);
 
 		Jugador jarretAllen = new Jugador((short) 233, "Jarret", "Allen", (byte) 31, Posicion.PIVOT, 20, (byte) 1,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
@@ -1602,12 +1571,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.B, (byte) 6, (byte) 1);
 
-		mapa.put(jarretAllen.getNombre() + " " + jarretAllen.getApellido(), jarretAllen);
-		mapa.put(dariusGarland.getNombre() + " " + dariusGarland.getApellido(), dariusGarland);
-		mapa.put(evanMoblaey.getNombre() + " " + evanMoblaey.getApellido(), evanMoblaey);
-		mapa.put(carisLeVert.getNombre() + " " + carisLeVert.getApellido(), carisLeVert);
-		mapa.put(lauriMarkkanen.getNombre() + " " + lauriMarkkanen.getApellido(), lauriMarkkanen);
-
 		Jugador lukaDoncic = new Jugador((short) 238, "Luka", "Doncic", (byte) 77, "Luka Magic", Posicion.BASE, 10.74f,
 				(byte) 3, (byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.A,
@@ -1628,12 +1591,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 28, Valores.B,
 				Valores.A, Valores.C, Valores.B, (byte) 16, (byte) 1);
-
-		mapa.put(lukaDoncic.getNombre() + " " + lukaDoncic.getApellido(), lukaDoncic);
-		mapa.put(jalenBrunson.getNombre() + " " + jalenBrunson.getApellido(), jalenBrunson);
-		mapa.put(spencerDinwiddie.getNombre() + " " + spencerDinwiddie.getApellido(), spencerDinwiddie);
-		mapa.put(dorianFinneySmith.getNombre() + " " + dorianFinneySmith.getApellido(), dorianFinneySmith);
-		mapa.put(reggieBullock.getNombre() + " " + reggieBullock.getApellido(), reggieBullock);
 
 		Jugador willBarton = new Jugador((short) 243, "William", "Barton", (byte) 5, "Will", Posicion.ALERO, 15.62f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
@@ -1656,12 +1613,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.B, Valores.D, (byte) 17, (byte) 1);
 
-		mapa.put(willBarton.getNombre() + " " + willBarton.getApellido(), willBarton);
-		mapa.put(aaronGordon.getNombre() + " " + aaronGordon.getApellido(), aaronGordon);
-		mapa.put(nikolaJokic.getNombre() + " " + nikolaJokic.getApellido(), nikolaJokic);
-		mapa.put(jamalMurray.getNombre() + " " + jamalMurray.getApellido(), jamalMurray);
-		mapa.put(monteMorris.getNombre() + " " + monteMorris.getApellido(), monteMorris);
-
 		Jugador cadeCunningham = new Jugador((short) 248, "Cade", "Cunningham", (byte) 2, Posicion.BASE, 10.05f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32, Valores.A,
@@ -1682,12 +1633,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.C, Valores.C, Valores.B, (byte) 7, (byte) 1);
-
-		mapa.put(cadeCunningham.getNombre() + " " + cadeCunningham.getApellido(), cadeCunningham);
-		mapa.put(marvinBagley.getNombre() + " " + marvinBagley.getApellido(), marvinBagley);
-		mapa.put(sadiqqBey.getNombre() + " " + sadiqqBey.getApellido(), sadiqqBey);
-		mapa.put(hamidouDiallo.getNombre() + " " + hamidouDiallo.getApellido(), hamidouDiallo);
-		mapa.put(jeramiGrant.getNombre() + " " + jeramiGrant.getApellido(), jeramiGrant);
 
 		Jugador stephenCurry = new Jugador((short) 253, "Stephen", "Curry", (byte) 30, "Chef Curry", Posicion.BASE,
 				45.78f, (byte) 8, (byte) 3, (byte) 2, (byte) 0, false, false, (byte) 1, (byte) 0, (byte) 2,
@@ -1710,12 +1655,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.C, (byte) 18, (byte) 1);
 
-		mapa.put(stephenCurry.getNombre() + " " + stephenCurry.getApellido(), stephenCurry);
-		mapa.put(klayThompson.getNombre() + " " + klayThompson.getApellido(), klayThompson);
-		mapa.put(draymondGreen.getNombre() + " " + draymondGreen.getApellido(), draymondGreen);
-		mapa.put(andrewWiggins.getNombre() + " " + andrewWiggins.getApellido(), andrewWiggins);
-		mapa.put(jordanPoole.getNombre() + " " + jordanPoole.getApellido(), jordanPoole);
-
 		Jugador christianWood = new Jugador((short) 258, "Christian", "Wood", (byte) 35, Posicion.PIVOT, 13.6F,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.B,
@@ -1736,12 +1675,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.C, (byte) 19, (byte) 1);
-
-		mapa.put(christianWood.getNombre() + " " + christianWood.getApellido(), christianWood);
-		mapa.put(jalenGreen.getNombre() + " " + jalenGreen.getApellido(), jalenGreen);
-		mapa.put(kpj.getNombre() + " " + kpj.getApellido(), kpj);
-		mapa.put(ericGordon.getNombre() + " " + ericGordon.getApellido(), ericGordon);
-		mapa.put(jaseanTate.getNombre() + " " + jaseanTate.getApellido(), jaseanTate);
 
 		Jugador malcomBrogdon = new Jugador((short) 263, "Malcom", "Brogdon", (byte) 7, Posicion.BASE, 21.7f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
@@ -1764,12 +1697,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.A, (byte) 8, (byte) 1);
 
-		mapa.put(malcomBrogdon.getNombre() + " " + malcomBrogdon.getApellido(), malcomBrogdon);
-		mapa.put(tyreseHaliburton.getNombre() + " " + tyreseHaliburton.getApellido(), tyreseHaliburton);
-		mapa.put(buddyHield.getNombre() + " " + buddyHield.getApellido(), buddyHield);
-		mapa.put(jalenSmith.getNombre() + " " + jalenSmith.getApellido(), jalenSmith);
-		mapa.put(mylesTurner.getNombre() + " " + mylesTurner.getApellido(), mylesTurner);
-
 		Jugador russelWestbrook = new Jugador((short) 268, "Russel", "Westbrook", (byte) 0, "Westbrick", Posicion.BASE,
 				44.21f, (byte) 9, (byte) 0, (byte) 1, (byte) 0, false, false, (byte) 2, (byte) 0, (byte) 2,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35,
@@ -1790,12 +1717,6 @@ public class Jugador extends ObjetoConNombre {
 				35.36f, (byte) 8, (byte) 1, (byte) 0, (byte) 0, false, false, (byte) 1, (byte) 0, (byte) 2,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 32,
 				Valores.A, Valores.B, Valores.C, Valores.A, (byte) 21, (byte) 1);
-
-		mapa.put(russelWestbrook.getNombre() + " " + russelWestbrook.getApellido(), russelWestbrook);
-		mapa.put(carmeloAnthony.getNombre() + " " + carmeloAnthony.getApellido(), carmeloAnthony);
-		mapa.put(malikMonk.getNombre() + " " + malikMonk.getApellido(), malikMonk);
-		mapa.put(leBronJames.getNombre() + " " + leBronJames.getApellido(), leBronJames);
-		mapa.put(anthonyDavis.getNombre() + " " + anthonyDavis.getApellido(), anthonyDavis);
 
 		Jugador dilonBrooks = new Jugador((short) 273, "Dilon", "Brooks", (byte) 24, Posicion.ALAPIVOT, 12.2f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
@@ -1818,12 +1739,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 10, Valores.B,
 				Valores.D, Valores.C, Valores.A, (byte) 24, (byte) 1);
 
-		mapa.put(dilonBrooks.getNombre() + " " + dilonBrooks.getApellido(), dilonBrooks);
-		mapa.put(jaMorant.getNombre() + " " + jaMorant.getApellido(), jaMorant);
-		mapa.put(brandonClarke.getNombre() + " " + brandonClarke.getApellido(), brandonClarke);
-		mapa.put(desmondBane.getNombre() + " " + desmondBane.getApellido(), desmondBane);
-		mapa.put(stevenAdams.getNombre() + " " + stevenAdams.getApellido(), stevenAdams);
-
 		Jugador jimmyButler = new Jugador((short) 278, "Jimmy", "Butler", (byte) 22, "Jimmy Buckets", Posicion.ALERO,
 				36.01f, (byte) 6, (byte) 0, (byte) 0, (byte) 0, false, true, (byte) 0, (byte) 0, (byte) 0,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 39,
@@ -1844,12 +1759,6 @@ public class Jugador extends ObjetoConNombre {
 				7f, (byte) 0, (byte) 1, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30,
 				Valores.C, Valores.C, Valores.C, Valores.A, (byte) 9, (byte) 1);
-
-		mapa.put(jimmyButler.getNombre() + " " + jimmyButler.getApellido(), jimmyButler);
-		mapa.put(bamAdebayo.getNombre() + " " + bamAdebayo.getApellido(), bamAdebayo);
-		mapa.put(kyleLowry.getNombre() + " " + kyleLowry.getApellido(), kyleLowry);
-		mapa.put(maxStrus.getNombre() + " " + maxStrus.getApellido(), maxStrus);
-		mapa.put(pjTucker.getNombre() + " " + pjTucker.getApellido(), pjTucker);
 
 		Jugador giannisAntetokoumpo = new Jugador((short) 283, "Giannis", "Antetokounmpo", (byte) 34, "The Greek Freak",
 				Posicion.ALAPIVOT, 39.34f, (byte) 6, (byte) 1, (byte) 2, (byte) 1, false, true, (byte) 1, (byte) 1,
@@ -1872,12 +1781,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.B, (byte) 10, (byte) 1);
 
-		mapa.put(giannisAntetokoumpo.getNombre() + " " + giannisAntetokoumpo.getApellido(), giannisAntetokoumpo);
-		mapa.put(graysonAllen.getNombre() + " " + graysonAllen.getApellido(), graysonAllen);
-		mapa.put(brookLopez.getNombre() + " " + brookLopez.getApellido(), brookLopez);
-		mapa.put(jrueHoliday.getNombre() + " " + jrueHoliday.getApellido(), jrueHoliday);
-		mapa.put(khrisMiddleton.getNombre() + " " + khrisMiddleton.getApellido(), khrisMiddleton);
-
 		Jugador anthonyEdwards = new Jugador((short) 288, "Anthony", "Edwards", (byte) 1, "Ant", Posicion.ALERO, 10.25f,
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.A,
@@ -1898,12 +1801,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.A, (byte) 22, (byte) 1);
-
-		mapa.put(anthonyEdwards.getNombre() + " " + anthonyEdwards.getApellido(), anthonyEdwards);
-		mapa.put(malikBeasly.getNombre() + " " + malikBeasly.getApellido(), malikBeasly);
-		mapa.put(patrickBeverly.getNombre() + " " + patrickBeverly.getApellido(), patrickBeverly);
-		mapa.put(kat.getNombre() + " " + kat.getApellido(), kat);
-		mapa.put(jadenMcDanields.getNombre() + " " + jadenMcDanields.getApellido(), jadenMcDanields);
 
 		Jugador cjMcCollum = new Jugador((short) 294, "Christian James", "McCollum", (byte) 3, "CJ McCollum",
 				Posicion.ESCOLTA, 30.86f, (byte) 0, (byte) 0, (byte) 0, (byte) 0, false, true, (byte) 0, (byte) 0,
@@ -1926,12 +1823,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.A, (byte) 23, (byte) 1);
 
-		mapa.put(cjMcCollum.getNombre() + " " + cjMcCollum.getApellido(), cjMcCollum);
-		mapa.put(jaxsonHayes.getNombre() + " " + jaxsonHayes.getApellido(), jaxsonHayes);
-		mapa.put(herbertJones.getNombre() + " " + herbertJones.getApellido(), herbertJones);
-		mapa.put(devonteGraham.getNombre() + " " + devonteGraham.getApellido(), devonteGraham);
-		mapa.put(jonasValanciunas.getNombre() + " " + jonasValanciunas.getApellido(), jonasValanciunas);
-
 		Jugador rjBarret = new Jugador((short) 299, "Rowan Alexander", "Barret", (byte) 9, "R.J.", Posicion.ALERO,
 				8.63f, (byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 34,
@@ -1952,12 +1843,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.A, (byte) 11, (byte) 1);
-
-		mapa.put(rjBarret.getNombre() + " " + rjBarret.getApellido(), rjBarret);
-		mapa.put(evanFournier.getNombre() + " " + evanFournier.getApellido(), evanFournier);
-		mapa.put(alecBurks.getNombre() + " " + alecBurks.getApellido(), alecBurks);
-		mapa.put(mitchellRobinson.getNombre() + " " + mitchellRobinson.getApellido(), mitchellRobinson);
-		mapa.put(juliusRande.getNombre() + " " + juliusRande.getApellido(), juliusRande);
 
 		Jugador coleAnthony = new Jugador((short) 304, "Cole", "Anthony", (byte) 50, Posicion.BASE, 3.45f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
@@ -1980,12 +1865,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.C, Valores.C, Valores.A, (byte) 12, (byte) 1);
 
-		mapa.put(coleAnthony.getNombre() + " " + coleAnthony.getApellido(), coleAnthony);
-		mapa.put(jalenSuggs.getNombre() + " " + jalenSuggs.getApellido(), jalenSuggs);
-		mapa.put(moBamba.getNombre() + " " + moBamba.getApellido(), moBamba);
-		mapa.put(franzWagner.getNombre() + " " + franzWagner.getApellido(), franzWagner);
-		mapa.put(jonathanIsaac.getNombre() + " " + jonathanIsaac.getApellido(), jonathanIsaac);
-
 		Jugador joelEmbiid = new Jugador((short) 309, "Joel", "Embiid", (byte) 21, "Jojo", Posicion.PIVOT, 31.54f,
 				(byte) 5, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 1, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 34, Valores.A,
@@ -2006,12 +1885,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.C, Valores.C, Valores.A, (byte) 13, (byte) 1);
-
-		mapa.put(joelEmbiid.getNombre() + " " + joelEmbiid.getApellido(), joelEmbiid);
-		mapa.put(jamesHarden.getNombre() + " " + jamesHarden.getApellido(), jamesHarden);
-		mapa.put(tyreseMaxey.getNombre() + " " + tyreseMaxey.getApellido(), tyreseMaxey);
-		mapa.put(tobiasHarris.getNombre() + " " + tobiasHarris.getApellido(), tobiasHarris);
-		mapa.put(matisseThybulle.getNombre() + " " + matisseThybulle.getApellido(), matisseThybulle);
 
 		Jugador deandreAyton = new Jugador((short) 314, "Deandre", "Ayton", (byte) 22, Posicion.PIVOT, 12.63f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
@@ -2034,12 +1907,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.A, Valores.A, (byte) 26, (byte) 1);
 
-		mapa.put(deandreAyton.getNombre() + " " + deandreAyton.getApellido(), deandreAyton);
-		mapa.put(mikalBridges.getNombre() + " " + mikalBridges.getApellido(), mikalBridges);
-		mapa.put(devinBooker.getNombre() + " " + devinBooker.getApellido(), devinBooker);
-		mapa.put(jaeCrowder.getNombre() + " " + jaeCrowder.getApellido(), jaeCrowder);
-		mapa.put(chrisPaul.getNombre() + " " + chrisPaul.getApellido(), chrisPaul);
-
 		Jugador damianLillard = new Jugador((short) 319, "Damian", "Lillard", (byte) 0, "Dame Time", Posicion.BASE,
 				39.34f, (byte) 6, (byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35,
@@ -2060,12 +1927,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.D, Valores.C, Valores.B, (byte) 27, (byte) 1);
-
-		mapa.put(damianLillard.getNombre() + " " + damianLillard.getApellido(), damianLillard);
-		mapa.put(anferneeSimons.getNombre() + " " + anferneeSimons.getApellido(), anferneeSimons);
-		mapa.put(cjjElleby.getNombre() + " " + cjjElleby.getApellido(), cjjElleby);
-		mapa.put(justiceWinslow.getNombre() + " " + justiceWinslow.getApellido(), justiceWinslow);
-		mapa.put(jusufNurkic.getNombre() + " " + jusufNurkic.getApellido(), jusufNurkic);
 
 		Jugador deAaronFox = new Jugador((short) 324, "De Aaron", "Fox", (byte) 5, Posicion.BASE, 28.1f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
@@ -2088,12 +1949,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 0, r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1,
 				(byte) 30, Valores.C, Valores.D, Valores.C, Valores.B, (byte) 28, (byte) 1);
 
-		mapa.put(deAaronFox.getNombre() + " " + deAaronFox.getApellido(), deAaronFox);
-		mapa.put(harrisonBarnes.getNombre() + " " + harrisonBarnes.getApellido(), harrisonBarnes);
-		mapa.put(justinHoliday.getNombre() + " " + justinHoliday.getApellido(), justinHoliday);
-		mapa.put(domantasSabonis.getNombre() + " " + domantasSabonis.getApellido(), domantasSabonis);
-		mapa.put(mauriceHarkless.getNombre() + " " + mauriceHarkless.getApellido(), mauriceHarkless);
-
 		Jugador dejounteMurray = new Jugador((short) 329, "Dejounte", "Murray", (byte) 5, Posicion.BASE, 15.24f,
 				(byte) 1, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35, Valores.B,
@@ -2114,12 +1969,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.D, Valores.D, Valores.B, (byte) 29, (byte) 1);
-
-		mapa.put(dejounteMurray.getNombre() + " " + dejounteMurray.getApellido(), dejounteMurray);
-		mapa.put(lonnieWalker.getNombre() + " " + lonnieWalker.getApellido(), lonnieWalker);
-		mapa.put(keldonJhonson.getNombre() + " " + keldonJhonson.getApellido(), keldonJhonson);
-		mapa.put(douMcDermott.getNombre() + " " + douMcDermott.getApellido(), douMcDermott);
-		mapa.put(jakobPoeltl.getNombre() + " " + jakobPoeltl.getApellido(), jakobPoeltl);
 
 		Jugador luguentzDortz = new Jugador((short) 334, "Luguentz", "Dortz", (byte) 5, "Lu Dortz", Posicion.ALERO,
 				1.78f, (byte) 0, (byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0,
@@ -2142,12 +1991,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.D, (byte) 25, (byte) 1);
 
-		mapa.put(luguentzDortz.getNombre() + " " + luguentzDortz.getApellido(), luguentzDortz);
-		mapa.put(dariusBazley.getNombre() + " " + dariusBazley.getApellido(), dariusBazley);
-		mapa.put(joshGiddey.getNombre() + " " + joshGiddey.getApellido(), joshGiddey);
-		mapa.put(kenrichWilliams.getNombre() + " " + kenrichWilliams.getApellido(), kenrichWilliams);
-		mapa.put(sga.getNombre() + " " + sga.getApellido(), sga);
-
 		Jugador mikeConley = new Jugador((short) 339, "Mike", "Conley", (byte) 11, Posicion.BASE, 21f, (byte) 1,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 4.7, Valores.B,
@@ -2168,12 +2011,6 @@ public class Jugador extends ObjetoConNombre {
 				35.34f, (byte) 3, (byte) 0, (byte) 0, (byte) 3, false, false, (byte) 0, (byte) 0, (byte) 0,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30,
 				Valores.B, Valores.D, Valores.D, Valores.A, (byte) 30, (byte) 1);
-
-		mapa.put(mikeConley.getNombre() + " " + mikeConley.getApellido(), mikeConley);
-		mapa.put(bojanBogdanovich.getNombre() + " " + bojanBogdanovich.getApellido(), bojanBogdanovich);
-		mapa.put(donovanMitchell.getNombre() + " " + donovanMitchell.getApellido(), donovanMitchell);
-		mapa.put(jordanClarkson.getNombre() + " " + jordanClarkson.getApellido(), jordanClarkson);
-		mapa.put(rudyGobert.getNombre() + " " + rudyGobert.getApellido(), rudyGobert);
 
 		Jugador bradleyBeal = new Jugador((short) 344, "Bradley", "Beal", (byte) 3, Posicion.BASE, 33.72F, (byte) 3,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
@@ -2196,12 +2033,6 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30,
 				Valores.B, Valores.B, Valores.D, Valores.C, (byte) 15, (byte) 1);
 
-		mapa.put(bradleyBeal.getNombre() + " " + bradleyBeal.getApellido(), bradleyBeal);
-		mapa.put(daniAvdija.getNombre() + " " + daniAvdija.getApellido(), daniAvdija);
-		mapa.put(kcp.getNombre() + " " + kcp.getApellido(), kcp);
-		mapa.put(thomasBryant.getNombre() + " " + thomasBryant.getApellido(), thomasBryant);
-		mapa.put(kristapsPorzingis.getNombre() + " " + kristapsPorzingis.getApellido(), kristapsPorzingis);
-
 		Jugador scottieBarnes = new Jugador((short) 349, "Scott Wayne", "Barnes", (byte) 4, "Scottie", Posicion.ALERO,
 				7.28f, (byte) 0, (byte) 0, (byte) 0, (byte) 0, true, false, (byte) 0, (byte) 0, (byte) 0,
 				r.nextInt(35) + 1, r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 35,
@@ -2222,12 +2053,6 @@ public class Jugador extends ObjetoConNombre {
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 30, Valores.B,
 				Valores.B, Valores.C, Valores.C, (byte) 14, (byte) 1);
-
-		mapa.put(scottieBarnes.getNombre() + " " + scottieBarnes.getApellido(), scottieBarnes);
-		mapa.put(ogAnunoby.getNombre() + " " + ogAnunoby.getApellido(), ogAnunoby);
-		mapa.put(fredVanVleet.getNombre() + " " + fredVanVleet.getApellido(), fredVanVleet);
-		mapa.put(pascalSiakam.getNombre() + " " + pascalSiakam.getApellido(), pascalSiakam);
-		mapa.put(garyTrentJr.getNombre() + " " + garyTrentJr.getApellido(), garyTrentJr);
 
 		Jugador reggieJackson = new Jugador((short) 354, "Reggie", "Jackson", (byte) 1, Posicion.BASE, 10.38f, (byte) 0,
 				(byte) 0, (byte) 0, (byte) 0, false, false, (byte) 0, (byte) 0, (byte) 0, r.nextInt(35) + 1,
@@ -2250,14 +2075,63 @@ public class Jugador extends ObjetoConNombre {
 				r.nextInt(11) + 1, r.nextInt(20) + 1, r.nextInt(2) + 1, r.nextInt(5) + 1, (byte) 22, Valores.B,
 				Valores.C, Valores.D, Valores.A, (byte) 20, (byte) 1);
 
-		mapa.put(reggieJackson.getNombre() + " " + reggieJackson.getApellido(), reggieJackson);
-		mapa.put(paulGeorge.getNombre() + " " + paulGeorge.getApellido(), paulGeorge);
-		mapa.put(kawhiLeonard.getNombre() + " " + kawhiLeonard.getApellido(), kawhiLeonard);
-		mapa.put(ivicaZubac.getNombre() + " " + ivicaZubac.getApellido(), ivicaZubac);
-		mapa.put(robertCovington.getNombre() + " " + robertCovington.getApellido(), robertCovington);
-
-		return mapa;
-
 	}
+
+	public static HashMap<String, Jugador> getDatosDeJugador() {
+		Statement smt = UtilsDB.conectarBBDD();
+		// Inicializamos un ArrayList para devolver.
+		HashMap<String, Jugador> ret = new HashMap<String, Jugador>();
+
+		try {
+			ResultSet cursor = smt.executeQuery("select * from jugador WHERE salario>0");
+			while (cursor.next()) {
+				Jugador actual = new Jugador();
+
+				actual.setNombre(cursor.getString("nombre"));
+				actual.setApellido(cursor.getString("apellido"));
+				actual.setDorsal(cursor.getByte("dorsal"));
+				actual.setApodo(cursor.getString("apodo"));
+				// actual.setPosicion(cursor.getString("posicion "));
+				actual.setSalario(cursor.getFloat("salario"));
+				actual.setNominacionesAllStar(cursor.getByte("nominacionesallstar"));
+				actual.setAnillosDeCampeon(cursor.getByte("anillosdecampeon"));
+				actual.setMVPs(cursor.getByte("mvp"));
+				actual.setDefensorDelAño(cursor.getByte("dpoy"));
+				actual.setRookieDelAño(cursor.getBoolean("roty"));
+				actual.setMIP(cursor.getBoolean("mip"));
+				actual.setMVPAllStar(cursor.getByte("mvpallstar"));
+				actual.setFMVP(cursor.getByte("fmvp"));
+				actual.setPremioAnotador(cursor.getByte("premioanotador"));
+				actual.setPPG(cursor.getFloat("ppg"));
+				actual.setAPG(cursor.getFloat("apg"));
+				actual.setRBG(cursor.getFloat("rbg"));
+				actual.setSPG(cursor.getFloat("spg"));
+				actual.setBPG(cursor.getFloat("bpg"));
+				actual.setBPG(cursor.getFloat("bpg"));
+				actual.setMPG(cursor.getByte("mpg"));
+
+				actual.setEquipo_id(cursor.getByte("equipo_eq_id"));
+				actual.setPlayoffs_Playoff_id(cursor.getByte("playoffs_playoff_id"));
+
+				ret.put(actual.getNombre() + " " + actual.getApellido(), actual);
+			}
+		} catch (SQLException e) {
+			// Si la conuslta falla no hay nada que devolver.
+			e.printStackTrace();
+			return null;
+		} catch (SetterJugadorNoFuncionaAsiException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		UtilsDB.desconectarBBDD();
+		return ret;
+	}
+
+	@Override
+	public String toString() {
+		return "Maricón [apellido=" + apellido + ", apodo=" + apodo + "]";
+	}
+	
 
 }

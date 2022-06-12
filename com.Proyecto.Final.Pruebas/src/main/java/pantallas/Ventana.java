@@ -14,6 +14,7 @@ import clases.Equipo;
 import clases.Jugador;
 import clases.Playoff;
 import exceptions.JugadorMalIntroduciodoException;
+import utils.UtilsDB;
 
 /**
  * Clase que hereda de JFrame, y que contendr� a las pantallas (Heredera de
@@ -34,18 +35,21 @@ public class Ventana extends JFrame {
 	 * variable interna que guarda el nombre y apellidos para luego usarla para
 	 * buscar la clave de un hashmap de jugadores
 	 */
-	private String nombreApellidosJugador;
+	private String nombreJugador;
 
 	/**
 	 * Constructor de Ventana, que inicializa su tamaño, título e icono, y otras
 	 * propiedades.
 	 * 
-	 * @throws SQLException lanza la excepción porque rescata los datos del equipo
-	 *                      desde bbdd
+	 * @throws SQLException                    lanza la excepción porque rescata los
+	 *                                         datos del equipo desde bbdd
+	 * @throws JugadorMalIntroduciodoException
 	 */
-	public Ventana() throws SQLException {
+	public Ventana() throws SQLException, JugadorMalIntroduciodoException {
+		UtilsDB.borrarDatosTablas();
+		Jugador.declaraJugadores();
 		miEquipo = new Equipo("Wizards");
-		setNombreApellidosJugador("");
+		setNombreJugador("");
 		pantallaActual = new PantallaInicial(this);
 		this.setSize(1300, 800);
 		this.setLocationRelativeTo(null);
@@ -140,15 +144,8 @@ public class Ventana extends JFrame {
 			this.pantallaActual = new PantallaVerEstadio(this);
 			break;
 		case "jugadorBuscado":
-			HashMap<String, Jugador> g;
-			try {
-				g = Jugador.buscaJugadores();
-				this.pantallaActual = new JugadorBuscado(this,g);
-			} catch (SQLException | JugadorMalIntroduciodoException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
+			this.pantallaActual = new JugadorBuscado(this);
+
 			break;
 
 		}
@@ -156,12 +153,12 @@ public class Ventana extends JFrame {
 		this.setContentPane(pantallaActual);
 	}
 
-	public String getNombreApellidosJugador() {
-		return nombreApellidosJugador;
+	public String getNombreJugador() {
+		return nombreJugador;
 	}
 
-	public void setNombreApellidosJugador(String nombreApellidosJugador) {
-		this.nombreApellidosJugador = nombreApellidosJugador;
+	public void setNombreJugador(String nombreJugador) {
+		this.nombreJugador = nombreJugador;
 	}
 
 }

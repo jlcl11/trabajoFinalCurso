@@ -41,20 +41,22 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		{
 
-		try {
-			UtilsDB.borrarDatosTablas();
+			try {
 
-		//	HashMap<String, Jugador> map = Jugador.buscaJugadores();
-		
-		
-			 Ventana v = new Ventana();
+				Ventana v = new Ventana();
+				HashMap<String,Jugador> s = Jugador.getDatosDeJugador();
+				System.out.println("Recorrer solo valores");
+				 System.out.println( s.get("James Harden"));
+				
 
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block9
-			e.printStackTrace();
+			} catch (SQLException | JugadorMalIntroduciodoException e) {
+				// TODO Auto-generated catch block9
+				e.printStackTrace();
+			}
+
 		}
-
 	}
 
 }

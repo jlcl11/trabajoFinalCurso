@@ -202,16 +202,19 @@ public class PantallaInicioPrimerMenu extends JPanel {
 			public void mouseClicked(MouseEvent e) {
 
 				try {
-					String popUp = JOptionPane
-							.showInputDialog("Dime el nombre y los apellidos del jugador que quieras buscar");
-					ventana.setNombreApellidosJugador(popUp);
+					String popUp = JOptionPane.showInputDialog("Dime el nombre  del jugador que quieras buscar");
+					ventana.setNombreJugador(popUp);
+					/*String popUp2 = JOptionPane.showInputDialog("Dime  los apellidos del jugador que quieras buscar");
+					ventana.setApellidoJugador(popUp2);*/
 					ventana.cambiarAPantalla("jugadorBuscado");
 				} catch (NullPointerException e1) {
 					JOptionPane.showMessageDialog(ventana, "Ese jugador no existe,prueba con otro", "Jugador no existe",
 							JOptionPane.ERROR_MESSAGE);
 				} catch (SQLException e1) {
-
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
+				
 
 			}
 		});
