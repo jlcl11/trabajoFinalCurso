@@ -30,6 +30,7 @@ public class TicketPorPantalla extends JFrame {
 
 		JTextPane txtpnVxvxvxvxv = new JTextPane();
 		txtpnVxvxvxvxv.setText(res);
+		txtpnVxvxvxvxv.setEditable(false);
 		getContentPane().add(txtpnVxvxvxvxv, BorderLayout.CENTER);
 	}
 
