@@ -204,8 +204,7 @@ public class PantallaInicioPrimerMenu extends JPanel {
 				try {
 					String popUp = JOptionPane.showInputDialog("Dime el nombre  del jugador que quieras buscar");
 					ventana.setNombreJugador(popUp);
-					/*String popUp2 = JOptionPane.showInputDialog("Dime  los apellidos del jugador que quieras buscar");
-					ventana.setApellidoJugador(popUp2);*/
+				
 					ventana.cambiarAPantalla("jugadorBuscado");
 				} catch (NullPointerException e1) {
 					JOptionPane.showMessageDialog(ventana, "Ese jugador no existe,prueba con otro", "Jugador no existe",

@@ -33,6 +33,7 @@ public class PantallitaDPOY extends JFrame {
 	 * ganador
 	 */
 	public PantallitaDPOY() {
+		getContentPane().setBackground(Color.WHITE);
 		this.setTitle("JuegoIndie2kNBA.exe");
 		this.setIconImage(new ImageIcon("./imagenes/logoPrograma.png").getImage());
 		this.setAlwaysOnTop(true);
@@ -40,23 +41,31 @@ public class PantallitaDPOY extends JFrame {
 		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
 				new ImageIcon("./imagenes/logoPrograma.png").getImage(), new Point(0, 0), "custom cursor"));
 
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0 };
-		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0 };
+		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.columnWeights = new double[] { 0.0, 1.0, 0.0, 1.0, 0.0, Double.MIN_VALUE };
-		gridBagLayout.rowWeights = new double[] { 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE };
+		gridBagLayout.rowWeights = new double[] { 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, Double.MIN_VALUE };
 		getContentPane().setLayout(gridBagLayout);
-
-		JLabel nombre = new JLabel(Liga.devolverDPOY().getNombre() + " " + Liga.devolverDPOY().getApellido());
-		nombre.setHorizontalAlignment(SwingConstants.CENTER);
-		nombre.setForeground(Color.BLACK);
-		nombre.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
-		GridBagConstraints gbc_nums = new GridBagConstraints();
-		gbc_nums.insets = new Insets(0, 0, 5, 5);
-		gbc_nums.gridx = 2;
-		gbc_nums.gridy = 3;
-		getContentPane().add(nombre, gbc_nums);
+		
+				JLabel nombre = new JLabel(Liga.devolverDPOY().getNombre() + " " + Liga.devolverDPOY().getApellido());
+				nombre.setHorizontalAlignment(SwingConstants.CENTER);
+				nombre.setForeground(Color.BLACK);
+				nombre.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
+				GridBagConstraints gbc_nums = new GridBagConstraints();
+				gbc_nums.insets = new Insets(0, 0, 5, 5);
+				gbc_nums.gridx = 2;
+				gbc_nums.gridy = 1;
+				getContentPane().add(nombre, gbc_nums);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\jcorr\\OneDrive\\Documentos\\GitHub\\trabajoFinalCurso\\com.Proyecto.Final.Pruebas\\imagenes\\dpoy.png"));
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.gridheight = 2;
+		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel.gridx = 2;
+		gbc_lblNewLabel.gridy = 2;
+		getContentPane().add(lblNewLabel, gbc_lblNewLabel);
 
 		JLabel stats = new JLabel(Liga.devolverDPOY().getRBG() + " RPG " + Liga.devolverDPOY().getSPG() + " SPG "
 				+ Liga.devolverDPOY().getBPG() + " BPG");

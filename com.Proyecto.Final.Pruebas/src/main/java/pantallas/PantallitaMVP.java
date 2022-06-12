@@ -46,18 +46,27 @@ public class PantallitaMVP extends JFrame {
 
 		JLabel nombre = new JLabel(Liga.devolverMVP().getNombre() + " " + Liga.devolverMVP().getApellido());
 		nombre.setHorizontalAlignment(SwingConstants.CENTER);
-		nombre.setForeground(Color.WHITE);
+		nombre.setForeground(Color.BLACK);
 		nombre.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
 		GridBagConstraints gbc_nums = new GridBagConstraints();
 		gbc_nums.insets = new Insets(0, 0, 5, 5);
 		gbc_nums.gridx = 2;
 		gbc_nums.gridy = 1;
 		getContentPane().add(nombre, gbc_nums);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(".\\imagenes\\mvptrofeo.png"));
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.gridheight = 2;
+		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel.gridx = 2;
+		gbc_lblNewLabel.gridy = 2;
+		getContentPane().add(lblNewLabel, gbc_lblNewLabel);
 
 		JLabel stats = new JLabel(Liga.devolverMVP().getPPG() + " PPG " + Liga.devolverMVP().getAPG() + " APG "
 				+ Liga.devolverMVP().getRBG() + " RBG " + Liga.devolverMVP().getSPG() + " SPG "
 				+ Liga.devolverMVP().getBPG() + " BPG");
-		stats.setForeground(Color.WHITE);
+		stats.setForeground(Color.BLACK);
 		stats.setHorizontalAlignment(SwingConstants.CENTER);
 		stats.setFont(new Font("Segoe UI Semibold", Font.BOLD, 15));
 		GridBagConstraints gbc_stats = new GridBagConstraints();
@@ -66,15 +75,7 @@ public class PantallitaMVP extends JFrame {
 		gbc_stats.gridy = 5;
 		getContentPane().add(stats, gbc_stats);
 
-		JLabel background = new JLabel("");
-		background.setIcon(new ImageIcon(".\\imagenes\\backgroundAllStar.png"));
-		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-		gbc_lblNewLabel.gridheight = 8;
-		gbc_lblNewLabel.gridwidth = 5;
-		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel.gridx = 0;
-		gbc_lblNewLabel.gridy = 0;
-		getContentPane().add(background, gbc_lblNewLabel);
+		
 
 	}
 
