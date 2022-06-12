@@ -200,15 +200,35 @@ public class PantallaInicioPrimerMenu extends JPanel {
 		buscadorJogadores.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				String popUp = JOptionPane
-						.showInputDialog("Dime el nombre y los apellidos del jugador que quieras buscar");
-				ventana.setNombreApellidosJugador(popUp);
-				System.out.println(ventana.getNombreApellidosJugador());
+				
+				try {
+					String popUp = JOptionPane
+							.showInputDialog("Dime el nombre y los apellidos del jugador que quieras buscar");
+					ventana.setNombreApellidosJugador(popUp);
+				}catch (java.lang.NullPointerException e2) {
+					JOptionPane.showMessageDialog(ventana, "Ese jugador no existe", "No te sabes el nombre del jugador",
+							JOptionPane.ERROR_MESSAGE);
+					/*try {
+						ventana.cambiarAPantalla("primerMenu");
+					} catch (SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}*/
+				}
 				try {
 					ventana.cambiarAPantalla("jugadorBuscado");
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
+				} catch (java.lang.NullPointerException e2) {
+					JOptionPane.showMessageDialog(ventana, "Ese jugador no existe", "No te sabes el nombre del jugador",
+							JOptionPane.ERROR_MESSAGE);
+					/*try {
+						ventana.cambiarAPantalla("primerMenu");
+					} catch (SQLException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}*/
 				}
 			}
 		});

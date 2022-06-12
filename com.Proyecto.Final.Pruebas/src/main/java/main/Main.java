@@ -45,20 +45,13 @@ public class Main {
 		try {
 			UtilsDB.borrarDatosTablas();
 
-			HashMap<String, Jugador> map = Jugador.buscaJugadores();
+		//	HashMap<String, Jugador> map = Jugador.buscaJugadores();
 		
-			System.out.println("Recorrer solo valores");
-			 System.out.println( map.get("LeBron James"));
-			for (Jugador valor : map.values()) {
-			   
-			}
+		
 			 Ventana v = new Ventana();
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block9
-			e.printStackTrace();
-		} catch (JugadorMalIntroduciodoException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

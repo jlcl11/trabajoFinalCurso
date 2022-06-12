@@ -11,7 +11,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import clases.Equipo;
+import clases.Jugador;
 import clases.Playoff;
+import exceptions.JugadorMalIntroduciodoException;
 
 /**
  * Clase que hereda de JFrame, y que contendr� a las pantallas (Heredera de
@@ -28,7 +30,10 @@ public class Ventana extends JFrame {
 	protected Equipo miEquipo;
 	/* Pantalla que se va a ir mostrando en la ventana */
 	private JPanel pantallaActual;
-	/**/
+	/*
+	 * variable interna que guarda el nombre y apellidos para luego usarla para
+	 * buscar la clave de un hashmap de jugadores
+	 */
 	private String nombreApellidosJugador;
 
 	/**
@@ -46,7 +51,6 @@ public class Ventana extends JFrame {
 		this.setLocationRelativeTo(null);
 		this.setTitle("JuegoIndie2kNBA.exe");
 		this.setIconImage(new ImageIcon("./imagenes/logoPrograma.png").getImage());
-		this.setAlwaysOnTop(true);
 
 		setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
 				new ImageIcon("./imagenes/logoPrograma.png").getImage(), new Point(0, 0), "custom cursor"));
@@ -136,7 +140,15 @@ public class Ventana extends JFrame {
 			this.pantallaActual = new PantallaVerEstadio(this);
 			break;
 		case "jugadorBuscado":
-			this.pantallaActual = new PantallaJugadorBuscado(this);
+			HashMap<String, Jugador> g;
+			try {
+				g = Jugador.buscaJugadores();
+				this.pantallaActual = new JugadorBuscado(this,g);
+			} catch (SQLException | JugadorMalIntroduciodoException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 			break;
 
 		}
