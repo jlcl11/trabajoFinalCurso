@@ -46,10 +46,6 @@ public class Main {
 			try {
 
 				Ventana v = new Ventana();
-				HashMap<String,Jugador> s = Jugador.getDatosDeJugador();
-				System.out.println("Recorrer solo valores");
-				 System.out.println( s.get("James Harden"));
-				
 
 			} catch (SQLException | JugadorMalIntroduciodoException e) {
 				// TODO Auto-generated catch block9

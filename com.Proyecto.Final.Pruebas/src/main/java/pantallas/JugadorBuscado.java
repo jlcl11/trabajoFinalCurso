@@ -46,11 +46,16 @@ public class JugadorBuscado extends JPanel {
 			}
 		});
 
-		JLabel labelNombre = new JLabel(Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getNombre()
-				+ Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getApodo() + " "
-				+ Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getApellido() + " "
-				+ Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getDorsal() + " "
-				+ Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getPosicion());
+		String apodo;
+		if (Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getApodo() != null) {
+			apodo = Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getApodo();
+		} else {
+			apodo = "";
+		}
+
+		JLabel labelNombre = new JLabel(Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getNombre() + " "
+				+ apodo + " " + Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getApellido() + " nº"
+				+ Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getDorsal());
 		labelNombre.setFont(new Font("Segoe UI Semibold", Font.BOLD | Font.ITALIC, 50));
 		labelNombre.setHorizontalAlignment(SwingConstants.RIGHT);
 		GridBagConstraints gbc_labelNombre = new GridBagConstraints();
@@ -82,14 +87,6 @@ public class JugadorBuscado extends JPanel {
 		gbc_labelPPG.gridy = 5;
 		add(labelPPG, gbc_labelPPG);
 
-		JLabel labelFinalizacion = new JLabel(
-				"Finalización " + Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getFinalizacion());
-		GridBagConstraints gbc_labelFinalizacion = new GridBagConstraints();
-		gbc_labelFinalizacion.insets = new Insets(0, 0, 5, 5);
-		gbc_labelFinalizacion.gridx = 9;
-		gbc_labelFinalizacion.gridy = 5;
-		add(labelFinalizacion, gbc_labelFinalizacion);
-
 		JLabel labelAnillos = new JLabel("Anillos de campeón "
 				+ Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getAnillosDeCampeon());
 		GridBagConstraints gbc_labelAnillos = new GridBagConstraints();
@@ -112,13 +109,6 @@ public class JugadorBuscado extends JPanel {
 		gbc_labelAPG.gridx = 7;
 		gbc_labelAPG.gridy = 7;
 		add(labelAPG, gbc_labelAPG);
-
-		JLabel labelTiro = new JLabel("Tiro " + Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getTiro());
-		GridBagConstraints gbc_labelTiro = new GridBagConstraints();
-		gbc_labelTiro.insets = new Insets(0, 0, 5, 5);
-		gbc_labelTiro.gridx = 9;
-		gbc_labelTiro.gridy = 7;
-		add(labelTiro, gbc_labelTiro);
 
 		JLabel labelMVPAllStar = new JLabel(
 				"MVP del  AllStar " + Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getMVPAllStar());
@@ -143,14 +133,6 @@ public class JugadorBuscado extends JPanel {
 		gbc_labelRBG.gridy = 9;
 		add(labelRBG, gbc_labelRBG);
 
-		JLabel labelOrga = new JLabel(
-				"Organización " + Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getOrganizacion());
-		GridBagConstraints gbc_labelOrga = new GridBagConstraints();
-		gbc_labelOrga.insets = new Insets(0, 0, 5, 5);
-		gbc_labelOrga.gridx = 9;
-		gbc_labelOrga.gridy = 9;
-		add(labelOrga, gbc_labelOrga);
-
 		JLabel labelPremioAnotador = new JLabel(
 				"Premio anotador " + Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getPremioAnotador());
 		GridBagConstraints gbc_labelPremioAnotador = new GridBagConstraints();
@@ -173,14 +155,6 @@ public class JugadorBuscado extends JPanel {
 		gbc_labelSPG.gridx = 7;
 		gbc_labelSPG.gridy = 11;
 		add(labelSPG, gbc_labelSPG);
-
-		JLabel labelDefensa = new JLabel(
-				"Defensa " + Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getDefensas());
-		GridBagConstraints gbc_labelDefensa = new GridBagConstraints();
-		gbc_labelDefensa.insets = new Insets(0, 0, 5, 5);
-		gbc_labelDefensa.gridx = 9;
-		gbc_labelDefensa.gridy = 11;
-		add(labelDefensa, gbc_labelDefensa);
 
 		JLabel labelFMVP = new JLabel("FMVP " + Jugador.getDatosDeJugador().get(ventana.getNombreJugador()).getFMVP());
 		GridBagConstraints gbc_labelFMVP = new GridBagConstraints();
