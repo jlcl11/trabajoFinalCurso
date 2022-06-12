@@ -164,6 +164,12 @@ public class PartidoAllStar extends Partido {
 		UtilsDB.desconectarBBDD();
 	}
 
+	/**
+	 * Función que ordena por la suma de estadísticas y devuelve un ArrayList con
+	 * los 10 últimos jugadores,los 10 mejores que serán los titulares del AllStar
+	 * 
+	 * @return el ArrayList de los 10 mejores jugadores
+	 */
 	public static ArrayList<Jugador> getTitularesAllStar() {
 		ArrayList<Jugador> jugadores = Jugador.getJugadores();
 
@@ -196,6 +202,13 @@ public class PartidoAllStar extends Partido {
 		return allStars;
 	}
 
+	/**
+	 * Función que ordena por la suma de estadísticas y devuelve un ArrayList con
+	 * los 5 mejores jugadores y del top 20 al top 15 para poder hacer un equipo
+	 * equilibrado con el otro
+	 * 
+	 * @return el ArrayList de los jugadores del primer equipo
+	 */
 	public static ArrayList<Jugador> getJugadoresEquipo1() {
 		ArrayList<Jugador> jugadores = Jugador.getJugadores();
 
@@ -231,6 +244,13 @@ public class PartidoAllStar extends Partido {
 		return allStarsEquipo1;
 	}
 
+	/**
+	 * Función que ordena por la suma de estadísticas y devuelve un ArrayList con
+	 * los mejores jugadores del top 15 al top 5 para poder hacer un equipo
+	 * equilibrado con el otro
+	 * 
+	 * @return el ArrayList de los jugadores del segundo equipo
+	 */
 	public static ArrayList<Jugador> getJugadoresEquipo2() { // Esta debe morir
 		ArrayList<Jugador> jugadores = Jugador.getJugadores();
 
@@ -266,6 +286,12 @@ public class PartidoAllStar extends Partido {
 		return allStarsEquipo2;
 	}
 
+	/**
+	 * Función que compara las estadísticas y consigue el mejor jugador entre los
+	 * AllStar
+	 * 
+	 * @return devuelve el MVP del AllStar
+	 */
 	public static Jugador getAllStarMVP() {
 		ArrayList<Jugador> jugadores = Jugador.getJugadores();
 
@@ -298,21 +324,22 @@ public class PartidoAllStar extends Partido {
 
 		return maximo;
 	}
-
-	public static PartidoAllStar partidoAllStar() throws SQLException {
-
-		Random r = new Random();
-
-		PartidoAllStar allStar = new PartidoAllStar((byte) 1, (short) ((short) r.nextInt(160) + 1),
-				(short) ((short) r.nextInt(160) + 1), LocalDateTime.of(2022, 02, 17, 21, 30), "Equipow 1", "Equipo 2",
-				"Titulares");
-		Equipo equipo1 = new Equipo("Equipo Este", (byte) 31, (byte) 1);
-		Equipo equipo2 = new Equipo("Equipo Oeste", (byte) 32, (byte) 1);
-		return allStar;
-	}
-	
-	
-	
-	
-	
+	/*
+	 * /** Función que devuelve un partido AllStar
+	 * 
+	 * @return
+	 * 
+	 * @throws SQLException
+	 * 
+	 * public static PartidoAllStar partidoAllStar() throws SQLException {
+	 * 
+	 * Random r = new Random();
+	 * 
+	 * PartidoAllStar allStar = new PartidoAllStar((byte) 1, (short) ((short)
+	 * r.nextInt(160) + 1), (short) ((short) r.nextInt(160) + 1),
+	 * LocalDateTime.of(2022, 02, 17, 21, 30), "Equipow 1", "Equipo 2",
+	 * "Titulares"); Equipo equipo1 = new Equipo("Equipo Este", (byte) 31, (byte)
+	 * 1); Equipo equipo2 = new Equipo("Equipo Oeste", (byte) 32, (byte) 1); return
+	 * allStar; }
+	 */
 }

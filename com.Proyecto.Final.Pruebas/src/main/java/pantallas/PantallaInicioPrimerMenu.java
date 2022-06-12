@@ -200,36 +200,19 @@ public class PantallaInicioPrimerMenu extends JPanel {
 		buscadorJogadores.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+
 				try {
 					String popUp = JOptionPane
 							.showInputDialog("Dime el nombre y los apellidos del jugador que quieras buscar");
 					ventana.setNombreApellidosJugador(popUp);
-				}catch (java.lang.NullPointerException e2) {
-					JOptionPane.showMessageDialog(ventana, "Ese jugador no existe", "No te sabes el nombre del jugador",
-							JOptionPane.ERROR_MESSAGE);
-					/*try {
-						ventana.cambiarAPantalla("primerMenu");
-					} catch (SQLException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}*/
-				}
-				try {
 					ventana.cambiarAPantalla("jugadorBuscado");
-				} catch (SQLException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				} catch (java.lang.NullPointerException e2) {
-					JOptionPane.showMessageDialog(ventana, "Ese jugador no existe", "No te sabes el nombre del jugador",
+				} catch (NullPointerException e1) {
+					JOptionPane.showMessageDialog(ventana, "Ese jugador no existe,prueba con otro", "Jugador no existe",
 							JOptionPane.ERROR_MESSAGE);
-					/*try {
-						ventana.cambiarAPantalla("primerMenu");
-					} catch (SQLException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}*/
+				} catch (SQLException e1) {
+
 				}
+
 			}
 		});
 		buscadorJogadores.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));

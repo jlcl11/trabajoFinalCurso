@@ -510,16 +510,7 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 			}
 		});
 
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setIcon(new ImageIcon(".\\imagenes\\logo.png"));
-		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-		gbc_lblNewLabel.gridheight = 27;
-		gbc_lblNewLabel.gridwidth = 12;
-		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel.gridx = 0;
-		gbc_lblNewLabel.gridy = 0;
-		add(lblNewLabel, gbc_lblNewLabel);
+
 
 		botonEquipoEscogido.setBackground(Color.BLUE);
 		botonEquipoEscogido.setForeground(Color.WHITE);
@@ -530,6 +521,16 @@ public class PantallaEscogerEquipoDatosFranquicia extends JPanel {
 		gbc_botonEquipoEscogido.gridx = 9;
 		gbc_botonEquipoEscogido.gridy = 25;
 		add(botonEquipoEscogido, gbc_botonEquipoEscogido);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setIcon(new ImageIcon(".\\imagenes\\logo.png"));
+		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
+		gbc_lblNewLabel.gridheight = 27;
+		gbc_lblNewLabel.gridwidth = 12;
+		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
+		gbc_lblNewLabel.gridx = 0;
+		gbc_lblNewLabel.gridy = 0;
+		add(lblNewLabel, gbc_lblNewLabel);
 
 	}
 

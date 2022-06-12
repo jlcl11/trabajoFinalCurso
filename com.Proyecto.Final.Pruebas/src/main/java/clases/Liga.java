@@ -64,6 +64,13 @@ public class Liga {
 		UtilsDB.desconectarBBDD();
 	}
 
+	/**
+	 * Función que ordena el Arrayist que contiene todos los jugadores en activo por
+	 * la suma de todas las estadísticas,por lo que solo devuelve la última posición
+	 * que es aquel que tiene la mayor suma de las mismas
+	 * 
+	 * @return devuelve el mejor jugador de la temporada
+	 */
 	public static Jugador devolverMVP() {
 
 		ArrayList<Jugador> jugadoresNormalesNBA = Jugador.getJugadores();
@@ -89,6 +96,13 @@ public class Liga {
 
 	}
 
+	/**
+	 * Función que ordena el Arrayist que contiene todos los jugadores en activo por
+	 * la suma de todas las estadísticas defensivas,por lo que solo devuelve la
+	 * última posición que es aquel que tiene la mayor suma de las mismas
+	 * 
+	 * @return devuelve el mejor defensor de la temporada
+	 */
 	public static Jugador devolverDPOY() {
 
 		ArrayList<Jugador> jugadoresNormalesNBA = Jugador.getJugadores();
@@ -112,6 +126,13 @@ public class Liga {
 
 	}
 
+	/**
+	 * Función que ordena el Arrayist que contiene todos los jugadores en activo por
+	 * la suma de todas las estadísticas,por lo que solo devuelve la última posición
+	 * que es aquel que tiene la mayor suma de las mismas
+	 * 
+	 * @return devuelve el mejor jugador de la temporada
+	 */
 	public static Jugador devolverPremioAnotador() {
 
 		ArrayList<Jugador> jugadoresNormalesNBA = Jugador.getJugadores();
@@ -133,6 +154,13 @@ public class Liga {
 		return max_jugador;
 	}
 
+	/**
+	 * Función que resume la temporada en un ticket,para ello usa el FileWriter para
+	 * escribir en un .txt,posteriormente en la pantalla adecuada se usará un
+	 * BufferedReader
+	 * 
+	 * @throws IOException lanza la excepción porque usa el FileWriter
+	 */
 	public static void imprimeTicket() throws IOException {
 
 		File archivo = new File("./ticket.txt");

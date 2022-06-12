@@ -1041,8 +1041,8 @@ public class Jugador extends ObjetoConNombre {
 	/**
 	 * Función que recorre la bbdd y consigue los jugadores retirados
 	 * 
-	 * @param nombre
-	 * @return
+	 * @param nombre del equipo del que se quieren ver los dorsales retirados
+	 * @return devuelve el ArrayList de los jugadores retirados del equipo
 	 */
 	public static ArrayList<Jugador> getJugadoresReitrados(String nombre) {
 
@@ -1076,6 +1076,11 @@ public class Jugador extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Función que recorre la bbdd y recoge todos los jugadores en activo
+	 * 
+	 * @return devuelve un ArrayList con todos los Jugadores
+	 */
 	public static ArrayList<Jugador> getJugadores() {
 		Statement smt = UtilsDB.conectarBBDD();
 		// Inicializamos un ArrayList para devolver.
@@ -1127,6 +1132,16 @@ public class Jugador extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Función que declara todos los jugadores para que mediante sus constructores
+	 * se metan en bbdd,posteriormente mete a los jugadores en activo en un HashMap
+	 * para que luego en su pantalla se pueda buscar mediante el nombre y el
+	 * apellido del jugador rescatar los datos del jugador
+	 * 
+	 * @return devuelve el HashMap con los jugadores en activo
+	 * @throws SQLException
+	 * @throws JugadorMalIntroduciodoException
+	 */
 	public static HashMap<String, Jugador> buscaJugadores() throws SQLException, JugadorMalIntroduciodoException {
 
 		Liga liga = new Liga((byte) 1);
@@ -2243,11 +2258,6 @@ public class Jugador extends ObjetoConNombre {
 
 		return mapa;
 
-	}
-
-	@Override
-	public String toString() {
-		return  getNombre() + apodo+" "+apellido;
 	}
 
 }

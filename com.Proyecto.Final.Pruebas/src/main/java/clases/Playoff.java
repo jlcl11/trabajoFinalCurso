@@ -133,6 +133,11 @@ public class Playoff extends ObjetoConNombre {
 		UtilsDB.desconectarBBDD();
 	}
 
+	/**
+	 * Función que recoge los equipos de la conferencia este
+	 * 
+	 * @return devuelve un ArrayList de equipos de la conferencia este
+	 */
 	public static ArrayList<Equipo> getEquiposEste() {
 		Statement smt = UtilsDB.conectarBBDD();
 
@@ -166,6 +171,11 @@ public class Playoff extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Función que recoge los equipos de la conferencia oeste
+	 * 
+	 * @return devuelve un ArrayList de equipos de la conferencia oeste
+	 */
 	public static ArrayList<Equipo> getEquiposOeste() {
 		Statement smt = UtilsDB.conectarBBDD();
 
@@ -199,6 +209,12 @@ public class Playoff extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Función que aprovecha el ArrayList que devuelve la función getEquiposEste y
+	 * devuelve de manera aleatoria 8 posiciones aleatorias
+	 * 
+	 * @return devuelve un ArarayList que contiene 8 equipos aleatorios
+	 */
 	public static ArrayList<Equipo> devolverPrimeraRondaEste() {
 		ArrayList<Equipo> todos = getEquiposEste();
 		ArrayList<Equipo> ret = new ArrayList<Equipo>();
@@ -212,6 +228,12 @@ public class Playoff extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Función que aprovecha el ArrayList que devuelve la función getEquiposOeste y
+	 * devuelve de manera aleatoria 8 posiciones aleatorias
+	 * 
+	 * @return devuelve un ArarayList que contiene 8 equipos aleatorios
+	 */
 	public static ArrayList<Equipo> devolverPrimeraRondaOeste() {
 		ArrayList<Equipo> todos = getEquiposOeste();
 		ArrayList<Equipo> ret = new ArrayList<Equipo>();
@@ -224,6 +246,13 @@ public class Playoff extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Función que aprovecha el ArrayList que devuelve la función
+	 * devolverPrimeraRondaEste y devuelve 4 posiciones aleatorias para crear
+	 * emparejamientos
+	 * 
+	 * @return ArrayList de Equipos que avazan en los playoff
+	 */
 	public static ArrayList<Equipo> devolverSegundaRondaEste() {
 		Random r = new Random();
 
@@ -243,6 +272,13 @@ public class Playoff extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Función que aprovecha el ArrayList que devuelve la función
+	 * devolverPrimeraRondaOeste y devuelve 4 posiciones aleatorias para crear
+	 * emparejamientos
+	 * 
+	 * @return ArrayList de Equipos que avazan en los playoff
+	 */
 	public static ArrayList<Equipo> devolverSegundaRondaOeste() {
 		Random r = new Random();
 		ArrayList<Equipo> todos = devolverPrimeraRondaOeste();
@@ -259,6 +295,13 @@ public class Playoff extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Función que aprovecha el ArrayList que devuelve la función
+	 * devolverSegundaRondaEste y devuelve 2 posiciones aleatorias para crear
+	 * emparejamientos
+	 * 
+	 * @return ArrayList de Equipos que avazan en los playoff
+	 */
 	public static ArrayList<Equipo> devolverFinalEste() {
 		Random r = new Random();
 		ArrayList<Equipo> todos = devolverSegundaRondaEste();
@@ -271,6 +314,13 @@ public class Playoff extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Función que aprovecha el ArrayList que devuelve la función
+	 * devolverSegundaRondaOeste y devuelve 2 posiciones aleatorias para crear
+	 * emparejamientos
+	 * 
+	 * @return ArrayList de Equipos que avazan en los playoff
+	 */
 	public static ArrayList<Equipo> devolverFinalOeste() {
 		Random r = new Random();
 		ArrayList<Equipo> todos = devolverSegundaRondaOeste();
@@ -282,6 +332,12 @@ public class Playoff extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Función que escoge una posición aleatoria del AraryList devolverFinalEste
+	 * para devolver el finalista del ESte
+	 * 
+	 * @return el equipo finalista del este
+	 */
 	public static Equipo devolverFinalistaEste() {
 		ArrayList<Equipo> todos = devolverFinalEste();
 		Random r = new Random();
@@ -290,6 +346,12 @@ public class Playoff extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Función que escoge una posición aleatoria del AraryList devolverFinalOeste
+	 * para devolver el finalista del ESte
+	 * 
+	 * @return el equipo finalista del oeste
+	 */
 	public static Equipo devolverFinalistaOeste() {
 		ArrayList<Equipo> todos = devolverFinalOeste();
 		Random r = new Random();
@@ -297,6 +359,12 @@ public class Playoff extends ObjetoConNombre {
 		return todos.get(r.nextInt(1));
 	}
 
+	/**
+	 * Esta función añade los finalistas de ambas conferencias para que en su
+	 * resprectiva pantalla se puedan mostrar como un elemento visual
+	 * 
+	 * @return
+	 */
 	public static ArrayList<Equipo> finalistasParaMostrarlos() {
 		ArrayList<Equipo> ret = new ArrayList<Equipo>();
 		ret.add(devolverFinalistaEste());
@@ -305,6 +373,13 @@ public class Playoff extends ObjetoConNombre {
 		return ret;
 	}
 
+	/**
+	 * Esta función devuelve una posición aleatoria del ArrayList que devuelve la
+	 * función dwdwdw para poder conseguir un campeón resultado de la batalla
+	 * aleatoria entre los finalistas de cada conferencia
+	 * 
+	 * @return el equipo ganador
+	 */
 	public static Equipo devolverCampeon() {
 		ArrayList<Equipo> todos = finalistasParaMostrarlos();
 		Random r = new Random();
