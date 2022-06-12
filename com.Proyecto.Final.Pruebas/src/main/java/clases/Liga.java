@@ -173,7 +173,7 @@ public class Liga {
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                    EL MVP DE LA TEMPORADA HA SIDO                       |\n");
-		escritor.write("" + devolverMVP().getNombre() + " " + devolverMVP().getApellido() + " ha anotado "
+		escritor.write("             " + devolverMVP().getNombre() + " " + devolverMVP().getApellido() + " ha anotado "
 				+ devolverMVP().getPPG() + " puntos por partido \n,ha repartido " + devolverMVP().getAPG()
 				+ " asistencias por partido,ha recogido " + devolverMVP().getRBG() + " rebotes por partido,ha robado "
 				+ devolverMVP().getSPG() + " y ha taponado " + devolverMVP().getBPG() + " balones por partido" + "\n");
@@ -194,7 +194,22 @@ public class Liga {
 				+ " ha anotado " + devolverPremioAnotador().getPPG() + " puntos por partido" + "\n");
 		escritor.write("|                                                                         |\n");
 		escritor.write("|                                                                         |\n");
+		escritor.write("|                   MVP ALL STAR                                                      |\n");
 		escritor.write("|                                                                         |\n");
+		escritor.write("|                       " + PartidoAllStar.getAllStarMVP().getNombre() + " "
+				+ PartidoAllStar.getAllStarMVP().getApellido() + " ha anotado " + devolverMVP().getPPG()
+				+ " puntos  \n,ha repartido " + PartidoAllStar.getAllStarMVP().getAPG() + " asistencias ,ha recogido "
+				+ PartidoAllStar.getAllStarMVP().getRBG() + " rebotes ,ha robado "
+				+ PartidoAllStar.getAllStarMVP().getSPG() + " balones y ha taponado "
+				+ PartidoAllStar.getAllStarMVP().getBPG() + " balones"
+				+ "                                                  |\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                               CAMPEON NBA                                          |\n");
+		escritor.write("|                                                                         |\n");
+		escritor.write("|                          " + Playoff.devolverCampeon().getCiudadLocal() + " "
+				+ Playoff.devolverCampeon().getNombre() + "                                               |\n");
+		escritor.write("|                                                                         |\n");
+
 		escritor.write("---------------------------------------------------------------------------\n");
 		escritor.flush();
 		escritor.close();
