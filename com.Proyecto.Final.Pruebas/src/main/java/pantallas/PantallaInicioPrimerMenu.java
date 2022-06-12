@@ -163,45 +163,53 @@ public class PantallaInicioPrimerMenu extends JPanel {
 				}
 			}
 		});
-		
-			
-		
-				JButton botonTicket = new JButton("Imprimir un ticket con los ganadores de la temporada");
-				botonTicket.addMouseListener(new MouseAdapter() {
-					@Override
-					public void mouseClicked(MouseEvent e) {
-						try {
-							Liga.imprimeTicket();
-							JOptionPane.showMessageDialog(ventana, "Ticket impreso con éxito", ventana.getName(),
-									JOptionPane.PLAIN_MESSAGE);
-							ticketPorPantalla p = new ticketPorPantalla();
-							
-							p.setVisible(true);
-							p.setAlwaysOnTop(true);
-							p.setSize(630, 805);
-							p.setLocationRelativeTo(null);
-						} catch (IOException e1) {
-							// TODO Auto-generated catch block
-							JOptionPane.showMessageDialog(ventana, "El ticket no pudo imprimirse", ventana.getName(),
-									JOptionPane.ERROR_MESSAGE);
-						}
-					}
-				});
-				botonTicket.setForeground(Color.WHITE);
-				botonTicket.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
-				botonTicket.setBackground(Color.BLUE);
-				GridBagConstraints gbc_botonTicket = new GridBagConstraints();
-				gbc_botonTicket.gridheight = 2;
-				gbc_botonTicket.fill = GridBagConstraints.BOTH;
-				gbc_botonTicket.insets = new Insets(0, 0, 5, 5);
-				gbc_botonTicket.gridx = 4;
-				gbc_botonTicket.gridy = 12;
-				add(botonTicket, gbc_botonTicket);
-		
+
+		JButton botonTicket = new JButton("Imprimir un ticket con los ganadores de la temporada");
+		botonTicket.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				try {
+					Liga.imprimeTicket();
+					JOptionPane.showMessageDialog(ventana, "Ticket impreso con éxito", ventana.getName(),
+							JOptionPane.PLAIN_MESSAGE);
+					ticketPorPantalla p = new ticketPorPantalla();
+
+					p.setVisible(true);
+					p.setAlwaysOnTop(true);
+					p.setSize(630, 805);
+					p.setLocationRelativeTo(null);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					JOptionPane.showMessageDialog(ventana, "El ticket no pudo imprimirse", ventana.getName(),
+							JOptionPane.ERROR_MESSAGE);
+				}
+			}
+		});
+		botonTicket.setForeground(Color.WHITE);
+		botonTicket.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
+		botonTicket.setBackground(Color.BLUE);
+		GridBagConstraints gbc_botonTicket = new GridBagConstraints();
+		gbc_botonTicket.gridheight = 2;
+		gbc_botonTicket.fill = GridBagConstraints.BOTH;
+		gbc_botonTicket.insets = new Insets(0, 0, 5, 5);
+		gbc_botonTicket.gridx = 4;
+		gbc_botonTicket.gridy = 12;
+		add(botonTicket, gbc_botonTicket);
+
 		JButton buscadorJogadores = new JButton("Buscador de Jugadores");
 		buscadorJogadores.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				String popUp = JOptionPane
+						.showInputDialog("Dime el nombre y los apellidos del jugador que quieras buscar");
+				ventana.setNombreApellidosJugador(popUp);
+				System.out.println(ventana.getNombreApellidosJugador());
+				try {
+					ventana.cambiarAPantalla("jugadorBuscado");
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		buscadorJogadores.setFont(new Font("Segoe UI Semibold", Font.BOLD, 20));
@@ -223,8 +231,7 @@ public class PantallaInicioPrimerMenu extends JPanel {
 		gbc_botonVolver.gridx = 1;
 		gbc_botonVolver.gridy = 14;
 		add(botonVolver, gbc_botonVolver);
-		
-	
+
 		JLabel lblNewLabel = new JLabel("New label");
 		lblNewLabel.setIcon(new ImageIcon(".\\imagenes\\NBA-2K22.jpeg"));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();

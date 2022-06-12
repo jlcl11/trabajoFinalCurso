@@ -28,6 +28,8 @@ public class Ventana extends JFrame {
 	protected Equipo miEquipo;
 	/* Pantalla que se va a ir mostrando en la ventana */
 	private JPanel pantallaActual;
+	/**/
+	private String nombreApellidosJugador;
 
 	/**
 	 * Constructor de Ventana, que inicializa su tamaño, título e icono, y otras
@@ -38,6 +40,7 @@ public class Ventana extends JFrame {
 	 */
 	public Ventana() throws SQLException {
 		miEquipo = new Equipo("Wizards");
+		setNombreApellidosJugador("");
 		pantallaActual = new PantallaInicial(this);
 		this.setSize(1300, 800);
 		this.setLocationRelativeTo(null);
@@ -132,10 +135,21 @@ public class Ventana extends JFrame {
 		case "Estadio":
 			this.pantallaActual = new PantallaVerEstadio(this);
 			break;
+		case "jugadorBuscado":
+			this.pantallaActual = new PantallaJugadorBuscado(this);
+			break;
 
 		}
 		this.pantallaActual.setVisible(true);
 		this.setContentPane(pantallaActual);
+	}
+
+	public String getNombreApellidosJugador() {
+		return nombreApellidosJugador;
+	}
+
+	public void setNombreApellidosJugador(String nombreApellidosJugador) {
+		this.nombreApellidosJugador = nombreApellidosJugador;
 	}
 
 }
