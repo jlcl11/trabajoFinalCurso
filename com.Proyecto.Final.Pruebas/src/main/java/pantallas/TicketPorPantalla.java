@@ -11,8 +11,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ticketPorPantalla extends JFrame {
-	public ticketPorPantalla() throws IOException {
+public class TicketPorPantalla extends JFrame {
+	public TicketPorPantalla() throws IOException {
 		this.setTitle("JuegoIndie2kNBA.exe");
 		this.setIconImage(new ImageIcon("./imagenes/logoPrograma.png").getImage());
 		this.setAlwaysOnTop(true);

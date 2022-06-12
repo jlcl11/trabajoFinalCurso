@@ -172,7 +172,7 @@ public class PantallaInicioPrimerMenu extends JPanel {
 					Liga.imprimeTicket();
 					JOptionPane.showMessageDialog(ventana, "Ticket impreso con éxito", ventana.getName(),
 							JOptionPane.PLAIN_MESSAGE);
-					ticketPorPantalla p = new ticketPorPantalla();
+					TicketPorPantalla p = new TicketPorPantalla();
 
 					p.setVisible(true);
 					p.setAlwaysOnTop(true);
